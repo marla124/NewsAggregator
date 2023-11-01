@@ -5,7 +5,7 @@ namespace NewsAggregatorProject.Data
 {
     public class NewsAggregatorDBContext : DbContext
     {
-        private const string ConnString = "Server=DESKTOP-2FD6QEU;DataBase=NewAggregator;TrustedConnection=True;";
+        //private const string ConnString = "Server=DESKTOP-2FD6QEU;DataBase=NewAggregator;TrustedConnection=True;";
         DbSet<Category> Categories { get; set; }
         DbSet<New> News { get; set; }
         DbSet<Source> Sources { get; set; }
@@ -15,8 +15,9 @@ namespace NewsAggregatorProject.Data
 
         DbSet<Comment> Comments { get; set; }
 
-        public NewsAggregatorDBContext(DbContextOptions<NewsAggregatorDBContext> options) : base(options) {
-            
-        }
+        public NewsAggregatorDBContext(DbContextOptions<NewsAggregatorDBContext> options) : base(options) { }
+        //public NewsAggregatorDBContext(DbContextOptionsBuilder optionsBuilder) {
+        //    optionsBuilder.UseSqlServer(ConnString);    
+        //}
     }
 }

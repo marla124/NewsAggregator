@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Брест\\source\\repos\\NewsAggregating\\NewsAggregatingProject\\NewsAggregatingProject\\NewsAggregatingProject.csproj": {}
+    "C:\\Users\\Брест\\source\\repos\\NewsAggregator\\NewsAggregatingProject\\NewsAggregatingProject\\NewsAggregatingProject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Брест\\source\\repos\\NewsAggregating\\NewsAggregatingProject\\NewsAggregatingProject\\NewsAggregatingProject.csproj": {
+    "C:\\Users\\Брест\\source\\repos\\NewsAggregator\\NewsAggregatingProject\\NewsAggregatingProject\\NewsAggregatingProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Брест\\source\\repos\\NewsAggregating\\NewsAggregatingProject\\NewsAggregatingProject\\NewsAggregatingProject.csproj",
+        "projectUniqueName": "C:\\Users\\Брест\\source\\repos\\NewsAggregator\\NewsAggregatingProject\\NewsAggregatingProject\\NewsAggregatingProject.csproj",
         "projectName": "NewsAggregatingProject",
-        "projectPath": "C:\\Users\\Брест\\source\\repos\\NewsAggregating\\NewsAggregatingProject\\NewsAggregatingProject\\NewsAggregatingProject.csproj",
+        "projectPath": "C:\\Users\\Брест\\source\\repos\\NewsAggregator\\NewsAggregatingProject\\NewsAggregatingProject\\NewsAggregatingProject.csproj",
         "packagesPath": "C:\\Users\\Брест\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Брест\\source\\repos\\NewsAggregating\\NewsAggregatingProject\\NewsAggregatingProject\\obj\\",
+        "outputPath": "C:\\Users\\Брест\\source\\repos\\NewsAggregator\\NewsAggregatingProject\\NewsAggregatingProject\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

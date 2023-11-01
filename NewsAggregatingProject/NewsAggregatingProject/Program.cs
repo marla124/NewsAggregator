@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using NewsAggregatorProject.Data;
+
 namespace NewsAggregatingProject
 {
     public class Program
@@ -5,7 +8,9 @@ namespace NewsAggregatingProject
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            const string ConnString = "Server=DESKTOP-2FD6QEU;DataBase=NewAggregator;TrustedConnection=True;";
 
+            builder.Services.AddDbContext<NewsAggregatorDBContext>(opt => opt.UseSqlServer(ConnString));
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
