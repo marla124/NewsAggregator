@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using NewsAggregatorProject.Data;
+using NewsAggregatingProject.Data;
 
 namespace NewsAggregatingProject
 {
@@ -10,7 +10,7 @@ namespace NewsAggregatingProject
             var builder = WebApplication.CreateBuilder(args);
             const string ConnString = "Server=DESKTOP-2FD6QEU;DataBase=NewAggregator;Trusted_Connection=True;TrustServerCertificate=True;";
 
-            builder.Services.AddDbContext<NewsAggregatorDBContext>(opt => opt.UseSqlServer(ConnString));
+            builder.Services.AddDbContext<NewsAggregatingDBContext>(opt =>opt.UseSqlServer(ConnString));
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 

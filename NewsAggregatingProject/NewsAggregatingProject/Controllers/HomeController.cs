@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using NewsAggregatingProject.Models;
+using NewsAggregatingProject.Services;
 using System.Diagnostics;
 
 namespace NewsAggregatingProject.Controllers
@@ -7,10 +8,12 @@ namespace NewsAggregatingProject.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly IDbInitializer _dbInitializer;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, IDbInitializer dbInitializer)
         {
             _logger = logger;
+            _dbInitializer= dbInitializer;
         }
 
         public IActionResult Index()
