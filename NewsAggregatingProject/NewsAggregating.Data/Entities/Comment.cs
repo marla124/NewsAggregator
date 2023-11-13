@@ -9,6 +9,8 @@
         public Guid NewId { get; set; }
         public New New { get; set; }
         public Guid? ParentCommentId { get; set; }
+        public List<Comment> ChildComments { get; set; }
         public Comment ParentComment { get; set; }
+        public User User { get; set; }
     }
 }

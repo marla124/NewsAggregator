@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NewsAggregatingProject.Data;
 
@@ -11,9 +12,11 @@ using NewsAggregatingProject.Data;
 namespace NewsAggregatingProject.Migrations
 {
     [DbContext(typeof(NewsAggregatingDBContext))]
-    partial class NewsAggregatorDBContextModelSnapshot : ModelSnapshot
+    [Migration("20231113230530_UpComment")]
+    partial class UpComment
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
