@@ -1,7 +1,10 @@
 using Microsoft.EntityFrameworkCore;
+using NewAggregating.Repositories;
+using NewAggregating.Repsitories;
 using NewsAggregatingProject.Data;
+using NewsAggregatingProject.MVC7.Services;
 
-namespace NewsAggregatingProject
+namespace NewsAggregatingProject.MVC7
 {
     public class Program
     {
@@ -12,6 +15,7 @@ namespace NewsAggregatingProject
 
             builder.Services.AddDbContext<NewsAggregatingDBContext>(opt =>opt.UseSqlServer(ConnString));
             // Add services to the container.
+            builder.Services.AddScoped<IRepository, Repository>();
             builder.Services.AddControllersWithViews();
 
             var app = builder.Build();

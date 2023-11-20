@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using NewsAggregatingProject.Models;
-using NewsAggregatingProject.Services;
+using NewsAggregatingProject.MVC7.Models;
+using NewsAggregatingProject.MVC7.Services;
 using System.Diagnostics;
 
-namespace NewsAggregatingProject.Controllers
+namespace NewsAggregatingProject.MVC7.Controllers
 {
     public class HomeController : Controller
     {
@@ -13,11 +13,12 @@ namespace NewsAggregatingProject.Controllers
         public HomeController(ILogger<HomeController> logger, IDbInitializer dbInitializer)
         {
             _logger = logger;
-            _dbInitializer= dbInitializer;
+            _dbInitializer = dbInitializer;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
+            await _dbInitializer.InitDbWithTestValues();
             return View();
         }
 

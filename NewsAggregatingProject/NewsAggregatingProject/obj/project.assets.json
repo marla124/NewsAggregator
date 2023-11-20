@@ -1054,6 +1054,19 @@
           }
         }
       },
+      "NewAggregating.Repositories/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "NewsAggregatingProject.Data": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/NewAggregating.Repositories.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/NewAggregating.Repositories.dll": {}
+        }
+      },
       "NewsAggregatingProject.Data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -2890,6 +2903,11 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "NewAggregating.Repositories/1.0.0": {
+      "type": "project",
+      "path": "../NewAggregating.Repsitories/NewAggregating.Repositories.csproj",
+      "msbuildProject": "../NewAggregating.Repsitories/NewAggregating.Repositories.csproj"
+    },
     "NewsAggregatingProject.Data/1.0.0": {
       "type": "project",
       "path": "../NewsAggregating.Data/NewsAggregatingProject.Data.csproj",
@@ -2902,6 +2920,7 @@
       "Microsoft.EntityFrameworkCore.Design >= 7.0.13",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.13",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.13",
+      "NewAggregating.Repositories >= 1.0.0",
       "NewsAggregatingProject.Data >= 1.0.0"
     ]
   },
@@ -2912,9 +2931,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Брест\\source\\repos\\NewsAggregator\\NewsAggregatingProject\\NewsAggregatingProject\\NewsAggregatingProject.csproj",
-      "projectName": "NewsAggregatingProject",
-      "projectPath": "C:\\Users\\Брест\\source\\repos\\NewsAggregator\\NewsAggregatingProject\\NewsAggregatingProject\\NewsAggregatingProject.csproj",
+      "projectUniqueName": "C:\\Users\\Брест\\source\\repos\\NewsAggregator\\NewsAggregatingProject\\NewsAggregatingProject\\NewsAggregatingProject.MVC7.csproj",
+      "projectName": "NewsAggregatingProject.MVC7",
+      "projectPath": "C:\\Users\\Брест\\source\\repos\\NewsAggregator\\NewsAggregatingProject\\NewsAggregatingProject\\NewsAggregatingProject.MVC7.csproj",
       "packagesPath": "C:\\Users\\Брест\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Брест\\source\\repos\\NewsAggregator\\NewsAggregatingProject\\NewsAggregatingProject\\obj\\",
       "projectStyle": "PackageReference",
@@ -2937,6 +2956,9 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
+            "C:\\Users\\Брест\\source\\repos\\NewsAggregator\\NewsAggregatingProject\\NewAggregating.Repsitories\\NewAggregating.Repositories.csproj": {
+              "projectPath": "C:\\Users\\Брест\\source\\repos\\NewsAggregator\\NewsAggregatingProject\\NewAggregating.Repsitories\\NewAggregating.Repositories.csproj"
+            },
             "C:\\Users\\Брест\\source\\repos\\NewsAggregator\\NewsAggregatingProject\\NewsAggregating.Data\\NewsAggregatingProject.Data.csproj": {
               "projectPath": "C:\\Users\\Брест\\source\\repos\\NewsAggregator\\NewsAggregatingProject\\NewsAggregating.Data\\NewsAggregatingProject.Data.csproj"
             }

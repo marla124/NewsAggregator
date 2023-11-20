@@ -1,4 +1,4 @@
-namespace NewsAggregatingProject.Models
+namespace NewsAggregatingProject.MVC7.Models
 {
     public class ErrorViewModel
     {

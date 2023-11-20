@@ -1,8 +1,8 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Брест\\source\\repos\\NewsAggregator\\NewsAggregatingProject\\NewsAggregatingProject\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\NewsAggregatingProject.bundle.scp.css",
-      "PackagePath": "staticwebassets\\NewsAggregatingProject.bundle.scp.css"
+      "Id": "C:\\Users\\Брест\\source\\repos\\NewsAggregator\\NewsAggregatingProject\\NewsAggregatingProject\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\NewsAggregatingProject.MVC7.bundle.scp.css",
+      "PackagePath": "staticwebassets\\NewsAggregatingProject.MVC7.bundle.scp.css"
     },
     {
       "Id": "C:\\Users\\Брест\\source\\repos\\NewsAggregator\\NewsAggregatingProject\\NewsAggregatingProject\\wwwroot\\css\\site.css",
@@ -245,20 +245,20 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.NewsAggregatingProject.Microsoft.AspNetCore.StaticWebAssets.props",
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.NewsAggregatingProject.MVC7.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
     {
-      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.NewsAggregatingProject.props",
-      "PackagePath": "build\\NewsAggregatingProject.props"
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.NewsAggregatingProject.MVC7.props",
+      "PackagePath": "build\\NewsAggregatingProject.MVC7.props"
     },
     {
-      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.NewsAggregatingProject.props",
-      "PackagePath": "buildMultiTargeting\\NewsAggregatingProject.props"
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.NewsAggregatingProject.MVC7.props",
+      "PackagePath": "buildMultiTargeting\\NewsAggregatingProject.MVC7.props"
     },
     {
-      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.NewsAggregatingProject.props",
-      "PackagePath": "buildTransitive\\NewsAggregatingProject.props"
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.NewsAggregatingProject.MVC7.props",
+      "PackagePath": "buildTransitive\\NewsAggregatingProject.MVC7.props"
     }
   ],
   "ElementsToRemove": []

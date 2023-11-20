@@ -104,6 +104,10 @@ namespace NewsAggregatingProject.Migrations
                     b.Property<Guid>("SourceId")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
                     b.HasIndex("CategoryId");

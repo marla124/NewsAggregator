@@ -150,3 +150,6 @@ C:\Users\Брест\source\repos\NewsAggregator\NewsAggregatingProject\NewsAggre
 C:\Users\Брест\source\repos\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject\obj\Debug\net7.0\ref\NewsAggregatingProject.dll
 C:\Users\Брест\source\repos\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject\bin\Debug\net7.0\NewsAggregatingProject.Data.dll
 C:\Users\Брест\source\repos\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject\bin\Debug\net7.0\NewsAggregatingProject.Data.pdb
+C:\Users\Брест\source\repos\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject\bin\Debug\net7.0\.filenesting.json
+C:\Users\Брест\source\repos\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject\bin\Debug\net7.0\NewAggregating.Repositories.dll
+C:\Users\Брест\source\repos\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject\bin\Debug\net7.0\NewAggregating.Repositories.pdb

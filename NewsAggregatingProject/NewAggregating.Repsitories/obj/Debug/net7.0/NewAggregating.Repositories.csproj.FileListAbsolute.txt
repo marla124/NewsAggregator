@@ -1,0 +1,15 @@
+C:\Users\Брест\source\repos\NewsAggregator\NewsAggregatingProject\NewAggregating.Repsitories\bin\Debug\net7.0\NewAggregating.Repositories.deps.json
+C:\Users\Брест\source\repos\NewsAggregator\NewsAggregatingProject\NewAggregating.Repsitories\bin\Debug\net7.0\NewAggregating.Repositories.dll
+C:\Users\Брест\source\repos\NewsAggregator\NewsAggregatingProject\NewAggregating.Repsitories\bin\Debug\net7.0\NewAggregating.Repositories.pdb
+C:\Users\Брест\source\repos\NewsAggregator\NewsAggregatingProject\NewAggregating.Repsitories\bin\Debug\net7.0\NewsAggregatingProject.Data.dll
+C:\Users\Брест\source\repos\NewsAggregator\NewsAggregatingProject\NewAggregating.Repsitories\bin\Debug\net7.0\NewsAggregatingProject.Data.pdb
+C:\Users\Брест\source\repos\NewsAggregator\NewsAggregatingProject\NewAggregating.Repsitories\obj\Debug\net7.0\NewAggregating.Repositories.csproj.AssemblyReference.cache
+C:\Users\Брест\source\repos\NewsAggregator\NewsAggregatingProject\NewAggregating.Repsitories\obj\Debug\net7.0\NewAggregating.Repositories.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Брест\source\repos\NewsAggregator\NewsAggregatingProject\NewAggregating.Repsitories\obj\Debug\net7.0\NewAggregating.Repositories.AssemblyInfoInputs.cache
+C:\Users\Брест\source\repos\NewsAggregator\NewsAggregatingProject\NewAggregating.Repsitories\obj\Debug\net7.0\NewAggregating.Repositories.AssemblyInfo.cs
+C:\Users\Брест\source\repos\NewsAggregator\NewsAggregatingProject\NewAggregating.Repsitories\obj\Debug\net7.0\NewAggregating.Repositories.csproj.CoreCompileInputs.cache
+C:\Users\Брест\source\repos\NewsAggregator\NewsAggregatingProject\NewAggregating.Repsitories\obj\Debug\net7.0\NewAggregating.Repositories.csproj.CopyComplete
+C:\Users\Брест\source\repos\NewsAggregator\NewsAggregatingProject\NewAggregating.Repsitories\obj\Debug\net7.0\NewAggregating.Repositories.dll
+C:\Users\Брест\source\repos\NewsAggregator\NewsAggregatingProject\NewAggregating.Repsitories\obj\Debug\net7.0\refint\NewAggregating.Repositories.dll
+C:\Users\Брест\source\repos\NewsAggregator\NewsAggregatingProject\NewAggregating.Repsitories\obj\Debug\net7.0\NewAggregating.Repositories.pdb
+C:\Users\Брест\source\repos\NewsAggregator\NewsAggregatingProject\NewAggregating.Repsitories\obj\Debug\net7.0\ref\NewAggregating.Repositories.dll
