@@ -5,31 +5,38 @@ using NewAggregating.Repositories;
 
 namespace NewAggregating.Repsitories
 {
-    public class Repository: IRepository
+    public class SourceRepository: ISourceRepository
     {
         private readonly NewsAggregatingDBContext _dbContext;
-        private int info=10;
 
-        public Repository(NewsAggregatingDBContext dbContext)
+        public SourceRepository(NewsAggregatingDBContext dbContext)
         {
             _dbContext = dbContext;
         }
 
-        public async Task<List<New?>> GetNews()
+        public async Task<int> Commit()
         {
-            return await _dbContext.News.ToListAsync();
+            return await _dbContext.SaveChangesAsync();
         }
 
-        public async Task<List<New>> GetNews()
+        public async Task<List<Source>> GetAll()
         {
-            info++;
-            return await _dbContext.News.ToListAsync();
+            return await _dbContext.Sources.ToListAsync();
         }
-        public async Task InsertNews(IEnumerable<New> news)
+
+        public IQueryable<Source> GetAsQureable()
         {
-            info++;
-            await _dbContext.News.AddRangeAsync(news);
-            await _dbContext.SaveChangesAsync();
+            return _dbContext.Sources.AsQueryable();
+        }
+
+        public async Task<Source?> GetBy(Guid id)
+        {
+            return await _dbContext.Sources.FirstOrDefaultAsync(source => source.Equals(id));
+        }
+
+        public Task InsertNews(List<New> news)
+        {
+            throw new NotImplementedException();
         }
     }
 }

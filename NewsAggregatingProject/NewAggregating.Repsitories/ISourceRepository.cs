@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace NewAggregating.Repositories
 {
-    public interface IRepository
+    public interface ISourceRepository
     {
-        Task<List<New>> GetNews();
-        Task<IQueryable<New>> GetNewsWithSource();
-        Task InsertNews(IEnumerable<New?> news);
-        Task<New> GetBy(Guid id);
+        Task<Source?> GetBy(Guid id);
+        Task <List<Source>> GetAll();
+        IQueryable<Source> GetAsQureable();
+        Task<int> Commit();
     }
 }

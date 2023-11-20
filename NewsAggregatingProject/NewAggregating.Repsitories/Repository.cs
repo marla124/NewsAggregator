@@ -1,35 +1,44 @@
-﻿using NewsAggregatingProject.Data;
-using NewsAggregatingProject.Data.Entities;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using NewAggregating.Repositories;
+using NewsAggregatingProject.Data;
+using NewsAggregatingProject.Data.Entities;
 
 namespace NewAggregating.Repsitories
 {
-    public class SourceRepository: ISourceRepository
+    public class Repository: IRepository
     {
         private readonly NewsAggregatingDBContext _dbContext;
-        private int info=10;
 
-        public SourceRepository(NewsAggregatingDBContext dbContext)
+        public Repository(NewsAggregatingDBContext dbContext)
         {
             _dbContext = dbContext;
         }
 
-        public async Task<List<New?>> GetNews()
+        public async Task<List<New?>> GetArticles()
         {
             return await _dbContext.News.ToListAsync();
         }
 
-        public async Task<List<New>> GetNews()
+        public IQueryable<New?> GetNewsWithSource()
         {
-            info++;
-            return await _dbContext.News.ToListAsync();
+            return _dbContext.News.Include(news => news.Source);
         }
-        public async Task InsertNews(IEnumerable<New> news)
+
+        public async Task InsertArticles(IEnumerable<New?> news)
         {
-            info++;
             await _dbContext.News.AddRangeAsync(news);
             await _dbContext.SaveChangesAsync();
         }
+
+        public async Task<New?> GetById(Guid id)
+        {
+            return await _dbContext.News.FirstOrDefaultAsync(news => news.Id.Equals(id));
+        }
+
+        public async Task<int> Commit()
+        {
+            return await _dbContext.SaveChangesAsync();
+        }
     }
 }
+

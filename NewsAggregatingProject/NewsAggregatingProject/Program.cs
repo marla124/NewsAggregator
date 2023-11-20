@@ -15,7 +15,10 @@ namespace NewsAggregatingProject.MVC7
 
             builder.Services.AddDbContext<NewsAggregatingDBContext>(opt =>opt.UseSqlServer(ConnString));
             // Add services to the container.
+            builder.Services.AddScoped<ISourceRepository, SourceRepository>();
             builder.Services.AddScoped<IRepository, Repository>();
+            builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
             builder.Services.AddControllersWithViews();
 
             var app = builder.Build();

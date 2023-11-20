@@ -8,17 +8,17 @@ namespace NewsAggregatingProject.MVC7.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly IDbInitializer _dbInitializer;
+        //private readonly IDbInitializer _dbInitializer;
 
-        public HomeController(ILogger<HomeController> logger, IDbInitializer dbInitializer)
+        public HomeController(ILogger<HomeController> logger /*IDbInitializer dbInitializer*/)
         {
             _logger = logger;
-            _dbInitializer = dbInitializer;
+            //_dbInitializer = dbInitializer;
         }
 
         public async Task<IActionResult> Index()
         {
-            await _dbInitializer.InitDbWithTestValues();
+            //await _dbInitializer.InitDbWithTestValues();
             return View();
         }
 
