@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using NewAggregating.Repositories;
 using NewAggregating.Repsitories;
 using NewsAggregatingProject.Data;
+using NewsAggregatingProject.Data.Entities;
 using NewsAggregatingProject.MVC7.Services;
 
 namespace NewsAggregatingProject.MVC7
@@ -15,8 +16,17 @@ namespace NewsAggregatingProject.MVC7
 
             builder.Services.AddDbContext<NewsAggregatingDBContext>(opt =>opt.UseSqlServer(ConnString));
             // Add services to the container.
-            builder.Services.AddScoped<ISourceRepository, SourceRepository>();
-            builder.Services.AddScoped<IRepository, Repository>();
+            builder.Services.AddScoped<IRepository<New>, Repository<New>>();
+            builder.Services.AddScoped<IRepository<Source>, Repository<Source>>();
+            builder.Services.AddScoped<IRepository<User>, Repository<User>>();
+            builder.Services.AddScoped<IRepository<RatingScale>, Repository<RatingScale>>();
+            builder.Services.AddScoped<IRepository<UserStatus>, Repository<UserStatus>>();
+            builder.Services.AddScoped<IRepository<Comment>, Repository<Comment>>();
+            builder.Services.AddScoped<IRepository<Category>, Repository<Category>>();
+
+
+
+
             builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             builder.Services.AddControllersWithViews();

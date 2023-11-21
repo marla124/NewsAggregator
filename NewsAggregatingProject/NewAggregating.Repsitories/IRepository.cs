@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace NewAggregating.Repositories
 {
-    public interface IRepository
+    public interface IRepository<T> where T : class, IBaseEntity
     {
-        Task<New?> GetById(Guid id);
-        Task<List<New?>> Get();
-        IQueryable<New?> GetAsQueryableAsync();
-        Task InsertNews(IEnumerable<New?> news);
-        Task InsertOneNew(New oneNew);
+        Task<T?> GetById(Guid id);
+        Task<List<T?>> Get();
+        IQueryable<T?> GetAsQueryable();
+        Task InsertMany(IEnumerable<T?> entities);
+        Task InsertOne(T oneEntity);
         Task DeleteById(Guid id);
-        Task DeleteNews(IEnumerable<New?> news);
+        Task DeleteMany(IEnumerable<T?> entities);
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NewsAggregatingProject.Data.Entities
 {
-    internal interface IBaseEntity
+    public interface IBaseEntity
     {
         Guid Id { get; set; }
     }
