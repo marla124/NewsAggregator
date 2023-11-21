@@ -9,10 +9,12 @@ namespace NewAggregating.Repositories
 {
     public interface IRepository
     {
-        Task<List<New?>> GetArticles();
-        IQueryable<New?> GetNewsWithSource();
-        Task InsertArticles(IEnumerable<New?> articles);
         Task<New?> GetById(Guid id);
-        Task<int> Commit();
+        Task<List<New?>> Get();
+        IQueryable<New?> GetAsQueryableAsync();
+        Task InsertNews(IEnumerable<New?> news);
+        Task InsertOneNew(New oneNew);
+        Task DeleteById(Guid id);
+        Task DeleteNews(IEnumerable<New?> news);
     }
 }

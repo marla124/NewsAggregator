@@ -9,9 +9,12 @@ namespace NewAggregating.Repositories
 {
     public interface ISourceRepository
     {
-        Task<Source?> GetBy(Guid id);
-        Task <List<Source>> GetAll();
-        IQueryable<Source> GetAsQureable();
-        Task<int> Commit();
+        Task<Source?> GetById(Guid id);
+        Task<List<Source?>> Get();
+        IQueryable<Source?> GetAsQueryableAsync();
+        Task InsertSources(IEnumerable<Source?> sources);
+        Task InsertOneSource(Source oneSource);
+        Task DeleteById(Guid id);
+        Task DeleteSources(IEnumerable<Source?> sources);
     }
 }

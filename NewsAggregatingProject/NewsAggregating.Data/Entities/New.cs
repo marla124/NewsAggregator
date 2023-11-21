@@ -1,6 +1,6 @@
 ﻿namespace NewsAggregatingProject.Data.Entities
 {
-    public class New
+    public class New:IBaseEntity
     {
         public Guid Id { get; set; }
         public Guid Id_source { get; set; }

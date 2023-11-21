@@ -1,6 +1,6 @@
 ﻿namespace NewsAggregatingProject.Data.Entities
 {
-    public class Comment
+    public class Comment:IBaseEntity
     {
         public Guid Id { get; set; }
         public Guid Id_user { get; set; }

@@ -14,29 +14,47 @@ namespace NewAggregating.Repsitories
             _dbContext = dbContext;
         }
 
-        public async Task<int> Commit()
+        public async Task DeleteById(Guid id)
         {
-            return await _dbContext.SaveChangesAsync();
+            var deleteEntity = await GetById(id);
+            if (deleteEntity != null)
+            {
+                _dbContext.Sources.Remove(deleteEntity);
+            }
         }
 
-        public async Task<List<Source>> GetAll()
+        public async Task DeleteSources(IEnumerable<Source?> sources)
+        {
+            if (sources.Any())
+            {
+                var deleteEntities = sources.Where(sources => _dbContext.Sources.Any(dbSource => dbSource.Id.Equals(sources.Id))).ToList();
+                _dbContext.Sources.RemoveRange(deleteEntities);
+            }
+        }
+
+        public async Task<List<Source?>> Get()
         {
             return await _dbContext.Sources.ToListAsync();
         }
 
-        public IQueryable<Source> GetAsQureable()
+        public IQueryable<Source?> GetAsQueryableAsync()
         {
             return _dbContext.Sources.AsQueryable();
         }
 
-        public async Task<Source?> GetBy(Guid id)
+        public async Task<Source?> GetById(Guid id)
         {
-            return await _dbContext.Sources.FirstOrDefaultAsync(source => source.Equals(id));
+            return await _dbContext.Sources.FirstOrDefaultAsync(sources => sources.Id.Equals(id));
         }
 
-        public Task InsertNews(List<New> news)
+        public async Task InsertSources(IEnumerable<Source?> sources)
         {
-            throw new NotImplementedException();
+            await _dbContext.Sources.AddRangeAsync(sources);
+        }
+
+        public async Task InsertOneSource(Source oneSource)
+        {
+            await _dbContext.Sources.AddAsync(oneSource);
         }
     }
 }

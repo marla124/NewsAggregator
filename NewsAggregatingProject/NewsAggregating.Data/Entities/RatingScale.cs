@@ -1,6 +1,6 @@
 ﻿namespace NewsAggregatingProject.Data.Entities
 {
-    public class RatingScale
+    public class RatingScale:IBaseEntity
     {
         public Guid Id { get; set; }
         public string Status { get; set; }

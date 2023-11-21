@@ -1,6 +1,6 @@
 ﻿namespace NewsAggregatingProject.Data.Entities
 {
-    public class UserStatus
+    public class UserStatus:IBaseEntity
     {
         public Guid Id { get; set; }
         public string Status { get; set; }

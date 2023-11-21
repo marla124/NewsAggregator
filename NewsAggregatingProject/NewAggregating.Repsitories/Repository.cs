@@ -14,30 +14,47 @@ namespace NewAggregating.Repsitories
             _dbContext = dbContext;
         }
 
-        public async Task<List<New?>> GetArticles()
+        public async Task DeleteById(Guid id)
+        {
+            var deleteEntity = await GetById(id);
+            if (deleteEntity != null)
+            {
+                _dbContext.News.Remove(deleteEntity);
+            }
+        }
+
+        public async Task DeleteNews(IEnumerable<New?> news)
+        {
+            if (news.Any())
+            {
+                var deleteEntities = news.Where(news => _dbContext.News.Any(dbNew => dbNew.Id.Equals(news.Id))).ToList();
+                _dbContext.News.RemoveRange(deleteEntities);
+            }   
+        }
+
+        public async Task<List<New?>> Get()
         {
             return await _dbContext.News.ToListAsync();
         }
 
-        public IQueryable<New?> GetNewsWithSource()
+        public IQueryable<New?> GetAsQueryableAsync()
         {
-            return _dbContext.News.Include(news => news.Source);
-        }
-
-        public async Task InsertArticles(IEnumerable<New?> news)
-        {
-            await _dbContext.News.AddRangeAsync(news);
-            await _dbContext.SaveChangesAsync();
+            return _dbContext.News.AsQueryable();
         }
 
         public async Task<New?> GetById(Guid id)
         {
-            return await _dbContext.News.FirstOrDefaultAsync(news => news.Id.Equals(id));
+            return await _dbContext.News.FirstOrDefaultAsync(news=>news.Id.Equals(id));
         }
 
-        public async Task<int> Commit()
+        public async Task InsertNews(IEnumerable<New?> news)
         {
-            return await _dbContext.SaveChangesAsync();
+            await _dbContext.News.AddRangeAsync(news);
+        }
+
+        public async Task InsertOneNew(New oneNew)
+        {
+            await _dbContext.News.AddAsync(oneNew); 
         }
     }
 }
