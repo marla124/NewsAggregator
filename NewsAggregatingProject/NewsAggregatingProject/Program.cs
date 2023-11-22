@@ -25,8 +25,6 @@ namespace NewsAggregatingProject.MVC7
             builder.Services.AddScoped<IRepository<Category>, Repository<Category>>();
 
 
-
-
             builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             builder.Services.AddControllersWithViews();

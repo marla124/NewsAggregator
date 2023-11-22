@@ -961,6 +961,16 @@
           }
         }
       },
+      "NewsAggregatingProject.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/NewsAggregatingProject.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/NewsAggregatingProject.Core.dll": {}
+        }
+      },
       "NewsAggregatingProject.Data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -2624,6 +2634,11 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "NewsAggregatingProject.Core/1.0.0": {
+      "type": "project",
+      "path": "../NewsAggregatingProject.Core/NewsAggregatingProject.Core.csproj",
+      "msbuildProject": "../NewsAggregatingProject.Core/NewsAggregatingProject.Core.csproj"
+    },
     "NewsAggregatingProject.Data/1.0.0": {
       "type": "project",
       "path": "../NewsAggregating.Data/NewsAggregatingProject.Data.csproj",
@@ -2632,6 +2647,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "NewsAggregatingProject.Core >= 1.0.0",
       "NewsAggregatingProject.Data >= 1.0.0"
     ]
   },
@@ -2669,6 +2685,9 @@
           "projectReferences": {
             "C:\\Users\\Брест\\source\\repos\\NewsAggregator\\NewsAggregatingProject\\NewsAggregating.Data\\NewsAggregatingProject.Data.csproj": {
               "projectPath": "C:\\Users\\Брест\\source\\repos\\NewsAggregator\\NewsAggregatingProject\\NewsAggregating.Data\\NewsAggregatingProject.Data.csproj"
+            },
+            "C:\\Users\\Брест\\source\\repos\\NewsAggregator\\NewsAggregatingProject\\NewsAggregatingProject.Core\\NewsAggregatingProject.Core.csproj": {
+              "projectPath": "C:\\Users\\Брест\\source\\repos\\NewsAggregator\\NewsAggregatingProject\\NewsAggregatingProject.Core\\NewsAggregatingProject.Core.csproj"
             }
           }
         }

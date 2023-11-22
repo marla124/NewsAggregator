@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\NewsAggregating.Data\NewsAggregatingProject.Data.csproj" />
+    <ProjectReference Include="..\NewsAggregatingProject.Core\NewsAggregatingProject.Core.csproj" />
   </ItemGroup>
 
 </Project>

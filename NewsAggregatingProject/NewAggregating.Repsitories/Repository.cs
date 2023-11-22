@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using NewAggregating.Repositories;
+using NewsAggregatingProject.Core;
 using NewsAggregatingProject.Data;
 using NewsAggregatingProject.Data.Entities;
 using System.Data;
@@ -9,7 +10,7 @@ namespace NewAggregating.Repsitories
     public class Repository<T>: IRepository<T> where T : class, IBaseEntity
     {
         private readonly NewsAggregatingDBContext _dbContext;
-        private readonly DbSet<T> _dbSet;
+        protected readonly DbSet<T> _dbSet;
 
         public Repository(NewsAggregatingDBContext dbContext)
         {
@@ -17,7 +18,7 @@ namespace NewAggregating.Repsitories
             _dbSet= _dbContext.Set<T>();
         }
 
-        public async Task DeleteById(Guid id)
+        public virtual async Task DeleteById(Guid id)
         {
             var deleteEntity = await GetById(id);
             if (deleteEntity != null)
@@ -30,7 +31,7 @@ namespace NewAggregating.Repsitories
             }
         }
 
-        public async Task DeleteMany(IEnumerable<T> entities)
+        public virtual async Task DeleteMany(IEnumerable<T> entities)
         {
             if (entities.Any())
             {
@@ -39,29 +40,67 @@ namespace NewAggregating.Repsitories
             }   
         }
 
-        public async Task<List<T>> Get()
+        public virtual async Task<List<T>> FindBy()
         {
             return await _dbSet.ToListAsync();
         }
 
-        public IQueryable<T> GetAsQueryable()
+        public virtual IQueryable<T> GetAsQueryable()
         {
             return _dbSet.AsQueryable();
         }
 
-        public async Task<T> GetById(Guid id)
+        public virtual async Task<T> GetById(Guid id)
         {
             return await _dbSet.FirstOrDefaultAsync(entities=>entities.Id.Equals(id));
         }
 
-        public async Task InsertMany(IEnumerable<T> entities)
+        public virtual async Task InsertMany(IEnumerable<T> entities)
         {
             await _dbSet.AddRangeAsync(entities);
         }
 
-        public async Task InsertOne(T entity)
+        public virtual async Task InsertOne(T entity)
         {
             await _dbSet.AddAsync(entity); 
+        }
+
+        public async Task<T?> GetByIdAsNoTracking(Guid id)
+        {
+            return await _dbSet.AsNoTracking().FirstOrDefaultAsync(entities => entities.Id.Equals(id));
+        }
+
+        //Task<IQueryable<T?>> IRepository<T>.FindBy()
+        //{
+        //    //??
+        //}
+
+        public async Task<int> Count()
+        {
+            return await _dbSet.CountAsync();
+        }
+
+        public async Task Update(T entity)
+        {
+            _dbSet.Update(entity);
+        }
+
+        public async Task Patch(Guid id, List<PatchDto> patchDtos)
+        {
+            var entity =await GetById(id);
+            if(entity != null)
+            {
+                var nameValuePairProperties = patchDtos.ToDictionary(
+                        k => k.PropertyName,
+                        v => v.PropertyName);
+                var dbEntityEntry=_dbContext.Entry(entity);
+                dbEntityEntry.CurrentValues.SetValues(nameValuePairProperties);
+                dbEntityEntry.State = EntityState.Modified;
+            }
+            else
+            {
+                throw new ArgumentException("Incorrect id for delete", nameof(id));
+            }
         }
     }
 }
