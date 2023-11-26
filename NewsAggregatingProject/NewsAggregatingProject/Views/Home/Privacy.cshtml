@@ -1,6 +1,19 @@
-﻿@{
-    ViewData["Title"] = "Privacy Policy";
+﻿@model List<NewsModel>;
+@{
+    ViewData["Title"] = "News";
 }
-<h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<div class="text-center">
+    <h1 class="display-4">News</h1>
+</div>
+
+<div class="row alugn-items-start">
+    @for (int i = 0; i < Model.Count; i++)
+    {
+        <div>
+            <p>@Html.DisplayNameFor(list=>list[i].Id)</p>
+            <p>@Html.DisplayFor(model=>model[i].Content)</p>
+        </div>
+    }
+
+</div>

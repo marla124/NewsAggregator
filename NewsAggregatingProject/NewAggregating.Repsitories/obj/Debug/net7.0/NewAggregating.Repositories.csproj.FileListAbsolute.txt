@@ -13,3 +13,5 @@ C:\Users\Брест\source\repos\NewsAggregator\NewsAggregatingProject\NewAggreg
 C:\Users\Брест\source\repos\NewsAggregator\NewsAggregatingProject\NewAggregating.Repsitories\obj\Debug\net7.0\refint\NewAggregating.Repositories.dll
 C:\Users\Брест\source\repos\NewsAggregator\NewsAggregatingProject\NewAggregating.Repsitories\obj\Debug\net7.0\NewAggregating.Repositories.pdb
 C:\Users\Брест\source\repos\NewsAggregator\NewsAggregatingProject\NewAggregating.Repsitories\obj\Debug\net7.0\ref\NewAggregating.Repositories.dll
+C:\Users\Брест\source\repos\NewsAggregator\NewsAggregatingProject\NewAggregating.Repsitories\bin\Debug\net7.0\NewsAggregatingProject.Core.dll
+C:\Users\Брест\source\repos\NewsAggregator\NewsAggregatingProject\NewAggregating.Repsitories\bin\Debug\net7.0\NewsAggregatingProject.Core.pdb

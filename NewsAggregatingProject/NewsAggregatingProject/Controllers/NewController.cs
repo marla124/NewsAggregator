@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using NewAggregating.Repositories;
 using NewsAggregatingProject.MVC7.Models;
 
@@ -16,12 +17,15 @@ namespace NewsAggregatingProject.MVC7.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            //var articlesList = _unitOfWork.Repository.GetNewsWithSource()
-            //    .Select(news => new NewsModel()
-            //    {
-            //        Id = news.Id,
-            //        Title = news.Title
-            //    };
+            var articlesList = _unitOfWork.NewRepository
+                .FindBy(news => !string.IsNullOrEmpty(news.Title), news => news.Source)
+                .Select(news => new NewsModel()
+                {
+                    Id = news.Id,
+                    Title = news.Title,
+                    Content = news.ContentNew
+                }).ToListAsync();
+                
                 return View();
 
         }

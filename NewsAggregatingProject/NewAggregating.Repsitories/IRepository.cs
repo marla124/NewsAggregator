@@ -3,6 +3,7 @@ using NewsAggregatingProject.Data.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -13,7 +14,8 @@ namespace NewAggregating.Repositories
         Task<T?> GetById(Guid id);
         Task<T?> GetByIdAsNoTracking(Guid id);
 
-        //Task<IQueryable<T?>> FindBy();
+        IQueryable<T> FindBy(Expression<Func<T, bool>> wherePredicate,
+                params Expression<Func<T, object>>[] includes);
         IQueryable<T?> GetAsQueryable();
 
         Task InsertMany(IEnumerable<T?> entities);

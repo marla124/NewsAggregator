@@ -1,8 +1,16 @@
-﻿@{
+﻿@using NewsAggregatingProject.MVC7.HtmlHelpers;
+@using NewsAggregatingProject.MVC7.TagHelpers;
+@{
     ViewData["Title"] = "Home Page";
+    Layout="_Layout";
 }
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<watch></watch>
+<div class="text-center">
+    @Html.CreateList(new[] {"123","321","456"})
+
 </div>

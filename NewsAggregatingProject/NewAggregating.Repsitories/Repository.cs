@@ -4,6 +4,7 @@ using NewsAggregatingProject.Core;
 using NewsAggregatingProject.Data;
 using NewsAggregatingProject.Data.Entities;
 using System.Data;
+using System.Linq.Expressions;
 
 namespace NewAggregating.Repsitories
 {
@@ -70,10 +71,18 @@ namespace NewAggregating.Repsitories
             return await _dbSet.AsNoTracking().FirstOrDefaultAsync(entities => entities.Id.Equals(id));
         }
 
-        //Task<IQueryable<T?>> IRepository<T>.FindBy()
-        //{
-        //    //??
-        //}
+        public IQueryable<T> FindBy(Expression<Func<T, bool>> wherePredicate,
+            params Expression<Func<T, object>>[] includes)
+        {
+            var resultQuery = _dbSet.Where(wherePredicate);
+            if (includes.Any())
+            {
+                resultQuery = includes.Aggregate(resultQuery,
+                    (current, include)
+                        => current.Include(include));
+            }
+            return resultQuery;
+        }
 
         public async Task<int> Count()
         {

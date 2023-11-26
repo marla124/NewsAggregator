@@ -78,3 +78,5 @@ C:\Users\Брест\source\repos\NewsAggregator\NewsAggregatingProject\NewsAggre
 C:\Users\Брест\source\repos\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject\obj\Debug\net7.0\NewsAggregatingProject.MVC7.pdb
 C:\Users\Брест\source\repos\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject\obj\Debug\net7.0\NewsAggregatingProject.MVC7.genruntimeconfig.cache
 C:\Users\Брест\source\repos\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject\obj\Debug\net7.0\ref\NewsAggregatingProject.MVC7.dll
+C:\Users\Брест\source\repos\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject\bin\Debug\net7.0\NewsAggregatingProject.Core.dll
+C:\Users\Брест\source\repos\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject\bin\Debug\net7.0\NewsAggregatingProject.Core.pdb

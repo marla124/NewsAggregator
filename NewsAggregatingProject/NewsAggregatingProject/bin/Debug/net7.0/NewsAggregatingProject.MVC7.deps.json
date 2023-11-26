@@ -558,10 +558,16 @@
       },
       "NewAggregating.Repositories/1.0.0": {
         "dependencies": {
+          "NewsAggregatingProject.Core": "1.0.0",
           "NewsAggregatingProject.Data": "1.0.0"
         },
         "runtime": {
           "NewAggregating.Repositories.dll": {}
+        }
+      },
+      "NewsAggregatingProject.Core/1.0.0": {
+        "runtime": {
+          "NewsAggregatingProject.Core.dll": {}
         }
       },
       "NewsAggregatingProject.Data/1.0.0": {
@@ -1002,6 +1008,11 @@
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
     },
     "NewAggregating.Repositories/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "NewsAggregatingProject.Core/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
