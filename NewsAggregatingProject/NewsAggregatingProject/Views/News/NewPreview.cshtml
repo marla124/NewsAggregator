@@ -1,0 +1,17 @@
+﻿﻿
+@model NewsModel
+@{
+    Layout = null;
+}
+
+<div class="col-12 col-sm-12 col-lg-6">
+    <h4>@Model.Title</h4>
+    <p>@Model.Description</p>
+    @if (@Model.RatingScale.HasValue)
+    {
+        <span>@Model.RatingScale</span>
+    }
+    <span>@Model.DataAndTime</span>
+    <span><i>@Model.Source</i></span>
+    @* <a asp-action="Details" asp-route-id="@Model.Id">Details</a> *@
+</div>

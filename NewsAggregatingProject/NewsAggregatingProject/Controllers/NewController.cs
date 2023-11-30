@@ -14,20 +14,27 @@ namespace NewsAggregatingProject.MVC7.Controllers
             _unitOfWork = unitOfWork;
         }
 
-        [HttpGet]
-        public IActionResult Index()
+        [HttpPost]
+        public async Task<IActionResult> Index()
         {
-            var articlesList = _unitOfWork.NewRepository
-                .FindBy(news => !string.IsNullOrEmpty(news.Title), news => news.Source)
+            var newsList = await _unitOfWork.NewRepository
+                .FindBy(article => !string.IsNullOrEmpty(article.Title),
+                    news => news.Source)
                 .Select(news => new NewsModel()
                 {
                     Id = news.Id,
+                    DataAndTime = news.DataAndTime,
+                    RatingScale = news.RatingScale.Status,
                     Title = news.Title,
-                    Content = news.ContentNew
-                }).ToListAsync();
-                
-                return View();
+                    Source = news.Source.Name,
+                    Description = news.Description,
+                })
+                .ToListAsync();
 
+            
+
+            return View(newsList);
         }
     }
 }
+

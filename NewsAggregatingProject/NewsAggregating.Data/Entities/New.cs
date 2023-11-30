@@ -6,6 +6,7 @@
         public Guid Id_source { get; set; }
         public Guid Id_category { get; set; }
         public Guid Id_characteristic { get; set; }
+        public string Description { get; set; }
         public string Title { get; set; }
         public string ContentNew { get; set; }
         public DateTime DataAndTime { get; set; }
