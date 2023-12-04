@@ -1,9 +1,8 @@
 ﻿using Microsoft.AspNetCore.Razor.TagHelpers;
-using System;
 
-namespace NewsAggregatingProject.MVC7.TagHelpers
+namespace NewsAggregatingProject.TagHelpers
 {
-    public class WatchTagHelper:TagHelper
+    public class WatchTagHelper : TagHelper
     {
         public override void Process(TagHelperContext context, TagHelperOutput output)
         {

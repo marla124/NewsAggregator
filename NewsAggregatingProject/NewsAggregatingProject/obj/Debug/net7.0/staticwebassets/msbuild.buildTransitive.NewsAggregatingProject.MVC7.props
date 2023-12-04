@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\NewsAggregatingProject.MVC7.props" />
-</Project>

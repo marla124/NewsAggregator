@@ -1,29 +1,29 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using NewAggregating.Repositories;
-using NewsAggregatingProject.MVC7.Models;
-using NewsAggregatingProject.MVC7.Services;
+using NewsAggregatingProject.Models;
+using NewsAggregatingProject.Repositories;
+using NewsAggregatingProject.Services;
 using System.Diagnostics;
 
-namespace NewsAggregatingProject.MVC7.Controllers
+namespace NewsAggregatingProject.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
         private readonly IUnitOfWork _unitOfWork;
 
-        //private readonly IDbInitializer _dbInitializer;
+        private readonly IDbInitializer _dbInitializer;
 
-        public HomeController(ILogger<HomeController> logger, IUnitOfWork unitOfWork/*IDbInitializer dbInitializer*/)
+        public HomeController(ILogger<HomeController> logger, IUnitOfWork unitOfWork, IDbInitializer dbInitializer)
         {
             _logger = logger;
             _unitOfWork = unitOfWork;
-            //_dbInitializer = dbInitializer;
+            _dbInitializer = dbInitializer;
         }
 
         public async Task<IActionResult> Index()
         {
-            //await _dbInitializer.InitDbWithTestValues();
+            await _dbInitializer.InitDbWithTestValues();
             return View();
         }
 
@@ -43,7 +43,7 @@ namespace NewsAggregatingProject.MVC7.Controllers
         {
             var newsList = _unitOfWork.NewRepository
                 .FindBy(news => !string.IsNullOrEmpty(news.Title), news => news.Source)
-                .Select(news => new NewsModel()
+                .Select(news => new NewModel()
                 {
                     Id = news.Id,
                     Title = news.Title,

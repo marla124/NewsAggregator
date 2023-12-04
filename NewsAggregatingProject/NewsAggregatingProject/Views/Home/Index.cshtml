@@ -1,8 +1,8 @@
-﻿@using NewsAggregatingProject.MVC7.HtmlHelpers;
-@using NewsAggregatingProject.MVC7.TagHelpers;
+﻿@using NewsAggregatingProject.HtmlHelpers;
+@using NewsAggregatingProject.TagHelpers;
 @{
     ViewData["Title"] = "Home Page";
-    Layout="_Layout";
+    Layout = "_Layout";
 }
 
 <div class="text-center">
@@ -11,6 +11,6 @@
 </div>
 <watch></watch>
 <div class="text-center">
-    @Html.CreateList(new[] {"123","321","456"})
+    @Html.CreateList(new[] { "123", "321", "456" })
 
 </div>

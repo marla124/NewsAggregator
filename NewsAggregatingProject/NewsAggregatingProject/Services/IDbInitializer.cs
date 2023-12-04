@@ -1,9 +1,8 @@
-﻿
-namespace NewsAggregatingProject.MVC7.Services
+﻿namespace NewsAggregatingProject.Services
 {
     public interface IDbInitializer
     {
-        //Task InitDbWithTestValues();
-        //Task InsertArticles();
+        Task InitDbWithTestValues();
+        Task InsertArticles();
     }
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9Y4htHSDgRHSew5cWrze4XZNUQC3p7x4nMMbmPf970wTzRVleamMIJ7e8GHm49ubtbomlmJX5RmTEXrpPdmFTg==",
+  "dgSpecHash": "n/X5vwmSPYSLmW+I8m9cuWrvm04y6NBGhaH0O83l3gZefaBEKBIRE9QbvxlSUVmvRTIQItdJd8z2Jyu+e34JkA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Брест\\source\\repos\\NewsAggregator\\NewsAggregatingProject\\NewsAggregatingProject.Core\\NewsAggregatingProject.Core.csproj",
+  "projectFilePath": "C:\\Users\\Брест\\myprj\\NewsAggregatingProject\\NewsAggregatingProject.Core\\NewsAggregatingProject.Core.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

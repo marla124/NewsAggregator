@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using NewAggregating.Repositories;
-using NewsAggregatingProject.MVC7.Models;
+using NewsAggregatingProject.Models;
+using NewsAggregatingProject.Repositories;
 
-namespace NewsAggregatingProject.MVC7.Controllers
+namespace NewsAggregatingProject.Controllers
 {
     public class NewController : Controller
     {
@@ -14,13 +14,13 @@ namespace NewsAggregatingProject.MVC7.Controllers
             _unitOfWork = unitOfWork;
         }
 
-        [HttpPost]
+        [HttpGet]
         public async Task<IActionResult> Index()
         {
             var newsList = await _unitOfWork.NewRepository
-                .FindBy(article => !string.IsNullOrEmpty(article.Title),
+                .FindBy(news => !string.IsNullOrEmpty(news.Title),
                     news => news.Source)
-                .Select(news => new NewsModel()
+                .Select(news => new NewModel()
                 {
                     Id = news.Id,
                     DataAndTime = news.DataAndTime,
@@ -31,9 +31,9 @@ namespace NewsAggregatingProject.MVC7.Controllers
                 })
                 .ToListAsync();
 
-            
 
-            return View(newsList);
+
+            return View();
         }
     }
 }

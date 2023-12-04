@@ -1,20 +1,19 @@
-using Microsoft.EntityFrameworkCore;
-using NewAggregating.Repositories;
-using NewAggregating.Repsitories;
 using NewsAggregatingProject.Data;
 using NewsAggregatingProject.Data.Entities;
-using NewsAggregatingProject.MVC7.Services;
+using NewsAggregatingProject.Services;
+using NewsAggregatingProject.Repositories;
+using Microsoft.EntityFrameworkCore;
 
-namespace NewsAggregatingProject.MVC7
+namespace NewsAggregatingProject
 {
     public class Program
     {
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-            const string ConnString = "Server=DESKTOP-2FD6QEU;DataBase=NewAggregator;Trusted_Connection=True;TrustServerCertificate=True;";
+            const string ConnString = "Server=DESKTOP-2FD6QEU;DataBase=NewAggregatorDB;Trusted_Connection=True;TrustServerCertificate=True;";
 
-            builder.Services.AddDbContext<NewsAggregatingDBContext>(opt =>opt.UseSqlServer(ConnString));
+            builder.Services.AddDbContext<NewsAggregatingDBContext>(opt => opt.UseSqlServer(ConnString));
             // Add services to the container.
             builder.Services.AddScoped<IRepository<New>, Repository<New>>();
             builder.Services.AddScoped<IRepository<Source>, Repository<Source>>();
@@ -24,7 +23,7 @@ namespace NewsAggregatingProject.MVC7
             builder.Services.AddScoped<IRepository<Comment>, Repository<Comment>>();
             builder.Services.AddScoped<IRepository<Category>, Repository<Category>>();
 
-
+            builder.Services.AddScoped<IDbInitializer, DbInitializer>();
             builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             builder.Services.AddControllersWithViews();
