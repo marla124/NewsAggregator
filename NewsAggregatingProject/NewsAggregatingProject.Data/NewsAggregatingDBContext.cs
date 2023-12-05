@@ -7,7 +7,7 @@ namespace NewsAggregatingProject.Data
     {
         //private const string ConnString = "Server=DESKTOP-2FD6QEU;DataBase=NewAggregator;TrustedConnection=True;";
         public DbSet<Category> Categories { get; set; }
-        public DbSet<New> News { get; set; }
+        public DbSet<News> News { get; set; }
         public DbSet<Source> Sources { get; set; }
         public DbSet<RatingScale> RatingScales { get; set; }
         public DbSet<User> Users { get; set; }

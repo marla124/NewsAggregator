@@ -4,6 +4,6 @@
     {
         public Guid Id { get; set; }
         public float? Status { get; set; }
-        public List<New> News { get; set; }
+        public List<News> News { get; set; }
     }
 }

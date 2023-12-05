@@ -5,7 +5,7 @@ namespace NewsAggregatingProject.Repositories
 {
     public interface IUnitOfWork
     {
-        IRepository<New> NewRepository { get; }
+        IRepository<News> NewRepository { get; }
         IRepository<Source> SourceRepository { get; }
         IRepository<Comment> CommentRepository { get; }
         IRepository<RatingScale> RatingScaleRepository { get; }

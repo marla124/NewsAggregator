@@ -2,7 +2,7 @@
 {
     public interface IDbInitializer
     {
-        Task InitDbWithTestValues();
-        Task InsertArticles();
+        //Task InitDbWithTestValues();
+        //Task InsertArticles();
     }
 }

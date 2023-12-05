@@ -9,63 +9,63 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = NewsAggregatingProject
 build_property.RootNamespace = NewsAggregatingProject
-build_property.ProjectDir = C:\Users\Брест\myprj\NewsAggregatingProject\NewsAggregatingProject\
+build_property.ProjectDir = C:\Users\Брест\source\repos\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Брест\myprj\NewsAggregatingProject\NewsAggregatingProject
+build_property.MSBuildProjectDirectory = C:\Users\Брест\source\repos\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Брест/myprj/NewsAggregatingProject/NewsAggregatingProject/Views/Home/Index.cshtml]
+[C:/Users/Брест/source/repos/NewsAggregator/NewsAggregatingProject/NewsAggregatingProject/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Брест/myprj/NewsAggregatingProject/NewsAggregatingProject/Views/Home/Privacy.cshtml]
+[C:/Users/Брест/source/repos/NewsAggregator/NewsAggregatingProject/NewsAggregatingProject/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Брест/myprj/NewsAggregatingProject/NewsAggregatingProject/Views/New/Create.cshtml]
+[C:/Users/Брест/source/repos/NewsAggregator/NewsAggregatingProject/NewsAggregatingProject/Views/New/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3XENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Брест/myprj/NewsAggregatingProject/NewsAggregatingProject/Views/New/Details.cshtml]
+[C:/Users/Брест/source/repos/NewsAggregator/NewsAggregatingProject/NewsAggregatingProject/Views/New/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3XERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Брест/myprj/NewsAggregatingProject/NewsAggregatingProject/Views/New/Edit.cshtml]
+[C:/Users/Брест/source/repos/NewsAggregator/NewsAggregatingProject/NewsAggregatingProject/Views/New/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3XEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Брест/myprj/NewsAggregatingProject/NewsAggregatingProject/Views/New/Favorite.cshtml]
+[C:/Users/Брест/source/repos/NewsAggregator/NewsAggregatingProject/NewsAggregatingProject/Views/New/Favorite.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3XEZhdm9yaXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Брест/myprj/NewsAggregatingProject/NewsAggregatingProject/Views/New/Index.cshtml]
+[C:/Users/Брест/source/repos/NewsAggregator/NewsAggregatingProject/NewsAggregatingProject/Views/New/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Брест/myprj/NewsAggregatingProject/NewsAggregatingProject/Views/New/NewPreview.cshtml]
+[C:/Users/Брест/source/repos/NewsAggregator/NewsAggregatingProject/NewsAggregatingProject/Views/New/NewPreview.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3XE5ld1ByZXZpZXcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Брест/myprj/NewsAggregatingProject/NewsAggregatingProject/Views/Shared/Error.cshtml]
+[C:/Users/Брест/source/repos/NewsAggregator/NewsAggregatingProject/NewsAggregatingProject/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Брест/myprj/NewsAggregatingProject/NewsAggregatingProject/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Брест/source/repos/NewsAggregator/NewsAggregatingProject/NewsAggregatingProject/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Брест/myprj/NewsAggregatingProject/NewsAggregatingProject/Views/_ViewImports.cshtml]
+[C:/Users/Брест/source/repos/NewsAggregator/NewsAggregatingProject/NewsAggregatingProject/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Брест/myprj/NewsAggregatingProject/NewsAggregatingProject/Views/_ViewStart.cshtml]
+[C:/Users/Брест/source/repos/NewsAggregator/NewsAggregatingProject/NewsAggregatingProject/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Брест/myprj/NewsAggregatingProject/NewsAggregatingProject/Views/Shared/_Layout.cshtml]
+[C:/Users/Брест/source/repos/NewsAggregator/NewsAggregatingProject/NewsAggregatingProject/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-049dm0tbed

@@ -66,16 +66,13 @@ namespace NewsAggregatingProject.Data.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    IdSource = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    IdCategory = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    IdRating = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    SourceId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ContentNew = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     DataAndTime = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    SourceId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    RatingScaleId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    CategoryId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                    CategoryId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    RatingScaleId = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -84,14 +81,12 @@ namespace NewsAggregatingProject.Data.Migrations
                         name: "FK_News_Categories_CategoryId",
                         column: x => x.CategoryId,
                         principalTable: "Categories",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_News_RatingScales_RatingScaleId",
                         column: x => x.RatingScaleId,
                         principalTable: "RatingScales",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_News_Sources_SourceId",
                         column: x => x.SourceId,
@@ -108,7 +103,6 @@ namespace NewsAggregatingProject.Data.Migrations
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Username = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    IdStatus = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     UserStatusId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
                 },
                 constraints: table =>
@@ -127,19 +121,23 @@ namespace NewsAggregatingProject.Data.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    IdUser = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Text = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     DateAndTime = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    IdNew = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    NewId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                    NewsId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    ParentCommentId = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Comments", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Comments_News_NewId",
-                        column: x => x.NewId,
+                        name: "FK_Comments_Comments_ParentCommentId",
+                        column: x => x.ParentCommentId,
+                        principalTable: "Comments",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_Comments_News_NewsId",
+                        column: x => x.NewsId,
                         principalTable: "News",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -152,9 +150,14 @@ namespace NewsAggregatingProject.Data.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Comments_NewId",
+                name: "IX_Comments_NewsId",
                 table: "Comments",
-                column: "NewId");
+                column: "NewsId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Comments_ParentCommentId",
+                table: "Comments",
+                column: "ParentCommentId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Comments_UserId",

@@ -12,7 +12,7 @@ using NewsAggregatingProject.Data;
 namespace NewsAggregatingProject.Data.Migrations
 {
     [DbContext(typeof(NewsAggregatingDBContext))]
-    [Migration("20231204200150_FirstMigration")]
+    [Migration("20231205150851_FirstMigration")]
     partial class FirstMigration
     {
         /// <inheritdoc />
@@ -49,13 +49,10 @@ namespace NewsAggregatingProject.Data.Migrations
                     b.Property<DateTime>("DateAndTime")
                         .HasColumnType("datetime2");
 
-                    b.Property<Guid>("IdNew")
+                    b.Property<Guid>("NewsId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("IdUser")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("NewId")
+                    b.Property<Guid?>("ParentCommentId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Text")
@@ -67,20 +64,22 @@ namespace NewsAggregatingProject.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("NewId");
+                    b.HasIndex("NewsId");
+
+                    b.HasIndex("ParentCommentId");
 
                     b.HasIndex("UserId");
 
                     b.ToTable("Comments");
                 });
 
-            modelBuilder.Entity("NewsAggregatingProject.Data.Entities.New", b =>
+            modelBuilder.Entity("NewsAggregatingProject.Data.Entities.News", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("CategoryId")
+                    b.Property<Guid?>("CategoryId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("ContentNew")
@@ -94,16 +93,7 @@ namespace NewsAggregatingProject.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid>("IdCategory")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("IdRating")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("IdSource")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("RatingScaleId")
+                    b.Property<Guid?>("RatingScaleId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<Guid>("SourceId")
@@ -171,9 +161,6 @@ namespace NewsAggregatingProject.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid>("IdStatus")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<string>("Password")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -209,11 +196,15 @@ namespace NewsAggregatingProject.Data.Migrations
 
             modelBuilder.Entity("NewsAggregatingProject.Data.Entities.Comment", b =>
                 {
-                    b.HasOne("NewsAggregatingProject.Data.Entities.New", "New")
+                    b.HasOne("NewsAggregatingProject.Data.Entities.News", "News")
                         .WithMany("Comments")
-                        .HasForeignKey("NewId")
+                        .HasForeignKey("NewsId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.HasOne("NewsAggregatingProject.Data.Entities.Comment", "ParentComment")
+                        .WithMany("ChildComments")
+                        .HasForeignKey("ParentCommentId");
 
                     b.HasOne("NewsAggregatingProject.Data.Entities.User", "User")
                         .WithMany("Comments")
@@ -221,34 +212,28 @@ namespace NewsAggregatingProject.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("New");
+                    b.Navigation("News");
+
+                    b.Navigation("ParentComment");
 
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("NewsAggregatingProject.Data.Entities.New", b =>
+            modelBuilder.Entity("NewsAggregatingProject.Data.Entities.News", b =>
                 {
-                    b.HasOne("NewsAggregatingProject.Data.Entities.Category", "Category")
+                    b.HasOne("NewsAggregatingProject.Data.Entities.Category", null)
                         .WithMany("News")
-                        .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("CategoryId");
 
-                    b.HasOne("NewsAggregatingProject.Data.Entities.RatingScale", "RatingScale")
+                    b.HasOne("NewsAggregatingProject.Data.Entities.RatingScale", null)
                         .WithMany("News")
-                        .HasForeignKey("RatingScaleId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("RatingScaleId");
 
                     b.HasOne("NewsAggregatingProject.Data.Entities.Source", "Source")
                         .WithMany("News")
                         .HasForeignKey("SourceId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Category");
-
-                    b.Navigation("RatingScale");
 
                     b.Navigation("Source");
                 });
@@ -269,7 +254,12 @@ namespace NewsAggregatingProject.Data.Migrations
                     b.Navigation("News");
                 });
 
-            modelBuilder.Entity("NewsAggregatingProject.Data.Entities.New", b =>
+            modelBuilder.Entity("NewsAggregatingProject.Data.Entities.Comment", b =>
+                {
+                    b.Navigation("ChildComments");
+                });
+
+            modelBuilder.Entity("NewsAggregatingProject.Data.Entities.News", b =>
                 {
                     b.Navigation("Comments");
                 });

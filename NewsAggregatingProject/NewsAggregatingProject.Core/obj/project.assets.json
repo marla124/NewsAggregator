@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Брест\\myprj\\NewsAggregatingProject\\NewsAggregatingProject.Core\\NewsAggregatingProject.Core.csproj",
+      "projectUniqueName": "C:\\Users\\Брест\\source\\repos\\NewsAggregator\\NewsAggregatingProject\\NewsAggregatingProject.Core\\NewsAggregatingProject.Core.csproj",
       "projectName": "NewsAggregatingProject.Core",
-      "projectPath": "C:\\Users\\Брест\\myprj\\NewsAggregatingProject\\NewsAggregatingProject.Core\\NewsAggregatingProject.Core.csproj",
+      "projectPath": "C:\\Users\\Брест\\source\\repos\\NewsAggregator\\NewsAggregatingProject\\NewsAggregatingProject.Core\\NewsAggregatingProject.Core.csproj",
       "packagesPath": "C:\\Users\\Брест\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Брест\\myprj\\NewsAggregatingProject\\NewsAggregatingProject.Core\\obj\\",
+      "outputPath": "C:\\Users\\Брест\\source\\repos\\NewsAggregator\\NewsAggregatingProject\\NewsAggregatingProject.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

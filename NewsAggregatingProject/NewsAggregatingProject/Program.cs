@@ -15,7 +15,7 @@ namespace NewsAggregatingProject
 
             builder.Services.AddDbContext<NewsAggregatingDBContext>(opt => opt.UseSqlServer(ConnString));
             // Add services to the container.
-            builder.Services.AddScoped<IRepository<New>, Repository<New>>();
+            builder.Services.AddScoped<IRepository<News>, Repository<News>>();
             builder.Services.AddScoped<IRepository<Source>, Repository<Source>>();
             builder.Services.AddScoped<IRepository<User>, Repository<User>>();
             builder.Services.AddScoped<IRepository<RatingScale>, Repository<RatingScale>>();
@@ -23,7 +23,7 @@ namespace NewsAggregatingProject
             builder.Services.AddScoped<IRepository<Comment>, Repository<Comment>>();
             builder.Services.AddScoped<IRepository<Category>, Repository<Category>>();
 
-            builder.Services.AddScoped<IDbInitializer, DbInitializer>();
+            //builder.Services.AddScoped<IDbInitializer, DbInitializer>();
             builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             builder.Services.AddControllersWithViews();

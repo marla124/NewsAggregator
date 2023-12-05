@@ -1,16 +1,17 @@
-﻿@model NewModel
+﻿@model List<NewModel>
 @{
-    Layout = null;
+    ViewData["Title"] = "News";
 }
 
-<div class="col-12 col-sm-12 col-lg-6">
-    <h4>@Model.Title</h4>
-    <div>@Html.Raw(Model.Description)</div>
+<div class="text-center">
+    <h2>News</h2>
+</div>
 
-    @if (@Model.RatingScale.HasValue)
-    {
-        <span>@Model.RatingScale</span>
-    }
-    <span>@Model.DataAndTime</span>
-    <span><i>@Model.Source</i></span>
+<div class="container text-center">
+    <div class="row align-items-start">
+        @foreach (var item in Model)
+        {
+            await Html.RenderPartialAsync("NewPreview", item);
+        }
+    </div>
 </div>

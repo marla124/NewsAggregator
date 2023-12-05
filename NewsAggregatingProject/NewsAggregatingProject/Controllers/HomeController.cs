@@ -12,18 +12,18 @@ namespace NewsAggregatingProject.Controllers
         private readonly ILogger<HomeController> _logger;
         private readonly IUnitOfWork _unitOfWork;
 
-        private readonly IDbInitializer _dbInitializer;
+        //private readonly IDbInitializer _dbInitializer;
 
-        public HomeController(ILogger<HomeController> logger, IUnitOfWork unitOfWork, IDbInitializer dbInitializer)
+        public HomeController(ILogger<HomeController> logger, IUnitOfWork unitOfWork /*IDbInitializer dbInitializer*/)
         {
             _logger = logger;
             _unitOfWork = unitOfWork;
-            _dbInitializer = dbInitializer;
+            //_dbInitializer = dbInitializer;
         }
 
         public async Task<IActionResult> Index()
         {
-            await _dbInitializer.InitDbWithTestValues();
+            //await _dbInitializer.InitDbWithTestValues();
             return View();
         }
 

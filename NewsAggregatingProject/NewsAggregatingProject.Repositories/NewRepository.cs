@@ -4,14 +4,14 @@ using Microsoft.EntityFrameworkCore;
 
 namespace NewsAggregatingProject.Repositories
 {
-    public class NewRepository : Repository<New>, INewRepository
+    public class NewRepository : Repository<News>, INewRepository
     {
         public NewRepository(NewsAggregatingDBContext dBContext) : base(dBContext)
         {
 
         }
 
-        public async override Task<List<New>> FindBy()
+        public async override Task<List<News>> FindBy()
         {
             return await _dbSet.Where(news => !string.IsNullOrEmpty(news.Title)).ToListAsync();
         }
