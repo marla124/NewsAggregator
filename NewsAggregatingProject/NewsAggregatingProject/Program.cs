@@ -14,9 +14,8 @@ namespace NewsAggregatingProject
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-            const string ConnString = "Server=DESKTOP-2FD6QEU;DataBase=NewAggregatorDB;Trusted_Connection=True;TrustServerCertificate=True;";
-
-            builder.Services.AddDbContext<NewsAggregatingDBContext>(opt => opt.UseSqlServer(ConnString));
+            var connectionString= builder.Configuration.GetConnectionString("Default");
+            builder.Services.AddDbContext<NewsAggregatingDBContext>(opt => opt.UseSqlServer(connectionString));
             // Add services to the container.
 
             builder.Services
