@@ -3,6 +3,9 @@ using NewsAggregatingProject.Data.Entities;
 using NewsAggregatingProject.Services;
 using NewsAggregatingProject.Repositories;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
+using FluentValidation;
+using NewsAggregatingProject.FluentValidation;
 
 namespace NewsAggregatingProject
 {
@@ -15,6 +18,9 @@ namespace NewsAggregatingProject
 
             builder.Services.AddDbContext<NewsAggregatingDBContext>(opt => opt.UseSqlServer(ConnString));
             // Add services to the container.
+
+            builder.Services
+                .AddValidatorsFromAssemblyContaining<UserRegisterValidator>();
             builder.Services.AddScoped<IRepository<News>, Repository<News>>();
             builder.Services.AddScoped<IRepository<Source>, Repository<Source>>();
             builder.Services.AddScoped<IRepository<User>, Repository<User>>();

@@ -1,0 +1,67 @@
+﻿@model UserRegisterModel
+@{
+    ViewBag.Title = "Register User";
+    Layout = "_Layout";
+}
+
+<h2>Register</h2>
+</div>
+<form asp-controller="User" asp-action="Register" method="post">
+    <div class="row">
+        <div class="col-12 col-md-4 col-lg-3">
+            <input type="submit" class="btn btn-primary" value="Create" />
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4">
+                <label asp-for="Email" class="form-label">Email</label>
+                <input type="text" class="form-control" asp-for="Email"></input>
+                <span asp-validation-for="Email"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4">
+                <label asp-for="Password" class="form-label">Password</label>
+                <input type="text" class="form-control" asp-for="Password"></input>
+                <span asp-validation-for="Password"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4">
+                <label asp-for="PasswordConfirmation" class="form-label">PasswordConfirmation</label>
+                <input type="text" class="form-control" asp-for="PasswordConfirmation"></input>
+                <span asp-validation-for="PasswordConfirmation"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4">
+                <label asp-for="Age" class="form-label">Age</label>
+                <input type="text" class="form-control" asp-for="Age"></input>
+                <span asp-validation-for="Age"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4">
+                <label asp-for="FirstName" class="form-label">FirstName</label>
+                <input type="text" class="form-control" asp-for="FirstName"></input>
+                <span asp-validation-for="FirstName"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4">
+                <label asp-for="LastName" class="form-label">LastName</label>
+                <input type="text" class="form-control" asp-for="LastName"></input>
+                <span asp-validation-for="LastName"></span>
+            </div>
+        </div>
+    </div>
+</form>
+</div>
+
+@section Scripts
+        {
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+
+}

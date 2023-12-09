@@ -8,6 +8,6 @@
         public string Description { get; set; }
         public DateTime DataAndTime { get; set; }
         public float? RatingScale { get; set; }
-        public string Source { get; set; }
+        public Guid SourceId { get; set; }
     }
 }

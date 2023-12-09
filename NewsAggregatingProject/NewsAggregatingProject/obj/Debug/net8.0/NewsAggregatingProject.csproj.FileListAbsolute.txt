@@ -283,3 +283,7 @@ C:\Users\Брест\source\repos\NewsAggregator\NewsAggregatingProject\NewsAggre
 C:\Users\Брест\source\repos\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject\obj\Debug\net8.0\NewsAggregatingProject.pdb
 C:\Users\Брест\source\repos\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject\obj\Debug\net8.0\NewsAggregatingProject.genruntimeconfig.cache
 C:\Users\Брест\source\repos\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject\obj\Debug\net8.0\ref\NewsAggregatingProject.dll
+C:\Users\Брест\source\repos\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject\bin\Debug\net8.0\FluentValidation.dll
+C:\Users\Брест\source\repos\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
+C:\Users\Брест\source\repos\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\Брест\source\repos\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject\obj\Debug\net8.0\NewsAggregatingProject.MvcApplicationPartsAssemblyInfo.cs
