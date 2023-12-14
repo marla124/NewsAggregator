@@ -1,0 +1,29 @@
+﻿@model List<SourceModel>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Go to Source</th>
+            <th scope="col">Get News</th>
+        </tr>
+    </thead>
+    <tbody>
+            @foreach(var source in Model)
+            {
+                <tr>
+                    <th scope="row">@source.Id</th>
+                    <td>@source.Name</td>
+                    <td>
+                        <a href="@source.Url" class="btn btn-light">Go to source</a>
+                    </td>
+                    <td>
+                        <a asp-controller="News" 
+                        asp-action="GetNews" 
+                        asp-route-articleSourceId="@source.Id" asp-route-sourceId="@source.Id" class="btn btn-primary">Get News</a>
+                    </td>
+                </tr>
+            }
+    </tbody>
+</table> 

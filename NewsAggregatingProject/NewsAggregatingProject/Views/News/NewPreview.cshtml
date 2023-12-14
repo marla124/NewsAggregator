@@ -1,0 +1,20 @@
+﻿@model NewModel
+@{
+    Layout = null;
+}
+
+<div class="col-12 col-sm-12 col-lg-6">
+    <h4>@Model.Title</h4>
+    <div>@Html.Raw(Model.Description)</div>
+
+    @if (@Model.RatingScale.HasValue)
+    {
+        <span>@Model.RatingScale</span>
+    }
+    <span>@Model.DataAndTime</span>
+    @* <span><i>@Model.Source</i></span> *@
+    <a asp-action="Details" asp-route-id="@Model.Id">Details</a>
+    @*  <span>
+    <a asp-controller="Article" asp-action="Details" asp-route-id="@Model.Id" class="link-primary">Detail</a>
+    </span> *@
+</div>

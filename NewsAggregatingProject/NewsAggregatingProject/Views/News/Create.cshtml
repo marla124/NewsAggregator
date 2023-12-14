@@ -1,0 +1,47 @@
+﻿@model CreateNewModel
+@{
+    ViewData["Title"] = "News";
+}
+
+<div class="container">
+<div class="text-center">
+    <h2>Create News</h2>
+</div>
+    <form asp-controller="New" asp-action="Create" method="post">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4">
+                <label asp-for="Title" class="form-label">Title</label>
+                <input type="text" class="form-control" asp-for="Title">
+                <span asp-validation-for="Title"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4">
+                <label asp-for="Description" class="form-label">Description</label>
+                <textarea class="form-control" asp-for="Description"></textarea>
+                <span asp-validation-for="Description"></span>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4">
+                <label asp-for="SourceId" class="form-label">Source</label>
+                <select asp-items="Model.AvailableSources" class="form-control" asp-for="SourceId"></select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-4 col-lg-3">
+                <input type="submit" class="btn btn-primary" value="Create" />
+            </div>
+        </div>
+    </form>
+</div>
+
+        @section Scripts
+        {
+            <script src="~/lib/jquery/dist/jquery.min.js"></script>
+            <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+            <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+
+        }

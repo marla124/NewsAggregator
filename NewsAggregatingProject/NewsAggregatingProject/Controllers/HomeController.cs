@@ -18,6 +18,7 @@ namespace NewsAggregatingProject.Controllers
         {
             _logger = logger;
             _unitOfWork = unitOfWork;
+            _logger.LogInformation("Hello from HomeController. Its works");
             //_dbInitializer = dbInitializer;
         }
 

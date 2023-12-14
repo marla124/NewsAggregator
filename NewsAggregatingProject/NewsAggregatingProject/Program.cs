@@ -6,6 +6,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using FluentValidation;
 using NewsAggregatingProject.FluentValidation;
+using Serilog;
+using Microsoft.AspNetCore.Mvc;
+using Serilog.Events;
 
 namespace NewsAggregatingProject
 {
@@ -17,6 +20,20 @@ namespace NewsAggregatingProject
             var connectionString= builder.Configuration.GetConnectionString("Default");
             builder.Services.AddDbContext<NewsAggregatingDBContext>(opt => opt.UseSqlServer(connectionString));
             // Add services to the container.
+
+            var logger = new LoggerConfiguration()
+                .MinimumLevel.Override("Microsoft", LogEventLevel.Information)
+                .WriteTo
+                .File("log.txt", rollingInterval: RollingInterval.Day,
+                    restrictedToMinimumLevel: LogEventLevel.Information)
+                .WriteTo
+                .Console()
+                .Enrich.FromLogContext()
+
+                .CreateLogger();
+
+            builder.Logging.ClearProviders();
+            builder.Logging.AddSerilog(logger);
 
             builder.Services
                 .AddValidatorsFromAssemblyContaining<UserRegisterValidator>();
@@ -45,10 +62,13 @@ namespace NewsAggregatingProject
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            //app.UseSerilogRequestLogging();
+
 
             app.UseRouting();
+            app.UseAuthentication();
+            app.Map("/NotFound", ()=>new NotFoundResult());
 
-            app.UseAuthorization();
 
             app.MapControllerRoute(
                 name: "default",

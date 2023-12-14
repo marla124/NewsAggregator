@@ -131,11 +131,11 @@ namespace NewsAggregatingProject.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("Description")
+                    b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Name")
+                    b.Property<string>("RSSUrl")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

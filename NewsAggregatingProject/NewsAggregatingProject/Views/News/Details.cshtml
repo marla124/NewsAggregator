@@ -1,0 +1,30 @@
+﻿@model NewModel
+@{
+    ViewData["Title"] = "News";
+}
+<div class="container text-center">
+    <h2>@Model.Title</h2>
+</div>
+<div class="row">
+    <div class="col-12">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut pretium velit, sed condimentum velit. Duis tristique lectus at lorem euismod vestibulum. Suspendisse sodales tempor orci vitae tempor. In gravida sem vel est ullamcorper luctus. Sed a maximus lectus, eget rutrum nibh. Duis aliquet at neque et ornare. Sed ac ligula id orci vehicula egestas. Aenean eu gravida lacus. Duis fringilla lorem ac ullamcorper vestibulum. Maecenas bibendum mi quis nulla scelerisque, a feugiat magna dictum. Nam fermentum nisi quis velit molestie vehicula. Aliquam rhoncus sem ac pulvinar auctor.
+        </p>
+        <p>
+            Curabitur nec augue a purus posuere faucibus. Morbi tincidunt, elit vel dictum consequat, diam dolor condimentum massa, accumsan interdum elit est non enim. Integer dapibus lectus eget dui ullamcorper vestibulum. Vestibulum feugiat nibh et nibh venenatis, nec lacinia leo vehicula. Ut mattis malesuada elementum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vestibulum rutrum sapien nec eleifend.
+        </p>
+
+        <p>
+            Nullam ut convallis arcu. Integer porttitor consectetur urna, placerat semper ligula pellentesque a. Proin pulvinar viverra arcu, vel congue nibh facilisis nec. Fusce gravida urna eget blandit tincidunt. Fusce felis orci, ultrices in magna sed, commodo malesuada enim. Fusce magna sapien, pretium a ex ut, malesuada cursus elit. Nam elementum faucibus sapien, non aliquam enim mollis vel. Aliquam erat volutpat. Nunc fringilla vitae arcu id imperdiet. Pellentesque dignissim justo nec purus molestie, at varius dui efficitur.
+        </p>
+        <p>
+            Aliquam erat volutpat. Vestibulum auctor eros elit, a eleifend metus gravida vel. Duis libero nisi, auctor vel ultrices non, cursus vel magna. Pellentesque convallis aliquet auctor. Aenean vitae venenatis tortor. Pellentesque tempus enim a nisi sollicitudin pulvinar. Suspendisse mollis hendrerit nibh eget semper. Nunc ut blandit turpis. Fusce euismod sit amet turpis nec scelerisque. Sed finibus vitae risus id facilisis. Morbi maximus odio eget nunc rutrum, vitae consequat dui auctor. Nullam malesuada, mauris eu rhoncus aliquam, mauris ante tempor nunc, sit amet pulvinar erat velit a nibh. Donec odio risus, sollicitudin eu leo et, viverra tristique tortor. Nullam bibendum vulputate orci quis porttitor. Pellentesque vitae dui placerat, cursus tortor vitae, scelerisque turpis.
+        </p>
+        <p>
+            Mauris vehicula ut massa auctor scelerisque. Vestibulum sagittis sed dolor eget molestie. Sed pharetra dolor scelerisque ante vulputate, eu rutrum enim gravida. Donec et pulvinar nulla, sed interdum leo. Nam pellentesque ex in varius mattis. Nullam gravida nisl vel odio iaculis rhoncus. Vestibulum enim leo, ultricies ut dignissim vel, posuere at libero. Duis efficitur dui erat, et egestas magna tempus sed. Donec sollicitudin sagittis arcu. Nulla finibus, sapien a vestibulum dignissim, felis massa venenatis erat, id interdum massa enim a risus. Nam ac ultricies justo. In semper hendrerit nulla sagittis euismod. Proin sit amet eros eget urna condimentum aliquam. Aenean mi magna, pharetra tincidunt felis viverra, eleifend pellentesque risus.
+        </p>
+    </div>
+</div>
+<div class="row">
+    <a asp-controller="New" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Edit</a>
+</div>
