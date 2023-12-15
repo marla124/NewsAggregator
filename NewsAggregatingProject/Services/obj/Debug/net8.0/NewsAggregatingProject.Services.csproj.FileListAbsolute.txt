@@ -1,0 +1,12 @@
+C:\Users\Брест\myprojectGIT\NewsAggregator\NewsAggregatingProject\Services\obj\Debug\net8.0\NewsAggregatingProject.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Брест\myprojectGIT\NewsAggregator\NewsAggregatingProject\Services\obj\Debug\net8.0\NewsAggregatingProject.Services.AssemblyInfoInputs.cache
+C:\Users\Брест\myprojectGIT\NewsAggregator\NewsAggregatingProject\Services\obj\Debug\net8.0\NewsAggregatingProject.Services.AssemblyInfo.cs
+C:\Users\Брест\myprojectGIT\NewsAggregator\NewsAggregatingProject\Services\obj\Debug\net8.0\NewsAggregatingProject.Services.csproj.CoreCompileInputs.cache
+C:\Users\Брест\myprojectGIT\NewsAggregator\NewsAggregatingProject\Services\obj\Debug\net8.0\NewsAggregatingProject.Services.sourcelink.json
+C:\Users\Брест\myprojectGIT\NewsAggregator\NewsAggregatingProject\Services\bin\Debug\net8.0\NewsAggregatingProject.Services.deps.json
+C:\Users\Брест\myprojectGIT\NewsAggregator\NewsAggregatingProject\Services\bin\Debug\net8.0\NewsAggregatingProject.Services.dll
+C:\Users\Брест\myprojectGIT\NewsAggregator\NewsAggregatingProject\Services\bin\Debug\net8.0\NewsAggregatingProject.Services.pdb
+C:\Users\Брест\myprojectGIT\NewsAggregator\NewsAggregatingProject\Services\obj\Debug\net8.0\NewsAggregatingProject.Services.dll
+C:\Users\Брест\myprojectGIT\NewsAggregator\NewsAggregatingProject\Services\obj\Debug\net8.0\refint\NewsAggregatingProject.Services.dll
+C:\Users\Брест\myprojectGIT\NewsAggregator\NewsAggregatingProject\Services\obj\Debug\net8.0\NewsAggregatingProject.Services.pdb
+C:\Users\Брест\myprojectGIT\NewsAggregator\NewsAggregatingProject\Services\obj\Debug\net8.0\ref\NewsAggregatingProject.Services.dll

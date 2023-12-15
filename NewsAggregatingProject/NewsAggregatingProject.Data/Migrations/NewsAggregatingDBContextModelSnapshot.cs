@@ -34,7 +34,7 @@ namespace NewsAggregatingProject.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Categories");
+                    b.ToTable("Categories", (string)null);
                 });
 
             modelBuilder.Entity("NewsAggregatingProject.Data.Entities.Comment", b =>
@@ -67,7 +67,7 @@ namespace NewsAggregatingProject.Data.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Comments");
+                    b.ToTable("Comments", (string)null);
                 });
 
             modelBuilder.Entity("NewsAggregatingProject.Data.Entities.News", b =>
@@ -108,7 +108,7 @@ namespace NewsAggregatingProject.Data.Migrations
 
                     b.HasIndex("SourceId");
 
-                    b.ToTable("News");
+                    b.ToTable("News", (string)null);
                 });
 
             modelBuilder.Entity("NewsAggregatingProject.Data.Entities.RatingScale", b =>
@@ -122,7 +122,7 @@ namespace NewsAggregatingProject.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("RatingScales");
+                    b.ToTable("RatingScales", (string)null);
                 });
 
             modelBuilder.Entity("NewsAggregatingProject.Data.Entities.Source", b =>
@@ -145,7 +145,7 @@ namespace NewsAggregatingProject.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Sources");
+                    b.ToTable("Sources", (string)null);
                 });
 
             modelBuilder.Entity("NewsAggregatingProject.Data.Entities.User", b =>
@@ -173,7 +173,7 @@ namespace NewsAggregatingProject.Data.Migrations
 
                     b.HasIndex("UserStatusId");
 
-                    b.ToTable("Users");
+                    b.ToTable("Users", (string)null);
                 });
 
             modelBuilder.Entity("NewsAggregatingProject.Data.Entities.UserStatus", b =>
@@ -188,7 +188,7 @@ namespace NewsAggregatingProject.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("UserStatuses");
+                    b.ToTable("UserStatuses", (string)null);
                 });
 
             modelBuilder.Entity("NewsAggregatingProject.Data.Entities.Comment", b =>

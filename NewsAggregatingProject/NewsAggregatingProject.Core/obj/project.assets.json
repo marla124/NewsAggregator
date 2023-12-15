@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {}
+    "net8.0": {
+      "NewsAggregatingProject.Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/NewsAggregatingProject.Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/NewsAggregatingProject.Services.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "NewsAggregatingProject.Services/1.0.0": {
+      "type": "project",
+      "path": "../Services/NewsAggregatingProject.Services.csproj",
+      "msbuildProject": "../Services/NewsAggregatingProject.Services.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net8.0": []
+    "net8.0": [
+      "NewsAggregatingProject.Services >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Брест\\.nuget\\packages\\": {},
@@ -38,7 +57,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Брест\\myprojectGIT\\NewsAggregator\\NewsAggregatingProject\\Services\\NewsAggregatingProject.Services.csproj": {
+              "projectPath": "C:\\Users\\Брест\\myprojectGIT\\NewsAggregator\\NewsAggregatingProject\\Services\\NewsAggregatingProject.Services.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

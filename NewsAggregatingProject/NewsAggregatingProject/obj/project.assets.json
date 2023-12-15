@@ -1770,6 +1770,9 @@
       "NewsAggregatingProject.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "NewsAggregatingProject.Services": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/NewsAggregatingProject.Core.dll": {}
         },
@@ -1803,6 +1806,16 @@
         },
         "runtime": {
           "bin/placeholder/NewsAggregatingProject.Repositories.dll": {}
+        }
+      },
+      "NewsAggregatingProject.Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/NewsAggregatingProject.Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/NewsAggregatingProject.Services.dll": {}
         }
       }
     }
@@ -4763,6 +4776,11 @@
       "type": "project",
       "path": "../NewsAggregatingProject.Repositories/NewsAggregatingProject.Repositories.csproj",
       "msbuildProject": "../NewsAggregatingProject.Repositories/NewsAggregatingProject.Repositories.csproj"
+    },
+    "NewsAggregatingProject.Services/1.0.0": {
+      "type": "project",
+      "path": "../Services/NewsAggregatingProject.Services.csproj",
+      "msbuildProject": "../Services/NewsAggregatingProject.Services.csproj"
     }
   },
   "projectFileDependencyGroups": {
