@@ -27,6 +27,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\NewsAggregatingProject.Repositories\NewsAggregatingProject.Repositories.csproj" />
+    <ProjectReference Include="..\NewsAggregatingProject.Services\NewsAggregatingProject.Services.csproj" />
   </ItemGroup>
 
 </Project>

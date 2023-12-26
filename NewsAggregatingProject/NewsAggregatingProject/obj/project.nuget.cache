@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "VmXKp3QegZ0Xk5WJZFb7VbvM/qg/SzgSZlyvWHspAYRQrhx1klMDQq5vYoGYB8h/PHvzRAaHRE7w3nMo4bzJVg==",
+  "dgSpecHash": "RvICCaU9WqZKCyAPfQRU+c1sBfsi2aZgVQ6j1/r9LiuEbrptPDw1f1iHIfmtd2+ndMPSdOxPZkdtUIf/p8ghkg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Брест\\myprojectGIT\\NewsAggregator\\NewsAggregatingProject\\NewsAggregatingProject\\NewsAggregatingProject.csproj",
   "expectedPackageFiles": [
@@ -88,6 +88,7 @@
     "C:\\Users\\Брест\\.nuget\\packages\\system.security.cryptography.protecteddata\\6.0.0\\system.security.cryptography.protecteddata.6.0.0.nupkg.sha512",
     "C:\\Users\\Брест\\.nuget\\packages\\system.security.permissions\\6.0.0\\system.security.permissions.6.0.0.nupkg.sha512",
     "C:\\Users\\Брест\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
+    "C:\\Users\\Брест\\.nuget\\packages\\system.servicemodel.syndication\\8.0.0\\system.servicemodel.syndication.8.0.0.nupkg.sha512",
     "C:\\Users\\Брест\\.nuget\\packages\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
     "C:\\Users\\Брест\\.nuget\\packages\\system.text.encoding.codepages\\6.0.0\\system.text.encoding.codepages.6.0.0.nupkg.sha512",
     "C:\\Users\\Брест\\.nuget\\packages\\system.text.encodings.web\\8.0.0\\system.text.encodings.web.8.0.0.nupkg.sha512",

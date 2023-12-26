@@ -9,12 +9,11 @@ namespace NewsAggregatingProject.Repositories
         private readonly IRepository<Source> _sourceRepository;
         private readonly IRepository<Comment> _commentRepository;
         private readonly IRepository<Category> _categoryRepository;
-        private readonly IRepository<RatingScale> _ratingScaleRepository;
         private readonly IRepository<User> _userRepository;
         private readonly IRepository<UserStatus> _userStatusRepository;
 
         public UnitOfWork(NewsAggregatingDBContext dbContext, IRepository<News> newRepository, IRepository<Source> sourceRepository,
-            IRepository<Comment> commentRepository, IRepository<Category> categoryRepository, IRepository<RatingScale> ratingScaleRepository,
+            IRepository<Comment> commentRepository, IRepository<Category> categoryRepository,
             IRepository<User> userRepository, IRepository<UserStatus> userStatusRepository)
         {
             _dbContext = dbContext;
@@ -22,7 +21,6 @@ namespace NewsAggregatingProject.Repositories
             _sourceRepository = sourceRepository;
             _commentRepository = commentRepository;
             _categoryRepository = categoryRepository;
-            _ratingScaleRepository = ratingScaleRepository;
             _userRepository = userRepository;
             _userStatusRepository = userStatusRepository;
         }
@@ -34,7 +32,6 @@ namespace NewsAggregatingProject.Repositories
         public IRepository<UserStatus> UserStatusRepository => _userStatusRepository;
         public IRepository<User> UserRepository => _userRepository;
         public IRepository<Category> CategoryRepository => _categoryRepository;
-        public IRepository<RatingScale> RatingScaleRepository => _ratingScaleRepository;
 
         public async Task<int> Commit()
         {

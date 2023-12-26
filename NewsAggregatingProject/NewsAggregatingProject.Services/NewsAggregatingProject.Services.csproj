@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.ServiceModel.Syndication" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NewsAggregatingProject.Core\NewsAggregatingProject.Core.csproj" />
+    <ProjectReference Include="..\NewsAggregatingProject.Repositories\NewsAggregatingProject.Repositories.csproj" />
+  </ItemGroup>
+
+</Project>

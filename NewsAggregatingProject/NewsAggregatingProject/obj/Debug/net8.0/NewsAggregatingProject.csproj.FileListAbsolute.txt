@@ -413,7 +413,6 @@ C:\Users\Брест\myprojectGIT\NewsAggregator\NewsAggregatingProject\NewsAggre
 C:\Users\Брест\myprojectGIT\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject\obj\Debug\net8.0\NewsAggregatingProject.AssemblyInfoInputs.cache
 C:\Users\Брест\myprojectGIT\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject\obj\Debug\net8.0\NewsAggregatingProject.AssemblyInfo.cs
 C:\Users\Брест\myprojectGIT\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject\obj\Debug\net8.0\NewsAggregatingProject.csproj.CoreCompileInputs.cache
-C:\Users\Брест\myprojectGIT\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject\obj\Debug\net8.0\NewsAggregatingProject.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Брест\myprojectGIT\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject\obj\Debug\net8.0\NewsAggregatingProject.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Брест\myprojectGIT\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject\obj\Debug\net8.0\NewsAggregatingProject.RazorAssemblyInfo.cache
 C:\Users\Брест\myprojectGIT\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject\obj\Debug\net8.0\NewsAggregatingProject.RazorAssemblyInfo.cs
@@ -443,3 +442,6 @@ C:\Users\Брест\myprojectGIT\NewsAggregator\NewsAggregatingProject\NewsAggre
 C:\Users\Брест\myprojectGIT\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject\bin\Debug\net8.0\Serilog.Sinks.Console.dll
 C:\Users\Брест\myprojectGIT\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject\bin\Debug\net8.0\Serilog.Sinks.Debug.dll
 C:\Users\Брест\myprojectGIT\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject\bin\Debug\net8.0\Serilog.Sinks.File.dll
+C:\Users\Брест\myprojectGIT\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject\bin\Debug\net8.0\System.ServiceModel.Syndication.dll
+C:\Users\Брест\myprojectGIT\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject\bin\Debug\net8.0\NewsAggregatingProject.Services.dll
+C:\Users\Брест\myprojectGIT\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject\bin\Debug\net8.0\NewsAggregatingProject.Services.pdb

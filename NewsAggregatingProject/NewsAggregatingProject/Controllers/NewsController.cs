@@ -5,6 +5,8 @@ using NewsAggregatingProject.Data;
 using NewsAggregatingProject.Data.Entities;
 using NewsAggregatingProject.Models;
 using NewsAggregatingProject.Repositories;
+using NewsAggregatingProject.Services;
+using NewsAggregatingProject.Services.Interfaces;
 using System.Data;
 
 
@@ -14,8 +16,10 @@ namespace NewsAggregatingProject.Controllers
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly NewsAggregatingDBContext _dbContext;
-        public NewsController(IUnitOfWork unitOfWork, NewsAggregatingDBContext dBContext)
+        private readonly INewsService _newsService;
+        public NewsController(IUnitOfWork unitOfWork, NewsAggregatingDBContext dBContext, INewsService newsService)
         {
+            _newsService = newsService;
             _unitOfWork = unitOfWork;
             _dbContext = dBContext;
         }
@@ -54,13 +58,10 @@ namespace NewsAggregatingProject.Controllers
             return View(model);
         }
         [HttpPost]
-        public async Task<IActionResult> GetNews(SourceModelAggregating model)
+        public async Task<IActionResult> Aggregate(SourceModelAggregating model)
         {
-            var source = (await _unitOfWork.SourceRepository.GetById(model.Id))?.RSSUrl;
-            if (string.IsNullOrEmpty(source))
-            {
+            var data=_newsService.AggregateDataFromByRssSourceId(model.Id);
 
-            }
             return RedirectToAction("Index");
         }
 

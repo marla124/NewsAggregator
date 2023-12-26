@@ -34,7 +34,7 @@ namespace NewsAggregatingProject.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Categories", (string)null);
+                    b.ToTable("Categories");
                 });
 
             modelBuilder.Entity("NewsAggregatingProject.Data.Entities.Comment", b =>
@@ -67,7 +67,7 @@ namespace NewsAggregatingProject.Data.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Comments", (string)null);
+                    b.ToTable("Comments");
                 });
 
             modelBuilder.Entity("NewsAggregatingProject.Data.Entities.News", b =>
@@ -76,7 +76,7 @@ namespace NewsAggregatingProject.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid?>("CategoryId")
+                    b.Property<Guid>("CategoryId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("ContentNew")
@@ -90,11 +90,15 @@ namespace NewsAggregatingProject.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid?>("RatingScaleId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<float?>("Rate")
+                        .HasColumnType("real");
 
                     b.Property<Guid>("SourceId")
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("SourceUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Title")
                         .IsRequired()
@@ -104,25 +108,9 @@ namespace NewsAggregatingProject.Data.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.HasIndex("RatingScaleId");
-
                     b.HasIndex("SourceId");
 
-                    b.ToTable("News", (string)null);
-                });
-
-            modelBuilder.Entity("NewsAggregatingProject.Data.Entities.RatingScale", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<float?>("Status")
-                        .HasColumnType("real");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("RatingScales", (string)null);
+                    b.ToTable("News");
                 });
 
             modelBuilder.Entity("NewsAggregatingProject.Data.Entities.Source", b =>
@@ -145,7 +133,7 @@ namespace NewsAggregatingProject.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Sources", (string)null);
+                    b.ToTable("Sources");
                 });
 
             modelBuilder.Entity("NewsAggregatingProject.Data.Entities.User", b =>
@@ -173,7 +161,7 @@ namespace NewsAggregatingProject.Data.Migrations
 
                     b.HasIndex("UserStatusId");
 
-                    b.ToTable("Users", (string)null);
+                    b.ToTable("Users");
                 });
 
             modelBuilder.Entity("NewsAggregatingProject.Data.Entities.UserStatus", b =>
@@ -188,7 +176,7 @@ namespace NewsAggregatingProject.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("UserStatuses", (string)null);
+                    b.ToTable("UserStatuses");
                 });
 
             modelBuilder.Entity("NewsAggregatingProject.Data.Entities.Comment", b =>
@@ -218,19 +206,19 @@ namespace NewsAggregatingProject.Data.Migrations
 
             modelBuilder.Entity("NewsAggregatingProject.Data.Entities.News", b =>
                 {
-                    b.HasOne("NewsAggregatingProject.Data.Entities.Category", null)
+                    b.HasOne("NewsAggregatingProject.Data.Entities.Category", "Category")
                         .WithMany("News")
-                        .HasForeignKey("CategoryId");
-
-                    b.HasOne("NewsAggregatingProject.Data.Entities.RatingScale", null)
-                        .WithMany("News")
-                        .HasForeignKey("RatingScaleId");
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("NewsAggregatingProject.Data.Entities.Source", "Source")
                         .WithMany("News")
                         .HasForeignKey("SourceId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Category");
 
                     b.Navigation("Source");
                 });
@@ -259,11 +247,6 @@ namespace NewsAggregatingProject.Data.Migrations
             modelBuilder.Entity("NewsAggregatingProject.Data.Entities.News", b =>
                 {
                     b.Navigation("Comments");
-                });
-
-            modelBuilder.Entity("NewsAggregatingProject.Data.Entities.RatingScale", b =>
-                {
-                    b.Navigation("News");
                 });
 
             modelBuilder.Entity("NewsAggregatingProject.Data.Entities.Source", b =>

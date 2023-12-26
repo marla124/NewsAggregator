@@ -1641,6 +1641,22 @@
           }
         }
       },
+      "System.ServiceModel.Syndication/8.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/System.ServiceModel.Syndication.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/System.ServiceModel.Syndication.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        }
+      },
       "System.Text.Encoding/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -1770,9 +1786,6 @@
       "NewsAggregatingProject.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "NewsAggregatingProject.Services": "1.0.0"
-        },
         "compile": {
           "bin/placeholder/NewsAggregatingProject.Core.dll": {}
         },
@@ -1811,6 +1824,11 @@
       "NewsAggregatingProject.Services/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "NewsAggregatingProject.Core": "1.0.0",
+          "NewsAggregatingProject.Repositories": "1.0.0",
+          "System.ServiceModel.Syndication": "8.0.0"
+        },
         "compile": {
           "bin/placeholder/NewsAggregatingProject.Services.dll": {}
         },
@@ -4460,6 +4478,35 @@
         "version.txt"
       ]
     },
+    "System.ServiceModel.Syndication/8.0.0": {
+      "sha512": "CJxIUwpBkMCPmIx46tFVOt0zpRrYurUHLW6tJBcmyj+MyWpKc6MMcS69B7IdlV/bgtgys073wMIHZX9QOQ1OFA==",
+      "type": "package",
+      "path": "system.servicemodel.syndication/8.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.ServiceModel.Syndication.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/System.ServiceModel.Syndication.targets",
+        "lib/net462/System.ServiceModel.Syndication.dll",
+        "lib/net462/System.ServiceModel.Syndication.xml",
+        "lib/net6.0/System.ServiceModel.Syndication.dll",
+        "lib/net6.0/System.ServiceModel.Syndication.xml",
+        "lib/net7.0/System.ServiceModel.Syndication.dll",
+        "lib/net7.0/System.ServiceModel.Syndication.xml",
+        "lib/net8.0/System.ServiceModel.Syndication.dll",
+        "lib/net8.0/System.ServiceModel.Syndication.xml",
+        "lib/netstandard2.0/System.ServiceModel.Syndication.dll",
+        "lib/netstandard2.0/System.ServiceModel.Syndication.xml",
+        "system.servicemodel.syndication.8.0.0.nupkg.sha512",
+        "system.servicemodel.syndication.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "System.Text.Encoding/4.3.0": {
       "sha512": "BiIg+KWaSDOITze6jGQynxg64naAPtqGHBwDrLaCtixsa5bKiR8dpPOHA7ge3C0JJQizJE+sfkz1wV+BAKAYZw==",
       "type": "package",
@@ -4779,8 +4826,8 @@
     },
     "NewsAggregatingProject.Services/1.0.0": {
       "type": "project",
-      "path": "../Services/NewsAggregatingProject.Services.csproj",
-      "msbuildProject": "../Services/NewsAggregatingProject.Services.csproj"
+      "path": "../NewsAggregatingProject.Services/NewsAggregatingProject.Services.csproj",
+      "msbuildProject": "../NewsAggregatingProject.Services/NewsAggregatingProject.Services.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -4793,6 +4840,7 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.0",
       "NewsAggregatingProject.Repositories >= 1.0.0",
+      "NewsAggregatingProject.Services >= 1.0.0",
       "Serilog >= 3.1.1",
       "Serilog.AspNetCore >= 8.0.0",
       "Serilog.Sinks.File >= 5.0.0"
@@ -4832,6 +4880,9 @@
           "projectReferences": {
             "C:\\Users\\Брест\\myprojectGIT\\NewsAggregator\\NewsAggregatingProject\\NewsAggregatingProject.Repositories\\NewsAggregatingProject.Repositories.csproj": {
               "projectPath": "C:\\Users\\Брест\\myprojectGIT\\NewsAggregator\\NewsAggregatingProject\\NewsAggregatingProject.Repositories\\NewsAggregatingProject.Repositories.csproj"
+            },
+            "C:\\Users\\Брест\\myprojectGIT\\NewsAggregator\\NewsAggregatingProject\\NewsAggregatingProject.Services\\NewsAggregatingProject.Services.csproj": {
+              "projectPath": "C:\\Users\\Брест\\myprojectGIT\\NewsAggregator\\NewsAggregatingProject\\NewsAggregatingProject.Services\\NewsAggregatingProject.Services.csproj"
             }
           }
         }

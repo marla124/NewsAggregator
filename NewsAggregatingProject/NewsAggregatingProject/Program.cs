@@ -9,6 +9,7 @@ using NewsAggregatingProject.FluentValidation;
 using Serilog;
 using Microsoft.AspNetCore.Mvc;
 using Serilog.Events;
+using NewsAggregatingProject.Services.Interfaces;
 
 namespace NewsAggregatingProject
 {
@@ -40,12 +41,13 @@ namespace NewsAggregatingProject
             builder.Services.AddScoped<IRepository<News>, Repository<News>>();
             builder.Services.AddScoped<IRepository<Source>, Repository<Source>>();
             builder.Services.AddScoped<IRepository<User>, Repository<User>>();
-            builder.Services.AddScoped<IRepository<RatingScale>, Repository<RatingScale>>();
             builder.Services.AddScoped<IRepository<UserStatus>, Repository<UserStatus>>();
             builder.Services.AddScoped<IRepository<Comment>, Repository<Comment>>();
             builder.Services.AddScoped<IRepository<Category>, Repository<Category>>();
 
             //builder.Services.AddScoped<IDbInitializer, DbInitializer>();
+            builder.Services.AddScoped<INewsService, NewsService>();
+
             builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             builder.Services.AddControllersWithViews();

@@ -16,6 +16,7 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.0",
           "Microsoft.EntityFrameworkCore.Tools": "8.0.0",
           "NewsAggregatingProject.Repositories": "1.0.0",
+          "NewsAggregatingProject.Services": "1.0.0",
           "Serilog": "3.1.1",
           "Serilog.AspNetCore": "8.0.0",
           "Serilog.Sinks.File": "5.0.0"
@@ -984,6 +985,14 @@
         }
       },
       "System.Security.Principal.Windows/5.0.0": {},
+      "System.ServiceModel.Syndication/8.0.0": {
+        "runtime": {
+          "lib/net8.0/System.ServiceModel.Syndication.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.23.53103"
+          }
+        }
+      },
       "System.Text.Encoding/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0",
@@ -1044,6 +1053,16 @@
         },
         "runtime": {
           "NewsAggregatingProject.Repositories.dll": {}
+        }
+      },
+      "NewsAggregatingProject.Services/1.0.0": {
+        "dependencies": {
+          "NewsAggregatingProject.Core": "1.0.0",
+          "NewsAggregatingProject.Repositories": "1.0.0",
+          "System.ServiceModel.Syndication": "8.0.0"
+        },
+        "runtime": {
+          "NewsAggregatingProject.Services.dll": {}
         }
       }
     }
@@ -1642,6 +1661,13 @@
       "path": "system.security.principal.windows/5.0.0",
       "hashPath": "system.security.principal.windows.5.0.0.nupkg.sha512"
     },
+    "System.ServiceModel.Syndication/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-CJxIUwpBkMCPmIx46tFVOt0zpRrYurUHLW6tJBcmyj+MyWpKc6MMcS69B7IdlV/bgtgys073wMIHZX9QOQ1OFA==",
+      "path": "system.servicemodel.syndication/8.0.0",
+      "hashPath": "system.servicemodel.syndication.8.0.0.nupkg.sha512"
+    },
     "System.Text.Encoding/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -1702,6 +1728,11 @@
       "sha512": ""
     },
     "NewsAggregatingProject.Repositories/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "NewsAggregatingProject.Services/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

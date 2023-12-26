@@ -9,7 +9,6 @@ namespace NewsAggregatingProject.Data
         public DbSet<Category> Categories { get; set; }
         public DbSet<News> News { get; set; }
         public DbSet<Source> Sources { get; set; }
-        public DbSet<RatingScale> RatingScales { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<UserStatus> UserStatuses { get; set; }
         public DbSet<Comment> Comments { get; set; }
