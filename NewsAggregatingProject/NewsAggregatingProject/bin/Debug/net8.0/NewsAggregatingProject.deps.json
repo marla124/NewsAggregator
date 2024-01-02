@@ -91,6 +91,14 @@
           }
         }
       },
+      "HtmlAgilityPack/1.11.57": {
+        "runtime": {
+          "lib/netstandard2.0/HtmlAgilityPack.dll": {
+            "assemblyVersion": "1.11.57.0",
+            "fileVersion": "1.11.57.0"
+          }
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "runtime": {
           "lib/net6.0/Humanizer.dll": {
@@ -1057,6 +1065,7 @@
       },
       "NewsAggregatingProject.Services/1.0.0": {
         "dependencies": {
+          "HtmlAgilityPack": "1.11.57",
           "NewsAggregatingProject.Core": "1.0.0",
           "NewsAggregatingProject.Repositories": "1.0.0",
           "System.ServiceModel.Syndication": "8.0.0"
@@ -1107,6 +1116,13 @@
       "sha512": "sha512-Yyme2uCHnf+HawEHUEj7PguR54TPkx1HJT93/POvHT4xONvUrNfLg3Zt2NUAmIbhMjplb6TPLN8DD9AA7B/3QA==",
       "path": "fluentvalidation.dependencyinjectionextensions/11.8.1",
       "hashPath": "fluentvalidation.dependencyinjectionextensions.11.8.1.nupkg.sha512"
+    },
+    "HtmlAgilityPack/1.11.57": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zDxnHcAvi+qhZG602eKaPJKmzm0T8npKVML0RMwjrRBabpmTRtu2OVpfNkMUfYMgQ+5EllOkSeGxu0uFVV2zFw==",
+      "path": "htmlagilitypack/1.11.57",
+      "hashPath": "htmlagilitypack.1.11.57.nupkg.sha512"
     },
     "Humanizer.Core/2.14.1": {
       "type": "package",

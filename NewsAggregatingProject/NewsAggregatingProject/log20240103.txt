@@ -1,0 +1,868 @@
+2024-01-03 00:12:21.719 +03:00 [INF] User profile is available. Using 'C:\Users\Брест\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-03 00:12:22.324 +03:00 [INF] Now listening on: https://localhost:7057
+2024-01-03 00:12:22.325 +03:00 [INF] Now listening on: http://localhost:5154
+2024-01-03 00:12:22.327 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-03 00:12:22.329 +03:00 [INF] Hosting environment: Development
+2024-01-03 00:12:22.329 +03:00 [INF] Content root path: C:\Users\Брест\myprojectGIT\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject
+2024-01-03 00:12:23.284 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/ - null null
+2024-01-03 00:12:23.527 +03:00 [INF] Executing endpoint 'NewsAggregatingProject.Controllers.HomeController.Index (NewsAggregatingProject)'
+2024-01-03 00:12:23.552 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller NewsAggregatingProject.Controllers.HomeController (NewsAggregatingProject).
+2024-01-03 00:12:24.403 +03:00 [INF] Hello from HomeController. Its works
+2024-01-03 00:12:24.416 +03:00 [INF] Executing ViewResult, running view Index.
+2024-01-03 00:12:24.593 +03:00 [INF] Executed ViewResult - view Index executed in 178.6979ms.
+2024-01-03 00:12:24.597 +03:00 [INF] Executed action NewsAggregatingProject.Controllers.HomeController.Index (NewsAggregatingProject) in 1042.2675ms
+2024-01-03 00:12:24.599 +03:00 [INF] Executed endpoint 'NewsAggregatingProject.Controllers.HomeController.Index (NewsAggregatingProject)'
+2024-01-03 00:12:24.608 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/ - 200 null text/html; charset=utf-8 1329.1213ms
+2024-01-03 00:12:24.613 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/... - null null
+2024-01-03 00:12:24.619 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/... - 404 0 null 6.087ms
+2024-01-03 00:12:24.626 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7057/..., Response status code: 404
+2024-01-03 00:12:24.636 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-03 00:12:24.637 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_vs/browserLink - null null
+2024-01-03 00:12:24.645 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/... - null null
+2024-01-03 00:12:24.657 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/... - 404 0 null 15.6493ms
+2024-01-03 00:12:24.659 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7057/..., Response status code: 404
+2024-01-03 00:12:24.659 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - 200 13780 application/javascript; charset=utf-8 23.1405ms
+2024-01-03 00:12:24.697 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_vs/browserLink - 200 null text/javascript; charset=UTF-8 60.2096ms
+2024-01-03 00:12:30.652 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/Source/List - null null
+2024-01-03 00:12:30.666 +03:00 [INF] Executing endpoint 'NewsAggregatingProject.Controllers.SourceController.List (NewsAggregatingProject)'
+2024-01-03 00:12:30.675 +03:00 [INF] Route matched with {action = "List", controller = "Source"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] List() on controller NewsAggregatingProject.Controllers.SourceController (NewsAggregatingProject).
+2024-01-03 00:12:32.248 +03:00 [INF] Executed DbCommand (87ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Name], [s].[RSSUrl], [s].[Url]
+FROM [Sources] AS [s]
+2024-01-03 00:12:32.345 +03:00 [INF] Executing ViewResult, running view List.
+2024-01-03 00:12:32.359 +03:00 [INF] Executed ViewResult - view List executed in 15.3064ms.
+2024-01-03 00:12:32.362 +03:00 [INF] Executed action NewsAggregatingProject.Controllers.SourceController.List (NewsAggregatingProject) in 1682.2618ms
+2024-01-03 00:12:32.367 +03:00 [INF] Executed endpoint 'NewsAggregatingProject.Controllers.SourceController.List (NewsAggregatingProject)'
+2024-01-03 00:12:32.373 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/Source/List - 200 null text/html; charset=utf-8 1721.6642ms
+2024-01-03 00:12:32.379 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-03 00:12:32.379 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_vs/browserLink - null null
+2024-01-03 00:12:32.391 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - 200 13780 application/javascript; charset=utf-8 11.7525ms
+2024-01-03 00:12:32.443 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_vs/browserLink - 200 null text/javascript; charset=UTF-8 63.3214ms
+2024-01-03 00:12:36.386 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/Source/yftyftyftyt - null null
+2024-01-03 00:12:36.396 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/Source/yftyftyftyt - 404 0 null 10.9785ms
+2024-01-03 00:12:36.419 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7057/Source/yftyftyftyt, Response status code: 404
+2024-01-03 00:12:39.554 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-03 00:12:39.603 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - 200 13780 application/javascript; charset=utf-8 48.6795ms
+2024-01-03 00:12:41.402 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/News/GetNews?sourceId=1dd0b67f-7c37-419d-b80d-19d8b055a920 - null null
+2024-01-03 00:12:41.419 +03:00 [INF] Executing endpoint 'NewsAggregatingProject.Controllers.NewsController.GetNews (NewsAggregatingProject)'
+2024-01-03 00:12:41.449 +03:00 [INF] Route matched with {action = "GetNews", controller = "News"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNews(System.Guid) on controller NewsAggregatingProject.Controllers.NewsController (NewsAggregatingProject).
+2024-01-03 00:12:41.792 +03:00 [INF] Executed DbCommand (60ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Name], [s].[RSSUrl], [s].[Url]
+FROM [Sources] AS [s]
+WHERE [s].[Id] = @__id_0
+2024-01-03 00:12:41.805 +03:00 [INF] Executing ViewResult, running view GetNews.
+2024-01-03 00:12:41.872 +03:00 [INF] Executed ViewResult - view GetNews executed in 68.8784ms.
+2024-01-03 00:12:41.879 +03:00 [INF] Executed action NewsAggregatingProject.Controllers.NewsController.GetNews (NewsAggregatingProject) in 422.1757ms
+2024-01-03 00:12:41.899 +03:00 [INF] Executed endpoint 'NewsAggregatingProject.Controllers.NewsController.GetNews (NewsAggregatingProject)'
+2024-01-03 00:12:41.905 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/News/GetNews?sourceId=1dd0b67f-7c37-419d-b80d-19d8b055a920 - 200 null text/html; charset=utf-8 503.1218ms
+2024-01-03 00:12:41.916 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-03 00:12:41.916 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_vs/browserLink - null null
+2024-01-03 00:12:41.928 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - 200 13780 application/javascript; charset=utf-8 11.5878ms
+2024-01-03 00:12:41.966 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_vs/browserLink - 200 null text/javascript; charset=UTF-8 50.1701ms
+2024-01-03 00:12:43.346 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7057/News/Aggregate - application/x-www-form-urlencoded 222
+2024-01-03 00:12:43.361 +03:00 [INF] Executing endpoint 'NewsAggregatingProject.Controllers.NewsController.Aggregate (NewsAggregatingProject)'
+2024-01-03 00:12:43.376 +03:00 [INF] Route matched with {action = "Aggregate", controller = "News"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Aggregate(NewsAggregatingProject.Models.SourceModelAggregating) on controller NewsAggregatingProject.Controllers.NewsController (NewsAggregatingProject).
+2024-01-03 00:13:07.177 +03:00 [INF] User profile is available. Using 'C:\Users\Брест\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-03 00:13:07.516 +03:00 [INF] Now listening on: https://localhost:7057
+2024-01-03 00:13:07.518 +03:00 [INF] Now listening on: http://localhost:5154
+2024-01-03 00:13:07.521 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-03 00:13:07.523 +03:00 [INF] Hosting environment: Development
+2024-01-03 00:13:07.524 +03:00 [INF] Content root path: C:\Users\Брест\myprojectGIT\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject
+2024-01-03 00:13:08.368 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/ - null null
+2024-01-03 00:13:08.562 +03:00 [INF] Executing endpoint 'NewsAggregatingProject.Controllers.HomeController.Index (NewsAggregatingProject)'
+2024-01-03 00:13:08.592 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller NewsAggregatingProject.Controllers.HomeController (NewsAggregatingProject).
+2024-01-03 00:13:09.611 +03:00 [INF] Hello from HomeController. Its works
+2024-01-03 00:13:09.626 +03:00 [INF] Executing ViewResult, running view Index.
+2024-01-03 00:13:09.760 +03:00 [INF] Executed ViewResult - view Index executed in 135.5998ms.
+2024-01-03 00:13:09.769 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/... - null null
+2024-01-03 00:13:09.774 +03:00 [INF] Executed action NewsAggregatingProject.Controllers.HomeController.Index (NewsAggregatingProject) in 1178.5921ms
+2024-01-03 00:13:09.779 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-03 00:13:09.786 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_vs/browserLink - null null
+2024-01-03 00:13:09.792 +03:00 [INF] Executed endpoint 'NewsAggregatingProject.Controllers.HomeController.Index (NewsAggregatingProject)'
+2024-01-03 00:13:09.799 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/... - 404 0 null 27.5374ms
+2024-01-03 00:13:09.816 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7057/..., Response status code: 404
+2024-01-03 00:13:09.817 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - 200 13780 application/javascript; charset=utf-8 38.1553ms
+2024-01-03 00:13:09.823 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/ - 200 null text/html; charset=utf-8 1462.2557ms
+2024-01-03 00:13:09.871 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_vs/browserLink - 200 null text/javascript; charset=UTF-8 91.9231ms
+2024-01-03 00:13:14.329 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/Source/List - null null
+2024-01-03 00:13:14.350 +03:00 [INF] Executing endpoint 'NewsAggregatingProject.Controllers.SourceController.List (NewsAggregatingProject)'
+2024-01-03 00:13:14.359 +03:00 [INF] Route matched with {action = "List", controller = "Source"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] List() on controller NewsAggregatingProject.Controllers.SourceController (NewsAggregatingProject).
+2024-01-03 00:13:15.388 +03:00 [INF] Executed DbCommand (60ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Name], [s].[RSSUrl], [s].[Url]
+FROM [Sources] AS [s]
+2024-01-03 00:13:15.502 +03:00 [INF] Executing ViewResult, running view List.
+2024-01-03 00:13:15.521 +03:00 [INF] Executed ViewResult - view List executed in 20.722ms.
+2024-01-03 00:13:15.532 +03:00 [INF] Executed action NewsAggregatingProject.Controllers.SourceController.List (NewsAggregatingProject) in 1167.99ms
+2024-01-03 00:13:15.541 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_vs/browserLink - null null
+2024-01-03 00:13:15.542 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-03 00:13:15.543 +03:00 [INF] Executed endpoint 'NewsAggregatingProject.Controllers.SourceController.List (NewsAggregatingProject)'
+2024-01-03 00:13:15.571 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - 200 13780 application/javascript; charset=utf-8 29.5762ms
+2024-01-03 00:13:15.586 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/Source/List - 200 null text/html; charset=utf-8 1257.2673ms
+2024-01-03 00:13:15.607 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_vs/browserLink - 200 null text/javascript; charset=UTF-8 65.9662ms
+2024-01-03 00:13:19.463 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/News/GetNews?sourceId=1dd0b67f-7c37-419d-b80d-19d8b055a920 - null null
+2024-01-03 00:13:19.479 +03:00 [INF] Executing endpoint 'NewsAggregatingProject.Controllers.NewsController.GetNews (NewsAggregatingProject)'
+2024-01-03 00:13:19.501 +03:00 [INF] Route matched with {action = "GetNews", controller = "News"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNews(System.Guid) on controller NewsAggregatingProject.Controllers.NewsController (NewsAggregatingProject).
+2024-01-03 00:13:19.799 +03:00 [INF] Executed DbCommand (39ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Name], [s].[RSSUrl], [s].[Url]
+FROM [Sources] AS [s]
+WHERE [s].[Id] = @__id_0
+2024-01-03 00:13:19.809 +03:00 [INF] Executing ViewResult, running view GetNews.
+2024-01-03 00:13:19.850 +03:00 [INF] Executed ViewResult - view GetNews executed in 41.0893ms.
+2024-01-03 00:13:19.853 +03:00 [INF] Executed action NewsAggregatingProject.Controllers.NewsController.GetNews (NewsAggregatingProject) in 345.2217ms
+2024-01-03 00:13:19.858 +03:00 [INF] Executed endpoint 'NewsAggregatingProject.Controllers.NewsController.GetNews (NewsAggregatingProject)'
+2024-01-03 00:13:19.865 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-03 00:13:19.866 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_vs/browserLink - null null
+2024-01-03 00:13:19.866 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/News/GetNews?sourceId=1dd0b67f-7c37-419d-b80d-19d8b055a920 - 200 null text/html; charset=utf-8 402.3481ms
+2024-01-03 00:13:19.874 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - 200 13780 application/javascript; charset=utf-8 8.953ms
+2024-01-03 00:13:19.922 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_vs/browserLink - 200 null text/javascript; charset=UTF-8 56.5311ms
+2024-01-03 00:13:22.027 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7057/News/Aggregate - application/x-www-form-urlencoded 222
+2024-01-03 00:13:22.064 +03:00 [INF] Executing endpoint 'NewsAggregatingProject.Controllers.NewsController.Aggregate (NewsAggregatingProject)'
+2024-01-03 00:13:22.077 +03:00 [INF] Route matched with {action = "Aggregate", controller = "News"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Aggregate(NewsAggregatingProject.Models.SourceModelAggregating) on controller NewsAggregatingProject.Controllers.NewsController (NewsAggregatingProject).
+2024-01-03 00:13:22.632 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Name], [s].[RSSUrl], [s].[Url]
+FROM [Sources] AS [s]
+WHERE [s].[Id] = @__id_0
+2024-01-03 00:13:23.461 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[SourceUrl]
+FROM [News] AS [n]
+2024-01-03 00:15:27.287 +03:00 [INF] User profile is available. Using 'C:\Users\Брест\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-03 00:15:27.544 +03:00 [INF] Now listening on: https://localhost:7057
+2024-01-03 00:15:27.545 +03:00 [INF] Now listening on: http://localhost:5154
+2024-01-03 00:15:27.547 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-03 00:15:27.548 +03:00 [INF] Hosting environment: Development
+2024-01-03 00:15:27.549 +03:00 [INF] Content root path: C:\Users\Брест\myprojectGIT\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject
+2024-01-03 00:15:31.338 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/ - null null
+2024-01-03 00:15:31.491 +03:00 [INF] Executing endpoint 'NewsAggregatingProject.Controllers.HomeController.Index (NewsAggregatingProject)'
+2024-01-03 00:15:31.523 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller NewsAggregatingProject.Controllers.HomeController (NewsAggregatingProject).
+2024-01-03 00:15:32.440 +03:00 [INF] Hello from HomeController. Its works
+2024-01-03 00:15:32.457 +03:00 [INF] Executing ViewResult, running view Index.
+2024-01-03 00:15:32.585 +03:00 [INF] Executed ViewResult - view Index executed in 126.8883ms.
+2024-01-03 00:15:32.595 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/... - null null
+2024-01-03 00:15:32.595 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-03 00:15:32.595 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_vs/browserLink - null null
+2024-01-03 00:15:32.607 +03:00 [INF] Executed action NewsAggregatingProject.Controllers.HomeController.Index (NewsAggregatingProject) in 1080.8066ms
+2024-01-03 00:15:32.618 +03:00 [INF] Executed endpoint 'NewsAggregatingProject.Controllers.HomeController.Index (NewsAggregatingProject)'
+2024-01-03 00:15:32.625 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/... - 404 0 null 25.674ms
+2024-01-03 00:15:32.625 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - 200 13780 application/javascript; charset=utf-8 27.4323ms
+2024-01-03 00:15:32.630 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7057/..., Response status code: 404
+2024-01-03 00:15:32.634 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/ - 200 null text/html; charset=utf-8 1309.7645ms
+2024-01-03 00:15:32.684 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_vs/browserLink - 200 null text/javascript; charset=UTF-8 88.3552ms
+2024-01-03 00:15:38.392 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/Source/List - null null
+2024-01-03 00:15:38.414 +03:00 [INF] Executing endpoint 'NewsAggregatingProject.Controllers.SourceController.List (NewsAggregatingProject)'
+2024-01-03 00:15:38.422 +03:00 [INF] Route matched with {action = "List", controller = "Source"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] List() on controller NewsAggregatingProject.Controllers.SourceController (NewsAggregatingProject).
+2024-01-03 00:15:39.401 +03:00 [INF] Executed DbCommand (81ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Name], [s].[RSSUrl], [s].[Url]
+FROM [Sources] AS [s]
+2024-01-03 00:15:39.587 +03:00 [INF] Executing ViewResult, running view List.
+2024-01-03 00:15:39.629 +03:00 [INF] Executed ViewResult - view List executed in 43.9322ms.
+2024-01-03 00:15:39.633 +03:00 [INF] Executed action NewsAggregatingProject.Controllers.SourceController.List (NewsAggregatingProject) in 1206.423ms
+2024-01-03 00:15:39.640 +03:00 [INF] Executed endpoint 'NewsAggregatingProject.Controllers.SourceController.List (NewsAggregatingProject)'
+2024-01-03 00:15:39.645 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-03 00:15:39.645 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_vs/browserLink - null null
+2024-01-03 00:15:39.651 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/Source/List - 200 null text/html; charset=utf-8 1259.7159ms
+2024-01-03 00:15:39.654 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - 200 13780 application/javascript; charset=utf-8 8.8306ms
+2024-01-03 00:15:39.703 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_vs/browserLink - 200 null text/javascript; charset=UTF-8 56.5699ms
+2024-01-03 00:15:42.577 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/News/GetNews?sourceId=527b3a40-db3e-4537-894e-bc85477680c1 - null null
+2024-01-03 00:15:42.593 +03:00 [INF] Executing endpoint 'NewsAggregatingProject.Controllers.NewsController.GetNews (NewsAggregatingProject)'
+2024-01-03 00:15:42.618 +03:00 [INF] Route matched with {action = "GetNews", controller = "News"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNews(System.Guid) on controller NewsAggregatingProject.Controllers.NewsController (NewsAggregatingProject).
+2024-01-03 00:15:42.951 +03:00 [INF] Executed DbCommand (56ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Name], [s].[RSSUrl], [s].[Url]
+FROM [Sources] AS [s]
+WHERE [s].[Id] = @__id_0
+2024-01-03 00:15:42.966 +03:00 [INF] Executing ViewResult, running view GetNews.
+2024-01-03 00:15:43.026 +03:00 [INF] Executed ViewResult - view GetNews executed in 61.63ms.
+2024-01-03 00:15:43.030 +03:00 [INF] Executed action NewsAggregatingProject.Controllers.NewsController.GetNews (NewsAggregatingProject) in 406.1493ms
+2024-01-03 00:15:43.034 +03:00 [INF] Executed endpoint 'NewsAggregatingProject.Controllers.NewsController.GetNews (NewsAggregatingProject)'
+2024-01-03 00:15:43.037 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/News/GetNews?sourceId=527b3a40-db3e-4537-894e-bc85477680c1 - 200 null text/html; charset=utf-8 460.367ms
+2024-01-03 00:15:43.108 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_vs/browserLink - null null
+2024-01-03 00:15:43.109 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-03 00:15:43.149 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - 200 13780 application/javascript; charset=utf-8 43.0737ms
+2024-01-03 00:15:43.175 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_vs/browserLink - 200 null text/javascript; charset=UTF-8 68.9168ms
+2024-01-03 00:15:44.979 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7057/News/Aggregate - application/x-www-form-urlencoded 222
+2024-01-03 00:15:44.990 +03:00 [INF] Executing endpoint 'NewsAggregatingProject.Controllers.NewsController.Aggregate (NewsAggregatingProject)'
+2024-01-03 00:15:45.001 +03:00 [INF] Route matched with {action = "Aggregate", controller = "News"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Aggregate(NewsAggregatingProject.Models.SourceModelAggregating) on controller NewsAggregatingProject.Controllers.NewsController (NewsAggregatingProject).
+2024-01-03 00:15:45.072 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Name], [s].[RSSUrl], [s].[Url]
+FROM [Sources] AS [s]
+WHERE [s].[Id] = @__id_0
+2024-01-03 00:15:45.411 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[SourceUrl]
+FROM [News] AS [n]
+2024-01-03 00:17:51.584 +03:00 [INF] User profile is available. Using 'C:\Users\Брест\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-03 00:17:51.941 +03:00 [INF] Now listening on: https://localhost:7057
+2024-01-03 00:17:52.168 +03:00 [INF] Now listening on: http://localhost:5154
+2024-01-03 00:17:52.171 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-03 00:17:52.173 +03:00 [INF] Hosting environment: Development
+2024-01-03 00:17:52.175 +03:00 [INF] Content root path: C:\Users\Брест\myprojectGIT\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject
+2024-01-03 00:17:52.425 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/ - null null
+2024-01-03 00:17:52.570 +03:00 [INF] Executing endpoint 'NewsAggregatingProject.Controllers.HomeController.Index (NewsAggregatingProject)'
+2024-01-03 00:17:52.592 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller NewsAggregatingProject.Controllers.HomeController (NewsAggregatingProject).
+2024-01-03 00:17:53.545 +03:00 [INF] Hello from HomeController. Its works
+2024-01-03 00:17:53.564 +03:00 [INF] Executing ViewResult, running view Index.
+2024-01-03 00:17:53.746 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-03 00:17:53.751 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/... - null null
+2024-01-03 00:17:53.755 +03:00 [INF] Executed ViewResult - view Index executed in 193.6127ms.
+2024-01-03 00:17:53.765 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_vs/browserLink - null null
+2024-01-03 00:17:53.777 +03:00 [INF] Executed action NewsAggregatingProject.Controllers.HomeController.Index (NewsAggregatingProject) in 1179.001ms
+2024-01-03 00:17:53.783 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - 200 13780 application/javascript; charset=utf-8 30.6654ms
+2024-01-03 00:17:53.789 +03:00 [INF] Executed endpoint 'NewsAggregatingProject.Controllers.HomeController.Index (NewsAggregatingProject)'
+2024-01-03 00:17:53.800 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/... - 404 0 null 48.9778ms
+2024-01-03 00:17:53.822 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/ - 200 null text/html; charset=utf-8 1402.4098ms
+2024-01-03 00:17:53.824 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7057/..., Response status code: 404
+2024-01-03 00:17:53.851 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_vs/browserLink - 200 null text/javascript; charset=UTF-8 85.9515ms
+2024-01-03 00:17:58.900 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/Source/List - null null
+2024-01-03 00:17:58.921 +03:00 [INF] Executing endpoint 'NewsAggregatingProject.Controllers.SourceController.List (NewsAggregatingProject)'
+2024-01-03 00:17:58.934 +03:00 [INF] Route matched with {action = "List", controller = "Source"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] List() on controller NewsAggregatingProject.Controllers.SourceController (NewsAggregatingProject).
+2024-01-03 00:18:00.099 +03:00 [INF] Executed DbCommand (79ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Name], [s].[RSSUrl], [s].[Url]
+FROM [Sources] AS [s]
+2024-01-03 00:18:00.231 +03:00 [INF] Executing ViewResult, running view List.
+2024-01-03 00:18:00.249 +03:00 [INF] Executed ViewResult - view List executed in 20.1546ms.
+2024-01-03 00:18:00.252 +03:00 [INF] Executed action NewsAggregatingProject.Controllers.SourceController.List (NewsAggregatingProject) in 1311.4661ms
+2024-01-03 00:18:00.255 +03:00 [INF] Executed endpoint 'NewsAggregatingProject.Controllers.SourceController.List (NewsAggregatingProject)'
+2024-01-03 00:18:00.264 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/Source/List - 200 null text/html; charset=utf-8 1363.8697ms
+2024-01-03 00:18:00.265 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-03 00:18:00.265 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_vs/browserLink - null null
+2024-01-03 00:18:00.277 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - 200 13780 application/javascript; charset=utf-8 12.083ms
+2024-01-03 00:18:00.324 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_vs/browserLink - 200 null text/javascript; charset=UTF-8 59.4137ms
+2024-01-03 00:18:02.261 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/News/GetNews?sourceId=1dd0b67f-7c37-419d-b80d-19d8b055a920 - null null
+2024-01-03 00:18:02.277 +03:00 [INF] Executing endpoint 'NewsAggregatingProject.Controllers.NewsController.GetNews (NewsAggregatingProject)'
+2024-01-03 00:18:02.302 +03:00 [INF] Route matched with {action = "GetNews", controller = "News"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNews(System.Guid) on controller NewsAggregatingProject.Controllers.NewsController (NewsAggregatingProject).
+2024-01-03 00:18:02.613 +03:00 [INF] Executed DbCommand (44ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Name], [s].[RSSUrl], [s].[Url]
+FROM [Sources] AS [s]
+WHERE [s].[Id] = @__id_0
+2024-01-03 00:18:02.627 +03:00 [INF] Executing ViewResult, running view GetNews.
+2024-01-03 00:18:02.684 +03:00 [INF] Executed ViewResult - view GetNews executed in 58.454ms.
+2024-01-03 00:18:02.688 +03:00 [INF] Executed action NewsAggregatingProject.Controllers.NewsController.GetNews (NewsAggregatingProject) in 376.4493ms
+2024-01-03 00:18:02.695 +03:00 [INF] Executed endpoint 'NewsAggregatingProject.Controllers.NewsController.GetNews (NewsAggregatingProject)'
+2024-01-03 00:18:02.699 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/News/GetNews?sourceId=1dd0b67f-7c37-419d-b80d-19d8b055a920 - 200 null text/html; charset=utf-8 438.4581ms
+2024-01-03 00:18:02.702 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-03 00:18:02.704 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_vs/browserLink - null null
+2024-01-03 00:18:02.717 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - 200 13780 application/javascript; charset=utf-8 16.0386ms
+2024-01-03 00:18:02.763 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_vs/browserLink - 200 null text/javascript; charset=UTF-8 59.565ms
+2024-01-03 00:18:04.588 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7057/News/Aggregate - application/x-www-form-urlencoded 222
+2024-01-03 00:18:04.608 +03:00 [INF] Executing endpoint 'NewsAggregatingProject.Controllers.NewsController.Aggregate (NewsAggregatingProject)'
+2024-01-03 00:18:04.620 +03:00 [INF] Route matched with {action = "Aggregate", controller = "News"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Aggregate(NewsAggregatingProject.Models.SourceModelAggregating) on controller NewsAggregatingProject.Controllers.NewsController (NewsAggregatingProject).
+2024-01-03 00:18:04.694 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Name], [s].[RSSUrl], [s].[Url]
+FROM [Sources] AS [s]
+WHERE [s].[Id] = @__id_0
+2024-01-03 00:18:05.222 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[SourceUrl]
+FROM [News] AS [n]
+2024-01-03 00:18:13.751 +03:00 [ERR] Failed executing DbCommand (152ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000), @p5='?' (DbType = Single), @p6='?' (DbType = Guid), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (DbType = Guid), @p10='?' (DbType = Guid), @p11='?' (Size = 4000), @p12='?' (DbType = DateTime2), @p13='?' (Size = 4000), @p14='?' (DbType = Single), @p15='?' (DbType = Guid), @p16='?' (Size = 4000), @p17='?' (Size = 4000), @p18='?' (DbType = Guid), @p19='?' (DbType = Guid), @p20='?' (Size = -1), @p21='?' (DbType = DateTime2), @p22='?' (Size = 4000), @p23='?' (DbType = Single), @p24='?' (DbType = Guid), @p25='?' (Size = 4000), @p26='?' (Size = 4000), @p27='?' (DbType = Guid), @p28='?' (DbType = Guid), @p29='?' (Size = 4000), @p30='?' (DbType = DateTime2), @p31='?' (Size = 4000), @p32='?' (DbType = Single), @p33='?' (DbType = Guid), @p34='?' (Size = 4000), @p35='?' (Size = 4000), @p36='?' (DbType = Guid), @p37='?' (DbType = Guid), @p38='?' (Size = -1), @p39='?' (DbType = DateTime2), @p40='?' (Size = 4000), @p41='?' (DbType = Single), @p42='?' (DbType = Guid), @p43='?' (Size = 4000), @p44='?' (Size = 4000), @p45='?' (DbType = Guid), @p46='?' (DbType = Guid), @p47='?' (Size = 4000), @p48='?' (DbType = DateTime2), @p49='?' (Size = 4000), @p50='?' (DbType = Single), @p51='?' (DbType = Guid), @p52='?' (Size = 4000), @p53='?' (Size = 4000), @p54='?' (DbType = Guid), @p55='?' (DbType = Guid), @p56='?' (Size = 4000), @p57='?' (DbType = DateTime2), @p58='?' (Size = 4000), @p59='?' (DbType = Single), @p60='?' (DbType = Guid), @p61='?' (Size = 4000), @p62='?' (Size = 4000), @p63='?' (DbType = Guid), @p64='?' (DbType = Guid), @p65='?' (Size = -1), @p66='?' (DbType = DateTime2), @p67='?' (Size = 4000), @p68='?' (DbType = Single), @p69='?' (DbType = Guid), @p70='?' (Size = 4000), @p71='?' (Size = 4000), @p72='?' (DbType = Guid), @p73='?' (DbType = Guid), @p74='?' (Size = -1), @p75='?' (DbType = DateTime2), @p76='?' (Size = 4000), @p77='?' (DbType = Single), @p78='?' (DbType = Guid), @p79='?' (Size = 4000), @p80='?' (Size = 4000), @p81='?' (DbType = Guid), @p82='?' (DbType = Guid), @p83='?' (Size = -1), @p84='?' (DbType = DateTime2), @p85='?' (Size = 4000), @p86='?' (DbType = Single), @p87='?' (DbType = Guid), @p88='?' (Size = 4000), @p89='?' (Size = 4000), @p90='?' (DbType = Guid), @p91='?' (DbType = Guid), @p92='?' (Size = 4000), @p93='?' (DbType = DateTime2), @p94='?' (Size = 4000), @p95='?' (DbType = Single), @p96='?' (DbType = Guid), @p97='?' (Size = 4000), @p98='?' (Size = 4000), @p99='?' (DbType = Guid), @p100='?' (DbType = Guid), @p101='?' (Size = -1), @p102='?' (DbType = DateTime2), @p103='?' (Size = 4000), @p104='?' (DbType = Single), @p105='?' (DbType = Guid), @p106='?' (Size = 4000), @p107='?' (Size = 4000), @p108='?' (DbType = Guid), @p109='?' (DbType = Guid), @p110='?' (Size = 4000), @p111='?' (DbType = DateTime2), @p112='?' (Size = 4000), @p113='?' (DbType = Single), @p114='?' (DbType = Guid), @p115='?' (Size = 4000), @p116='?' (Size = 4000), @p117='?' (DbType = Guid), @p118='?' (DbType = Guid), @p119='?' (Size = -1), @p120='?' (DbType = DateTime2), @p121='?' (Size = 4000), @p122='?' (DbType = Single), @p123='?' (DbType = Guid), @p124='?' (Size = 4000), @p125='?' (Size = 4000), @p126='?' (DbType = Guid), @p127='?' (DbType = Guid), @p128='?' (Size = -1), @p129='?' (DbType = DateTime2), @p130='?' (Size = 4000), @p131='?' (DbType = Single), @p132='?' (DbType = Guid), @p133='?' (Size = 4000), @p134='?' (Size = 4000), @p135='?' (DbType = Guid), @p136='?' (DbType = Guid), @p137='?' (Size = 4000), @p138='?' (DbType = DateTime2), @p139='?' (Size = 4000), @p140='?' (DbType = Single), @p141='?' (DbType = Guid), @p142='?' (Size = 4000), @p143='?' (Size = 4000), @p144='?' (DbType = Guid), @p145='?' (DbType = Guid), @p146='?' (Size = -1), @p147='?' (DbType = DateTime2), @p148='?' (Size = 4000), @p149='?' (DbType = Single), @p150='?' (DbType = Guid), @p151='?' (Size = 4000), @p152='?' (Size = 4000), @p153='?' (DbType = Guid), @p154='?' (DbType = Guid), @p155='?' (Size = -1), @p156='?' (DbType = DateTime2), @p157='?' (Size = 4000), @p158='?' (DbType = Single), @p159='?' (DbType = Guid), @p160='?' (Size = 4000), @p161='?' (Size = 4000), @p162='?' (DbType = Guid), @p163='?' (DbType = Guid), @p164='?' (Size = -1), @p165='?' (DbType = DateTime2), @p166='?' (Size = 4000), @p167='?' (DbType = Single), @p168='?' (DbType = Guid), @p169='?' (Size = 4000), @p170='?' (Size = 4000), @p171='?' (DbType = Guid), @p172='?' (DbType = Guid), @p173='?' (Size = 4000), @p174='?' (DbType = DateTime2), @p175='?' (Size = 4000), @p176='?' (DbType = Single), @p177='?' (DbType = Guid), @p178='?' (Size = 4000), @p179='?' (Size = 4000), @p180='?' (DbType = Guid), @p181='?' (DbType = Guid), @p182='?' (Size = 4000), @p183='?' (DbType = DateTime2), @p184='?' (Size = 4000), @p185='?' (DbType = Single), @p186='?' (DbType = Guid), @p187='?' (Size = 4000), @p188='?' (Size = 4000), @p189='?' (DbType = Guid), @p190='?' (DbType = Guid), @p191='?' (Size = -1), @p192='?' (DbType = DateTime2), @p193='?' (Size = 4000), @p194='?' (DbType = Single), @p195='?' (DbType = Guid), @p196='?' (Size = 4000), @p197='?' (Size = 4000), @p198='?' (DbType = Guid), @p199='?' (DbType = Guid), @p200='?' (Size = -1), @p201='?' (DbType = DateTime2), @p202='?' (Size = 4000), @p203='?' (DbType = Single), @p204='?' (DbType = Guid), @p205='?' (Size = 4000), @p206='?' (Size = 4000), @p207='?' (DbType = Guid), @p208='?' (DbType = Guid), @p209='?' (Size = 4000), @p210='?' (DbType = DateTime2), @p211='?' (Size = 4000), @p212='?' (DbType = Single), @p213='?' (DbType = Guid), @p214='?' (Size = 4000), @p215='?' (Size = 4000), @p216='?' (DbType = Guid), @p217='?' (DbType = Guid), @p218='?' (Size = 4000), @p219='?' (DbType = DateTime2), @p220='?' (Size = 4000), @p221='?' (DbType = Single), @p222='?' (DbType = Guid), @p223='?' (Size = 4000), @p224='?' (Size = 4000), @p225='?' (DbType = Guid), @p226='?' (DbType = Guid), @p227='?' (Size = 4000), @p228='?' (DbType = DateTime2), @p229='?' (Size = 4000), @p230='?' (DbType = Single), @p231='?' (DbType = Guid), @p232='?' (Size = 4000), @p233='?' (Size = 4000), @p234='?' (DbType = Guid), @p235='?' (DbType = Guid), @p236='?' (Size = 4000), @p237='?' (DbType = DateTime2), @p238='?' (Size = 4000), @p239='?' (DbType = Single), @p240='?' (DbType = Guid), @p241='?' (Size = 4000), @p242='?' (Size = 4000), @p243='?' (DbType = Guid), @p244='?' (DbType = Guid), @p245='?' (Size = -1), @p246='?' (DbType = DateTime2), @p247='?' (Size = 4000), @p248='?' (DbType = Single), @p249='?' (DbType = Guid), @p250='?' (Size = 4000), @p251='?' (Size = 4000), @p252='?' (DbType = Guid), @p253='?' (DbType = Guid), @p254='?' (Size = -1), @p255='?' (DbType = DateTime2), @p256='?' (Size = 4000), @p257='?' (DbType = Single), @p258='?' (DbType = Guid), @p259='?' (Size = 4000), @p260='?' (Size = 4000), @p261='?' (DbType = Guid), @p262='?' (DbType = Guid), @p263='?' (Size = 4000), @p264='?' (DbType = DateTime2), @p265='?' (Size = 4000), @p266='?' (DbType = Single), @p267='?' (DbType = Guid), @p268='?' (Size = 4000), @p269='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [News] ([Id], [CategoryId], [ContentNew], [DataAndTime], [Description], [Rate], [SourceId], [SourceUrl], [Title])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8),
+(@p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17),
+(@p18, @p19, @p20, @p21, @p22, @p23, @p24, @p25, @p26),
+(@p27, @p28, @p29, @p30, @p31, @p32, @p33, @p34, @p35),
+(@p36, @p37, @p38, @p39, @p40, @p41, @p42, @p43, @p44),
+(@p45, @p46, @p47, @p48, @p49, @p50, @p51, @p52, @p53),
+(@p54, @p55, @p56, @p57, @p58, @p59, @p60, @p61, @p62),
+(@p63, @p64, @p65, @p66, @p67, @p68, @p69, @p70, @p71),
+(@p72, @p73, @p74, @p75, @p76, @p77, @p78, @p79, @p80),
+(@p81, @p82, @p83, @p84, @p85, @p86, @p87, @p88, @p89),
+(@p90, @p91, @p92, @p93, @p94, @p95, @p96, @p97, @p98),
+(@p99, @p100, @p101, @p102, @p103, @p104, @p105, @p106, @p107),
+(@p108, @p109, @p110, @p111, @p112, @p113, @p114, @p115, @p116),
+(@p117, @p118, @p119, @p120, @p121, @p122, @p123, @p124, @p125),
+(@p126, @p127, @p128, @p129, @p130, @p131, @p132, @p133, @p134),
+(@p135, @p136, @p137, @p138, @p139, @p140, @p141, @p142, @p143),
+(@p144, @p145, @p146, @p147, @p148, @p149, @p150, @p151, @p152),
+(@p153, @p154, @p155, @p156, @p157, @p158, @p159, @p160, @p161),
+(@p162, @p163, @p164, @p165, @p166, @p167, @p168, @p169, @p170),
+(@p171, @p172, @p173, @p174, @p175, @p176, @p177, @p178, @p179),
+(@p180, @p181, @p182, @p183, @p184, @p185, @p186, @p187, @p188),
+(@p189, @p190, @p191, @p192, @p193, @p194, @p195, @p196, @p197),
+(@p198, @p199, @p200, @p201, @p202, @p203, @p204, @p205, @p206),
+(@p207, @p208, @p209, @p210, @p211, @p212, @p213, @p214, @p215),
+(@p216, @p217, @p218, @p219, @p220, @p221, @p222, @p223, @p224),
+(@p225, @p226, @p227, @p228, @p229, @p230, @p231, @p232, @p233),
+(@p234, @p235, @p236, @p237, @p238, @p239, @p240, @p241, @p242),
+(@p243, @p244, @p245, @p246, @p247, @p248, @p249, @p250, @p251),
+(@p252, @p253, @p254, @p255, @p256, @p257, @p258, @p259, @p260),
+(@p261, @p262, @p263, @p264, @p265, @p266, @p267, @p268, @p269);
+2024-01-03 00:18:14.016 +03:00 [ERR] An exception occurred in the database while saving changes for context type 'NewsAggregatingProject.Data.NewsAggregatingDBContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Конфликт инструкции INSERT с ограничением FOREIGN KEY "FK_News_Categories_CategoryId". Конфликт произошел в базе данных "NewAggregatorDB", таблица "dbo.Categories", column 'Id'.
+Выполнение данной инструкции было прервано.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__209_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:2ac96614-86f4-45a2-af24-9ce2adc61f96
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Конфликт инструкции INSERT с ограничением FOREIGN KEY "FK_News_Categories_CategoryId". Конфликт произошел в базе данных "NewAggregatorDB", таблица "dbo.Categories", column 'Id'.
+Выполнение данной инструкции было прервано.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__209_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:2ac96614-86f4-45a2-af24-9ce2adc61f96
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2024-01-03 00:18:14.387 +03:00 [INF] Executed action NewsAggregatingProject.Controllers.NewsController.Aggregate (NewsAggregatingProject) in 9761.2131ms
+2024-01-03 00:18:14.391 +03:00 [INF] Executed endpoint 'NewsAggregatingProject.Controllers.NewsController.Aggregate (NewsAggregatingProject)'
+2024-01-03 00:18:14.400 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Конфликт инструкции INSERT с ограничением FOREIGN KEY "FK_News_Categories_CategoryId". Конфликт произошел в базе данных "NewAggregatorDB", таблица "dbo.Categories", column 'Id'.
+Выполнение данной инструкции было прервано.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__209_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:2ac96614-86f4-45a2-af24-9ce2adc61f96
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at NewsAggregatingProject.Repositories.UnitOfWork.Commit() in C:\Users\Брест\myprojectGIT\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.Repositories\UnitOfWork.cs:line 38
+   at NewsAggregatingProject.Services.NewsService.InsertParsedNews(List`1 listFullfilledNews) in C:\Users\Брест\myprojectGIT\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.Services\NewsService.cs:line 82
+   at NewsAggregatingProject.Controllers.NewsController.Aggregate(SourceModelAggregating model) in C:\Users\Брест\myprojectGIT\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject\Controllers\NewsController.cs:line 79
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-01-03 00:18:14.747 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7057/News/Aggregate - 500 null text/html; charset=utf-8 10159.104ms
+2024-01-03 00:18:14.762 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-03 00:18:14.763 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_vs/browserLink - null null
+2024-01-03 00:18:14.775 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - 200 13780 application/javascript; charset=utf-8 13.0077ms
+2024-01-03 00:18:14.805 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_vs/browserLink - 200 null text/javascript; charset=UTF-8 41.7841ms
+2024-01-03 00:22:11.156 +03:00 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-01-03 00:22:11.258 +03:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-01-03 00:22:11.288 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-01-03 00:24:04.326 +03:00 [INF] User profile is available. Using 'C:\Users\Брест\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-03 00:24:04.721 +03:00 [INF] Now listening on: https://localhost:7057
+2024-01-03 00:24:04.722 +03:00 [INF] Now listening on: http://localhost:5154
+2024-01-03 00:24:04.725 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-03 00:24:04.726 +03:00 [INF] Hosting environment: Development
+2024-01-03 00:24:04.727 +03:00 [INF] Content root path: C:\Users\Брест\myprojectGIT\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject
+2024-01-03 00:24:06.393 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/ - null null
+2024-01-03 00:24:06.579 +03:00 [INF] Executing endpoint 'NewsAggregatingProject.Controllers.HomeController.Index (NewsAggregatingProject)'
+2024-01-03 00:24:06.607 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller NewsAggregatingProject.Controllers.HomeController (NewsAggregatingProject).
+2024-01-03 00:24:07.639 +03:00 [INF] Hello from HomeController. Its works
+2024-01-03 00:24:07.657 +03:00 [INF] Executing ViewResult, running view Index.
+2024-01-03 00:24:07.790 +03:00 [INF] Executed ViewResult - view Index executed in 136.9007ms.
+2024-01-03 00:24:07.801 +03:00 [INF] Executed action NewsAggregatingProject.Controllers.HomeController.Index (NewsAggregatingProject) in 1190.624ms
+2024-01-03 00:24:07.803 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/... - null null
+2024-01-03 00:24:07.804 +03:00 [INF] Executed endpoint 'NewsAggregatingProject.Controllers.HomeController.Index (NewsAggregatingProject)'
+2024-01-03 00:24:07.824 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-03 00:24:07.833 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_vs/browserLink - null null
+2024-01-03 00:24:07.833 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/... - 404 0 null 15.7968ms
+2024-01-03 00:24:07.840 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/ - 200 null text/html; charset=utf-8 1455.0367ms
+2024-01-03 00:24:07.845 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - 200 13780 application/javascript; charset=utf-8 21.973ms
+2024-01-03 00:24:07.846 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7057/..., Response status code: 404
+2024-01-03 00:24:07.921 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_vs/browserLink - 200 null text/javascript; charset=UTF-8 89.6087ms
+2024-01-03 00:24:12.439 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/Source/List - null null
+2024-01-03 00:24:12.478 +03:00 [INF] Executing endpoint 'NewsAggregatingProject.Controllers.SourceController.List (NewsAggregatingProject)'
+2024-01-03 00:24:12.489 +03:00 [INF] Route matched with {action = "List", controller = "Source"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] List() on controller NewsAggregatingProject.Controllers.SourceController (NewsAggregatingProject).
+2024-01-03 00:24:13.601 +03:00 [INF] Executed DbCommand (75ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Name], [s].[RSSUrl], [s].[Url]
+FROM [Sources] AS [s]
+2024-01-03 00:24:13.705 +03:00 [INF] Executing ViewResult, running view List.
+2024-01-03 00:24:13.724 +03:00 [INF] Executed ViewResult - view List executed in 20.1611ms.
+2024-01-03 00:24:13.728 +03:00 [INF] Executed action NewsAggregatingProject.Controllers.SourceController.List (NewsAggregatingProject) in 1234.2908ms
+2024-01-03 00:24:13.732 +03:00 [INF] Executed endpoint 'NewsAggregatingProject.Controllers.SourceController.List (NewsAggregatingProject)'
+2024-01-03 00:24:13.739 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_vs/browserLink - null null
+2024-01-03 00:24:13.742 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/Source/List - 200 null text/html; charset=utf-8 1302.8735ms
+2024-01-03 00:24:13.740 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-03 00:24:13.753 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - 200 13780 application/javascript; charset=utf-8 12.7868ms
+2024-01-03 00:24:13.795 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_vs/browserLink - 200 null text/javascript; charset=UTF-8 56.3995ms
+2024-01-03 00:24:16.646 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/News/GetNews?sourceId=1dd0b67f-7c37-419d-b80d-19d8b055a920 - null null
+2024-01-03 00:24:16.668 +03:00 [INF] Executing endpoint 'NewsAggregatingProject.Controllers.NewsController.GetNews (NewsAggregatingProject)'
+2024-01-03 00:24:16.690 +03:00 [INF] Route matched with {action = "GetNews", controller = "News"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNews(System.Guid) on controller NewsAggregatingProject.Controllers.NewsController (NewsAggregatingProject).
+2024-01-03 00:24:16.922 +03:00 [INF] Executed DbCommand (43ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Name], [s].[RSSUrl], [s].[Url]
+FROM [Sources] AS [s]
+WHERE [s].[Id] = @__id_0
+2024-01-03 00:24:16.931 +03:00 [INF] Executing ViewResult, running view GetNews.
+2024-01-03 00:24:16.977 +03:00 [INF] Executed ViewResult - view GetNews executed in 47.7229ms.
+2024-01-03 00:24:16.981 +03:00 [INF] Executed action NewsAggregatingProject.Controllers.NewsController.GetNews (NewsAggregatingProject) in 287.725ms
+2024-01-03 00:24:16.984 +03:00 [INF] Executed endpoint 'NewsAggregatingProject.Controllers.NewsController.GetNews (NewsAggregatingProject)'
+2024-01-03 00:24:16.987 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/News/GetNews?sourceId=1dd0b67f-7c37-419d-b80d-19d8b055a920 - 200 null text/html; charset=utf-8 341.5791ms
+2024-01-03 00:24:16.995 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_vs/browserLink - null null
+2024-01-03 00:24:16.995 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-03 00:24:17.018 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - 200 13780 application/javascript; charset=utf-8 23.1169ms
+2024-01-03 00:24:17.047 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_vs/browserLink - 200 null text/javascript; charset=UTF-8 51.9102ms
+2024-01-03 00:24:18.822 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7057/News/Aggregate - application/x-www-form-urlencoded 222
+2024-01-03 00:24:18.842 +03:00 [INF] Executing endpoint 'NewsAggregatingProject.Controllers.NewsController.Aggregate (NewsAggregatingProject)'
+2024-01-03 00:24:18.856 +03:00 [INF] Route matched with {action = "Aggregate", controller = "News"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Aggregate(NewsAggregatingProject.Models.SourceModelAggregating) on controller NewsAggregatingProject.Controllers.NewsController (NewsAggregatingProject).
+2024-01-03 00:24:18.930 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Name], [s].[RSSUrl], [s].[Url]
+FROM [Sources] AS [s]
+WHERE [s].[Id] = @__id_0
+2024-01-03 00:24:19.677 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[SourceUrl]
+FROM [News] AS [n]
+2024-01-03 00:24:28.281 +03:00 [ERR] Failed executing DbCommand (65ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?' (Size = -1), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000), @p5='?' (DbType = Single), @p6='?' (DbType = Guid), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (DbType = Guid), @p10='?' (DbType = Guid), @p11='?' (Size = -1), @p12='?' (DbType = DateTime2), @p13='?' (Size = 4000), @p14='?' (DbType = Single), @p15='?' (DbType = Guid), @p16='?' (Size = 4000), @p17='?' (Size = 4000), @p18='?' (DbType = Guid), @p19='?' (DbType = Guid), @p20='?' (Size = -1), @p21='?' (DbType = DateTime2), @p22='?' (Size = 4000), @p23='?' (DbType = Single), @p24='?' (DbType = Guid), @p25='?' (Size = 4000), @p26='?' (Size = 4000), @p27='?' (DbType = Guid), @p28='?' (DbType = Guid), @p29='?' (Size = 4000), @p30='?' (DbType = DateTime2), @p31='?' (Size = 4000), @p32='?' (DbType = Single), @p33='?' (DbType = Guid), @p34='?' (Size = 4000), @p35='?' (Size = 4000), @p36='?' (DbType = Guid), @p37='?' (DbType = Guid), @p38='?' (Size = -1), @p39='?' (DbType = DateTime2), @p40='?' (Size = 4000), @p41='?' (DbType = Single), @p42='?' (DbType = Guid), @p43='?' (Size = 4000), @p44='?' (Size = 4000), @p45='?' (DbType = Guid), @p46='?' (DbType = Guid), @p47='?' (Size = -1), @p48='?' (DbType = DateTime2), @p49='?' (Size = 4000), @p50='?' (DbType = Single), @p51='?' (DbType = Guid), @p52='?' (Size = 4000), @p53='?' (Size = 4000), @p54='?' (DbType = Guid), @p55='?' (DbType = Guid), @p56='?' (Size = 4000), @p57='?' (DbType = DateTime2), @p58='?' (Size = 4000), @p59='?' (DbType = Single), @p60='?' (DbType = Guid), @p61='?' (Size = 4000), @p62='?' (Size = 4000), @p63='?' (DbType = Guid), @p64='?' (DbType = Guid), @p65='?' (Size = -1), @p66='?' (DbType = DateTime2), @p67='?' (Size = 4000), @p68='?' (DbType = Single), @p69='?' (DbType = Guid), @p70='?' (Size = 4000), @p71='?' (Size = 4000), @p72='?' (DbType = Guid), @p73='?' (DbType = Guid), @p74='?' (Size = -1), @p75='?' (DbType = DateTime2), @p76='?' (Size = 4000), @p77='?' (DbType = Single), @p78='?' (DbType = Guid), @p79='?' (Size = 4000), @p80='?' (Size = 4000), @p81='?' (DbType = Guid), @p82='?' (DbType = Guid), @p83='?' (Size = 4000), @p84='?' (DbType = DateTime2), @p85='?' (Size = 4000), @p86='?' (DbType = Single), @p87='?' (DbType = Guid), @p88='?' (Size = 4000), @p89='?' (Size = 4000), @p90='?' (DbType = Guid), @p91='?' (DbType = Guid), @p92='?' (Size = -1), @p93='?' (DbType = DateTime2), @p94='?' (Size = 4000), @p95='?' (DbType = Single), @p96='?' (DbType = Guid), @p97='?' (Size = 4000), @p98='?' (Size = 4000), @p99='?' (DbType = Guid), @p100='?' (DbType = Guid), @p101='?' (Size = 4000), @p102='?' (DbType = DateTime2), @p103='?' (Size = 4000), @p104='?' (DbType = Single), @p105='?' (DbType = Guid), @p106='?' (Size = 4000), @p107='?' (Size = 4000), @p108='?' (DbType = Guid), @p109='?' (DbType = Guid), @p110='?' (Size = -1), @p111='?' (DbType = DateTime2), @p112='?' (Size = 4000), @p113='?' (DbType = Single), @p114='?' (DbType = Guid), @p115='?' (Size = 4000), @p116='?' (Size = 4000), @p117='?' (DbType = Guid), @p118='?' (DbType = Guid), @p119='?' (Size = 4000), @p120='?' (DbType = DateTime2), @p121='?' (Size = 4000), @p122='?' (DbType = Single), @p123='?' (DbType = Guid), @p124='?' (Size = 4000), @p125='?' (Size = 4000), @p126='?' (DbType = Guid), @p127='?' (DbType = Guid), @p128='?' (Size = 4000), @p129='?' (DbType = DateTime2), @p130='?' (Size = 4000), @p131='?' (DbType = Single), @p132='?' (DbType = Guid), @p133='?' (Size = 4000), @p134='?' (Size = 4000), @p135='?' (DbType = Guid), @p136='?' (DbType = Guid), @p137='?' (Size = 4000), @p138='?' (DbType = DateTime2), @p139='?' (Size = 4000), @p140='?' (DbType = Single), @p141='?' (DbType = Guid), @p142='?' (Size = 4000), @p143='?' (Size = 4000), @p144='?' (DbType = Guid), @p145='?' (DbType = Guid), @p146='?' (Size = 4000), @p147='?' (DbType = DateTime2), @p148='?' (Size = 4000), @p149='?' (DbType = Single), @p150='?' (DbType = Guid), @p151='?' (Size = 4000), @p152='?' (Size = 4000), @p153='?' (DbType = Guid), @p154='?' (DbType = Guid), @p155='?' (Size = -1), @p156='?' (DbType = DateTime2), @p157='?' (Size = 4000), @p158='?' (DbType = Single), @p159='?' (DbType = Guid), @p160='?' (Size = 4000), @p161='?' (Size = 4000), @p162='?' (DbType = Guid), @p163='?' (DbType = Guid), @p164='?' (Size = -1), @p165='?' (DbType = DateTime2), @p166='?' (Size = 4000), @p167='?' (DbType = Single), @p168='?' (DbType = Guid), @p169='?' (Size = 4000), @p170='?' (Size = 4000), @p171='?' (DbType = Guid), @p172='?' (DbType = Guid), @p173='?' (Size = -1), @p174='?' (DbType = DateTime2), @p175='?' (Size = 4000), @p176='?' (DbType = Single), @p177='?' (DbType = Guid), @p178='?' (Size = 4000), @p179='?' (Size = 4000), @p180='?' (DbType = Guid), @p181='?' (DbType = Guid), @p182='?' (Size = 4000), @p183='?' (DbType = DateTime2), @p184='?' (Size = 4000), @p185='?' (DbType = Single), @p186='?' (DbType = Guid), @p187='?' (Size = 4000), @p188='?' (Size = 4000), @p189='?' (DbType = Guid), @p190='?' (DbType = Guid), @p191='?' (Size = 4000), @p192='?' (DbType = DateTime2), @p193='?' (Size = 4000), @p194='?' (DbType = Single), @p195='?' (DbType = Guid), @p196='?' (Size = 4000), @p197='?' (Size = 4000), @p198='?' (DbType = Guid), @p199='?' (DbType = Guid), @p200='?' (Size = 4000), @p201='?' (DbType = DateTime2), @p202='?' (Size = 4000), @p203='?' (DbType = Single), @p204='?' (DbType = Guid), @p205='?' (Size = 4000), @p206='?' (Size = 4000), @p207='?' (DbType = Guid), @p208='?' (DbType = Guid), @p209='?' (Size = 4000), @p210='?' (DbType = DateTime2), @p211='?' (Size = 4000), @p212='?' (DbType = Single), @p213='?' (DbType = Guid), @p214='?' (Size = 4000), @p215='?' (Size = 4000), @p216='?' (DbType = Guid), @p217='?' (DbType = Guid), @p218='?' (Size = -1), @p219='?' (DbType = DateTime2), @p220='?' (Size = 4000), @p221='?' (DbType = Single), @p222='?' (DbType = Guid), @p223='?' (Size = 4000), @p224='?' (Size = 4000), @p225='?' (DbType = Guid), @p226='?' (DbType = Guid), @p227='?' (Size = 4000), @p228='?' (DbType = DateTime2), @p229='?' (Size = 4000), @p230='?' (DbType = Single), @p231='?' (DbType = Guid), @p232='?' (Size = 4000), @p233='?' (Size = 4000), @p234='?' (DbType = Guid), @p235='?' (DbType = Guid), @p236='?' (Size = -1), @p237='?' (DbType = DateTime2), @p238='?' (Size = 4000), @p239='?' (DbType = Single), @p240='?' (DbType = Guid), @p241='?' (Size = 4000), @p242='?' (Size = 4000), @p243='?' (DbType = Guid), @p244='?' (DbType = Guid), @p245='?' (Size = 4000), @p246='?' (DbType = DateTime2), @p247='?' (Size = 4000), @p248='?' (DbType = Single), @p249='?' (DbType = Guid), @p250='?' (Size = 4000), @p251='?' (Size = 4000), @p252='?' (DbType = Guid), @p253='?' (DbType = Guid), @p254='?' (Size = 4000), @p255='?' (DbType = DateTime2), @p256='?' (Size = 4000), @p257='?' (DbType = Single), @p258='?' (DbType = Guid), @p259='?' (Size = 4000), @p260='?' (Size = 4000), @p261='?' (DbType = Guid), @p262='?' (DbType = Guid), @p263='?' (Size = -1), @p264='?' (DbType = DateTime2), @p265='?' (Size = 4000), @p266='?' (DbType = Single), @p267='?' (DbType = Guid), @p268='?' (Size = 4000), @p269='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [News] ([Id], [CategoryId], [ContentNew], [DataAndTime], [Description], [Rate], [SourceId], [SourceUrl], [Title])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8),
+(@p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17),
+(@p18, @p19, @p20, @p21, @p22, @p23, @p24, @p25, @p26),
+(@p27, @p28, @p29, @p30, @p31, @p32, @p33, @p34, @p35),
+(@p36, @p37, @p38, @p39, @p40, @p41, @p42, @p43, @p44),
+(@p45, @p46, @p47, @p48, @p49, @p50, @p51, @p52, @p53),
+(@p54, @p55, @p56, @p57, @p58, @p59, @p60, @p61, @p62),
+(@p63, @p64, @p65, @p66, @p67, @p68, @p69, @p70, @p71),
+(@p72, @p73, @p74, @p75, @p76, @p77, @p78, @p79, @p80),
+(@p81, @p82, @p83, @p84, @p85, @p86, @p87, @p88, @p89),
+(@p90, @p91, @p92, @p93, @p94, @p95, @p96, @p97, @p98),
+(@p99, @p100, @p101, @p102, @p103, @p104, @p105, @p106, @p107),
+(@p108, @p109, @p110, @p111, @p112, @p113, @p114, @p115, @p116),
+(@p117, @p118, @p119, @p120, @p121, @p122, @p123, @p124, @p125),
+(@p126, @p127, @p128, @p129, @p130, @p131, @p132, @p133, @p134),
+(@p135, @p136, @p137, @p138, @p139, @p140, @p141, @p142, @p143),
+(@p144, @p145, @p146, @p147, @p148, @p149, @p150, @p151, @p152),
+(@p153, @p154, @p155, @p156, @p157, @p158, @p159, @p160, @p161),
+(@p162, @p163, @p164, @p165, @p166, @p167, @p168, @p169, @p170),
+(@p171, @p172, @p173, @p174, @p175, @p176, @p177, @p178, @p179),
+(@p180, @p181, @p182, @p183, @p184, @p185, @p186, @p187, @p188),
+(@p189, @p190, @p191, @p192, @p193, @p194, @p195, @p196, @p197),
+(@p198, @p199, @p200, @p201, @p202, @p203, @p204, @p205, @p206),
+(@p207, @p208, @p209, @p210, @p211, @p212, @p213, @p214, @p215),
+(@p216, @p217, @p218, @p219, @p220, @p221, @p222, @p223, @p224),
+(@p225, @p226, @p227, @p228, @p229, @p230, @p231, @p232, @p233),
+(@p234, @p235, @p236, @p237, @p238, @p239, @p240, @p241, @p242),
+(@p243, @p244, @p245, @p246, @p247, @p248, @p249, @p250, @p251),
+(@p252, @p253, @p254, @p255, @p256, @p257, @p258, @p259, @p260),
+(@p261, @p262, @p263, @p264, @p265, @p266, @p267, @p268, @p269);
+2024-01-03 00:24:28.365 +03:00 [ERR] An exception occurred in the database while saving changes for context type 'NewsAggregatingProject.Data.NewsAggregatingDBContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Конфликт инструкции INSERT с ограничением FOREIGN KEY "FK_News_Categories_CategoryId". Конфликт произошел в базе данных "NewAggregatorDB", таблица "dbo.Categories", column 'Id'.
+Выполнение данной инструкции было прервано.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__209_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:f94da747-dda0-4438-aeff-21e4d54e10d6
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Конфликт инструкции INSERT с ограничением FOREIGN KEY "FK_News_Categories_CategoryId". Конфликт произошел в базе данных "NewAggregatorDB", таблица "dbo.Categories", column 'Id'.
+Выполнение данной инструкции было прервано.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__209_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:f94da747-dda0-4438-aeff-21e4d54e10d6
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2024-01-03 00:24:28.631 +03:00 [INF] Executed action NewsAggregatingProject.Controllers.NewsController.Aggregate (NewsAggregatingProject) in 9771.3968ms
+2024-01-03 00:24:28.636 +03:00 [INF] Executed endpoint 'NewsAggregatingProject.Controllers.NewsController.Aggregate (NewsAggregatingProject)'
+2024-01-03 00:24:28.645 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Конфликт инструкции INSERT с ограничением FOREIGN KEY "FK_News_Categories_CategoryId". Конфликт произошел в базе данных "NewAggregatorDB", таблица "dbo.Categories", column 'Id'.
+Выполнение данной инструкции было прервано.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__209_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:f94da747-dda0-4438-aeff-21e4d54e10d6
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at NewsAggregatingProject.Repositories.UnitOfWork.Commit() in C:\Users\Брест\myprojectGIT\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.Repositories\UnitOfWork.cs:line 38
+   at NewsAggregatingProject.Services.NewsService.InsertParsedNews(List`1 listFullfilledNews) in C:\Users\Брест\myprojectGIT\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.Services\NewsService.cs:line 82
+   at NewsAggregatingProject.Controllers.NewsController.Aggregate(SourceModelAggregating model) in C:\Users\Брест\myprojectGIT\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject\Controllers\NewsController.cs:line 79
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-01-03 00:24:28.791 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7057/News/Aggregate - 500 null text/html; charset=utf-8 9968.4434ms
+2024-01-03 00:24:28.809 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-03 00:24:28.809 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_vs/browserLink - null null
+2024-01-03 00:24:28.874 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_vs/browserLink - 200 null text/javascript; charset=UTF-8 64.8817ms
+2024-01-03 00:24:28.883 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - 200 13780 application/javascript; charset=utf-8 74.5573ms
+2024-01-03 00:28:38.480 +03:00 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-01-03 00:28:38.563 +03:00 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-01-03 00:28:38.568 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-01-03 00:28:38.569 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-01-03 00:28:38.610 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-01-03 00:28:38.630 +03:00 [INF] Applying migration '20240102212809_TemporaryMigration'.
+2024-01-03 00:28:38.705 +03:00 [INF] Executed DbCommand (24ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [News] DROP CONSTRAINT [FK_News_Categories_CategoryId];
+2024-01-03 00:28:38.715 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DROP TABLE [Categories];
+2024-01-03 00:28:38.720 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DROP INDEX [IX_News_CategoryId] ON [News];
+2024-01-03 00:28:38.817 +03:00 [INF] Executed DbCommand (97ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var0 sysname;
+SELECT @var0 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[News]') AND [c].[name] = N'CategoryId');
+IF @var0 IS NOT NULL EXEC(N'ALTER TABLE [News] DROP CONSTRAINT [' + @var0 + '];');
+ALTER TABLE [News] DROP COLUMN [CategoryId];
+2024-01-03 00:28:38.822 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20240102212809_TemporaryMigration', N'8.0.0');
+2024-01-03 00:28:46.167 +03:00 [INF] User profile is available. Using 'C:\Users\Брест\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-03 00:28:46.756 +03:00 [INF] Now listening on: https://localhost:7057
+2024-01-03 00:28:47.020 +03:00 [INF] Now listening on: http://localhost:5154
+2024-01-03 00:28:47.025 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-03 00:28:47.033 +03:00 [INF] Hosting environment: Development
+2024-01-03 00:28:47.035 +03:00 [INF] Content root path: C:\Users\Брест\myprojectGIT\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject
+2024-01-03 00:28:47.323 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/ - null null
+2024-01-03 00:28:47.516 +03:00 [INF] Executing endpoint 'NewsAggregatingProject.Controllers.HomeController.Index (NewsAggregatingProject)'
+2024-01-03 00:28:47.544 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller NewsAggregatingProject.Controllers.HomeController (NewsAggregatingProject).
+2024-01-03 00:28:48.423 +03:00 [INF] Hello from HomeController. Its works
+2024-01-03 00:28:48.438 +03:00 [INF] Executing ViewResult, running view Index.
+2024-01-03 00:28:48.584 +03:00 [INF] Executed ViewResult - view Index executed in 131.6797ms.
+2024-01-03 00:28:48.614 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/... - null null
+2024-01-03 00:28:48.621 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_vs/browserLink - null null
+2024-01-03 00:28:48.637 +03:00 [INF] Executed action NewsAggregatingProject.Controllers.HomeController.Index (NewsAggregatingProject) in 1089.9374ms
+2024-01-03 00:28:48.643 +03:00 [INF] Executed endpoint 'NewsAggregatingProject.Controllers.HomeController.Index (NewsAggregatingProject)'
+2024-01-03 00:28:48.646 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/... - 404 0 null 31.6061ms
+2024-01-03 00:28:48.651 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7057/..., Response status code: 404
+2024-01-03 00:28:48.665 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/ - 200 null text/html; charset=utf-8 1348.4144ms
+2024-01-03 00:28:48.678 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-03 00:28:48.689 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - 200 13780 application/javascript; charset=utf-8 11.4415ms
+2024-01-03 00:28:48.712 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_vs/browserLink - 200 null text/javascript; charset=UTF-8 90.183ms
+2024-01-03 00:28:53.609 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/Source/List - null null
+2024-01-03 00:28:53.628 +03:00 [INF] Executing endpoint 'NewsAggregatingProject.Controllers.SourceController.List (NewsAggregatingProject)'
+2024-01-03 00:28:53.645 +03:00 [INF] Route matched with {action = "List", controller = "Source"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] List() on controller NewsAggregatingProject.Controllers.SourceController (NewsAggregatingProject).
+2024-01-03 00:28:54.544 +03:00 [INF] Executed DbCommand (63ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Name], [s].[RSSUrl], [s].[Url]
+FROM [Sources] AS [s]
+2024-01-03 00:28:54.659 +03:00 [INF] Executing ViewResult, running view List.
+2024-01-03 00:28:54.676 +03:00 [INF] Executed ViewResult - view List executed in 19.0014ms.
+2024-01-03 00:28:54.679 +03:00 [INF] Executed action NewsAggregatingProject.Controllers.SourceController.List (NewsAggregatingProject) in 1028.2895ms
+2024-01-03 00:28:54.683 +03:00 [INF] Executed endpoint 'NewsAggregatingProject.Controllers.SourceController.List (NewsAggregatingProject)'
+2024-01-03 00:28:54.690 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-03 00:28:54.690 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_vs/browserLink - null null
+2024-01-03 00:28:54.692 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/Source/List - 200 null text/html; charset=utf-8 1082.0444ms
+2024-01-03 00:28:54.697 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - 200 13780 application/javascript; charset=utf-8 6.9463ms
+2024-01-03 00:28:54.763 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_vs/browserLink - 200 null text/javascript; charset=UTF-8 72.242ms
+2024-01-03 00:28:57.098 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/News/GetNews?sourceId=1dd0b67f-7c37-419d-b80d-19d8b055a920 - null null
+2024-01-03 00:28:57.112 +03:00 [INF] Executing endpoint 'NewsAggregatingProject.Controllers.NewsController.GetNews (NewsAggregatingProject)'
+2024-01-03 00:28:57.135 +03:00 [INF] Route matched with {action = "GetNews", controller = "News"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNews(System.Guid) on controller NewsAggregatingProject.Controllers.NewsController (NewsAggregatingProject).
+2024-01-03 00:28:57.449 +03:00 [INF] Executed DbCommand (34ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Name], [s].[RSSUrl], [s].[Url]
+FROM [Sources] AS [s]
+WHERE [s].[Id] = @__id_0
+2024-01-03 00:28:57.460 +03:00 [INF] Executing ViewResult, running view GetNews.
+2024-01-03 00:28:57.513 +03:00 [INF] Executed ViewResult - view GetNews executed in 54.2338ms.
+2024-01-03 00:28:57.517 +03:00 [INF] Executed action NewsAggregatingProject.Controllers.NewsController.GetNews (NewsAggregatingProject) in 375.0951ms
+2024-01-03 00:28:57.521 +03:00 [INF] Executed endpoint 'NewsAggregatingProject.Controllers.NewsController.GetNews (NewsAggregatingProject)'
+2024-01-03 00:28:57.526 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/News/GetNews?sourceId=1dd0b67f-7c37-419d-b80d-19d8b055a920 - 200 null text/html; charset=utf-8 428.4441ms
+2024-01-03 00:28:57.531 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_vs/browserLink - null null
+2024-01-03 00:28:57.531 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-03 00:28:57.546 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - 200 13780 application/javascript; charset=utf-8 14.4684ms
+2024-01-03 00:28:57.557 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_vs/browserLink - 200 null text/javascript; charset=UTF-8 25.5582ms
+2024-01-03 00:28:59.103 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7057/News/Aggregate - application/x-www-form-urlencoded 222
+2024-01-03 00:28:59.120 +03:00 [INF] Executing endpoint 'NewsAggregatingProject.Controllers.NewsController.Aggregate (NewsAggregatingProject)'
+2024-01-03 00:28:59.135 +03:00 [INF] Route matched with {action = "Aggregate", controller = "News"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Aggregate(NewsAggregatingProject.Models.SourceModelAggregating) on controller NewsAggregatingProject.Controllers.NewsController (NewsAggregatingProject).
+2024-01-03 00:28:59.223 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Name], [s].[RSSUrl], [s].[Url]
+FROM [Sources] AS [s]
+WHERE [s].[Id] = @__id_0
+2024-01-03 00:28:59.959 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[SourceUrl]
+FROM [News] AS [n]
+2024-01-03 00:29:09.501 +03:00 [INF] Executed DbCommand (75ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = -1), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000), @p4='?' (DbType = Single), @p5='?' (DbType = Guid), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Guid), @p9='?' (Size = -1), @p10='?' (DbType = DateTime2), @p11='?' (Size = 4000), @p12='?' (DbType = Single), @p13='?' (DbType = Guid), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (DbType = Guid), @p17='?' (Size = -1), @p18='?' (DbType = DateTime2), @p19='?' (Size = 4000), @p20='?' (DbType = Single), @p21='?' (DbType = Guid), @p22='?' (Size = 4000), @p23='?' (Size = 4000), @p24='?' (DbType = Guid), @p25='?' (Size = 4000), @p26='?' (DbType = DateTime2), @p27='?' (Size = 4000), @p28='?' (DbType = Single), @p29='?' (DbType = Guid), @p30='?' (Size = 4000), @p31='?' (Size = 4000), @p32='?' (DbType = Guid), @p33='?' (Size = 4000), @p34='?' (DbType = DateTime2), @p35='?' (Size = 4000), @p36='?' (DbType = Single), @p37='?' (DbType = Guid), @p38='?' (Size = 4000), @p39='?' (Size = 4000), @p40='?' (DbType = Guid), @p41='?' (Size = 4000), @p42='?' (DbType = DateTime2), @p43='?' (Size = 4000), @p44='?' (DbType = Single), @p45='?' (DbType = Guid), @p46='?' (Size = 4000), @p47='?' (Size = 4000), @p48='?' (DbType = Guid), @p49='?' (Size = -1), @p50='?' (DbType = DateTime2), @p51='?' (Size = 4000), @p52='?' (DbType = Single), @p53='?' (DbType = Guid), @p54='?' (Size = 4000), @p55='?' (Size = 4000), @p56='?' (DbType = Guid), @p57='?' (Size = -1), @p58='?' (DbType = DateTime2), @p59='?' (Size = 4000), @p60='?' (DbType = Single), @p61='?' (DbType = Guid), @p62='?' (Size = 4000), @p63='?' (Size = 4000), @p64='?' (DbType = Guid), @p65='?' (Size = -1), @p66='?' (DbType = DateTime2), @p67='?' (Size = 4000), @p68='?' (DbType = Single), @p69='?' (DbType = Guid), @p70='?' (Size = 4000), @p71='?' (Size = 4000), @p72='?' (DbType = Guid), @p73='?' (Size = 4000), @p74='?' (DbType = DateTime2), @p75='?' (Size = 4000), @p76='?' (DbType = Single), @p77='?' (DbType = Guid), @p78='?' (Size = 4000), @p79='?' (Size = 4000), @p80='?' (DbType = Guid), @p81='?' (Size = 4000), @p82='?' (DbType = DateTime2), @p83='?' (Size = 4000), @p84='?' (DbType = Single), @p85='?' (DbType = Guid), @p86='?' (Size = 4000), @p87='?' (Size = 4000), @p88='?' (DbType = Guid), @p89='?' (Size = -1), @p90='?' (DbType = DateTime2), @p91='?' (Size = 4000), @p92='?' (DbType = Single), @p93='?' (DbType = Guid), @p94='?' (Size = 4000), @p95='?' (Size = 4000), @p96='?' (DbType = Guid), @p97='?' (Size = -1), @p98='?' (DbType = DateTime2), @p99='?' (Size = 4000), @p100='?' (DbType = Single), @p101='?' (DbType = Guid), @p102='?' (Size = 4000), @p103='?' (Size = 4000), @p104='?' (DbType = Guid), @p105='?' (Size = -1), @p106='?' (DbType = DateTime2), @p107='?' (Size = 4000), @p108='?' (DbType = Single), @p109='?' (DbType = Guid), @p110='?' (Size = 4000), @p111='?' (Size = 4000), @p112='?' (DbType = Guid), @p113='?' (Size = -1), @p114='?' (DbType = DateTime2), @p115='?' (Size = 4000), @p116='?' (DbType = Single), @p117='?' (DbType = Guid), @p118='?' (Size = 4000), @p119='?' (Size = 4000), @p120='?' (DbType = Guid), @p121='?' (Size = 4000), @p122='?' (DbType = DateTime2), @p123='?' (Size = 4000), @p124='?' (DbType = Single), @p125='?' (DbType = Guid), @p126='?' (Size = 4000), @p127='?' (Size = 4000), @p128='?' (DbType = Guid), @p129='?' (Size = -1), @p130='?' (DbType = DateTime2), @p131='?' (Size = 4000), @p132='?' (DbType = Single), @p133='?' (DbType = Guid), @p134='?' (Size = 4000), @p135='?' (Size = 4000), @p136='?' (DbType = Guid), @p137='?' (Size = 4000), @p138='?' (DbType = DateTime2), @p139='?' (Size = 4000), @p140='?' (DbType = Single), @p141='?' (DbType = Guid), @p142='?' (Size = 4000), @p143='?' (Size = 4000), @p144='?' (DbType = Guid), @p145='?' (Size = -1), @p146='?' (DbType = DateTime2), @p147='?' (Size = 4000), @p148='?' (DbType = Single), @p149='?' (DbType = Guid), @p150='?' (Size = 4000), @p151='?' (Size = 4000), @p152='?' (DbType = Guid), @p153='?' (Size = 4000), @p154='?' (DbType = DateTime2), @p155='?' (Size = 4000), @p156='?' (DbType = Single), @p157='?' (DbType = Guid), @p158='?' (Size = 4000), @p159='?' (Size = 4000), @p160='?' (DbType = Guid), @p161='?' (Size = 4000), @p162='?' (DbType = DateTime2), @p163='?' (Size = 4000), @p164='?' (DbType = Single), @p165='?' (DbType = Guid), @p166='?' (Size = 4000), @p167='?' (Size = 4000), @p168='?' (DbType = Guid), @p169='?' (Size = 4000), @p170='?' (DbType = DateTime2), @p171='?' (Size = 4000), @p172='?' (DbType = Single), @p173='?' (DbType = Guid), @p174='?' (Size = 4000), @p175='?' (Size = 4000), @p176='?' (DbType = Guid), @p177='?' (Size = 4000), @p178='?' (DbType = DateTime2), @p179='?' (Size = 4000), @p180='?' (DbType = Single), @p181='?' (DbType = Guid), @p182='?' (Size = 4000), @p183='?' (Size = 4000), @p184='?' (DbType = Guid), @p185='?' (Size = 4000), @p186='?' (DbType = DateTime2), @p187='?' (Size = 4000), @p188='?' (DbType = Single), @p189='?' (DbType = Guid), @p190='?' (Size = 4000), @p191='?' (Size = 4000), @p192='?' (DbType = Guid), @p193='?' (Size = -1), @p194='?' (DbType = DateTime2), @p195='?' (Size = 4000), @p196='?' (DbType = Single), @p197='?' (DbType = Guid), @p198='?' (Size = 4000), @p199='?' (Size = 4000), @p200='?' (DbType = Guid), @p201='?' (Size = -1), @p202='?' (DbType = DateTime2), @p203='?' (Size = 4000), @p204='?' (DbType = Single), @p205='?' (DbType = Guid), @p206='?' (Size = 4000), @p207='?' (Size = 4000), @p208='?' (DbType = Guid), @p209='?' (Size = 4000), @p210='?' (DbType = DateTime2), @p211='?' (Size = 4000), @p212='?' (DbType = Single), @p213='?' (DbType = Guid), @p214='?' (Size = 4000), @p215='?' (Size = 4000), @p216='?' (DbType = Guid), @p217='?' (Size = -1), @p218='?' (DbType = DateTime2), @p219='?' (Size = 4000), @p220='?' (DbType = Single), @p221='?' (DbType = Guid), @p222='?' (Size = 4000), @p223='?' (Size = 4000), @p224='?' (DbType = Guid), @p225='?' (Size = 4000), @p226='?' (DbType = DateTime2), @p227='?' (Size = 4000), @p228='?' (DbType = Single), @p229='?' (DbType = Guid), @p230='?' (Size = 4000), @p231='?' (Size = 4000), @p232='?' (DbType = Guid), @p233='?' (Size = 4000), @p234='?' (DbType = DateTime2), @p235='?' (Size = 4000), @p236='?' (DbType = Single), @p237='?' (DbType = Guid), @p238='?' (Size = 4000), @p239='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [News] ([Id], [ContentNew], [DataAndTime], [Description], [Rate], [SourceId], [SourceUrl], [Title])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7),
+(@p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15),
+(@p16, @p17, @p18, @p19, @p20, @p21, @p22, @p23),
+(@p24, @p25, @p26, @p27, @p28, @p29, @p30, @p31),
+(@p32, @p33, @p34, @p35, @p36, @p37, @p38, @p39),
+(@p40, @p41, @p42, @p43, @p44, @p45, @p46, @p47),
+(@p48, @p49, @p50, @p51, @p52, @p53, @p54, @p55),
+(@p56, @p57, @p58, @p59, @p60, @p61, @p62, @p63),
+(@p64, @p65, @p66, @p67, @p68, @p69, @p70, @p71),
+(@p72, @p73, @p74, @p75, @p76, @p77, @p78, @p79),
+(@p80, @p81, @p82, @p83, @p84, @p85, @p86, @p87),
+(@p88, @p89, @p90, @p91, @p92, @p93, @p94, @p95),
+(@p96, @p97, @p98, @p99, @p100, @p101, @p102, @p103),
+(@p104, @p105, @p106, @p107, @p108, @p109, @p110, @p111),
+(@p112, @p113, @p114, @p115, @p116, @p117, @p118, @p119),
+(@p120, @p121, @p122, @p123, @p124, @p125, @p126, @p127),
+(@p128, @p129, @p130, @p131, @p132, @p133, @p134, @p135),
+(@p136, @p137, @p138, @p139, @p140, @p141, @p142, @p143),
+(@p144, @p145, @p146, @p147, @p148, @p149, @p150, @p151),
+(@p152, @p153, @p154, @p155, @p156, @p157, @p158, @p159),
+(@p160, @p161, @p162, @p163, @p164, @p165, @p166, @p167),
+(@p168, @p169, @p170, @p171, @p172, @p173, @p174, @p175),
+(@p176, @p177, @p178, @p179, @p180, @p181, @p182, @p183),
+(@p184, @p185, @p186, @p187, @p188, @p189, @p190, @p191),
+(@p192, @p193, @p194, @p195, @p196, @p197, @p198, @p199),
+(@p200, @p201, @p202, @p203, @p204, @p205, @p206, @p207),
+(@p208, @p209, @p210, @p211, @p212, @p213, @p214, @p215),
+(@p216, @p217, @p218, @p219, @p220, @p221, @p222, @p223),
+(@p224, @p225, @p226, @p227, @p228, @p229, @p230, @p231),
+(@p232, @p233, @p234, @p235, @p236, @p237, @p238, @p239);
+2024-01-03 00:29:09.546 +03:00 [INF] Executing RedirectResult, redirecting to /News.
+2024-01-03 00:29:09.550 +03:00 [INF] Executed action NewsAggregatingProject.Controllers.NewsController.Aggregate (NewsAggregatingProject) in 10403.7239ms
+2024-01-03 00:29:09.553 +03:00 [INF] Executed endpoint 'NewsAggregatingProject.Controllers.NewsController.Aggregate (NewsAggregatingProject)'
+2024-01-03 00:29:09.556 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7057/News/Aggregate - 302 0 null 10452.8443ms
+2024-01-03 00:29:09.566 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/News - null null
+2024-01-03 00:29:09.576 +03:00 [INF] Executing endpoint 'NewsAggregatingProject.Controllers.NewsController.Index (NewsAggregatingProject)'
+2024-01-03 00:29:09.588 +03:00 [INF] Route matched with {action = "Index", controller = "News"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller NewsAggregatingProject.Controllers.NewsController (NewsAggregatingProject).
+2024-01-03 00:29:09.648 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[DataAndTime], [n].[Description], [n].[Title]
+FROM [News] AS [n]
+2024-01-03 00:29:09.661 +03:00 [INF] Executing ViewResult, running view Index.
+2024-01-03 00:29:09.734 +03:00 [INF] Executed ViewResult - view Index executed in 73.7998ms.
+2024-01-03 00:29:09.739 +03:00 [INF] Executed action NewsAggregatingProject.Controllers.NewsController.Index (NewsAggregatingProject) in 145.2375ms
+2024-01-03 00:29:09.748 +03:00 [INF] Executed endpoint 'NewsAggregatingProject.Controllers.NewsController.Index (NewsAggregatingProject)'
+2024-01-03 00:29:09.751 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/News - 200 null text/html; charset=utf-8 184.4035ms
+2024-01-03 00:29:09.824 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-03 00:29:09.824 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_vs/browserLink - null null
+2024-01-03 00:29:09.828 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - 200 13780 application/javascript; charset=utf-8 5.0459ms
+2024-01-03 00:29:09.846 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_vs/browserLink - 200 null text/javascript; charset=UTF-8 22.4089ms
+2024-01-03 00:36:02.556 +03:00 [INF] User profile is available. Using 'C:\Users\Брест\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-03 00:36:02.946 +03:00 [INF] Now listening on: https://localhost:7057
+2024-01-03 00:36:02.948 +03:00 [INF] Now listening on: http://localhost:5154
+2024-01-03 00:36:02.950 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-03 00:36:02.951 +03:00 [INF] Hosting environment: Development
+2024-01-03 00:36:02.952 +03:00 [INF] Content root path: C:\Users\Брест\myprojectGIT\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject
+2024-01-03 00:36:04.426 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/ - null null
+2024-01-03 00:36:04.551 +03:00 [INF] Executing endpoint 'NewsAggregatingProject.Controllers.HomeController.Index (NewsAggregatingProject)'
+2024-01-03 00:36:04.571 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller NewsAggregatingProject.Controllers.HomeController (NewsAggregatingProject).
+2024-01-03 00:36:05.297 +03:00 [INF] Hello from HomeController. Its works
+2024-01-03 00:36:05.308 +03:00 [INF] Executing ViewResult, running view Index.
+2024-01-03 00:36:05.434 +03:00 [INF] Executed ViewResult - view Index executed in 123.6947ms.
+2024-01-03 00:36:05.443 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/... - null null
+2024-01-03 00:36:05.446 +03:00 [INF] Executed action NewsAggregatingProject.Controllers.HomeController.Index (NewsAggregatingProject) in 872.159ms
+2024-01-03 00:36:05.448 +03:00 [INF] Executed endpoint 'NewsAggregatingProject.Controllers.HomeController.Index (NewsAggregatingProject)'
+2024-01-03 00:36:05.451 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/... - 404 0 null 7.7178ms
+2024-01-03 00:36:05.476 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_vs/browserLink - null null
+2024-01-03 00:36:05.480 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-03 00:36:05.484 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7057/..., Response status code: 404
+2024-01-03 00:36:05.484 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/ - 200 null text/html; charset=utf-8 1063.6411ms
+2024-01-03 00:36:05.499 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - 200 13780 application/javascript; charset=utf-8 20.901ms
+2024-01-03 00:36:05.540 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_vs/browserLink - 200 null text/javascript; charset=UTF-8 64.1189ms
+2024-01-03 00:36:12.565 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/News - null null
+2024-01-03 00:36:12.586 +03:00 [INF] Executing endpoint 'NewsAggregatingProject.Controllers.NewsController.Index (NewsAggregatingProject)'
+2024-01-03 00:36:12.598 +03:00 [INF] Route matched with {action = "Index", controller = "News"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller NewsAggregatingProject.Controllers.NewsController (NewsAggregatingProject).
+2024-01-03 00:36:13.870 +03:00 [INF] Executed DbCommand (44ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[DataAndTime], [n].[Description], [n].[Title]
+FROM [News] AS [n]
+2024-01-03 00:36:13.909 +03:00 [INF] Executing ViewResult, running view Index.
+2024-01-03 00:36:13.980 +03:00 [INF] Executed ViewResult - view Index executed in 72.0918ms.
+2024-01-03 00:36:13.982 +03:00 [INF] Executed action NewsAggregatingProject.Controllers.NewsController.Index (NewsAggregatingProject) in 1376.5737ms
+2024-01-03 00:36:13.985 +03:00 [INF] Executed endpoint 'NewsAggregatingProject.Controllers.NewsController.Index (NewsAggregatingProject)'
+2024-01-03 00:36:13.993 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/News - 200 null text/html; charset=utf-8 1428.4133ms
+2024-01-03 00:36:14.079 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-03 00:36:14.079 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_vs/browserLink - null null
+2024-01-03 00:36:14.085 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - 200 13780 application/javascript; charset=utf-8 6.2529ms
+2024-01-03 00:36:14.102 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_vs/browserLink - 200 null text/javascript; charset=UTF-8 23.3956ms
+2024-01-03 00:36:16.890 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/News/Details/9338c260-3baf-44d3-9e57-113242e4f204 - null null
+2024-01-03 00:36:16.904 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/News/Details/9338c260-3baf-44d3-9e57-113242e4f204 - 404 0 null 13.7614ms
+2024-01-03 00:36:16.920 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7057/News/Details/9338c260-3baf-44d3-9e57-113242e4f204, Response status code: 404
+2024-01-03 00:38:27.549 +03:00 [INF] User profile is available. Using 'C:\Users\Брест\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-03 00:38:27.952 +03:00 [INF] Now listening on: https://localhost:7057
+2024-01-03 00:38:27.954 +03:00 [INF] Now listening on: http://localhost:5154
+2024-01-03 00:38:27.959 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-03 00:38:27.962 +03:00 [INF] Hosting environment: Development
+2024-01-03 00:38:27.964 +03:00 [INF] Content root path: C:\Users\Брест\myprojectGIT\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject
+2024-01-03 00:38:31.136 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/ - null null
+2024-01-03 00:38:31.319 +03:00 [INF] Executing endpoint 'NewsAggregatingProject.Controllers.HomeController.Index (NewsAggregatingProject)'
+2024-01-03 00:38:31.350 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller NewsAggregatingProject.Controllers.HomeController (NewsAggregatingProject).
+2024-01-03 00:38:32.395 +03:00 [INF] Hello from HomeController. Its works
+2024-01-03 00:38:32.408 +03:00 [INF] Executing ViewResult, running view Index.
+2024-01-03 00:38:32.553 +03:00 [INF] Executed ViewResult - view Index executed in 120.7487ms.
+2024-01-03 00:38:32.554 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/... - null null
+2024-01-03 00:38:32.556 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-03 00:38:32.566 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_vs/browserLink - null null
+2024-01-03 00:38:32.576 +03:00 [INF] Executed action NewsAggregatingProject.Controllers.HomeController.Index (NewsAggregatingProject) in 1220.6454ms
+2024-01-03 00:38:32.582 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/... - 404 0 null 27.4875ms
+2024-01-03 00:38:32.593 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - 200 13780 application/javascript; charset=utf-8 37.787ms
+2024-01-03 00:38:32.622 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7057/..., Response status code: 404
+2024-01-03 00:38:32.632 +03:00 [INF] Executed endpoint 'NewsAggregatingProject.Controllers.HomeController.Index (NewsAggregatingProject)'
+2024-01-03 00:38:32.643 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/ - 200 null text/html; charset=utf-8 1515.9639ms
+2024-01-03 00:38:32.659 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_vs/browserLink - 200 null text/javascript; charset=UTF-8 94.5266ms
+2024-01-03 00:38:35.536 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/News - null null
+2024-01-03 00:38:35.557 +03:00 [INF] Executing endpoint 'NewsAggregatingProject.Controllers.NewsController.Index (NewsAggregatingProject)'
+2024-01-03 00:38:35.570 +03:00 [INF] Route matched with {action = "Index", controller = "News"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller NewsAggregatingProject.Controllers.NewsController (NewsAggregatingProject).
+2024-01-03 00:38:36.759 +03:00 [INF] Executed DbCommand (54ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[DataAndTime], [n].[Description], [n].[Title]
+FROM [News] AS [n]
+2024-01-03 00:38:36.791 +03:00 [INF] Executing ViewResult, running view Index.
+2024-01-03 00:38:36.839 +03:00 [INF] Executed ViewResult - view Index executed in 49.2418ms.
+2024-01-03 00:38:36.843 +03:00 [INF] Executed action NewsAggregatingProject.Controllers.NewsController.Index (NewsAggregatingProject) in 1265.8374ms
+2024-01-03 00:38:36.848 +03:00 [INF] Executed endpoint 'NewsAggregatingProject.Controllers.NewsController.Index (NewsAggregatingProject)'
+2024-01-03 00:38:36.855 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/News - 200 null text/html; charset=utf-8 1319.703ms
+2024-01-03 00:38:36.940 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-03 00:38:36.940 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_vs/browserLink - null null
+2024-01-03 00:38:36.949 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - 200 13780 application/javascript; charset=utf-8 9.8599ms
+2024-01-03 00:38:36.982 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_vs/browserLink - 200 null text/javascript; charset=UTF-8 42.4736ms
+2024-01-03 00:38:41.100 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/News/Details/9338c260-3baf-44d3-9e57-113242e4f204 - null null
+2024-01-03 00:38:41.116 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/News/Details/9338c260-3baf-44d3-9e57-113242e4f204 - 404 0 null 16.8035ms
+2024-01-03 00:38:41.126 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7057/News/Details/9338c260-3baf-44d3-9e57-113242e4f204, Response status code: 404
+2024-01-03 00:38:45.947 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-03 00:38:45.969 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - 200 13780 application/javascript; charset=utf-8 22.6205ms
+2024-01-03 00:42:02.338 +03:00 [INF] User profile is available. Using 'C:\Users\Брест\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-03 00:42:02.678 +03:00 [INF] Now listening on: https://localhost:7057
+2024-01-03 00:42:02.680 +03:00 [INF] Now listening on: http://localhost:5154
+2024-01-03 00:42:02.683 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-03 00:42:02.685 +03:00 [INF] Hosting environment: Development
+2024-01-03 00:42:02.686 +03:00 [INF] Content root path: C:\Users\Брест\myprojectGIT\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject
+2024-01-03 00:42:03.579 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/ - null null
+2024-01-03 00:42:03.734 +03:00 [INF] Executing endpoint 'NewsAggregatingProject.Controllers.HomeController.Index (NewsAggregatingProject)'
+2024-01-03 00:42:03.757 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller NewsAggregatingProject.Controllers.HomeController (NewsAggregatingProject).
+2024-01-03 00:42:04.709 +03:00 [INF] Hello from HomeController. Its works
+2024-01-03 00:42:04.722 +03:00 [INF] Executing ViewResult, running view Index.
+2024-01-03 00:42:04.846 +03:00 [INF] Executed ViewResult - view Index executed in 124.9697ms.
+2024-01-03 00:42:04.864 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-03 00:42:04.865 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/... - null null
+2024-01-03 00:42:04.869 +03:00 [INF] Executed action NewsAggregatingProject.Controllers.HomeController.Index (NewsAggregatingProject) in 1107.4829ms
+2024-01-03 00:42:04.876 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_vs/browserLink - null null
+2024-01-03 00:42:04.893 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - 200 13780 application/javascript; charset=utf-8 28.6079ms
+2024-01-03 00:42:04.896 +03:00 [INF] Executed endpoint 'NewsAggregatingProject.Controllers.HomeController.Index (NewsAggregatingProject)'
+2024-01-03 00:42:04.901 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/... - 404 0 null 36.8535ms
+2024-01-03 00:42:04.909 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7057/..., Response status code: 404
+2024-01-03 00:42:04.918 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/ - 200 null text/html; charset=utf-8 1344.8568ms
+2024-01-03 00:42:04.951 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_vs/browserLink - 200 null text/javascript; charset=UTF-8 80.6962ms
+2024-01-03 00:42:09.256 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/News - null null
+2024-01-03 00:42:09.283 +03:00 [INF] Executing endpoint 'NewsAggregatingProject.Controllers.NewsController.Index (NewsAggregatingProject)'
+2024-01-03 00:42:09.297 +03:00 [INF] Route matched with {action = "Index", controller = "News"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller NewsAggregatingProject.Controllers.NewsController (NewsAggregatingProject).
+2024-01-03 00:42:10.490 +03:00 [INF] Executed DbCommand (49ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[DataAndTime], [n].[Description], [n].[Title]
+FROM [News] AS [n]
+2024-01-03 00:42:10.522 +03:00 [INF] Executing ViewResult, running view Index.
+2024-01-03 00:42:10.587 +03:00 [INF] Executed ViewResult - view Index executed in 66.4351ms.
+2024-01-03 00:42:10.590 +03:00 [INF] Executed action NewsAggregatingProject.Controllers.NewsController.Index (NewsAggregatingProject) in 1286.5277ms
+2024-01-03 00:42:10.610 +03:00 [INF] Executed endpoint 'NewsAggregatingProject.Controllers.NewsController.Index (NewsAggregatingProject)'
+2024-01-03 00:42:10.639 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/News - 200 null text/html; charset=utf-8 1383.8123ms
+2024-01-03 00:42:10.720 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-03 00:42:10.720 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/_vs/browserLink - null null
+2024-01-03 00:42:10.724 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_framework/aspnetcore-browser-refresh.js - 200 13780 application/javascript; charset=utf-8 4.551ms
+2024-01-03 00:42:10.750 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/_vs/browserLink - 200 null text/javascript; charset=UTF-8 29.7389ms
+2024-01-03 00:42:13.941 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7057/News/Details/9338c260-3baf-44d3-9e57-113242e4f204 - null null
+2024-01-03 00:42:13.957 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7057/News/Details/9338c260-3baf-44d3-9e57-113242e4f204 - 404 0 null 16.9628ms
+2024-01-03 00:42:13.967 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7057/News/Details/9338c260-3baf-44d3-9e57-113242e4f204, Response status code: 404

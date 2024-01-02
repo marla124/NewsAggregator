@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "k/LBik62WidcelXjTsaMB70cdcPe1w7b/GSsa5/ELOVp4csLsXmSUa80U9VlFz2DB4AADdf+zO4MT9S1JPwoFg==",
+  "dgSpecHash": "KFfN+GiF32xRfPWhIFUjA3bwsnGPqS/ka4NtbyX9hE3+aFYpTk0Cqid3bag+pgz9SHzHeYYqrDficstC9Q+Bew==",
   "success": true,
   "projectFilePath": "C:\\Users\\Брест\\myprojectGIT\\NewsAggregator\\NewsAggregatingProject\\NewsAggregatingProject.Services\\NewsAggregatingProject.Services.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Брест\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Брест\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
+    "C:\\Users\\Брест\\.nuget\\packages\\htmlagilitypack\\1.11.57\\htmlagilitypack.1.11.57.nupkg.sha512",
     "C:\\Users\\Брест\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Брест\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Брест\\.nuget\\packages\\microsoft.data.sqlclient\\5.1.1\\microsoft.data.sqlclient.5.1.1.nupkg.sha512",

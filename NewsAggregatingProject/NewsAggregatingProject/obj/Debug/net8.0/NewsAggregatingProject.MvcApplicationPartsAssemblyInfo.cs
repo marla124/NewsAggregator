@@ -11,13 +11,7 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("NewsAggregatingProject.Data")]
-[assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+071f8e12faf61855b69fc40084e1f72117de4dc3")]
-[assembly: System.Reflection.AssemblyProductAttribute("NewsAggregatingProject.Data")]
-[assembly: System.Reflection.AssemblyTitleAttribute("NewsAggregatingProject.Data")]
-[assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
+[assembly: Microsoft.AspNetCore.Mvc.ApplicationParts.ApplicationPartAttribute("FluentValidation.AspNetCore")]
 
 // Создано классом WriteCodeFragment MSBuild.
 

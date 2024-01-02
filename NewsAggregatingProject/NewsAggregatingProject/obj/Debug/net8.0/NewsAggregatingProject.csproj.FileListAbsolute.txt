@@ -445,3 +445,5 @@ C:\Users\Брест\myprojectGIT\NewsAggregator\NewsAggregatingProject\NewsAggre
 C:\Users\Брест\myprojectGIT\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject\bin\Debug\net8.0\System.ServiceModel.Syndication.dll
 C:\Users\Брест\myprojectGIT\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject\bin\Debug\net8.0\NewsAggregatingProject.Services.dll
 C:\Users\Брест\myprojectGIT\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject\bin\Debug\net8.0\NewsAggregatingProject.Services.pdb
+C:\Users\Брест\myprojectGIT\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject\obj\Debug\net8.0\NewsAggregatingProject.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Брест\myprojectGIT\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject\bin\Debug\net8.0\HtmlAgilityPack.dll
