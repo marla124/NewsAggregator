@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using NewsAggregatingProject.Core;
 using NewsAggregatingProject.Data;
 using NewsAggregatingProject.Data.Entities;
+using NewsAggregatingProject.Filters;
 using NewsAggregatingProject.Models;
 using NewsAggregatingProject.Repositories;
 using NewsAggregatingProject.Services;
@@ -13,6 +15,7 @@ using System.Data;
 
 namespace NewsAggregatingProject.Controllers
 {
+    [LastVisitTrackerResourceFilter]
     public class NewsController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -26,6 +29,7 @@ namespace NewsAggregatingProject.Controllers
         }
 
         [HttpGet]
+        //[Authorize]
         public async Task<IActionResult> Index()
         {
             try

@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using NewsAggregatingProject.Filters;
 using NewsAggregatingProject.Models;
 using NewsAggregatingProject.Repositories;
 using NewsAggregatingProject.Services;
@@ -22,7 +23,8 @@ namespace NewsAggregatingProject.Controllers
             //_dbInitializer = dbInitializer;
         }
 
-        public async Task<IActionResult> Index()
+        [TestResourceFilter(50,"HelloWorld!")]
+        public async Task<IActionResult> Index(int? data)
         {
             //await _dbInitializer.InitDbWithTestValues();
             return View();
