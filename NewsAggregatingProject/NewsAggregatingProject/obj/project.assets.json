@@ -1840,6 +1840,7 @@
         "dependencies": {
           "HtmlAgilityPack": "1.11.57",
           "NewsAggregatingProject.Core": "1.0.0",
+          "NewsAggregatingProject.Data": "1.0.0",
           "NewsAggregatingProject.Repositories": "1.0.0",
           "System.ServiceModel.Syndication": "8.0.0"
         },

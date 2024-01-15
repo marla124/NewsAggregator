@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\NewsAggregatingProject.Core\NewsAggregatingProject.Core.csproj" />
+    <ProjectReference Include="..\NewsAggregatingProject.Data\NewsAggregatingProject.Data.csproj" />
     <ProjectReference Include="..\NewsAggregatingProject.Repositories\NewsAggregatingProject.Repositories.csproj" />
   </ItemGroup>
 

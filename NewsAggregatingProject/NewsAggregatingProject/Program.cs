@@ -10,6 +10,7 @@ using Serilog;
 using Microsoft.AspNetCore.Mvc;
 using Serilog.Events;
 using NewsAggregatingProject.Services.Interfaces;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace NewsAggregatingProject
 {
@@ -36,6 +37,13 @@ namespace NewsAggregatingProject
             builder.Logging.ClearProviders();
             builder.Logging.AddSerilog(logger);
 
+            builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                            .AddCookie(opt =>
+                            {
+                                opt.LoginPath = new PathString("/User/Login");
+                                opt.AccessDeniedPath = new PathString("/User/AccessDenied");
+                                opt.LogoutPath = new PathString("/User/Logout");
+                            });
             builder.Services
                 .AddValidatorsFromAssemblyContaining<UserRegisterValidator>();
             builder.Services.AddScoped<IRepository<News>, Repository<News>>();
@@ -47,6 +55,8 @@ namespace NewsAggregatingProject
 
             //builder.Services.AddScoped<IDbInitializer, DbInitializer>();
             builder.Services.AddScoped<INewsService, NewsService>();
+            builder.Services.AddScoped<IUserService, UserService>();
+
 
             builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
@@ -68,6 +78,7 @@ namespace NewsAggregatingProject
 
 
             app.UseRouting();
+            app.UseAuthorization();
             app.UseAuthentication();
             app.Map("/NotFound", ()=>new NotFoundResult());
 

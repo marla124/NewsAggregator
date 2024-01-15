@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using NewsAggregatingProject.Filters;
@@ -12,25 +13,21 @@ namespace NewsAggregatingProject.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly IUnitOfWork _unitOfWork;
-
-        //private readonly IDbInitializer _dbInitializer;
-
-        public HomeController(ILogger<HomeController> logger, IUnitOfWork unitOfWork /*IDbInitializer dbInitializer*/)
+        public HomeController(ILogger<HomeController> logger, IUnitOfWork unitOfWork)
         {
             _logger = logger;
             _unitOfWork = unitOfWork;
             _logger.LogInformation("Hello from HomeController. Its works");
-            //_dbInitializer = dbInitializer;
         }
 
         [TestResourceFilter(50,"HelloWorld!")]
         public async Task<IActionResult> Index(int? data)
         {
-            //await _dbInitializer.InitDbWithTestValues();
             return View();
         }
 
-        public IActionResult Privacy()
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> Privacy()
         {
             return View();
         }

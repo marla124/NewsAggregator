@@ -2817,6 +2817,7 @@
     "net8.0": [
       "HtmlAgilityPack >= 1.11.57",
       "NewsAggregatingProject.Core >= 1.0.0",
+      "NewsAggregatingProject.Data >= 1.0.0",
       "NewsAggregatingProject.Repositories >= 1.0.0",
       "System.ServiceModel.Syndication >= 8.0.0"
     ]
@@ -2855,6 +2856,9 @@
           "projectReferences": {
             "C:\\Users\\Брест\\myprojectGIT\\NewsAggregator\\NewsAggregatingProject\\NewsAggregatingProject.Core\\NewsAggregatingProject.Core.csproj": {
               "projectPath": "C:\\Users\\Брест\\myprojectGIT\\NewsAggregator\\NewsAggregatingProject\\NewsAggregatingProject.Core\\NewsAggregatingProject.Core.csproj"
+            },
+            "C:\\Users\\Брест\\myprojectGIT\\NewsAggregator\\NewsAggregatingProject\\NewsAggregatingProject.Data\\NewsAggregatingProject.Data.csproj": {
+              "projectPath": "C:\\Users\\Брест\\myprojectGIT\\NewsAggregator\\NewsAggregatingProject\\NewsAggregatingProject.Data\\NewsAggregatingProject.Data.csproj"
             },
             "C:\\Users\\Брест\\myprojectGIT\\NewsAggregator\\NewsAggregatingProject\\NewsAggregatingProject.Repositories\\NewsAggregatingProject.Repositories.csproj": {
               "projectPath": "C:\\Users\\Брест\\myprojectGIT\\NewsAggregator\\NewsAggregatingProject\\NewsAggregatingProject.Repositories\\NewsAggregatingProject.Repositories.csproj"

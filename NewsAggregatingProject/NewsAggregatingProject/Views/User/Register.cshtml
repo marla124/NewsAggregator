@@ -9,7 +9,7 @@
 <form asp-controller="User" asp-action="Register" method="post">
     <div class="row">
         <div class="col-12 col-md-4 col-lg-3">
-            <input type="submit" class="btn btn-primary" value="Create" />
+            <input type="submit" class="btn btn-primary" value="Register" />
         </div>
         <div class="row">
             <div class="col-12 col-md-6 col-lg-4">
@@ -32,27 +32,7 @@
                 <span asp-validation-for="PasswordConfirmation"></span>
             </div>
         </div>
-        <div class="row">
-            <div class="col-12 col-md-6 col-lg-4">
-                <label asp-for="Age" class="form-label">Age</label>
-                <input type="text" class="form-control" asp-for="Age"></input>
-                <span asp-validation-for="Age"></span>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12 col-md-6 col-lg-4">
-                <label asp-for="FirstName" class="form-label">FirstName</label>
-                <input type="text" class="form-control" asp-for="FirstName"></input>
-                <span asp-validation-for="FirstName"></span>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12 col-md-6 col-lg-4">
-                <label asp-for="LastName" class="form-label">LastName</label>
-                <input type="text" class="form-control" asp-for="LastName"></input>
-                <span asp-validation-for="LastName"></span>
-            </div>
-        </div>
+
     </div>
 </form>
 </div>
