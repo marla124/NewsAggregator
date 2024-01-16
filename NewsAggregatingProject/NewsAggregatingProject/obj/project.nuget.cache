@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tKeG5x3twHOMZbvk2Wkby4SZjrNnzUq8hwELpwn8ZMBJXUWeOdylAKH80wP7N5eB+CmT/0zTzS8J4o7Jzwl98g==",
+  "dgSpecHash": "aM/K80bJfEcge/GDC2IqRhL8+iG2nXVf99gNT1m0R3+fv7aWK2pLSjLdQ2pz1fA/IkZAapw9QOubAfg4g78GNw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Брест\\myprojectGIT\\NewsAggregator\\NewsAggregatingProject\\NewsAggregatingProject\\NewsAggregatingProject.csproj",
+  "projectFilePath": "C:\\Users\\Брест\\myprj\\NewsAggregator\\NewsAggregatingProject\\NewsAggregatingProject\\NewsAggregatingProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Брест\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Брест\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

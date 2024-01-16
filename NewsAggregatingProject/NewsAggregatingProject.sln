@@ -11,9 +11,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewsAggregatingProject.Data
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewsAggregatingProject.Repositories", "NewsAggregatingProject.Repositories\NewsAggregatingProject.Repositories.csproj", "{FAAD4842-2948-400A-A76C-5B7E574E9814}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsAggregatingProject.Services", "NewsAggregatingProject.Services\NewsAggregatingProject.Services.csproj", "{2E085469-8AC0-439C-9C79-52C5C8DA5BB3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewsAggregatingProject.Services", "NewsAggregatingProject.Services\NewsAggregatingProject.Services.csproj", "{2E085469-8AC0-439C-9C79-52C5C8DA5BB3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BLL", "BLL", "{6C849F60-45DC-45EE-B895-6ED56D4C3569}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NAP.DAL", "NAP.DAL", "{DFDD9F49-6865-4F7C-889D-DD197B636CBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsAggregatingProject.MvcIdentity", "NewsAggregatingProject.MvcIdentity\NewsAggregatingProject.MvcIdentity.csproj", "{682E3DB2-1FB9-46E5-BEE7-49C1ADE24E8B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,11 +45,17 @@ Global
 		{2E085469-8AC0-439C-9C79-52C5C8DA5BB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E085469-8AC0-439C-9C79-52C5C8DA5BB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E085469-8AC0-439C-9C79-52C5C8DA5BB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{682E3DB2-1FB9-46E5-BEE7-49C1ADE24E8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{682E3DB2-1FB9-46E5-BEE7-49C1ADE24E8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{682E3DB2-1FB9-46E5-BEE7-49C1ADE24E8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{682E3DB2-1FB9-46E5-BEE7-49C1ADE24E8B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{E24AA7A9-316E-499A-8D0A-5826EB3203C8} = {DFDD9F49-6865-4F7C-889D-DD197B636CBB}
+		{FAAD4842-2948-400A-A76C-5B7E574E9814} = {DFDD9F49-6865-4F7C-889D-DD197B636CBB}
 		{2E085469-8AC0-439C-9C79-52C5C8DA5BB3} = {6C849F60-45DC-45EE-B895-6ED56D4C3569}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
