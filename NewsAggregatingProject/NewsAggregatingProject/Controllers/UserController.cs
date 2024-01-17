@@ -1,6 +1,5 @@
 ﻿using FluentValidation;
 using FluentValidation.AspNetCore;
-using HtmlAgilityPack;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
@@ -27,10 +26,10 @@ namespace NewsAggregatingProject.Controllers
             _userService = userService;
             _loginValidator = loginValidator;
         }
-            
-        
-        public IActionResult Index()=>View();
-        
+
+
+        public IActionResult Index() => View();
+
 
         [HttpGet]
         public IActionResult Register() => View();
@@ -38,22 +37,21 @@ namespace NewsAggregatingProject.Controllers
         [HttpPost]
         public async Task<IActionResult> Register(UserRegisterModel model)
         {
-            var result= await _registerValidator.ValidateAsync(model);
+            var result = await _registerValidator.ValidateAsync(model);
             if (result.IsValid && !(_userService.IsUserExists(model.Email)))
             {
                 var dto = new UserDto()
                 {
-                    Email=model.Email,
-                    Password=model.Password
+                    Email = model.Email,
+                    Password = model.Password
                 };
-                _userService.RegisterUser(dto);
-                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,
-                    new ClaimsPrincipal( await _userService.Autanticate(dto.Email)));
-                return Ok(model); 
+                await _userService.RegisterUser(dto);
+                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,  new ClaimsPrincipal(await _userService.Authenticate(dto.Email)));
+                return Ok(model);
             }
             else
             {
-                result.AddToModelState(this.ModelState);
+                result.AddToModelState(ModelState);
                 return View(model);
             }
         }
@@ -67,9 +65,9 @@ namespace NewsAggregatingProject.Controllers
                 if (await _userService.IsPasswordCorrect(model.Email, model.Password))
                 {
                     await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,
-                    new ClaimsPrincipal(await _userService.Autanticate(model.Email)));
+                    new ClaimsPrincipal(await _userService.Authenticate(model.Email)));
                 }
-                
+
                 return RedirectToAction("Index", "Home");
             }
             else
@@ -82,5 +80,17 @@ namespace NewsAggregatingProject.Controllers
 
         [HttpGet]
         public IActionResult Login() => View();
+
+
+        [HttpPost]
+        public async Task<IActionResult> Logout(UserLogoutModel model)
+        {
+            await HttpContext.SignOutAsync();
+            return RedirectToAction("Index", "Home");
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Logout() => View();
+
     }
 }

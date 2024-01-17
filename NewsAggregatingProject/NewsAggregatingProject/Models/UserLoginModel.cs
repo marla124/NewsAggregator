@@ -1,8 +1,7 @@
 ﻿namespace NewsAggregatingProject.Models
 {
-    public class UserLoginModel
+    public class UserLogoutModel
     {
-        public string Email { get; set; }
-        public string Password { get; set; }
+        public string IsConfirmed { get; set; }
     }
 }

@@ -1,0 +1,30 @@
+﻿@model UserLoginModel
+@{
+    ViewBag.Title = "login";
+    Layout = "_Layout";
+}
+<div>
+    <h2>Logout</h2>
+</div>
+<form asp-controller="User" asp-action="Logout" method="post">
+
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4">
+                <h4>Are you sure?</h4>
+            </div>
+        </div>
+        <div class="col-12 col-md-4 col-lg-3">
+            <input type="submit" class="btn btn-primary" value="Yes" />
+        </div>
+    
+</form>
+
+
+@section Scripts
+        {
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+
+}

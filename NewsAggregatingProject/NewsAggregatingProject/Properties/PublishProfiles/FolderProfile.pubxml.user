@@ -5,7 +5,8 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>C:\Users\Брест\PublishDv</_PublishTargetUrl>
-    <History>True|2024-01-16T15:53:25.9161725Z;True|2024-01-16T18:45:26.9576582+03:00;True|2024-01-16T18:36:32.0510014+03:00;True|2024-01-16T18:25:21.8479967+03:00;True|2024-01-16T18:24:44.4152963+03:00;</History>
+    <History>True|2024-01-16T17:33:54.3140343Z;True|2024-01-16T20:33:09.0806511+03:00;True|2024-01-16T20:31:32.8783984+03:00;False|2024-01-16T20:30:32.4575021+03:00;True|2024-01-16T18:53:25.9161725+03:00;True|2024-01-16T18:45:26.9576582+03:00;True|2024-01-16T18:36:32.0510014+03:00;True|2024-01-16T18:25:21.8479967+03:00;True|2024-01-16T18:24:44.4152963+03:00;</History>
     <LastFailureDetails />
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
   </PropertyGroup>
 </Project>

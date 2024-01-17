@@ -78,8 +78,9 @@ namespace NewsAggregatingProject
 
 
             app.UseRouting();
-            app.UseAuthorization();
+
             app.UseAuthentication();
+            app.UseAuthorization();
             app.Map("/NotFound", ()=>new NotFoundResult());
 
 

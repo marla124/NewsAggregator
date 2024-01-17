@@ -85,3 +85,83 @@
 2024-01-16 19:36:12.863 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5154/_framework/aspnetcore-browser-refresh.js - 200 13780 application/javascript; charset=utf-8 24.2997ms
 2024-01-16 19:36:12.866 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5154/..., Response status code: 404
 2024-01-16 19:36:12.890 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5154/_vs/browserLink - 200 null text/javascript; charset=UTF-8 62.7377ms
+2024-01-16 20:32:27.271 +03:00 [INF] User profile is available. Using 'C:\Users\Брест\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-16 20:32:27.772 +03:00 [INF] Now listening on: http://localhost:5154
+2024-01-16 20:32:27.776 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-16 20:32:27.778 +03:00 [INF] Hosting environment: Development
+2024-01-16 20:32:27.779 +03:00 [INF] Content root path: C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject
+2024-01-16 20:32:30.161 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5154/ - null null
+2024-01-16 20:32:30.357 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-01-16 20:32:30.385 +03:00 [INF] Executing endpoint 'NewsAggregatingProject.Controllers.HomeController.Index (NewsAggregatingProject)'
+2024-01-16 20:32:30.409 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.Nullable`1[System.Int32]) on controller NewsAggregatingProject.Controllers.HomeController (NewsAggregatingProject).
+2024-01-16 20:32:31.462 +03:00 [INF] Hello from HomeController. Its works
+2024-01-16 20:32:31.518 +03:00 [INF] Executing ViewResult, running view Index.
+2024-01-16 20:32:31.643 +03:00 [INF] Executed ViewResult - view Index executed in 127.682ms.
+2024-01-16 20:32:31.646 +03:00 [INF] Executed action NewsAggregatingProject.Controllers.HomeController.Index (NewsAggregatingProject) in 1234.909ms
+2024-01-16 20:32:31.648 +03:00 [INF] Executed endpoint 'NewsAggregatingProject.Controllers.HomeController.Index (NewsAggregatingProject)'
+2024-01-16 20:32:31.656 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5154/NewsAggregatingProject.styles.css?v=Jg_OWFgEVGzbT4cywdMe3WCxN0p5tC8FQbMx3dfOETs - null null
+2024-01-16 20:32:31.656 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5154/lib/bootstrap/dist/css/bootstrap.min.css - null null
+2024-01-16 20:32:31.661 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5154/css/site.css?v=SnKAoo3aWK7zl5gv-wHkQXus6da0Ri1UK9opz-d2Ies - null null
+2024-01-16 20:32:31.661 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5154/... - null null
+2024-01-16 20:32:31.665 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5154/lib/jquery/dist/jquery.min.js - null null
+2024-01-16 20:32:31.675 +03:00 [INF] The file /lib/bootstrap/dist/css/bootstrap.min.css was not modified
+2024-01-16 20:32:31.675 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5154/ - 200 null text/html; charset=utf-8 1518.9552ms
+2024-01-16 20:32:31.676 +03:00 [INF] The file /css/site.css was not modified
+2024-01-16 20:32:31.681 +03:00 [INF] Sending file. Request path: '/NewsAggregatingProject.styles.css'. Physical path: 'C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject\obj\Debug\net8.0\scopedcss\bundle\NewsAggregatingProject.styles.css'
+2024-01-16 20:32:31.681 +03:00 [INF] The file /lib/jquery/dist/jquery.min.js was not modified
+2024-01-16 20:32:31.681 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5154/... - 404 0 null 20.6001ms
+2024-01-16 20:32:31.683 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5154/lib/bootstrap/dist/js/bootstrap.bundle.min.js - null null
+2024-01-16 20:32:31.684 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5154/lib/bootstrap/dist/css/bootstrap.min.css - 304 null text/css 28.2623ms
+2024-01-16 20:32:31.685 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5154/css/site.css?v=SnKAoo3aWK7zl5gv-wHkQXus6da0Ri1UK9opz-d2Ies - 304 null text/css 24.0276ms
+2024-01-16 20:32:31.686 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5154/NewsAggregatingProject.styles.css?v=Jg_OWFgEVGzbT4cywdMe3WCxN0p5tC8FQbMx3dfOETs - 200 1140 text/css 34.17ms
+2024-01-16 20:32:31.687 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5154/lib/jquery/dist/jquery.min.js - 304 null text/javascript 23.3128ms
+2024-01-16 20:32:31.691 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5154/..., Response status code: 404
+2024-01-16 20:32:31.694 +03:00 [INF] The file /lib/bootstrap/dist/js/bootstrap.bundle.min.js was not modified
+2024-01-16 20:32:31.702 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5154/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - null null
+2024-01-16 20:32:31.703 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5154/lib/bootstrap/dist/js/bootstrap.bundle.min.js - 304 null text/javascript 19.3619ms
+2024-01-16 20:32:31.706 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5154/_vs/browserLink - null null
+2024-01-16 20:32:31.708 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5154/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-16 20:32:31.711 +03:00 [INF] The file /js/site.js was not modified
+2024-01-16 20:32:31.718 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5154/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - 304 null text/javascript 16.2259ms
+2024-01-16 20:32:31.718 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5154/_framework/aspnetcore-browser-refresh.js - 200 13780 application/javascript; charset=utf-8 10.1099ms
+2024-01-16 20:32:31.780 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5154/_vs/browserLink - 200 null text/javascript; charset=UTF-8 73.048ms
+2024-01-16 22:34:11.317 +03:00 [INF] User profile is available. Using 'C:\Users\Брест\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-16 22:34:11.613 +03:00 [INF] Now listening on: http://localhost:5154
+2024-01-16 22:34:11.620 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-16 22:34:11.621 +03:00 [INF] Hosting environment: Development
+2024-01-16 22:34:11.622 +03:00 [INF] Content root path: C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject
+2024-01-16 22:34:14.252 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5154/ - null null
+2024-01-16 22:34:15.023 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-01-16 22:34:15.094 +03:00 [INF] Executing endpoint 'NewsAggregatingProject.Controllers.HomeController.Index (NewsAggregatingProject)'
+2024-01-16 22:34:15.366 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.Nullable`1[System.Int32]) on controller NewsAggregatingProject.Controllers.HomeController (NewsAggregatingProject).
+2024-01-16 22:34:16.330 +03:00 [INF] Hello from HomeController. Its works
+2024-01-16 22:34:16.359 +03:00 [INF] Executing ViewResult, running view Index.
+2024-01-16 22:34:16.446 +03:00 [INF] Executed ViewResult - view Index executed in 91.2118ms.
+2024-01-16 22:34:16.450 +03:00 [INF] Executed action NewsAggregatingProject.Controllers.HomeController.Index (NewsAggregatingProject) in 1076.4659ms
+2024-01-16 22:34:16.454 +03:00 [INF] Executed endpoint 'NewsAggregatingProject.Controllers.HomeController.Index (NewsAggregatingProject)'
+2024-01-16 22:34:16.461 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5154/css/site.css?v=SnKAoo3aWK7zl5gv-wHkQXus6da0Ri1UK9opz-d2Ies - null null
+2024-01-16 22:34:16.461 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5154/lib/bootstrap/dist/css/bootstrap.min.css - null null
+2024-01-16 22:34:16.462 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5154/NewsAggregatingProject.styles.css?v=Jg_OWFgEVGzbT4cywdMe3WCxN0p5tC8FQbMx3dfOETs - null null
+2024-01-16 22:34:16.471 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5154/... - null null
+2024-01-16 22:34:16.475 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5154/lib/jquery/dist/jquery.min.js - null null
+2024-01-16 22:34:16.484 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5154/ - 200 null text/html; charset=utf-8 2253.9125ms
+2024-01-16 22:34:16.489 +03:00 [INF] The file /css/site.css was not modified
+2024-01-16 22:34:16.491 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5154/... - 404 0 null 19.5812ms
+2024-01-16 22:34:16.492 +03:00 [INF] The file /NewsAggregatingProject.styles.css was not modified
+2024-01-16 22:34:16.494 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5154/lib/bootstrap/dist/js/bootstrap.bundle.min.js - null null
+2024-01-16 22:34:16.496 +03:00 [INF] The file /lib/bootstrap/dist/css/bootstrap.min.css was not modified
+2024-01-16 22:34:16.499 +03:00 [INF] The file /lib/jquery/dist/jquery.min.js was not modified
+2024-01-16 22:34:16.501 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5154/css/site.css?v=SnKAoo3aWK7zl5gv-wHkQXus6da0Ri1UK9opz-d2Ies - 304 null text/css 40.0793ms
+2024-01-16 22:34:16.503 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5154/..., Response status code: 404
+2024-01-16 22:34:16.506 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5154/NewsAggregatingProject.styles.css?v=Jg_OWFgEVGzbT4cywdMe3WCxN0p5tC8FQbMx3dfOETs - 304 null text/css 43.3141ms
+2024-01-16 22:34:16.508 +03:00 [INF] The file /lib/bootstrap/dist/js/bootstrap.bundle.min.js was not modified
+2024-01-16 22:34:16.509 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5154/lib/bootstrap/dist/css/bootstrap.min.css - 304 null text/css 48.347ms
+2024-01-16 22:34:16.510 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5154/lib/jquery/dist/jquery.min.js - 304 null text/javascript 35.7506ms
+2024-01-16 22:34:16.517 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5154/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - null null
+2024-01-16 22:34:16.520 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5154/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-16 22:34:16.525 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5154/_vs/browserLink - null null
+2024-01-16 22:34:16.526 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5154/lib/bootstrap/dist/js/bootstrap.bundle.min.js - 304 null text/javascript 31.8406ms
+2024-01-16 22:34:16.535 +03:00 [INF] The file /js/site.js was not modified
+2024-01-16 22:34:16.542 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5154/_framework/aspnetcore-browser-refresh.js - 200 13780 application/javascript; charset=utf-8 22.2518ms
+2024-01-16 22:34:16.547 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5154/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - 304 null text/javascript 30.365ms
+2024-01-16 22:34:16.630 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5154/_vs/browserLink - 200 null text/javascript; charset=UTF-8 104.6965ms

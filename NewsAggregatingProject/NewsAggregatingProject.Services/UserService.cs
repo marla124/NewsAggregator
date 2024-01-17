@@ -22,14 +22,15 @@ namespace NewsAggregatingProject.Services
             _configuration = configuration;
         }
 
-        public async Task<ClaimsIdentity> Autanticate(string email)
+        public async Task<ClaimsIdentity> Authenticate(string email)
         {
             var user = await _unitOfWork.UserRepository
-                .FindBy(user => user.Email.Equals(email))
+                .FindBy(us => us.Email.Equals(email))
                 .FirstOrDefaultAsync();
             if (user != null)
             {
-                var status = (await _unitOfWork.UserStatusRepository.GetByIdAsNoTracking(user.UserStatusId)).Status;
+                var status = (await _unitOfWork.UserStatusRepository
+                    .GetByIdAsNoTracking(user.UserStatusId)).Status;
 
                 var claims = new List<Claim>()
                 {
@@ -72,11 +73,9 @@ namespace NewsAggregatingProject.Services
         public bool IsUserExists(string email)
         {
 
-            if (_unitOfWork.UserRepository.FindBy(user => user.Email.Equals(email)).Any())
-            {
-                return true;
-            }
-            return false;
+            return _unitOfWork.UserRepository
+                .FindBy(user => user.Email.Equals(email)).Any();
+
 
         }
         private string MdHashGenerate(string input)

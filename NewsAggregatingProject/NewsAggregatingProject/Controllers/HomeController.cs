@@ -26,7 +26,7 @@ namespace NewsAggregatingProject.Controllers
             return View();
         }
 
-        [Authorize(Roles = "Admin")]
+        [Authorize]
         public async Task<IActionResult> Privacy()
         {
             return View();
