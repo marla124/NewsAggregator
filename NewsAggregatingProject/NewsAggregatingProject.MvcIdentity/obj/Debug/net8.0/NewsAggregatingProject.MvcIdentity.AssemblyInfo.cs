@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NewsAggregatingProject.MvcIdentity")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fba5965029bd4f89f47e88dea47a88bf8d2a0a78")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2925b26ca35aae4e95252fe8d6cd5bf43ee8fe97")]
 [assembly: System.Reflection.AssemblyProductAttribute("NewsAggregatingProject.MvcIdentity")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NewsAggregatingProject.MvcIdentity")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

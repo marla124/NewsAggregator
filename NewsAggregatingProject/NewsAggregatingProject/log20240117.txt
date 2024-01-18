@@ -1124,3 +1124,165 @@ WHERE [u].[Id] = @__id_0
 2024-01-17 22:23:58.484 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5154/... - 404 0 null 8.8674ms
 2024-01-17 22:23:58.515 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5154/_vs/browserLink - 200 null text/javascript; charset=UTF-8 39.3441ms
 2024-01-17 22:23:58.530 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5154/..., Response status code: 404
+2024-01-17 22:37:45.850 +03:00 [INF] User profile is available. Using 'C:\Users\Брест\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-17 22:37:46.133 +03:00 [INF] Now listening on: http://localhost:5154
+2024-01-17 22:37:46.136 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-17 22:37:46.138 +03:00 [INF] Hosting environment: Development
+2024-01-17 22:37:46.139 +03:00 [INF] Content root path: C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject
+2024-01-17 22:37:50.340 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5154/ - null null
+2024-01-17 22:37:50.793 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-01-17 22:37:50.847 +03:00 [INF] Executing endpoint 'NewsAggregatingProject.Controllers.HomeController.Index (NewsAggregatingProject)'
+2024-01-17 22:37:50.982 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.Nullable`1[System.Int32]) on controller NewsAggregatingProject.Controllers.HomeController (NewsAggregatingProject).
+2024-01-17 22:37:53.107 +03:00 [INF] Hello from HomeController. Its works
+2024-01-17 22:37:53.132 +03:00 [INF] Executing ViewResult, running view Index.
+2024-01-17 22:37:53.289 +03:00 [INF] Executed ViewResult - view Index executed in 158.0003ms.
+2024-01-17 22:37:53.292 +03:00 [INF] Executed action NewsAggregatingProject.Controllers.HomeController.Index (NewsAggregatingProject) in 2307.0527ms
+2024-01-17 22:37:53.294 +03:00 [INF] Executed endpoint 'NewsAggregatingProject.Controllers.HomeController.Index (NewsAggregatingProject)'
+2024-01-17 22:37:53.303 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5154/ - 200 null text/html; charset=utf-8 2982.9001ms
+2024-01-17 22:37:53.327 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5154/... - null null
+2024-01-17 22:37:53.329 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5154/js/site.js?v=ke6cNXTaLouif2W5dHpCLEdtipLVVhzkvdN6rzr9L8s - null null
+2024-01-17 22:37:53.330 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5154/_vs/browserLink - null null
+2024-01-17 22:37:53.329 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5154/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-17 22:37:53.358 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5154/_framework/aspnetcore-browser-refresh.js - 200 13780 application/javascript; charset=utf-8 28.7347ms
+2024-01-17 22:37:53.361 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5154/... - 404 0 null 34.0899ms
+2024-01-17 22:37:53.362 +03:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject\wwwroot\js\site.js'
+2024-01-17 22:37:53.407 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5154/js/site.js?v=ke6cNXTaLouif2W5dHpCLEdtipLVVhzkvdN6rzr9L8s - 200 131 text/javascript 77.5123ms
+2024-01-17 22:37:53.413 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5154/..., Response status code: 404
+2024-01-17 22:37:53.467 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5154/_vs/browserLink - 200 null text/javascript; charset=UTF-8 137.7508ms
+2024-01-17 22:37:55.629 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5154/User/Login - null null
+2024-01-17 22:37:55.660 +03:00 [INF] Executing endpoint 'NewsAggregatingProject.Controllers.UserController.Login (NewsAggregatingProject)'
+2024-01-17 22:37:55.665 +03:00 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller NewsAggregatingProject.Controllers.UserController (NewsAggregatingProject).
+2024-01-17 22:37:55.907 +03:00 [INF] Executing ViewResult, running view Login.
+2024-01-17 22:37:56.074 +03:00 [INF] Executed ViewResult - view Login executed in 167.7679ms.
+2024-01-17 22:37:56.079 +03:00 [INF] Executed action NewsAggregatingProject.Controllers.UserController.Login (NewsAggregatingProject) in 410.58ms
+2024-01-17 22:37:56.085 +03:00 [INF] Executed endpoint 'NewsAggregatingProject.Controllers.UserController.Login (NewsAggregatingProject)'
+2024-01-17 22:37:56.095 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5154/js/site.js?v=ke6cNXTaLouif2W5dHpCLEdtipLVVhzkvdN6rzr9L8s - null null
+2024-01-17 22:37:56.096 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5154/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-17 22:37:56.103 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5154/User/Login - 200 null text/html; charset=utf-8 473.5495ms
+2024-01-17 22:37:56.104 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5154/_vs/browserLink - null null
+2024-01-17 22:37:56.110 +03:00 [INF] The file /js/site.js was not modified
+2024-01-17 22:37:56.112 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5154/_framework/aspnetcore-browser-refresh.js - 200 13780 application/javascript; charset=utf-8 15.0758ms
+2024-01-17 22:37:56.127 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5154/js/site.js?v=ke6cNXTaLouif2W5dHpCLEdtipLVVhzkvdN6rzr9L8s - 304 null text/javascript 32.0486ms
+2024-01-17 22:37:56.132 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5154/_vs/browserLink - 200 null text/javascript; charset=UTF-8 27.8942ms
+2024-01-17 22:37:59.617 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5154/User/Login - application/x-www-form-urlencoded 231
+2024-01-17 22:37:59.630 +03:00 [INF] Executing endpoint 'NewsAggregatingProject.Controllers.UserController.Login (NewsAggregatingProject)'
+2024-01-17 22:37:59.645 +03:00 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(NewsAggregatingProject.Models.UserLoginModel) on controller NewsAggregatingProject.Controllers.UserController (NewsAggregatingProject).
+2024-01-17 22:38:00.699 +03:00 [INF] Executed DbCommand (61ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[Email] = @__email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-01-17 22:38:00.808 +03:00 [INF] Executed DbCommand (21ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[UserStatusId]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2024-01-17 22:38:00.932 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[UserStatusId]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2024-01-17 22:38:00.962 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Status]
+FROM [UserStatuses] AS [u]
+WHERE [u].[Id] = @__id_0
+2024-01-17 22:38:00.979 +03:00 [INF] AuthenticationScheme: Cookies signed in.
+2024-01-17 22:38:00.987 +03:00 [INF] Executing RedirectResult, redirecting to /.
+2024-01-17 22:38:00.991 +03:00 [INF] Executed action NewsAggregatingProject.Controllers.UserController.Login (NewsAggregatingProject) in 1339.7717ms
+2024-01-17 22:38:00.994 +03:00 [INF] Executed endpoint 'NewsAggregatingProject.Controllers.UserController.Login (NewsAggregatingProject)'
+2024-01-17 22:38:01.005 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5154/User/Login - 302 0 null 1390.1825ms
+2024-01-17 22:38:01.011 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5154/ - null null
+2024-01-17 22:38:01.022 +03:00 [INF] Executing endpoint 'NewsAggregatingProject.Controllers.HomeController.Index (NewsAggregatingProject)'
+2024-01-17 22:38:01.025 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.Nullable`1[System.Int32]) on controller NewsAggregatingProject.Controllers.HomeController (NewsAggregatingProject).
+2024-01-17 22:38:01.030 +03:00 [INF] Hello from HomeController. Its works
+2024-01-17 22:38:01.033 +03:00 [INF] Executing ViewResult, running view Index.
+2024-01-17 22:38:01.038 +03:00 [INF] Executed ViewResult - view Index executed in 4.9316ms.
+2024-01-17 22:38:01.041 +03:00 [INF] Executed action NewsAggregatingProject.Controllers.HomeController.Index (NewsAggregatingProject) in 12.1908ms
+2024-01-17 22:38:01.045 +03:00 [INF] Executed endpoint 'NewsAggregatingProject.Controllers.HomeController.Index (NewsAggregatingProject)'
+2024-01-17 22:38:01.050 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5154/ - 200 null text/html; charset=utf-8 39.2321ms
+2024-01-17 22:38:01.053 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5154/js/site.js?v=ke6cNXTaLouif2W5dHpCLEdtipLVVhzkvdN6rzr9L8s - null null
+2024-01-17 22:38:01.059 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5154/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-17 22:38:01.060 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5154/_vs/browserLink - null null
+2024-01-17 22:38:01.061 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5154/... - null null
+2024-01-17 22:38:01.069 +03:00 [INF] The file /js/site.js was not modified
+2024-01-17 22:38:01.072 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5154/js/site.js?v=ke6cNXTaLouif2W5dHpCLEdtipLVVhzkvdN6rzr9L8s - 304 null text/javascript 18.9696ms
+2024-01-17 22:38:01.106 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5154/... - 404 0 null 45.1041ms
+2024-01-17 22:38:01.110 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5154/_framework/aspnetcore-browser-refresh.js - 200 13780 application/javascript; charset=utf-8 50.7657ms
+2024-01-17 22:38:01.123 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5154/_vs/browserLink - 200 null text/javascript; charset=UTF-8 62.4919ms
+2024-01-17 22:38:01.124 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5154/..., Response status code: 404
+2024-01-17 22:40:38.340 +03:00 [INF] User profile is available. Using 'C:\Users\Брест\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-17 22:40:38.787 +03:00 [INF] Now listening on: http://localhost:5154
+2024-01-17 22:40:38.790 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-17 22:40:38.792 +03:00 [INF] Hosting environment: Development
+2024-01-17 22:40:38.793 +03:00 [INF] Content root path: C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject
+2024-01-17 22:40:39.120 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5154/ - null null
+2024-01-17 22:40:39.305 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-01-17 22:40:39.374 +03:00 [INF] Executing endpoint 'NewsAggregatingProject.Controllers.HomeController.Index (NewsAggregatingProject)'
+2024-01-17 22:40:39.405 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.Nullable`1[System.Int32]) on controller NewsAggregatingProject.Controllers.HomeController (NewsAggregatingProject).
+2024-01-17 22:40:40.466 +03:00 [INF] Hello from HomeController. Its works
+2024-01-17 22:40:40.488 +03:00 [INF] Executing ViewResult, running view Index.
+2024-01-17 22:40:40.644 +03:00 [INF] Executed ViewResult - view Index executed in 159.2767ms.
+2024-01-17 22:40:40.650 +03:00 [INF] Executed action NewsAggregatingProject.Controllers.HomeController.Index (NewsAggregatingProject) in 1241.1377ms
+2024-01-17 22:40:40.653 +03:00 [INF] Executed endpoint 'NewsAggregatingProject.Controllers.HomeController.Index (NewsAggregatingProject)'
+2024-01-17 22:40:40.658 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5154/... - null null
+2024-01-17 22:40:40.669 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5154/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-17 22:40:40.671 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5154/_vs/browserLink - null null
+2024-01-17 22:40:40.690 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5154/ - 200 null text/html; charset=utf-8 1585.241ms
+2024-01-17 22:40:40.690 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5154/_framework/aspnetcore-browser-refresh.js - 200 13780 application/javascript; charset=utf-8 21.2639ms
+2024-01-17 22:40:40.691 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5154/... - 404 0 null 32.9489ms
+2024-01-17 22:40:40.713 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5154/..., Response status code: 404
+2024-01-17 22:40:40.730 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5154/js/site.js?v=grfj5xklgxVtoDhbSsrI93x-GY0PUpmvTGsd89fgEOM - null null
+2024-01-17 22:40:40.769 +03:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject\wwwroot\js\site.js'
+2024-01-17 22:40:40.772 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5154/js/site.js?v=grfj5xklgxVtoDhbSsrI93x-GY0PUpmvTGsd89fgEOM - 200 283 text/javascript 42.1589ms
+2024-01-17 22:40:40.773 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5154/_vs/browserLink - 200 null text/javascript; charset=UTF-8 102.3799ms
+2024-01-17 22:41:10.726 +03:00 [INF] User profile is available. Using 'C:\Users\Брест\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-17 22:41:10.983 +03:00 [INF] Now listening on: http://localhost:5154
+2024-01-17 22:41:10.988 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-17 22:41:10.990 +03:00 [INF] Hosting environment: Development
+2024-01-17 22:41:10.991 +03:00 [INF] Content root path: C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject
+2024-01-17 22:41:11.547 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5154/ - null null
+2024-01-17 22:41:11.671 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-01-17 22:41:11.730 +03:00 [INF] Executing endpoint 'NewsAggregatingProject.Controllers.HomeController.Index (NewsAggregatingProject)'
+2024-01-17 22:41:11.761 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.Nullable`1[System.Int32]) on controller NewsAggregatingProject.Controllers.HomeController (NewsAggregatingProject).
+2024-01-17 22:41:12.743 +03:00 [INF] Hello from HomeController. Its works
+2024-01-17 22:41:12.765 +03:00 [INF] Executing ViewResult, running view Index.
+2024-01-17 22:41:12.910 +03:00 [INF] Executed ViewResult - view Index executed in 146.7117ms.
+2024-01-17 22:41:12.914 +03:00 [INF] Executed action NewsAggregatingProject.Controllers.HomeController.Index (NewsAggregatingProject) in 1148.663ms
+2024-01-17 22:41:12.918 +03:00 [INF] Executed endpoint 'NewsAggregatingProject.Controllers.HomeController.Index (NewsAggregatingProject)'
+2024-01-17 22:41:12.920 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5154/... - null null
+2024-01-17 22:41:12.936 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5154/... - 404 0 null 15.5049ms
+2024-01-17 22:41:12.950 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5154/_vs/browserLink - null null
+2024-01-17 22:41:12.949 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5154/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-17 22:41:12.953 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5154/ - 200 null text/html; charset=utf-8 1417.4374ms
+2024-01-17 22:41:12.962 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5154/..., Response status code: 404
+2024-01-17 22:41:12.966 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5154/js/site.js?v=iOLi-T11D3wPFBvgudTugXd56nf8pql6orkdUIFg5K0 - null null
+2024-01-17 22:41:12.975 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5154/_framework/aspnetcore-browser-refresh.js - 200 13780 application/javascript; charset=utf-8 25.5773ms
+2024-01-17 22:41:13.020 +03:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject\wwwroot\js\site.js'
+2024-01-17 22:41:13.023 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5154/js/site.js?v=iOLi-T11D3wPFBvgudTugXd56nf8pql6orkdUIFg5K0 - 200 285 text/javascript 57.5292ms
+2024-01-17 22:41:13.030 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5154/_vs/browserLink - 200 null text/javascript; charset=UTF-8 80.4947ms
+2024-01-17 23:57:18.770 +03:00 [INF] User profile is available. Using 'C:\Users\Брест\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-17 23:57:19.133 +03:00 [INF] Now listening on: http://localhost:5154
+2024-01-17 23:57:19.136 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-17 23:57:19.137 +03:00 [INF] Hosting environment: Development
+2024-01-17 23:57:19.138 +03:00 [INF] Content root path: C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject
+2024-01-17 23:57:21.540 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5154/ - null null
+2024-01-17 23:57:21.756 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-01-17 23:57:21.834 +03:00 [INF] Executing endpoint 'NewsAggregatingProject.Controllers.HomeController.Index (NewsAggregatingProject)'
+2024-01-17 23:57:21.874 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.Nullable`1[System.Int32]) on controller NewsAggregatingProject.Controllers.HomeController (NewsAggregatingProject).
+2024-01-17 23:57:23.012 +03:00 [INF] Hello from HomeController. Its works
+2024-01-17 23:57:23.037 +03:00 [INF] Executing ViewResult, running view Index.
+2024-01-17 23:57:23.160 +03:00 [INF] Executed ViewResult - view Index executed in 125.6764ms.
+2024-01-17 23:57:23.202 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5154/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-17 23:57:23.206 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5154/js/site.js?v=iOLi-T11D3wPFBvgudTugXd56nf8pql6orkdUIFg5K0 - null null
+2024-01-17 23:57:23.220 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5154/... - null null
+2024-01-17 23:57:23.222 +03:00 [INF] Executed action NewsAggregatingProject.Controllers.HomeController.Index (NewsAggregatingProject) in 1341.8903ms
+2024-01-17 23:57:23.232 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5154/_vs/browserLink - null null
+2024-01-17 23:57:23.237 +03:00 [INF] Executed endpoint 'NewsAggregatingProject.Controllers.HomeController.Index (NewsAggregatingProject)'
+2024-01-17 23:57:23.239 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5154/_framework/aspnetcore-browser-refresh.js - 200 13780 application/javascript; charset=utf-8 36.1469ms
+2024-01-17 23:57:23.245 +03:00 [INF] The file /js/site.js was not modified
+2024-01-17 23:57:23.266 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5154/... - 404 0 null 46.0568ms
+2024-01-17 23:57:23.278 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5154/js/site.js?v=iOLi-T11D3wPFBvgudTugXd56nf8pql6orkdUIFg5K0 - 304 null text/javascript 71.601ms
+2024-01-17 23:57:23.287 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5154/ - 200 null text/html; charset=utf-8 1757.3854ms
+2024-01-17 23:57:23.290 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5154/..., Response status code: 404
+2024-01-17 23:57:23.329 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5154/_vs/browserLink - 200 null text/javascript; charset=UTF-8 101.1942ms

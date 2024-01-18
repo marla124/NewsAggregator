@@ -92,5 +92,11 @@ namespace NewsAggregatingProject.Controllers
         [HttpGet]
         public async Task<IActionResult> Logout() => View();
 
+        [HttpPost]
+        public IActionResult Test()
+        {
+            return Ok("Hello");
+        }
+
     }
 }
