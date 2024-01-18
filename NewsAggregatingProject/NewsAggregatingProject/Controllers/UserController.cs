@@ -46,7 +46,7 @@ namespace NewsAggregatingProject.Controllers
                     Password = model.Password
                 };
                 await _userService.RegisterUser(dto);
-                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,  new ClaimsPrincipal(await _userService.Authenticate(dto.Email)));
+                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(await _userService.Authenticate(dto.Email)));
                 return Ok(model);
             }
             else
@@ -57,8 +57,9 @@ namespace NewsAggregatingProject.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Login(UserLoginModel model)
+        public async Task<IActionResult> Login([FromBody]UserLoginModel model)
         {
+            var x = await new StreamReader(Request.Body).ReadToEndAsync();
             var result = await _loginValidator.ValidateAsync(model);
             if (result.IsValid && _userService.IsUserExists(model.Email))
             {
@@ -70,11 +71,9 @@ namespace NewsAggregatingProject.Controllers
 
                 return RedirectToAction("Index", "Home");
             }
-            else
-            {
-                result.AddToModelState(this.ModelState);
-                return View(model);
-            }
+            result.AddToModelState(ModelState);
+            return View(model);
+
         }
 
 
@@ -83,19 +82,10 @@ namespace NewsAggregatingProject.Controllers
 
 
         [HttpPost]
-        public async Task<IActionResult> Logout(UserLogoutModel model)
+        public async Task<IActionResult> Logout()
         {
             await HttpContext.SignOutAsync();
-            return RedirectToAction("Index", "Home");
-        }
-
-        [HttpGet]
-        public async Task<IActionResult> Logout() => View();
-
-        [HttpPost]
-        public IActionResult Test()
-        {
-            return Ok("Hello");
+            return Ok();
         }
 
     }
