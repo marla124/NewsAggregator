@@ -1,5 +1,6 @@
 ﻿using HtmlAgilityPack;
 using Microsoft.EntityFrameworkCore;
+using NewsAggregatingProject.API.Mappers;
 using NewsAggregatingProject.Core;
 using NewsAggregatingProject.Data.Entities;
 using NewsAggregatingProject.Repositories;
@@ -12,10 +13,13 @@ namespace NewsAggregatingProject.Services
     public class NewsService : INewsService
     {
         private readonly IUnitOfWork _unitOfWork;
+        private readonly NewsMapper _newsMapper;
 
-        public NewsService(IUnitOfWork unitOfWork)
+
+        public NewsService(IUnitOfWork unitOfWork, NewsMapper newsMapper)
         {
             _unitOfWork = unitOfWork;
+            _newsMapper=newsMapper;
         }
         public async Task<NewsDto[]?> AggregateDataFromByRssSourceId(Guid sourceId)
         {
@@ -32,7 +36,7 @@ namespace NewsAggregatingProject.Services
                     Date = item.PublishDate.UtcDateTime,
                     Title = item.Title.Text,
                     Description = item.Summary.Text,
-                    SourceUrl=item.Id
+                    SourceUrl = item.Id
                 }).ToArray();
 
                 return rssNews;
@@ -40,7 +44,7 @@ namespace NewsAggregatingProject.Services
 
         }
 
-        public async Task<NewsDto> GetNewsByUrl(string url,NewsDto dto)
+        public async Task<NewsDto> GetNewsByUrl(string url, NewsDto dto)
         {
             var web = new HtmlWeb();
             var doc = web.Load(url);
@@ -55,10 +59,6 @@ namespace NewsAggregatingProject.Services
             return dto;
         }
 
-        public Task<NewsDto> GetNewsByUrl(string Url)
-        {
-            throw new NotImplementedException();
-        }
 
         public async Task<string[]> GetExistedNewsUrls()
         {
@@ -68,18 +68,43 @@ namespace NewsAggregatingProject.Services
         }
         public async Task<int> InsertParsedNews(List<NewsDto> listFullfilledNews)
         {
-            var news=listFullfilledNews.Select(dto=>new News()
-            {
-                Id= dto.Id,
-                DataAndTime=dto.Date,
-                ContentNew=dto.ConentNew,
-                Title=dto.Title,
-                Description=dto.Description,
-                SourceId=dto.SourceId,
-                SourceUrl=dto.SourceUrl
-            }).ToArray();
+            var news = listFullfilledNews.Select(dto => _newsMapper.NewsDtoToNews(dto)).ToArray();
             await _unitOfWork.NewRepository.InsertMany(news);
             return await _unitOfWork.Commit();
+        }
+
+        public async Task<NewsDto?> GetNewsById(Guid id)
+        {
+            var news = (await _unitOfWork.NewRepository.GetById(id));
+            if(news == null)
+            {
+                return null;
+            }
+            return _newsMapper.NewsToNewsDto(news);
+            
+        }
+
+        public async Task<NewsDto?[]> GetNewsByName(string name)
+        {
+            var news = await _unitOfWork.NewRepository
+                .FindBy(news => news.Title.Contains(name))
+                .Select(news => _newsMapper.NewsToNewsDto(news)).ToArrayAsync();
+            return news;
+        }
+
+        public async Task<NewsDto[]?> GetPositive()
+        {
+            var news = await _unitOfWork.NewRepository.GetAsQueryable()
+            //.FindBy(news => news.Rate >= 0)
+            .Select(news => _newsMapper.NewsToNewsDto(news))
+            .ToArrayAsync();
+            return news;
+        }
+
+        public async Task DeleteNews(Guid id)
+        {
+            await _unitOfWork.NewRepository.DeleteById(id);
+            await _unitOfWork.Commit();
         }
     }
 }

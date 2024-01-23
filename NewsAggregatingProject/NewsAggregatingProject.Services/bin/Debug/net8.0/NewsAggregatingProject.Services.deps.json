@@ -11,6 +11,7 @@
           "HtmlAgilityPack": "1.11.57",
           "NewsAggregatingProject.Core": "1.0.0",
           "NewsAggregatingProject.Data": "1.0.0",
+          "NewsAggregatingProject.Mappers": "1.0.0",
           "NewsAggregatingProject.Repositories": "1.0.0",
           "System.ServiceModel.Syndication": "8.0.0"
         },
@@ -395,6 +396,14 @@
           }
         }
       },
+      "Riok.Mapperly/3.3.0": {
+        "runtime": {
+          "lib/netstandard2.0/Riok.Mapperly.Abstractions.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.3.0.0"
+          }
+        }
+      },
       "System.Configuration.ConfigurationManager/6.0.1": {
         "dependencies": {
           "System.Security.Cryptography.ProtectedData": "6.0.0",
@@ -583,6 +592,23 @@
         },
         "runtime": {
           "NewsAggregatingProject.Data.dll": {}
+        }
+      },
+      "NewsAggregatingProject.Mappers/1.0.0": {
+        "dependencies": {
+          "NewsAggregatingProject.Core": "1.0.0",
+          "NewsAggregatingProject.Data": "1.0.0",
+          "NewsAggregatingProject.Models": "1.0.0",
+          "Riok.Mapperly": "3.3.0",
+          "System.ServiceModel.Syndication": "8.0.0"
+        },
+        "runtime": {
+          "NewsAggregatingProject.Mappers.dll": {}
+        }
+      },
+      "NewsAggregatingProject.Models/1.0.0": {
+        "runtime": {
+          "NewsAggregatingProject.Models.dll": {}
         }
       },
       "NewsAggregatingProject.Repositories/1.0.0": {
@@ -833,6 +859,13 @@
       "path": "microsoft.win32.systemevents/6.0.0",
       "hashPath": "microsoft.win32.systemevents.6.0.0.nupkg.sha512"
     },
+    "Riok.Mapperly/3.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zncD+ur/lys3vdStUsJa8A/g6fLABsfVOHKx7aFjZ3xBCGmSde8BEGcoLdhuC1Tpcyo6pgWSTigJqB4aPXSFiw==",
+      "path": "riok.mapperly/3.3.0",
+      "hashPath": "riok.mapperly.3.3.0.nupkg.sha512"
+    },
     "System.Configuration.ConfigurationManager/6.0.1": {
       "type": "package",
       "serviceable": true,
@@ -1000,6 +1033,16 @@
       "sha512": ""
     },
     "NewsAggregatingProject.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "NewsAggregatingProject.Mappers/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "NewsAggregatingProject.Models/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

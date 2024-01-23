@@ -1,0 +1,12 @@
+C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.Models\bin\Debug\net8.0\NewsAggregatingProject.Models.deps.json
+C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.Models\bin\Debug\net8.0\NewsAggregatingProject.Models.dll
+C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.Models\bin\Debug\net8.0\NewsAggregatingProject.Models.pdb
+C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.Models\obj\Debug\net8.0\NewsAggregatingProject.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.Models\obj\Debug\net8.0\NewsAggregatingProject.Models.AssemblyInfoInputs.cache
+C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.Models\obj\Debug\net8.0\NewsAggregatingProject.Models.AssemblyInfo.cs
+C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.Models\obj\Debug\net8.0\NewsAggregatingProject.Models.csproj.CoreCompileInputs.cache
+C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.Models\obj\Debug\net8.0\NewsAggregatingProject.Models.sourcelink.json
+C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.Models\obj\Debug\net8.0\NewsAggregatingProject.Models.dll
+C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.Models\obj\Debug\net8.0\refint\NewsAggregatingProject.Models.dll
+C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.Models\obj\Debug\net8.0\NewsAggregatingProject.Models.pdb
+C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.Models\obj\Debug\net8.0\ref\NewsAggregatingProject.Models.dll
