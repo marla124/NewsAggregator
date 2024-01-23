@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NewsAggregatingProject.Models
 {
-    internal class SourceModel
+    public class SourceModel
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
