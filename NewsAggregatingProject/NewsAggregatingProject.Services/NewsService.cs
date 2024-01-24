@@ -1,7 +1,9 @@
 ﻿using HtmlAgilityPack;
+using MediatR;
 using Microsoft.EntityFrameworkCore;
 using NewsAggregatingProject.API.Mappers;
 using NewsAggregatingProject.Core;
+using NewsAggregatingProject.Data.CQS.Commands;
 using NewsAggregatingProject.Data.Entities;
 using NewsAggregatingProject.Repositories;
 using NewsAggregatingProject.Services.Interfaces;
@@ -14,12 +16,15 @@ namespace NewsAggregatingProject.Services
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly NewsMapper _newsMapper;
+        private readonly IMediator _mediator;
 
 
-        public NewsService(IUnitOfWork unitOfWork, NewsMapper newsMapper)
+
+        public NewsService(IUnitOfWork unitOfWork, NewsMapper newsMapper, IMediator mediator)
         {
             _unitOfWork = unitOfWork;
             _newsMapper=newsMapper;
+            _mediator=mediator;
         }
         public async Task<NewsDto[]?> AggregateDataFromByRssSourceId(Guid sourceId)
         {
@@ -105,6 +110,17 @@ namespace NewsAggregatingProject.Services
         {
             await _unitOfWork.NewRepository.DeleteById(id);
             await _unitOfWork.Commit();
+        }
+
+        public async Task CreateNews(NewsDto dto)
+        {
+            var command=new AddNewsCommand() { News = dto };
+            _mediator.Send(command);
+        }
+
+        public Task CreateNewsAndSource(NewsDto newsDto, SourceDto sourceDto)
+        {
+            
         }
     }
 }

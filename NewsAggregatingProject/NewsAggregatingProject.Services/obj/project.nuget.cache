@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "YuDNdS6tgVJMuN1FlSKYx9TKyxULcep68WJraLb4Ecp1x8fVa0O9z3+C8CtjZQ+yGL5pFAcfvBNw6tocXFvs0Q==",
+  "dgSpecHash": "H5T3v4aJz8Rm30Bz/w3wjyfRxHKxz/jcbMwLuIUumcV+mhEfeVu726OTtXYNzFHKoBw3bJnoveDJgVcR4+ccvQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Брест\\myprj\\NewsAggregator\\NewsAggregatingProject\\NewsAggregatingProject.Services\\NewsAggregatingProject.Services.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Брест\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Брест\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
     "C:\\Users\\Брест\\.nuget\\packages\\htmlagilitypack\\1.11.57\\htmlagilitypack.1.11.57.nupkg.sha512",
+    "C:\\Users\\Брест\\.nuget\\packages\\mediatr\\12.2.0\\mediatr.12.2.0.nupkg.sha512",
+    "C:\\Users\\Брест\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\Брест\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Брест\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Брест\\.nuget\\packages\\microsoft.data.sqlclient\\5.1.1\\microsoft.data.sqlclient.5.1.1.nupkg.sha512",

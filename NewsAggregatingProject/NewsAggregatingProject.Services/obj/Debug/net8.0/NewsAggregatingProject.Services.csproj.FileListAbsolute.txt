@@ -42,3 +42,5 @@ C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingP
 C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.Services\bin\Debug\net8.0\NewsAggregatingProject.Models.dll
 C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.Services\bin\Debug\net8.0\NewsAggregatingProject.Mappers.pdb
 C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.Services\bin\Debug\net8.0\NewsAggregatingProject.Models.pdb
+C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.Services\bin\Debug\net8.0\NewsAggregatingProject.Data.CQS.dll
+C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.Services\bin\Debug\net8.0\NewsAggregatingProject.Data.CQS.pdb

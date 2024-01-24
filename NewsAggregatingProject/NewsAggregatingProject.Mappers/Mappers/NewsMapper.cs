@@ -12,6 +12,8 @@ namespace NewsAggregatingProject.API.Mappers
         public partial NewsDto NewsToNewsDto(News news);
         public partial News NewsDtoToNews(NewsDto dto);
         public partial NewsModel NewsDtoToNewsModel(NewsDto dto);
+        public partial NewsDto NewsModelToNewsDto(NewsModel model);
+
 
 
 

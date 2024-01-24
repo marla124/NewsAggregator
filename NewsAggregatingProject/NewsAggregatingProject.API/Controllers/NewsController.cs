@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using NewsAggregatingProject.API.Mappers;
+using NewsAggregatingProject.Models;
 using NewsAggregatingProject.Services.Interfaces;
 
 namespace NewsAggregatingProject.API.Controllers
@@ -34,8 +35,10 @@ namespace NewsAggregatingProject.API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateNews()
+        public async Task<IActionResult> CreateNews(NewsModel request)
         {
+            var dto=_newsMapper.NewsModelToNewsDto(request);
+            await _newsService.CreateNews(dto);
             return Ok();
         }
 

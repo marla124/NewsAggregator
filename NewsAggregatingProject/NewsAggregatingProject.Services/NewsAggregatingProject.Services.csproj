@@ -8,11 +8,13 @@
 
   <ItemGroup>
     <PackageReference Include="HtmlAgilityPack" Version="1.11.57" />
+    <PackageReference Include="MediatR" Version="12.2.0" />
     <PackageReference Include="System.ServiceModel.Syndication" Version="8.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\NewsAggregatingProject.Core\NewsAggregatingProject.Core.csproj" />
+    <ProjectReference Include="..\NewsAggregatingProject.Data.CQS\NewsAggregatingProject.Data.CQS.csproj" />
     <ProjectReference Include="..\NewsAggregatingProject.Data\NewsAggregatingProject.Data.csproj" />
     <ProjectReference Include="..\NewsAggregatingProject.Mappers\NewsAggregatingProject.Mappers.csproj" />
     <ProjectReference Include="..\NewsAggregatingProject.Repositories\NewsAggregatingProject.Repositories.csproj" />

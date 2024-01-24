@@ -1,4 +1,5 @@
 
+using Microsoft.AspNetCore.Hosting;
 using Serilog;
 using Serilog.Events;
 
@@ -27,6 +28,7 @@ namespace NewsAggregatingProject.API
             builder.Services.AddSwaggerGen();
 
             builder.Services.RegisterServices(builder.Configuration);
+            builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(Program).Assembly));
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

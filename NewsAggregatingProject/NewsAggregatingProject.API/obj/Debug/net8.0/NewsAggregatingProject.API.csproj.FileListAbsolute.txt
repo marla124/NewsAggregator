@@ -94,3 +94,7 @@ C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingP
 C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.API\obj\Debug\net8.0\NewsAggregatingProject.API.pdb
 C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.API\obj\Debug\net8.0\NewsAggregatingProject.API.genruntimeconfig.cache
 C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.API\obj\Debug\net8.0\ref\NewsAggregatingProject.API.dll
+C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.API\bin\Debug\net8.0\MediatR.dll
+C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.API\bin\Debug\net8.0\MediatR.Contracts.dll
+C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.API\bin\Debug\net8.0\NewsAggregatingProject.Data.CQS.dll
+C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.API\bin\Debug\net8.0\NewsAggregatingProject.Data.CQS.pdb
