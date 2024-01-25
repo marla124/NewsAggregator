@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace NewsAggregatingProject.Services
 {
-    internal class SourceService : ISourceService
+    public class SourceService : ISourceService
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly SourceMapper _sourceMapper;

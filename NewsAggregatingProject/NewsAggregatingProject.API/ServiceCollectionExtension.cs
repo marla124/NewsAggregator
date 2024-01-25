@@ -5,6 +5,7 @@ using NewsAggregatingProject.Repositories;
 using NewsAggregatingProject.Services.Interfaces;
 using NewsAggregatingProject.Services;
 using NewsAggregatingProject.API.Mappers;
+using NewsAggregatingProject.Data.CQS.Commands;
 
 namespace NewsAggregatingProject.API
 {
@@ -25,9 +26,13 @@ namespace NewsAggregatingProject.API
             services.AddScoped<IRepository<Category>, Repository<Category>>();
             services.AddScoped<INewsService, NewsService>();
             services.AddScoped<IUserService, UserService>();
+            //services.AddScoped<ISourceService, SourceService>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             services.AddScoped<NewsMapper>();
+            services.AddMediatR(cfg => {
+                cfg.RegisterServicesFromAssembly(typeof(AddNewsCommand).Assembly);
+            });
 
         }
     }

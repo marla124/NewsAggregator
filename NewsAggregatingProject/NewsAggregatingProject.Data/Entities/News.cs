@@ -6,7 +6,7 @@
         public Guid SourceId { get; set; }
         //public Guid CategoryId { get; set; }
         public float? Rate { get; set; }
-        public string Description { get; set; }
+        public string? Description { get; set; }
         public string SourceUrl {  get; set; }
         public string Title { get; set; }
         public string ContentNew { get; set; }

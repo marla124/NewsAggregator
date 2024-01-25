@@ -615,3 +615,4 @@ C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingP
 C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject\bin\Debug\net8.0\MediatR.Contracts.dll
 C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject\bin\Debug\net8.0\NewsAggregatingProject.Data.CQS.dll
 C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject\bin\Debug\net8.0\NewsAggregatingProject.Data.CQS.pdb
+C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject\bin\Debug\net8.0\Newtonsoft.Json.dll

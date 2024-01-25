@@ -1,0 +1,1165 @@
+2024-01-25 01:18:57.834 +03:00 [INF] Now listening on: https://localhost:7100
+2024-01-25 01:18:57.866 +03:00 [INF] Now listening on: http://localhost:5184
+2024-01-25 01:18:57.868 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-25 01:18:57.868 +03:00 [INF] Hosting environment: Development
+2024-01-25 01:18:57.868 +03:00 [INF] Content root path: C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.API
+2024-01-25 01:19:05.946 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/swagger/index.html - null null
+2024-01-25 01:19:06.757 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/swagger/index.html - 200 null text/html;charset=utf-8 816.7968ms
+2024-01-25 01:19:07.472 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-25 01:19:07.478 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/_vs/browserLink - null null
+2024-01-25 01:19:07.489 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/_framework/aspnetcore-browser-refresh.js - 200 13788 application/javascript; charset=utf-8 17.0201ms
+2024-01-25 01:19:07.724 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/_vs/browserLink - 200 null text/javascript; charset=UTF-8 246.9977ms
+2024-01-25 01:19:07.771 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/swagger/v1/swagger.json - null null
+2024-01-25 01:19:07.942 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 170.5436ms
+2024-01-25 01:20:34.712 +03:00 [INF] Now listening on: https://localhost:7100
+2024-01-25 01:20:34.792 +03:00 [INF] Now listening on: http://localhost:5184
+2024-01-25 01:20:34.795 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-25 01:20:34.796 +03:00 [INF] Hosting environment: Development
+2024-01-25 01:20:34.796 +03:00 [INF] Content root path: C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.API
+2024-01-25 01:20:38.382 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/swagger/index.html - null null
+2024-01-25 01:20:38.656 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/swagger/index.html - 200 null text/html;charset=utf-8 282.025ms
+2024-01-25 01:20:38.712 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-25 01:20:38.712 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/_vs/browserLink - null null
+2024-01-25 01:20:38.723 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/_framework/aspnetcore-browser-refresh.js - 200 13788 application/javascript; charset=utf-8 10.4434ms
+2024-01-25 01:20:38.761 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/_vs/browserLink - 200 null text/javascript; charset=UTF-8 48.8213ms
+2024-01-25 01:20:38.820 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/swagger/v1/swagger.json - null null
+2024-01-25 01:20:38.999 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 178.8204ms
+2024-01-25 01:21:41.419 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/api/AggregateNews?sourceId=1dd0b67f-7c37-419d-b80d-19d8b055a920 - null 0
+2024-01-25 01:21:41.431 +03:00 [INF] Executing endpoint 'NewsAggregatingProject.API.Controllers.AggregateNewsController.Aggregate (NewsAggregatingProject.API)'
+2024-01-25 01:21:41.476 +03:00 [INF] Route matched with {action = "Aggregate", controller = "AggregateNews"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Aggregate(System.Guid) on controller NewsAggregatingProject.API.Controllers.AggregateNewsController (NewsAggregatingProject.API).
+2024-01-25 01:21:45.819 +03:00 [INF] Executed DbCommand (75ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Name], [s].[RSSUrl], [s].[Url]
+FROM [Sources] AS [s]
+WHERE [s].[Id] = @__id_0
+2024-01-25 01:21:46.335 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[SourceUrl]
+FROM [News] AS [n]
+2024-01-25 01:21:54.507 +03:00 [ERR] Failed executing DbCommand (99ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000), @p4='?' (DbType = Single), @p5='?' (DbType = Guid), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Guid), @p9='?' (Size = 4000), @p10='?' (DbType = DateTime2), @p11='?' (Size = 4000), @p12='?' (DbType = Single), @p13='?' (DbType = Guid), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (DbType = Guid), @p17='?' (Size = 4000), @p18='?' (DbType = DateTime2), @p19='?' (Size = 4000), @p20='?' (DbType = Single), @p21='?' (DbType = Guid), @p22='?' (Size = 4000), @p23='?' (Size = 4000), @p24='?' (DbType = Guid), @p25='?' (Size = 4000), @p26='?' (DbType = DateTime2), @p27='?' (Size = 4000), @p28='?' (DbType = Single), @p29='?' (DbType = Guid), @p30='?' (Size = 4000), @p31='?' (Size = 4000), @p32='?' (DbType = Guid), @p33='?' (Size = 4000), @p34='?' (DbType = DateTime2), @p35='?' (Size = 4000), @p36='?' (DbType = Single), @p37='?' (DbType = Guid), @p38='?' (Size = 4000), @p39='?' (Size = 4000), @p40='?' (DbType = Guid), @p41='?' (Size = 4000), @p42='?' (DbType = DateTime2), @p43='?' (Size = 4000), @p44='?' (DbType = Single), @p45='?' (DbType = Guid), @p46='?' (Size = 4000), @p47='?' (Size = 4000), @p48='?' (DbType = Guid), @p49='?' (Size = 4000), @p50='?' (DbType = DateTime2), @p51='?' (Size = 4000), @p52='?' (DbType = Single), @p53='?' (DbType = Guid), @p54='?' (Size = 4000), @p55='?' (Size = 4000), @p56='?' (DbType = Guid), @p57='?' (Size = 4000), @p58='?' (DbType = DateTime2), @p59='?' (Size = 4000), @p60='?' (DbType = Single), @p61='?' (DbType = Guid), @p62='?' (Size = 4000), @p63='?' (Size = 4000), @p64='?' (DbType = Guid), @p65='?' (Size = 4000), @p66='?' (DbType = DateTime2), @p67='?' (Size = 4000), @p68='?' (DbType = Single), @p69='?' (DbType = Guid), @p70='?' (Size = 4000), @p71='?' (Size = 4000), @p72='?' (DbType = Guid), @p73='?' (Size = 4000), @p74='?' (DbType = DateTime2), @p75='?' (Size = 4000), @p76='?' (DbType = Single), @p77='?' (DbType = Guid), @p78='?' (Size = 4000), @p79='?' (Size = 4000), @p80='?' (DbType = Guid), @p81='?' (Size = 4000), @p82='?' (DbType = DateTime2), @p83='?' (Size = 4000), @p84='?' (DbType = Single), @p85='?' (DbType = Guid), @p86='?' (Size = 4000), @p87='?' (Size = 4000), @p88='?' (DbType = Guid), @p89='?' (Size = 4000), @p90='?' (DbType = DateTime2), @p91='?' (Size = 4000), @p92='?' (DbType = Single), @p93='?' (DbType = Guid), @p94='?' (Size = 4000), @p95='?' (Size = 4000), @p96='?' (DbType = Guid), @p97='?' (Size = 4000), @p98='?' (DbType = DateTime2), @p99='?' (Size = 4000), @p100='?' (DbType = Single), @p101='?' (DbType = Guid), @p102='?' (Size = 4000), @p103='?' (Size = 4000), @p104='?' (DbType = Guid), @p105='?' (Size = 4000), @p106='?' (DbType = DateTime2), @p107='?' (Size = 4000), @p108='?' (DbType = Single), @p109='?' (DbType = Guid), @p110='?' (Size = 4000), @p111='?' (Size = 4000), @p112='?' (DbType = Guid), @p113='?' (Size = 4000), @p114='?' (DbType = DateTime2), @p115='?' (Size = 4000), @p116='?' (DbType = Single), @p117='?' (DbType = Guid), @p118='?' (Size = 4000), @p119='?' (Size = 4000), @p120='?' (DbType = Guid), @p121='?' (Size = 4000), @p122='?' (DbType = DateTime2), @p123='?' (Size = 4000), @p124='?' (DbType = Single), @p125='?' (DbType = Guid), @p126='?' (Size = 4000), @p127='?' (Size = 4000), @p128='?' (DbType = Guid), @p129='?' (Size = 4000), @p130='?' (DbType = DateTime2), @p131='?' (Size = 4000), @p132='?' (DbType = Single), @p133='?' (DbType = Guid), @p134='?' (Size = 4000), @p135='?' (Size = 4000), @p136='?' (DbType = Guid), @p137='?' (Size = 4000), @p138='?' (DbType = DateTime2), @p139='?' (Size = 4000), @p140='?' (DbType = Single), @p141='?' (DbType = Guid), @p142='?' (Size = 4000), @p143='?' (Size = 4000), @p144='?' (DbType = Guid), @p145='?' (Size = 4000), @p146='?' (DbType = DateTime2), @p147='?' (Size = 4000), @p148='?' (DbType = Single), @p149='?' (DbType = Guid), @p150='?' (Size = 4000), @p151='?' (Size = 4000), @p152='?' (DbType = Guid), @p153='?' (Size = 4000), @p154='?' (DbType = DateTime2), @p155='?' (Size = 4000), @p156='?' (DbType = Single), @p157='?' (DbType = Guid), @p158='?' (Size = 4000), @p159='?' (Size = 4000), @p160='?' (DbType = Guid), @p161='?' (Size = 4000), @p162='?' (DbType = DateTime2), @p163='?' (Size = 4000), @p164='?' (DbType = Single), @p165='?' (DbType = Guid), @p166='?' (Size = 4000), @p167='?' (Size = 4000), @p168='?' (DbType = Guid), @p169='?' (Size = 4000), @p170='?' (DbType = DateTime2), @p171='?' (Size = 4000), @p172='?' (DbType = Single), @p173='?' (DbType = Guid), @p174='?' (Size = 4000), @p175='?' (Size = 4000), @p176='?' (DbType = Guid), @p177='?' (Size = 4000), @p178='?' (DbType = DateTime2), @p179='?' (Size = 4000), @p180='?' (DbType = Single), @p181='?' (DbType = Guid), @p182='?' (Size = 4000), @p183='?' (Size = 4000), @p184='?' (DbType = Guid), @p185='?' (Size = 4000), @p186='?' (DbType = DateTime2), @p187='?' (Size = 4000), @p188='?' (DbType = Single), @p189='?' (DbType = Guid), @p190='?' (Size = 4000), @p191='?' (Size = 4000), @p192='?' (DbType = Guid), @p193='?' (Size = 4000), @p194='?' (DbType = DateTime2), @p195='?' (Size = 4000), @p196='?' (DbType = Single), @p197='?' (DbType = Guid), @p198='?' (Size = 4000), @p199='?' (Size = 4000), @p200='?' (DbType = Guid), @p201='?' (Size = 4000), @p202='?' (DbType = DateTime2), @p203='?' (Size = 4000), @p204='?' (DbType = Single), @p205='?' (DbType = Guid), @p206='?' (Size = 4000), @p207='?' (Size = 4000), @p208='?' (DbType = Guid), @p209='?' (Size = 4000), @p210='?' (DbType = DateTime2), @p211='?' (Size = 4000), @p212='?' (DbType = Single), @p213='?' (DbType = Guid), @p214='?' (Size = 4000), @p215='?' (Size = 4000), @p216='?' (DbType = Guid), @p217='?' (Size = 4000), @p218='?' (DbType = DateTime2), @p219='?' (Size = 4000), @p220='?' (DbType = Single), @p221='?' (DbType = Guid), @p222='?' (Size = 4000), @p223='?' (Size = 4000), @p224='?' (DbType = Guid), @p225='?' (Size = 4000), @p226='?' (DbType = DateTime2), @p227='?' (Size = 4000), @p228='?' (DbType = Single), @p229='?' (DbType = Guid), @p230='?' (Size = 4000), @p231='?' (Size = 4000), @p232='?' (DbType = Guid), @p233='?' (Size = 4000), @p234='?' (DbType = DateTime2), @p235='?' (Size = 4000), @p236='?' (DbType = Single), @p237='?' (DbType = Guid), @p238='?' (Size = 4000), @p239='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [News] ([Id], [ContentNew], [DataAndTime], [Description], [Rate], [SourceId], [SourceUrl], [Title])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7),
+(@p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15),
+(@p16, @p17, @p18, @p19, @p20, @p21, @p22, @p23),
+(@p24, @p25, @p26, @p27, @p28, @p29, @p30, @p31),
+(@p32, @p33, @p34, @p35, @p36, @p37, @p38, @p39),
+(@p40, @p41, @p42, @p43, @p44, @p45, @p46, @p47),
+(@p48, @p49, @p50, @p51, @p52, @p53, @p54, @p55),
+(@p56, @p57, @p58, @p59, @p60, @p61, @p62, @p63),
+(@p64, @p65, @p66, @p67, @p68, @p69, @p70, @p71),
+(@p72, @p73, @p74, @p75, @p76, @p77, @p78, @p79),
+(@p80, @p81, @p82, @p83, @p84, @p85, @p86, @p87),
+(@p88, @p89, @p90, @p91, @p92, @p93, @p94, @p95),
+(@p96, @p97, @p98, @p99, @p100, @p101, @p102, @p103),
+(@p104, @p105, @p106, @p107, @p108, @p109, @p110, @p111),
+(@p112, @p113, @p114, @p115, @p116, @p117, @p118, @p119),
+(@p120, @p121, @p122, @p123, @p124, @p125, @p126, @p127),
+(@p128, @p129, @p130, @p131, @p132, @p133, @p134, @p135),
+(@p136, @p137, @p138, @p139, @p140, @p141, @p142, @p143),
+(@p144, @p145, @p146, @p147, @p148, @p149, @p150, @p151),
+(@p152, @p153, @p154, @p155, @p156, @p157, @p158, @p159),
+(@p160, @p161, @p162, @p163, @p164, @p165, @p166, @p167),
+(@p168, @p169, @p170, @p171, @p172, @p173, @p174, @p175),
+(@p176, @p177, @p178, @p179, @p180, @p181, @p182, @p183),
+(@p184, @p185, @p186, @p187, @p188, @p189, @p190, @p191),
+(@p192, @p193, @p194, @p195, @p196, @p197, @p198, @p199),
+(@p200, @p201, @p202, @p203, @p204, @p205, @p206, @p207),
+(@p208, @p209, @p210, @p211, @p212, @p213, @p214, @p215),
+(@p216, @p217, @p218, @p219, @p220, @p221, @p222, @p223),
+(@p224, @p225, @p226, @p227, @p228, @p229, @p230, @p231),
+(@p232, @p233, @p234, @p235, @p236, @p237, @p238, @p239);
+2024-01-25 01:21:54.694 +03:00 [ERR] An exception occurred in the database while saving changes for context type 'NewsAggregatingProject.Data.NewsAggregatingDBContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Не удалось вставить значение NULL в столбец "ContentNew", таблицы "NewAggregatorDB.dbo.News"; в столбце запрещены значения NULL. Ошибка в INSERT.
+Выполнение данной инструкции было прервано.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__209_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:49d99dd7-92c8-4f05-b976-437961748dce
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Не удалось вставить значение NULL в столбец "ContentNew", таблицы "NewAggregatorDB.dbo.News"; в столбце запрещены значения NULL. Ошибка в INSERT.
+Выполнение данной инструкции было прервано.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__209_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:49d99dd7-92c8-4f05-b976-437961748dce
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2024-01-25 01:21:54.951 +03:00 [INF] Executed action NewsAggregatingProject.API.Controllers.AggregateNewsController.Aggregate (NewsAggregatingProject.API) in 13469.464ms
+2024-01-25 01:21:54.952 +03:00 [INF] Executed endpoint 'NewsAggregatingProject.API.Controllers.AggregateNewsController.Aggregate (NewsAggregatingProject.API)'
+2024-01-25 01:21:54.957 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Не удалось вставить значение NULL в столбец "ContentNew", таблицы "NewAggregatorDB.dbo.News"; в столбце запрещены значения NULL. Ошибка в INSERT.
+Выполнение данной инструкции было прервано.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__209_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:49d99dd7-92c8-4f05-b976-437961748dce
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at NewsAggregatingProject.Repositories.UnitOfWork.Commit() in C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.Repositories\UnitOfWork.cs:line 38
+   at NewsAggregatingProject.Services.NewsService.InsertParsedNews(List`1 listFullfilledNews) in C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.Services\NewsService.cs:line 87
+   at NewsAggregatingProject.API.Controllers.AggregateNewsController.Aggregate(Guid sourceId) in C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.API\Controllers\AggregateNewsController.cs:line 37
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-01-25 01:21:55.005 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/api/AggregateNews?sourceId=1dd0b67f-7c37-419d-b80d-19d8b055a920 - 500 null text/plain; charset=utf-8 13586.0167ms
+2024-01-25 01:33:21.112 +03:00 [INF] Now listening on: https://localhost:7100
+2024-01-25 01:33:21.156 +03:00 [INF] Now listening on: http://localhost:5184
+2024-01-25 01:33:21.158 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-25 01:33:21.159 +03:00 [INF] Hosting environment: Development
+2024-01-25 01:33:21.159 +03:00 [INF] Content root path: C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.API
+2024-01-25 01:33:22.809 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/swagger/index.html - null null
+2024-01-25 01:33:23.255 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/swagger/index.html - 200 null text/html;charset=utf-8 450.8169ms
+2024-01-25 01:33:24.353 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/_vs/browserLink - null null
+2024-01-25 01:33:24.353 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-25 01:33:24.373 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/_framework/aspnetcore-browser-refresh.js - 200 13788 application/javascript; charset=utf-8 20.2769ms
+2024-01-25 01:33:24.452 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/_vs/browserLink - 200 null text/javascript; charset=UTF-8 99.2724ms
+2024-01-25 01:33:24.499 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/swagger/v1/swagger.json - null null
+2024-01-25 01:33:24.666 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 167.4578ms
+2024-01-25 01:33:31.202 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/api/AggregateNews?sourceId=1dd0b67f-7c37-419d-b80d-19d8b055a920 - null 0
+2024-01-25 01:33:31.218 +03:00 [INF] Executing endpoint 'NewsAggregatingProject.API.Controllers.AggregateNewsController.Aggregate (NewsAggregatingProject.API)'
+2024-01-25 01:33:31.270 +03:00 [INF] Route matched with {action = "Aggregate", controller = "AggregateNews"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Aggregate(System.Guid) on controller NewsAggregatingProject.API.Controllers.AggregateNewsController (NewsAggregatingProject.API).
+2024-01-25 01:33:33.834 +03:00 [INF] Executed DbCommand (157ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Name], [s].[RSSUrl], [s].[Url]
+FROM [Sources] AS [s]
+WHERE [s].[Id] = @__id_0
+2024-01-25 01:33:34.299 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[SourceUrl]
+FROM [News] AS [n]
+2024-01-25 01:33:41.521 +03:00 [ERR] Failed executing DbCommand (139ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000), @p4='?' (DbType = Single), @p5='?' (DbType = Guid), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Guid), @p9='?' (Size = 4000), @p10='?' (DbType = DateTime2), @p11='?' (Size = 4000), @p12='?' (DbType = Single), @p13='?' (DbType = Guid), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (DbType = Guid), @p17='?' (Size = 4000), @p18='?' (DbType = DateTime2), @p19='?' (Size = 4000), @p20='?' (DbType = Single), @p21='?' (DbType = Guid), @p22='?' (Size = 4000), @p23='?' (Size = 4000), @p24='?' (DbType = Guid), @p25='?' (Size = 4000), @p26='?' (DbType = DateTime2), @p27='?' (Size = 4000), @p28='?' (DbType = Single), @p29='?' (DbType = Guid), @p30='?' (Size = 4000), @p31='?' (Size = 4000), @p32='?' (DbType = Guid), @p33='?' (Size = 4000), @p34='?' (DbType = DateTime2), @p35='?' (Size = 4000), @p36='?' (DbType = Single), @p37='?' (DbType = Guid), @p38='?' (Size = 4000), @p39='?' (Size = 4000), @p40='?' (DbType = Guid), @p41='?' (Size = 4000), @p42='?' (DbType = DateTime2), @p43='?' (Size = 4000), @p44='?' (DbType = Single), @p45='?' (DbType = Guid), @p46='?' (Size = 4000), @p47='?' (Size = 4000), @p48='?' (DbType = Guid), @p49='?' (Size = 4000), @p50='?' (DbType = DateTime2), @p51='?' (Size = 4000), @p52='?' (DbType = Single), @p53='?' (DbType = Guid), @p54='?' (Size = 4000), @p55='?' (Size = 4000), @p56='?' (DbType = Guid), @p57='?' (Size = 4000), @p58='?' (DbType = DateTime2), @p59='?' (Size = 4000), @p60='?' (DbType = Single), @p61='?' (DbType = Guid), @p62='?' (Size = 4000), @p63='?' (Size = 4000), @p64='?' (DbType = Guid), @p65='?' (Size = 4000), @p66='?' (DbType = DateTime2), @p67='?' (Size = 4000), @p68='?' (DbType = Single), @p69='?' (DbType = Guid), @p70='?' (Size = 4000), @p71='?' (Size = 4000), @p72='?' (DbType = Guid), @p73='?' (Size = 4000), @p74='?' (DbType = DateTime2), @p75='?' (Size = 4000), @p76='?' (DbType = Single), @p77='?' (DbType = Guid), @p78='?' (Size = 4000), @p79='?' (Size = 4000), @p80='?' (DbType = Guid), @p81='?' (Size = 4000), @p82='?' (DbType = DateTime2), @p83='?' (Size = 4000), @p84='?' (DbType = Single), @p85='?' (DbType = Guid), @p86='?' (Size = 4000), @p87='?' (Size = 4000), @p88='?' (DbType = Guid), @p89='?' (Size = 4000), @p90='?' (DbType = DateTime2), @p91='?' (Size = 4000), @p92='?' (DbType = Single), @p93='?' (DbType = Guid), @p94='?' (Size = 4000), @p95='?' (Size = 4000), @p96='?' (DbType = Guid), @p97='?' (Size = 4000), @p98='?' (DbType = DateTime2), @p99='?' (Size = 4000), @p100='?' (DbType = Single), @p101='?' (DbType = Guid), @p102='?' (Size = 4000), @p103='?' (Size = 4000), @p104='?' (DbType = Guid), @p105='?' (Size = 4000), @p106='?' (DbType = DateTime2), @p107='?' (Size = 4000), @p108='?' (DbType = Single), @p109='?' (DbType = Guid), @p110='?' (Size = 4000), @p111='?' (Size = 4000), @p112='?' (DbType = Guid), @p113='?' (Size = 4000), @p114='?' (DbType = DateTime2), @p115='?' (Size = 4000), @p116='?' (DbType = Single), @p117='?' (DbType = Guid), @p118='?' (Size = 4000), @p119='?' (Size = 4000), @p120='?' (DbType = Guid), @p121='?' (Size = 4000), @p122='?' (DbType = DateTime2), @p123='?' (Size = 4000), @p124='?' (DbType = Single), @p125='?' (DbType = Guid), @p126='?' (Size = 4000), @p127='?' (Size = 4000), @p128='?' (DbType = Guid), @p129='?' (Size = 4000), @p130='?' (DbType = DateTime2), @p131='?' (Size = 4000), @p132='?' (DbType = Single), @p133='?' (DbType = Guid), @p134='?' (Size = 4000), @p135='?' (Size = 4000), @p136='?' (DbType = Guid), @p137='?' (Size = 4000), @p138='?' (DbType = DateTime2), @p139='?' (Size = 4000), @p140='?' (DbType = Single), @p141='?' (DbType = Guid), @p142='?' (Size = 4000), @p143='?' (Size = 4000), @p144='?' (DbType = Guid), @p145='?' (Size = 4000), @p146='?' (DbType = DateTime2), @p147='?' (Size = 4000), @p148='?' (DbType = Single), @p149='?' (DbType = Guid), @p150='?' (Size = 4000), @p151='?' (Size = 4000), @p152='?' (DbType = Guid), @p153='?' (Size = 4000), @p154='?' (DbType = DateTime2), @p155='?' (Size = 4000), @p156='?' (DbType = Single), @p157='?' (DbType = Guid), @p158='?' (Size = 4000), @p159='?' (Size = 4000), @p160='?' (DbType = Guid), @p161='?' (Size = 4000), @p162='?' (DbType = DateTime2), @p163='?' (Size = 4000), @p164='?' (DbType = Single), @p165='?' (DbType = Guid), @p166='?' (Size = 4000), @p167='?' (Size = 4000), @p168='?' (DbType = Guid), @p169='?' (Size = 4000), @p170='?' (DbType = DateTime2), @p171='?' (Size = 4000), @p172='?' (DbType = Single), @p173='?' (DbType = Guid), @p174='?' (Size = 4000), @p175='?' (Size = 4000), @p176='?' (DbType = Guid), @p177='?' (Size = 4000), @p178='?' (DbType = DateTime2), @p179='?' (Size = 4000), @p180='?' (DbType = Single), @p181='?' (DbType = Guid), @p182='?' (Size = 4000), @p183='?' (Size = 4000), @p184='?' (DbType = Guid), @p185='?' (Size = 4000), @p186='?' (DbType = DateTime2), @p187='?' (Size = 4000), @p188='?' (DbType = Single), @p189='?' (DbType = Guid), @p190='?' (Size = 4000), @p191='?' (Size = 4000), @p192='?' (DbType = Guid), @p193='?' (Size = 4000), @p194='?' (DbType = DateTime2), @p195='?' (Size = 4000), @p196='?' (DbType = Single), @p197='?' (DbType = Guid), @p198='?' (Size = 4000), @p199='?' (Size = 4000), @p200='?' (DbType = Guid), @p201='?' (Size = 4000), @p202='?' (DbType = DateTime2), @p203='?' (Size = 4000), @p204='?' (DbType = Single), @p205='?' (DbType = Guid), @p206='?' (Size = 4000), @p207='?' (Size = 4000), @p208='?' (DbType = Guid), @p209='?' (Size = 4000), @p210='?' (DbType = DateTime2), @p211='?' (Size = 4000), @p212='?' (DbType = Single), @p213='?' (DbType = Guid), @p214='?' (Size = 4000), @p215='?' (Size = 4000), @p216='?' (DbType = Guid), @p217='?' (Size = 4000), @p218='?' (DbType = DateTime2), @p219='?' (Size = 4000), @p220='?' (DbType = Single), @p221='?' (DbType = Guid), @p222='?' (Size = 4000), @p223='?' (Size = 4000), @p224='?' (DbType = Guid), @p225='?' (Size = 4000), @p226='?' (DbType = DateTime2), @p227='?' (Size = 4000), @p228='?' (DbType = Single), @p229='?' (DbType = Guid), @p230='?' (Size = 4000), @p231='?' (Size = 4000), @p232='?' (DbType = Guid), @p233='?' (Size = 4000), @p234='?' (DbType = DateTime2), @p235='?' (Size = 4000), @p236='?' (DbType = Single), @p237='?' (DbType = Guid), @p238='?' (Size = 4000), @p239='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [News] ([Id], [ContentNew], [DataAndTime], [Description], [Rate], [SourceId], [SourceUrl], [Title])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7),
+(@p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15),
+(@p16, @p17, @p18, @p19, @p20, @p21, @p22, @p23),
+(@p24, @p25, @p26, @p27, @p28, @p29, @p30, @p31),
+(@p32, @p33, @p34, @p35, @p36, @p37, @p38, @p39),
+(@p40, @p41, @p42, @p43, @p44, @p45, @p46, @p47),
+(@p48, @p49, @p50, @p51, @p52, @p53, @p54, @p55),
+(@p56, @p57, @p58, @p59, @p60, @p61, @p62, @p63),
+(@p64, @p65, @p66, @p67, @p68, @p69, @p70, @p71),
+(@p72, @p73, @p74, @p75, @p76, @p77, @p78, @p79),
+(@p80, @p81, @p82, @p83, @p84, @p85, @p86, @p87),
+(@p88, @p89, @p90, @p91, @p92, @p93, @p94, @p95),
+(@p96, @p97, @p98, @p99, @p100, @p101, @p102, @p103),
+(@p104, @p105, @p106, @p107, @p108, @p109, @p110, @p111),
+(@p112, @p113, @p114, @p115, @p116, @p117, @p118, @p119),
+(@p120, @p121, @p122, @p123, @p124, @p125, @p126, @p127),
+(@p128, @p129, @p130, @p131, @p132, @p133, @p134, @p135),
+(@p136, @p137, @p138, @p139, @p140, @p141, @p142, @p143),
+(@p144, @p145, @p146, @p147, @p148, @p149, @p150, @p151),
+(@p152, @p153, @p154, @p155, @p156, @p157, @p158, @p159),
+(@p160, @p161, @p162, @p163, @p164, @p165, @p166, @p167),
+(@p168, @p169, @p170, @p171, @p172, @p173, @p174, @p175),
+(@p176, @p177, @p178, @p179, @p180, @p181, @p182, @p183),
+(@p184, @p185, @p186, @p187, @p188, @p189, @p190, @p191),
+(@p192, @p193, @p194, @p195, @p196, @p197, @p198, @p199),
+(@p200, @p201, @p202, @p203, @p204, @p205, @p206, @p207),
+(@p208, @p209, @p210, @p211, @p212, @p213, @p214, @p215),
+(@p216, @p217, @p218, @p219, @p220, @p221, @p222, @p223),
+(@p224, @p225, @p226, @p227, @p228, @p229, @p230, @p231),
+(@p232, @p233, @p234, @p235, @p236, @p237, @p238, @p239);
+2024-01-25 01:33:41.602 +03:00 [ERR] An exception occurred in the database while saving changes for context type 'NewsAggregatingProject.Data.NewsAggregatingDBContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Не удалось вставить значение NULL в столбец "ContentNew", таблицы "NewAggregatorDB.dbo.News"; в столбце запрещены значения NULL. Ошибка в INSERT.
+Выполнение данной инструкции было прервано.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__209_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:8d8b662a-d3ed-4702-92da-b9a5e5fc32e7
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Не удалось вставить значение NULL в столбец "ContentNew", таблицы "NewAggregatorDB.dbo.News"; в столбце запрещены значения NULL. Ошибка в INSERT.
+Выполнение данной инструкции было прервано.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__209_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:8d8b662a-d3ed-4702-92da-b9a5e5fc32e7
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2024-01-25 01:33:41.877 +03:00 [INF] Executed action NewsAggregatingProject.API.Controllers.AggregateNewsController.Aggregate (NewsAggregatingProject.API) in 10599.9335ms
+2024-01-25 01:33:41.879 +03:00 [INF] Executed endpoint 'NewsAggregatingProject.API.Controllers.AggregateNewsController.Aggregate (NewsAggregatingProject.API)'
+2024-01-25 01:33:41.886 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Не удалось вставить значение NULL в столбец "ContentNew", таблицы "NewAggregatorDB.dbo.News"; в столбце запрещены значения NULL. Ошибка в INSERT.
+Выполнение данной инструкции было прервано.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__209_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:8d8b662a-d3ed-4702-92da-b9a5e5fc32e7
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at NewsAggregatingProject.Repositories.UnitOfWork.Commit() in C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.Repositories\UnitOfWork.cs:line 38
+   at NewsAggregatingProject.Services.NewsService.InsertParsedNews(List`1 listFullfilledNews) in C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.Services\NewsService.cs:line 87
+   at NewsAggregatingProject.API.Controllers.AggregateNewsController.Aggregate(Guid sourceId) in C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.API\Controllers\AggregateNewsController.cs:line 36
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-01-25 01:33:41.939 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/api/AggregateNews?sourceId=1dd0b67f-7c37-419d-b80d-19d8b055a920 - 500 null text/plain; charset=utf-8 10737.7945ms
+2024-01-25 01:34:44.109 +03:00 [INF] Now listening on: https://localhost:7100
+2024-01-25 01:34:44.147 +03:00 [INF] Now listening on: http://localhost:5184
+2024-01-25 01:34:44.150 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-25 01:34:44.151 +03:00 [INF] Hosting environment: Development
+2024-01-25 01:34:44.151 +03:00 [INF] Content root path: C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.API
+2024-01-25 01:34:47.587 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/swagger/index.html - null null
+2024-01-25 01:34:48.004 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/swagger/index.html - 200 null text/html;charset=utf-8 429.6586ms
+2024-01-25 01:34:48.060 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-25 01:34:48.060 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/_vs/browserLink - null null
+2024-01-25 01:34:48.069 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/_framework/aspnetcore-browser-refresh.js - 200 13788 application/javascript; charset=utf-8 9.1298ms
+2024-01-25 01:34:48.122 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/_vs/browserLink - 200 null text/javascript; charset=UTF-8 61.9148ms
+2024-01-25 01:34:48.206 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/swagger/v1/swagger.json - null null
+2024-01-25 01:34:48.358 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 153.3331ms
+2024-01-25 01:34:59.067 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/api/AggregateNews?sourceId=1dd0b67f-7c37-419d-b80d-19d8b055a920 - null 0
+2024-01-25 01:34:59.083 +03:00 [INF] Executing endpoint 'NewsAggregatingProject.API.Controllers.AggregateNewsController.Aggregate (NewsAggregatingProject.API)'
+2024-01-25 01:34:59.132 +03:00 [INF] Route matched with {action = "Aggregate", controller = "AggregateNews"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Aggregate(System.Guid) on controller NewsAggregatingProject.API.Controllers.AggregateNewsController (NewsAggregatingProject.API).
+2024-01-25 01:35:07.561 +03:00 [INF] Executed DbCommand (63ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Name], [s].[RSSUrl], [s].[Url]
+FROM [Sources] AS [s]
+WHERE [s].[Id] = @__id_0
+2024-01-25 01:35:39.767 +03:00 [INF] Now listening on: https://localhost:7100
+2024-01-25 01:35:39.826 +03:00 [INF] Now listening on: http://localhost:5184
+2024-01-25 01:35:39.829 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-25 01:35:39.830 +03:00 [INF] Hosting environment: Development
+2024-01-25 01:35:39.830 +03:00 [INF] Content root path: C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.API
+2024-01-25 01:38:49.671 +03:00 [INF] Now listening on: https://localhost:7100
+2024-01-25 01:38:49.701 +03:00 [INF] Now listening on: http://localhost:5184
+2024-01-25 01:38:49.703 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-25 01:38:49.703 +03:00 [INF] Hosting environment: Development
+2024-01-25 01:38:49.703 +03:00 [INF] Content root path: C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.API
+2024-01-25 01:38:53.357 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/swagger/index.html - null null
+2024-01-25 01:38:53.646 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/swagger/index.html - 200 null text/html;charset=utf-8 297.8337ms
+2024-01-25 01:38:53.714 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/_vs/browserLink - null null
+2024-01-25 01:38:53.714 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-25 01:38:53.740 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/_framework/aspnetcore-browser-refresh.js - 200 13788 application/javascript; charset=utf-8 25.9483ms
+2024-01-25 01:38:53.792 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/_vs/browserLink - 200 null text/javascript; charset=UTF-8 77.9977ms
+2024-01-25 01:38:53.891 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/swagger/v1/swagger.json - null null
+2024-01-25 01:38:54.040 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 148.7585ms
+2024-01-25 01:39:01.272 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/api/AggregateNews?sourceId=1dd0b67f-7c37-419d-b80d-19d8b055a920 - null 0
+2024-01-25 01:39:01.302 +03:00 [INF] Executing endpoint 'NewsAggregatingProject.API.Controllers.AggregateNewsController.Aggregate (NewsAggregatingProject.API)'
+2024-01-25 01:39:01.353 +03:00 [INF] Route matched with {action = "Aggregate", controller = "AggregateNews"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Aggregate(System.Guid) on controller NewsAggregatingProject.API.Controllers.AggregateNewsController (NewsAggregatingProject.API).
+2024-01-25 01:39:12.244 +03:00 [INF] Executed DbCommand (73ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Name], [s].[RSSUrl], [s].[Url]
+FROM [Sources] AS [s]
+WHERE [s].[Id] = @__id_0
+2024-01-25 01:39:40.898 +03:00 [INF] Executed DbCommand (46ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[SourceUrl]
+FROM [News] AS [n]
+2024-01-25 01:40:00.933 +03:00 [ERR] Failed executing DbCommand (58ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000), @p4='?' (DbType = Single), @p5='?' (DbType = Guid), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Guid), @p9='?' (Size = 4000), @p10='?' (DbType = DateTime2), @p11='?' (Size = 4000), @p12='?' (DbType = Single), @p13='?' (DbType = Guid), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (DbType = Guid), @p17='?' (Size = 4000), @p18='?' (DbType = DateTime2), @p19='?' (Size = 4000), @p20='?' (DbType = Single), @p21='?' (DbType = Guid), @p22='?' (Size = 4000), @p23='?' (Size = 4000), @p24='?' (DbType = Guid), @p25='?' (Size = 4000), @p26='?' (DbType = DateTime2), @p27='?' (Size = 4000), @p28='?' (DbType = Single), @p29='?' (DbType = Guid), @p30='?' (Size = 4000), @p31='?' (Size = 4000), @p32='?' (DbType = Guid), @p33='?' (Size = 4000), @p34='?' (DbType = DateTime2), @p35='?' (Size = 4000), @p36='?' (DbType = Single), @p37='?' (DbType = Guid), @p38='?' (Size = 4000), @p39='?' (Size = 4000), @p40='?' (DbType = Guid), @p41='?' (Size = 4000), @p42='?' (DbType = DateTime2), @p43='?' (Size = 4000), @p44='?' (DbType = Single), @p45='?' (DbType = Guid), @p46='?' (Size = 4000), @p47='?' (Size = 4000), @p48='?' (DbType = Guid), @p49='?' (Size = 4000), @p50='?' (DbType = DateTime2), @p51='?' (Size = 4000), @p52='?' (DbType = Single), @p53='?' (DbType = Guid), @p54='?' (Size = 4000), @p55='?' (Size = 4000), @p56='?' (DbType = Guid), @p57='?' (Size = 4000), @p58='?' (DbType = DateTime2), @p59='?' (Size = 4000), @p60='?' (DbType = Single), @p61='?' (DbType = Guid), @p62='?' (Size = 4000), @p63='?' (Size = 4000), @p64='?' (DbType = Guid), @p65='?' (Size = 4000), @p66='?' (DbType = DateTime2), @p67='?' (Size = 4000), @p68='?' (DbType = Single), @p69='?' (DbType = Guid), @p70='?' (Size = 4000), @p71='?' (Size = 4000), @p72='?' (DbType = Guid), @p73='?' (Size = 4000), @p74='?' (DbType = DateTime2), @p75='?' (Size = 4000), @p76='?' (DbType = Single), @p77='?' (DbType = Guid), @p78='?' (Size = 4000), @p79='?' (Size = 4000), @p80='?' (DbType = Guid), @p81='?' (Size = 4000), @p82='?' (DbType = DateTime2), @p83='?' (Size = 4000), @p84='?' (DbType = Single), @p85='?' (DbType = Guid), @p86='?' (Size = 4000), @p87='?' (Size = 4000), @p88='?' (DbType = Guid), @p89='?' (Size = 4000), @p90='?' (DbType = DateTime2), @p91='?' (Size = 4000), @p92='?' (DbType = Single), @p93='?' (DbType = Guid), @p94='?' (Size = 4000), @p95='?' (Size = 4000), @p96='?' (DbType = Guid), @p97='?' (Size = 4000), @p98='?' (DbType = DateTime2), @p99='?' (Size = 4000), @p100='?' (DbType = Single), @p101='?' (DbType = Guid), @p102='?' (Size = 4000), @p103='?' (Size = 4000), @p104='?' (DbType = Guid), @p105='?' (Size = 4000), @p106='?' (DbType = DateTime2), @p107='?' (Size = 4000), @p108='?' (DbType = Single), @p109='?' (DbType = Guid), @p110='?' (Size = 4000), @p111='?' (Size = 4000), @p112='?' (DbType = Guid), @p113='?' (Size = 4000), @p114='?' (DbType = DateTime2), @p115='?' (Size = 4000), @p116='?' (DbType = Single), @p117='?' (DbType = Guid), @p118='?' (Size = 4000), @p119='?' (Size = 4000), @p120='?' (DbType = Guid), @p121='?' (Size = 4000), @p122='?' (DbType = DateTime2), @p123='?' (Size = 4000), @p124='?' (DbType = Single), @p125='?' (DbType = Guid), @p126='?' (Size = 4000), @p127='?' (Size = 4000), @p128='?' (DbType = Guid), @p129='?' (Size = 4000), @p130='?' (DbType = DateTime2), @p131='?' (Size = 4000), @p132='?' (DbType = Single), @p133='?' (DbType = Guid), @p134='?' (Size = 4000), @p135='?' (Size = 4000), @p136='?' (DbType = Guid), @p137='?' (Size = 4000), @p138='?' (DbType = DateTime2), @p139='?' (Size = 4000), @p140='?' (DbType = Single), @p141='?' (DbType = Guid), @p142='?' (Size = 4000), @p143='?' (Size = 4000), @p144='?' (DbType = Guid), @p145='?' (Size = 4000), @p146='?' (DbType = DateTime2), @p147='?' (Size = 4000), @p148='?' (DbType = Single), @p149='?' (DbType = Guid), @p150='?' (Size = 4000), @p151='?' (Size = 4000), @p152='?' (DbType = Guid), @p153='?' (Size = 4000), @p154='?' (DbType = DateTime2), @p155='?' (Size = 4000), @p156='?' (DbType = Single), @p157='?' (DbType = Guid), @p158='?' (Size = 4000), @p159='?' (Size = 4000), @p160='?' (DbType = Guid), @p161='?' (Size = 4000), @p162='?' (DbType = DateTime2), @p163='?' (Size = 4000), @p164='?' (DbType = Single), @p165='?' (DbType = Guid), @p166='?' (Size = 4000), @p167='?' (Size = 4000), @p168='?' (DbType = Guid), @p169='?' (Size = 4000), @p170='?' (DbType = DateTime2), @p171='?' (Size = 4000), @p172='?' (DbType = Single), @p173='?' (DbType = Guid), @p174='?' (Size = 4000), @p175='?' (Size = 4000), @p176='?' (DbType = Guid), @p177='?' (Size = 4000), @p178='?' (DbType = DateTime2), @p179='?' (Size = 4000), @p180='?' (DbType = Single), @p181='?' (DbType = Guid), @p182='?' (Size = 4000), @p183='?' (Size = 4000), @p184='?' (DbType = Guid), @p185='?' (Size = 4000), @p186='?' (DbType = DateTime2), @p187='?' (Size = 4000), @p188='?' (DbType = Single), @p189='?' (DbType = Guid), @p190='?' (Size = 4000), @p191='?' (Size = 4000), @p192='?' (DbType = Guid), @p193='?' (Size = 4000), @p194='?' (DbType = DateTime2), @p195='?' (Size = 4000), @p196='?' (DbType = Single), @p197='?' (DbType = Guid), @p198='?' (Size = 4000), @p199='?' (Size = 4000), @p200='?' (DbType = Guid), @p201='?' (Size = 4000), @p202='?' (DbType = DateTime2), @p203='?' (Size = 4000), @p204='?' (DbType = Single), @p205='?' (DbType = Guid), @p206='?' (Size = 4000), @p207='?' (Size = 4000), @p208='?' (DbType = Guid), @p209='?' (Size = 4000), @p210='?' (DbType = DateTime2), @p211='?' (Size = 4000), @p212='?' (DbType = Single), @p213='?' (DbType = Guid), @p214='?' (Size = 4000), @p215='?' (Size = 4000), @p216='?' (DbType = Guid), @p217='?' (Size = 4000), @p218='?' (DbType = DateTime2), @p219='?' (Size = 4000), @p220='?' (DbType = Single), @p221='?' (DbType = Guid), @p222='?' (Size = 4000), @p223='?' (Size = 4000), @p224='?' (DbType = Guid), @p225='?' (Size = 4000), @p226='?' (DbType = DateTime2), @p227='?' (Size = 4000), @p228='?' (DbType = Single), @p229='?' (DbType = Guid), @p230='?' (Size = 4000), @p231='?' (Size = 4000), @p232='?' (DbType = Guid), @p233='?' (Size = 4000), @p234='?' (DbType = DateTime2), @p235='?' (Size = 4000), @p236='?' (DbType = Single), @p237='?' (DbType = Guid), @p238='?' (Size = 4000), @p239='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [News] ([Id], [ContentNew], [DataAndTime], [Description], [Rate], [SourceId], [SourceUrl], [Title])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7),
+(@p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15),
+(@p16, @p17, @p18, @p19, @p20, @p21, @p22, @p23),
+(@p24, @p25, @p26, @p27, @p28, @p29, @p30, @p31),
+(@p32, @p33, @p34, @p35, @p36, @p37, @p38, @p39),
+(@p40, @p41, @p42, @p43, @p44, @p45, @p46, @p47),
+(@p48, @p49, @p50, @p51, @p52, @p53, @p54, @p55),
+(@p56, @p57, @p58, @p59, @p60, @p61, @p62, @p63),
+(@p64, @p65, @p66, @p67, @p68, @p69, @p70, @p71),
+(@p72, @p73, @p74, @p75, @p76, @p77, @p78, @p79),
+(@p80, @p81, @p82, @p83, @p84, @p85, @p86, @p87),
+(@p88, @p89, @p90, @p91, @p92, @p93, @p94, @p95),
+(@p96, @p97, @p98, @p99, @p100, @p101, @p102, @p103),
+(@p104, @p105, @p106, @p107, @p108, @p109, @p110, @p111),
+(@p112, @p113, @p114, @p115, @p116, @p117, @p118, @p119),
+(@p120, @p121, @p122, @p123, @p124, @p125, @p126, @p127),
+(@p128, @p129, @p130, @p131, @p132, @p133, @p134, @p135),
+(@p136, @p137, @p138, @p139, @p140, @p141, @p142, @p143),
+(@p144, @p145, @p146, @p147, @p148, @p149, @p150, @p151),
+(@p152, @p153, @p154, @p155, @p156, @p157, @p158, @p159),
+(@p160, @p161, @p162, @p163, @p164, @p165, @p166, @p167),
+(@p168, @p169, @p170, @p171, @p172, @p173, @p174, @p175),
+(@p176, @p177, @p178, @p179, @p180, @p181, @p182, @p183),
+(@p184, @p185, @p186, @p187, @p188, @p189, @p190, @p191),
+(@p192, @p193, @p194, @p195, @p196, @p197, @p198, @p199),
+(@p200, @p201, @p202, @p203, @p204, @p205, @p206, @p207),
+(@p208, @p209, @p210, @p211, @p212, @p213, @p214, @p215),
+(@p216, @p217, @p218, @p219, @p220, @p221, @p222, @p223),
+(@p224, @p225, @p226, @p227, @p228, @p229, @p230, @p231),
+(@p232, @p233, @p234, @p235, @p236, @p237, @p238, @p239);
+2024-01-25 01:40:01.006 +03:00 [ERR] An exception occurred in the database while saving changes for context type 'NewsAggregatingProject.Data.NewsAggregatingDBContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Не удалось вставить значение NULL в столбец "ContentNew", таблицы "NewAggregatorDB.dbo.News"; в столбце запрещены значения NULL. Ошибка в INSERT.
+Выполнение данной инструкции было прервано.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__209_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:bd5c8973-a462-43b2-ad4b-cd95defd10b6
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Не удалось вставить значение NULL в столбец "ContentNew", таблицы "NewAggregatorDB.dbo.News"; в столбце запрещены значения NULL. Ошибка в INSERT.
+Выполнение данной инструкции было прервано.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__209_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:bd5c8973-a462-43b2-ad4b-cd95defd10b6
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2024-01-25 01:40:01.233 +03:00 [INF] Executed action NewsAggregatingProject.API.Controllers.AggregateNewsController.Aggregate (NewsAggregatingProject.API) in 59874.3963ms
+2024-01-25 01:40:01.234 +03:00 [INF] Executed endpoint 'NewsAggregatingProject.API.Controllers.AggregateNewsController.Aggregate (NewsAggregatingProject.API)'
+2024-01-25 01:40:01.238 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Не удалось вставить значение NULL в столбец "ContentNew", таблицы "NewAggregatorDB.dbo.News"; в столбце запрещены значения NULL. Ошибка в INSERT.
+Выполнение данной инструкции было прервано.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__209_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:bd5c8973-a462-43b2-ad4b-cd95defd10b6
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at NewsAggregatingProject.Repositories.UnitOfWork.Commit() in C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.Repositories\UnitOfWork.cs:line 38
+   at NewsAggregatingProject.Services.NewsService.InsertParsedNews(List`1 listFullfilledNews) in C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.Services\NewsService.cs:line 87
+   at NewsAggregatingProject.API.Controllers.AggregateNewsController.Aggregate(Guid sourceId) in C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.API\Controllers\AggregateNewsController.cs:line 36
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-01-25 01:40:01.300 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/api/AggregateNews?sourceId=1dd0b67f-7c37-419d-b80d-19d8b055a920 - 500 null text/plain; charset=utf-8 60028.6117ms
+2024-01-25 01:40:34.612 +03:00 [INF] Now listening on: https://localhost:7100
+2024-01-25 01:40:34.669 +03:00 [INF] Now listening on: http://localhost:5184
+2024-01-25 01:40:34.672 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-25 01:40:34.672 +03:00 [INF] Hosting environment: Development
+2024-01-25 01:40:34.672 +03:00 [INF] Content root path: C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.API
+2024-01-25 01:40:36.015 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/swagger/index.html - null null
+2024-01-25 01:40:36.257 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/swagger/index.html - 200 null text/html;charset=utf-8 243.6357ms
+2024-01-25 01:40:36.948 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-25 01:40:36.948 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/_vs/browserLink - null null
+2024-01-25 01:40:37.024 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/_framework/aspnetcore-browser-refresh.js - 200 13788 application/javascript; charset=utf-8 75.7906ms
+2024-01-25 01:40:37.198 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/_vs/browserLink - 200 null text/javascript; charset=UTF-8 249.3135ms
+2024-01-25 01:40:37.261 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/swagger/v1/swagger.json - null null
+2024-01-25 01:40:37.425 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 163.9721ms
+2024-01-25 01:40:46.457 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/api/AggregateNews?sourceId=1dd0b67f-7c37-419d-b80d-19d8b055a920 - null 0
+2024-01-25 01:40:46.473 +03:00 [INF] Executing endpoint 'NewsAggregatingProject.API.Controllers.AggregateNewsController.Aggregate (NewsAggregatingProject.API)'
+2024-01-25 01:40:46.521 +03:00 [INF] Route matched with {action = "Aggregate", controller = "AggregateNews"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Aggregate(System.Guid) on controller NewsAggregatingProject.API.Controllers.AggregateNewsController (NewsAggregatingProject.API).
+2024-01-25 01:40:53.806 +03:00 [INF] Executed DbCommand (77ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Name], [s].[RSSUrl], [s].[Url]
+FROM [Sources] AS [s]
+WHERE [s].[Id] = @__id_0
+2024-01-25 01:41:21.010 +03:00 [INF] Executed DbCommand (32ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[SourceUrl]
+FROM [News] AS [n]
+2024-01-25 01:43:14.853 +03:00 [ERR] Failed executing DbCommand (48ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000), @p4='?' (DbType = Single), @p5='?' (DbType = Guid), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Guid), @p9='?' (Size = 4000), @p10='?' (DbType = DateTime2), @p11='?' (Size = 4000), @p12='?' (DbType = Single), @p13='?' (DbType = Guid), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (DbType = Guid), @p17='?' (Size = 4000), @p18='?' (DbType = DateTime2), @p19='?' (Size = 4000), @p20='?' (DbType = Single), @p21='?' (DbType = Guid), @p22='?' (Size = 4000), @p23='?' (Size = 4000), @p24='?' (DbType = Guid), @p25='?' (Size = 4000), @p26='?' (DbType = DateTime2), @p27='?' (Size = 4000), @p28='?' (DbType = Single), @p29='?' (DbType = Guid), @p30='?' (Size = 4000), @p31='?' (Size = 4000), @p32='?' (DbType = Guid), @p33='?' (Size = 4000), @p34='?' (DbType = DateTime2), @p35='?' (Size = 4000), @p36='?' (DbType = Single), @p37='?' (DbType = Guid), @p38='?' (Size = 4000), @p39='?' (Size = 4000), @p40='?' (DbType = Guid), @p41='?' (Size = 4000), @p42='?' (DbType = DateTime2), @p43='?' (Size = 4000), @p44='?' (DbType = Single), @p45='?' (DbType = Guid), @p46='?' (Size = 4000), @p47='?' (Size = 4000), @p48='?' (DbType = Guid), @p49='?' (Size = 4000), @p50='?' (DbType = DateTime2), @p51='?' (Size = 4000), @p52='?' (DbType = Single), @p53='?' (DbType = Guid), @p54='?' (Size = 4000), @p55='?' (Size = 4000), @p56='?' (DbType = Guid), @p57='?' (Size = 4000), @p58='?' (DbType = DateTime2), @p59='?' (Size = 4000), @p60='?' (DbType = Single), @p61='?' (DbType = Guid), @p62='?' (Size = 4000), @p63='?' (Size = 4000), @p64='?' (DbType = Guid), @p65='?' (Size = 4000), @p66='?' (DbType = DateTime2), @p67='?' (Size = 4000), @p68='?' (DbType = Single), @p69='?' (DbType = Guid), @p70='?' (Size = 4000), @p71='?' (Size = 4000), @p72='?' (DbType = Guid), @p73='?' (Size = 4000), @p74='?' (DbType = DateTime2), @p75='?' (Size = 4000), @p76='?' (DbType = Single), @p77='?' (DbType = Guid), @p78='?' (Size = 4000), @p79='?' (Size = 4000), @p80='?' (DbType = Guid), @p81='?' (Size = 4000), @p82='?' (DbType = DateTime2), @p83='?' (Size = 4000), @p84='?' (DbType = Single), @p85='?' (DbType = Guid), @p86='?' (Size = 4000), @p87='?' (Size = 4000), @p88='?' (DbType = Guid), @p89='?' (Size = 4000), @p90='?' (DbType = DateTime2), @p91='?' (Size = 4000), @p92='?' (DbType = Single), @p93='?' (DbType = Guid), @p94='?' (Size = 4000), @p95='?' (Size = 4000), @p96='?' (DbType = Guid), @p97='?' (Size = 4000), @p98='?' (DbType = DateTime2), @p99='?' (Size = 4000), @p100='?' (DbType = Single), @p101='?' (DbType = Guid), @p102='?' (Size = 4000), @p103='?' (Size = 4000), @p104='?' (DbType = Guid), @p105='?' (Size = 4000), @p106='?' (DbType = DateTime2), @p107='?' (Size = 4000), @p108='?' (DbType = Single), @p109='?' (DbType = Guid), @p110='?' (Size = 4000), @p111='?' (Size = 4000), @p112='?' (DbType = Guid), @p113='?' (Size = 4000), @p114='?' (DbType = DateTime2), @p115='?' (Size = 4000), @p116='?' (DbType = Single), @p117='?' (DbType = Guid), @p118='?' (Size = 4000), @p119='?' (Size = 4000), @p120='?' (DbType = Guid), @p121='?' (Size = 4000), @p122='?' (DbType = DateTime2), @p123='?' (Size = 4000), @p124='?' (DbType = Single), @p125='?' (DbType = Guid), @p126='?' (Size = 4000), @p127='?' (Size = 4000), @p128='?' (DbType = Guid), @p129='?' (Size = 4000), @p130='?' (DbType = DateTime2), @p131='?' (Size = 4000), @p132='?' (DbType = Single), @p133='?' (DbType = Guid), @p134='?' (Size = 4000), @p135='?' (Size = 4000), @p136='?' (DbType = Guid), @p137='?' (Size = 4000), @p138='?' (DbType = DateTime2), @p139='?' (Size = 4000), @p140='?' (DbType = Single), @p141='?' (DbType = Guid), @p142='?' (Size = 4000), @p143='?' (Size = 4000), @p144='?' (DbType = Guid), @p145='?' (Size = 4000), @p146='?' (DbType = DateTime2), @p147='?' (Size = 4000), @p148='?' (DbType = Single), @p149='?' (DbType = Guid), @p150='?' (Size = 4000), @p151='?' (Size = 4000), @p152='?' (DbType = Guid), @p153='?' (Size = 4000), @p154='?' (DbType = DateTime2), @p155='?' (Size = 4000), @p156='?' (DbType = Single), @p157='?' (DbType = Guid), @p158='?' (Size = 4000), @p159='?' (Size = 4000), @p160='?' (DbType = Guid), @p161='?' (Size = 4000), @p162='?' (DbType = DateTime2), @p163='?' (Size = 4000), @p164='?' (DbType = Single), @p165='?' (DbType = Guid), @p166='?' (Size = 4000), @p167='?' (Size = 4000), @p168='?' (DbType = Guid), @p169='?' (Size = 4000), @p170='?' (DbType = DateTime2), @p171='?' (Size = 4000), @p172='?' (DbType = Single), @p173='?' (DbType = Guid), @p174='?' (Size = 4000), @p175='?' (Size = 4000), @p176='?' (DbType = Guid), @p177='?' (Size = 4000), @p178='?' (DbType = DateTime2), @p179='?' (Size = 4000), @p180='?' (DbType = Single), @p181='?' (DbType = Guid), @p182='?' (Size = 4000), @p183='?' (Size = 4000), @p184='?' (DbType = Guid), @p185='?' (Size = 4000), @p186='?' (DbType = DateTime2), @p187='?' (Size = 4000), @p188='?' (DbType = Single), @p189='?' (DbType = Guid), @p190='?' (Size = 4000), @p191='?' (Size = 4000), @p192='?' (DbType = Guid), @p193='?' (Size = 4000), @p194='?' (DbType = DateTime2), @p195='?' (Size = 4000), @p196='?' (DbType = Single), @p197='?' (DbType = Guid), @p198='?' (Size = 4000), @p199='?' (Size = 4000), @p200='?' (DbType = Guid), @p201='?' (Size = 4000), @p202='?' (DbType = DateTime2), @p203='?' (Size = 4000), @p204='?' (DbType = Single), @p205='?' (DbType = Guid), @p206='?' (Size = 4000), @p207='?' (Size = 4000), @p208='?' (DbType = Guid), @p209='?' (Size = 4000), @p210='?' (DbType = DateTime2), @p211='?' (Size = 4000), @p212='?' (DbType = Single), @p213='?' (DbType = Guid), @p214='?' (Size = 4000), @p215='?' (Size = 4000), @p216='?' (DbType = Guid), @p217='?' (Size = 4000), @p218='?' (DbType = DateTime2), @p219='?' (Size = 4000), @p220='?' (DbType = Single), @p221='?' (DbType = Guid), @p222='?' (Size = 4000), @p223='?' (Size = 4000), @p224='?' (DbType = Guid), @p225='?' (Size = 4000), @p226='?' (DbType = DateTime2), @p227='?' (Size = 4000), @p228='?' (DbType = Single), @p229='?' (DbType = Guid), @p230='?' (Size = 4000), @p231='?' (Size = 4000), @p232='?' (DbType = Guid), @p233='?' (Size = 4000), @p234='?' (DbType = DateTime2), @p235='?' (Size = 4000), @p236='?' (DbType = Single), @p237='?' (DbType = Guid), @p238='?' (Size = 4000), @p239='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [News] ([Id], [ContentNew], [DataAndTime], [Description], [Rate], [SourceId], [SourceUrl], [Title])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7),
+(@p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15),
+(@p16, @p17, @p18, @p19, @p20, @p21, @p22, @p23),
+(@p24, @p25, @p26, @p27, @p28, @p29, @p30, @p31),
+(@p32, @p33, @p34, @p35, @p36, @p37, @p38, @p39),
+(@p40, @p41, @p42, @p43, @p44, @p45, @p46, @p47),
+(@p48, @p49, @p50, @p51, @p52, @p53, @p54, @p55),
+(@p56, @p57, @p58, @p59, @p60, @p61, @p62, @p63),
+(@p64, @p65, @p66, @p67, @p68, @p69, @p70, @p71),
+(@p72, @p73, @p74, @p75, @p76, @p77, @p78, @p79),
+(@p80, @p81, @p82, @p83, @p84, @p85, @p86, @p87),
+(@p88, @p89, @p90, @p91, @p92, @p93, @p94, @p95),
+(@p96, @p97, @p98, @p99, @p100, @p101, @p102, @p103),
+(@p104, @p105, @p106, @p107, @p108, @p109, @p110, @p111),
+(@p112, @p113, @p114, @p115, @p116, @p117, @p118, @p119),
+(@p120, @p121, @p122, @p123, @p124, @p125, @p126, @p127),
+(@p128, @p129, @p130, @p131, @p132, @p133, @p134, @p135),
+(@p136, @p137, @p138, @p139, @p140, @p141, @p142, @p143),
+(@p144, @p145, @p146, @p147, @p148, @p149, @p150, @p151),
+(@p152, @p153, @p154, @p155, @p156, @p157, @p158, @p159),
+(@p160, @p161, @p162, @p163, @p164, @p165, @p166, @p167),
+(@p168, @p169, @p170, @p171, @p172, @p173, @p174, @p175),
+(@p176, @p177, @p178, @p179, @p180, @p181, @p182, @p183),
+(@p184, @p185, @p186, @p187, @p188, @p189, @p190, @p191),
+(@p192, @p193, @p194, @p195, @p196, @p197, @p198, @p199),
+(@p200, @p201, @p202, @p203, @p204, @p205, @p206, @p207),
+(@p208, @p209, @p210, @p211, @p212, @p213, @p214, @p215),
+(@p216, @p217, @p218, @p219, @p220, @p221, @p222, @p223),
+(@p224, @p225, @p226, @p227, @p228, @p229, @p230, @p231),
+(@p232, @p233, @p234, @p235, @p236, @p237, @p238, @p239);
+2024-01-25 01:43:14.902 +03:00 [ERR] An exception occurred in the database while saving changes for context type 'NewsAggregatingProject.Data.NewsAggregatingDBContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Не удалось вставить значение NULL в столбец "ContentNew", таблицы "NewAggregatorDB.dbo.News"; в столбце запрещены значения NULL. Ошибка в INSERT.
+Выполнение данной инструкции было прервано.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__209_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:33815edd-4137-46c5-9e4b-89e077f8d399
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Не удалось вставить значение NULL в столбец "ContentNew", таблицы "NewAggregatorDB.dbo.News"; в столбце запрещены значения NULL. Ошибка в INSERT.
+Выполнение данной инструкции было прервано.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__209_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:33815edd-4137-46c5-9e4b-89e077f8d399
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2024-01-25 01:43:15.186 +03:00 [INF] Executed action NewsAggregatingProject.API.Controllers.AggregateNewsController.Aggregate (NewsAggregatingProject.API) in 148657.5199ms
+2024-01-25 01:43:15.188 +03:00 [INF] Executed endpoint 'NewsAggregatingProject.API.Controllers.AggregateNewsController.Aggregate (NewsAggregatingProject.API)'
+2024-01-25 01:43:15.195 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Не удалось вставить значение NULL в столбец "ContentNew", таблицы "NewAggregatorDB.dbo.News"; в столбце запрещены значения NULL. Ошибка в INSERT.
+Выполнение данной инструкции было прервано.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__209_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:33815edd-4137-46c5-9e4b-89e077f8d399
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at NewsAggregatingProject.Repositories.UnitOfWork.Commit() in C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.Repositories\UnitOfWork.cs:line 38
+   at NewsAggregatingProject.Services.NewsService.InsertParsedNews(List`1 listFullfilledNews) in C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.Services\NewsService.cs:line 87
+   at NewsAggregatingProject.API.Controllers.AggregateNewsController.Aggregate(Guid sourceId) in C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.API\Controllers\AggregateNewsController.cs:line 36
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-01-25 01:43:15.397 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/api/AggregateNews?sourceId=1dd0b67f-7c37-419d-b80d-19d8b055a920 - 500 null text/plain; charset=utf-8 148940.7519ms
+2024-01-25 01:43:44.485 +03:00 [INF] Now listening on: https://localhost:7100
+2024-01-25 01:43:44.520 +03:00 [INF] Now listening on: http://localhost:5184
+2024-01-25 01:43:44.522 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-25 01:43:44.523 +03:00 [INF] Hosting environment: Development
+2024-01-25 01:43:44.523 +03:00 [INF] Content root path: C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.API
+2024-01-25 01:43:48.952 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/swagger/index.html - null null
+2024-01-25 01:43:49.280 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/swagger/index.html - 200 null text/html;charset=utf-8 335.9133ms
+2024-01-25 01:43:49.368 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-25 01:43:49.368 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/_vs/browserLink - null null
+2024-01-25 01:43:49.374 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/_framework/aspnetcore-browser-refresh.js - 200 13788 application/javascript; charset=utf-8 6.1848ms
+2024-01-25 01:43:49.437 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/_vs/browserLink - 200 null text/javascript; charset=UTF-8 69.6303ms
+2024-01-25 01:43:49.507 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/swagger/v1/swagger.json - null null
+2024-01-25 01:43:49.675 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 167.5712ms
+2024-01-25 01:43:57.386 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/api/AggregateNews?sourceId=1dd0b67f-7c37-419d-b80d-19d8b055a920 - null 0
+2024-01-25 01:43:57.401 +03:00 [INF] Executing endpoint 'NewsAggregatingProject.API.Controllers.AggregateNewsController.Aggregate (NewsAggregatingProject.API)'
+2024-01-25 01:43:57.449 +03:00 [INF] Route matched with {action = "Aggregate", controller = "AggregateNews"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Aggregate(System.Guid) on controller NewsAggregatingProject.API.Controllers.AggregateNewsController (NewsAggregatingProject.API).
+2024-01-25 01:43:59.561 +03:00 [INF] Executed DbCommand (73ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Name], [s].[RSSUrl], [s].[Url]
+FROM [Sources] AS [s]
+WHERE [s].[Id] = @__id_0
+2024-01-25 01:44:00.149 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[SourceUrl]
+FROM [News] AS [n]
+2024-01-25 19:23:59.004 +03:00 [INF] Now listening on: https://localhost:7100
+2024-01-25 19:23:59.036 +03:00 [INF] Now listening on: http://localhost:5184
+2024-01-25 19:23:59.038 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-25 19:23:59.038 +03:00 [INF] Hosting environment: Development
+2024-01-25 19:23:59.038 +03:00 [INF] Content root path: C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.API
+2024-01-25 19:24:01.314 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/swagger/index.html - null null
+2024-01-25 19:24:01.553 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/swagger/index.html - 200 null text/html;charset=utf-8 246.6456ms
+2024-01-25 19:24:01.705 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/_vs/browserLink - null null
+2024-01-25 19:24:01.705 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-25 19:24:01.743 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/_framework/aspnetcore-browser-refresh.js - 200 13788 application/javascript; charset=utf-8 38.3968ms
+2024-01-25 19:24:03.761 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/_vs/browserLink - 200 null text/javascript; charset=UTF-8 2056.2001ms
+2024-01-25 19:24:03.878 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/swagger/v1/swagger.json - null null
+2024-01-25 19:24:03.972 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 93.9663ms
+2024-01-25 19:24:26.799 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/api/AggregateNews?sourceId=1dd0b67f-7c37-419d-b80d-19d8b055a920 - null 0
+2024-01-25 19:24:26.806 +03:00 [INF] Executing endpoint 'NewsAggregatingProject.API.Controllers.AggregateNewsController.Aggregate (NewsAggregatingProject.API)'
+2024-01-25 19:24:26.833 +03:00 [INF] Route matched with {action = "Aggregate", controller = "AggregateNews"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Aggregate(System.Guid) on controller NewsAggregatingProject.API.Controllers.AggregateNewsController (NewsAggregatingProject.API).
+2024-01-25 19:24:28.317 +03:00 [INF] Executed DbCommand (103ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Name], [s].[RSSUrl], [s].[Url]
+FROM [Sources] AS [s]
+WHERE [s].[Id] = @__id_0
+2024-01-25 19:24:28.628 +03:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[SourceUrl]
+FROM [News] AS [n]
+2024-01-25 19:55:34.260 +03:00 [INF] Now listening on: https://localhost:7100
+2024-01-25 19:55:34.293 +03:00 [INF] Now listening on: http://localhost:5184
+2024-01-25 19:55:34.295 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-25 19:55:34.295 +03:00 [INF] Hosting environment: Development
+2024-01-25 19:55:34.295 +03:00 [INF] Content root path: C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.API
+2024-01-25 19:55:36.481 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/swagger/index.html - null null
+2024-01-25 19:55:36.722 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/swagger/index.html - 200 null text/html;charset=utf-8 249.585ms
+2024-01-25 19:55:38.325 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-25 19:55:38.326 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/_vs/browserLink - null null
+2024-01-25 19:55:38.331 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/_framework/aspnetcore-browser-refresh.js - 200 13788 application/javascript; charset=utf-8 5.4856ms
+2024-01-25 19:55:38.381 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/_vs/browserLink - 200 null text/javascript; charset=UTF-8 55.4972ms
+2024-01-25 19:55:38.456 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/swagger/v1/swagger.json - null null
+2024-01-25 19:55:38.594 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 137.8498ms
+2024-01-25 19:56:14.706 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/api/AggregateNews?sourceId=1dd0b67f-7c37-419d-b80d-19d8b055a920 - null 0
+2024-01-25 19:56:14.712 +03:00 [INF] Executing endpoint 'NewsAggregatingProject.API.Controllers.AggregateNewsController.Aggregate (NewsAggregatingProject.API)'
+2024-01-25 19:56:14.741 +03:00 [INF] Route matched with {action = "Aggregate", controller = "AggregateNews"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Aggregate(System.Guid) on controller NewsAggregatingProject.API.Controllers.AggregateNewsController (NewsAggregatingProject.API).
+2024-01-25 19:56:16.276 +03:00 [INF] Executed DbCommand (64ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Name], [s].[RSSUrl], [s].[Url]
+FROM [Sources] AS [s]
+WHERE [s].[Id] = @__id_0
+2024-01-25 19:56:16.606 +03:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[SourceUrl]
+FROM [News] AS [n]
+2024-01-25 19:56:47.047 +03:00 [ERR] Failed executing DbCommand (74ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000), @p4='?' (DbType = Single), @p5='?' (DbType = Guid), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Guid), @p9='?' (Size = 4000), @p10='?' (DbType = DateTime2), @p11='?' (Size = 4000), @p12='?' (DbType = Single), @p13='?' (DbType = Guid), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (DbType = Guid), @p17='?' (Size = -1), @p18='?' (DbType = DateTime2), @p19='?' (Size = 4000), @p20='?' (DbType = Single), @p21='?' (DbType = Guid), @p22='?' (Size = 4000), @p23='?' (Size = 4000), @p24='?' (DbType = Guid), @p25='?' (Size = 4000), @p26='?' (DbType = DateTime2), @p27='?' (Size = 4000), @p28='?' (DbType = Single), @p29='?' (DbType = Guid), @p30='?' (Size = 4000), @p31='?' (Size = 4000), @p32='?' (DbType = Guid), @p33='?' (Size = 4000), @p34='?' (DbType = DateTime2), @p35='?' (Size = 4000), @p36='?' (DbType = Single), @p37='?' (DbType = Guid), @p38='?' (Size = 4000), @p39='?' (Size = 4000), @p40='?' (DbType = Guid), @p41='?' (Size = 4000), @p42='?' (DbType = DateTime2), @p43='?' (Size = 4000), @p44='?' (DbType = Single), @p45='?' (DbType = Guid), @p46='?' (Size = 4000), @p47='?' (Size = 4000), @p48='?' (DbType = Guid), @p49='?' (Size = -1), @p50='?' (DbType = DateTime2), @p51='?' (Size = 4000), @p52='?' (DbType = Single), @p53='?' (DbType = Guid), @p54='?' (Size = 4000), @p55='?' (Size = 4000), @p56='?' (DbType = Guid), @p57='?' (Size = 4000), @p58='?' (DbType = DateTime2), @p59='?' (Size = 4000), @p60='?' (DbType = Single), @p61='?' (DbType = Guid), @p62='?' (Size = 4000), @p63='?' (Size = 4000), @p64='?' (DbType = Guid), @p65='?' (Size = 4000), @p66='?' (DbType = DateTime2), @p67='?' (Size = 4000), @p68='?' (DbType = Single), @p69='?' (DbType = Guid), @p70='?' (Size = 4000), @p71='?' (Size = 4000), @p72='?' (DbType = Guid), @p73='?' (Size = 4000), @p74='?' (DbType = DateTime2), @p75='?' (Size = 4000), @p76='?' (DbType = Single), @p77='?' (DbType = Guid), @p78='?' (Size = 4000), @p79='?' (Size = 4000), @p80='?' (DbType = Guid), @p81='?' (Size = -1), @p82='?' (DbType = DateTime2), @p83='?' (Size = 4000), @p84='?' (DbType = Single), @p85='?' (DbType = Guid), @p86='?' (Size = 4000), @p87='?' (Size = 4000), @p88='?' (DbType = Guid), @p89='?' (Size = -1), @p90='?' (DbType = DateTime2), @p91='?' (Size = 4000), @p92='?' (DbType = Single), @p93='?' (DbType = Guid), @p94='?' (Size = 4000), @p95='?' (Size = 4000), @p96='?' (DbType = Guid), @p97='?' (Size = 4000), @p98='?' (DbType = DateTime2), @p99='?' (Size = 4000), @p100='?' (DbType = Single), @p101='?' (DbType = Guid), @p102='?' (Size = 4000), @p103='?' (Size = 4000), @p104='?' (DbType = Guid), @p105='?' (Size = 4000), @p106='?' (DbType = DateTime2), @p107='?' (Size = 4000), @p108='?' (DbType = Single), @p109='?' (DbType = Guid), @p110='?' (Size = 4000), @p111='?' (Size = 4000), @p112='?' (DbType = Guid), @p113='?' (Size = 4000), @p114='?' (DbType = DateTime2), @p115='?' (Size = 4000), @p116='?' (DbType = Single), @p117='?' (DbType = Guid), @p118='?' (Size = 4000), @p119='?' (Size = 4000), @p120='?' (DbType = Guid), @p121='?' (Size = 4000), @p122='?' (DbType = DateTime2), @p123='?' (Size = 4000), @p124='?' (DbType = Single), @p125='?' (DbType = Guid), @p126='?' (Size = 4000), @p127='?' (Size = 4000), @p128='?' (DbType = Guid), @p129='?' (Size = 4000), @p130='?' (DbType = DateTime2), @p131='?' (Size = 4000), @p132='?' (DbType = Single), @p133='?' (DbType = Guid), @p134='?' (Size = 4000), @p135='?' (Size = 4000), @p136='?' (DbType = Guid), @p137='?' (Size = -1), @p138='?' (DbType = DateTime2), @p139='?' (Size = 4000), @p140='?' (DbType = Single), @p141='?' (DbType = Guid), @p142='?' (Size = 4000), @p143='?' (Size = 4000), @p144='?' (DbType = Guid), @p145='?' (Size = 4000), @p146='?' (DbType = DateTime2), @p147='?' (Size = 4000), @p148='?' (DbType = Single), @p149='?' (DbType = Guid), @p150='?' (Size = 4000), @p151='?' (Size = 4000), @p152='?' (DbType = Guid), @p153='?' (Size = 4000), @p154='?' (DbType = DateTime2), @p155='?' (Size = 4000), @p156='?' (DbType = Single), @p157='?' (DbType = Guid), @p158='?' (Size = 4000), @p159='?' (Size = 4000), @p160='?' (DbType = Guid), @p161='?' (Size = -1), @p162='?' (DbType = DateTime2), @p163='?' (Size = 4000), @p164='?' (DbType = Single), @p165='?' (DbType = Guid), @p166='?' (Size = 4000), @p167='?' (Size = 4000), @p168='?' (DbType = Guid), @p169='?' (Size = 4000), @p170='?' (DbType = DateTime2), @p171='?' (Size = 4000), @p172='?' (DbType = Single), @p173='?' (DbType = Guid), @p174='?' (Size = 4000), @p175='?' (Size = 4000), @p176='?' (DbType = Guid), @p177='?' (Size = 4000), @p178='?' (DbType = DateTime2), @p179='?' (Size = 4000), @p180='?' (DbType = Single), @p181='?' (DbType = Guid), @p182='?' (Size = 4000), @p183='?' (Size = 4000), @p184='?' (DbType = Guid), @p185='?' (Size = 4000), @p186='?' (DbType = DateTime2), @p187='?' (Size = 4000), @p188='?' (DbType = Single), @p189='?' (DbType = Guid), @p190='?' (Size = 4000), @p191='?' (Size = 4000), @p192='?' (DbType = Guid), @p193='?' (Size = 4000), @p194='?' (DbType = DateTime2), @p195='?' (Size = 4000), @p196='?' (DbType = Single), @p197='?' (DbType = Guid), @p198='?' (Size = 4000), @p199='?' (Size = 4000), @p200='?' (DbType = Guid), @p201='?' (Size = 4000), @p202='?' (DbType = DateTime2), @p203='?' (Size = 4000), @p204='?' (DbType = Single), @p205='?' (DbType = Guid), @p206='?' (Size = 4000), @p207='?' (Size = 4000), @p208='?' (DbType = Guid), @p209='?' (Size = 4000), @p210='?' (DbType = DateTime2), @p211='?' (Size = 4000), @p212='?' (DbType = Single), @p213='?' (DbType = Guid), @p214='?' (Size = 4000), @p215='?' (Size = 4000), @p216='?' (DbType = Guid), @p217='?' (Size = -1), @p218='?' (DbType = DateTime2), @p219='?' (Size = 4000), @p220='?' (DbType = Single), @p221='?' (DbType = Guid), @p222='?' (Size = 4000), @p223='?' (Size = 4000), @p224='?' (DbType = Guid), @p225='?' (Size = 4000), @p226='?' (DbType = DateTime2), @p227='?' (Size = 4000), @p228='?' (DbType = Single), @p229='?' (DbType = Guid), @p230='?' (Size = 4000), @p231='?' (Size = 4000), @p232='?' (DbType = Guid), @p233='?' (Size = 4000), @p234='?' (DbType = DateTime2), @p235='?' (Size = 4000), @p236='?' (DbType = Single), @p237='?' (DbType = Guid), @p238='?' (Size = 4000), @p239='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [News] ([Id], [ContentNew], [DataAndTime], [Description], [Rate], [SourceId], [SourceUrl], [Title])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7),
+(@p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15),
+(@p16, @p17, @p18, @p19, @p20, @p21, @p22, @p23),
+(@p24, @p25, @p26, @p27, @p28, @p29, @p30, @p31),
+(@p32, @p33, @p34, @p35, @p36, @p37, @p38, @p39),
+(@p40, @p41, @p42, @p43, @p44, @p45, @p46, @p47),
+(@p48, @p49, @p50, @p51, @p52, @p53, @p54, @p55),
+(@p56, @p57, @p58, @p59, @p60, @p61, @p62, @p63),
+(@p64, @p65, @p66, @p67, @p68, @p69, @p70, @p71),
+(@p72, @p73, @p74, @p75, @p76, @p77, @p78, @p79),
+(@p80, @p81, @p82, @p83, @p84, @p85, @p86, @p87),
+(@p88, @p89, @p90, @p91, @p92, @p93, @p94, @p95),
+(@p96, @p97, @p98, @p99, @p100, @p101, @p102, @p103),
+(@p104, @p105, @p106, @p107, @p108, @p109, @p110, @p111),
+(@p112, @p113, @p114, @p115, @p116, @p117, @p118, @p119),
+(@p120, @p121, @p122, @p123, @p124, @p125, @p126, @p127),
+(@p128, @p129, @p130, @p131, @p132, @p133, @p134, @p135),
+(@p136, @p137, @p138, @p139, @p140, @p141, @p142, @p143),
+(@p144, @p145, @p146, @p147, @p148, @p149, @p150, @p151),
+(@p152, @p153, @p154, @p155, @p156, @p157, @p158, @p159),
+(@p160, @p161, @p162, @p163, @p164, @p165, @p166, @p167),
+(@p168, @p169, @p170, @p171, @p172, @p173, @p174, @p175),
+(@p176, @p177, @p178, @p179, @p180, @p181, @p182, @p183),
+(@p184, @p185, @p186, @p187, @p188, @p189, @p190, @p191),
+(@p192, @p193, @p194, @p195, @p196, @p197, @p198, @p199),
+(@p200, @p201, @p202, @p203, @p204, @p205, @p206, @p207),
+(@p208, @p209, @p210, @p211, @p212, @p213, @p214, @p215),
+(@p216, @p217, @p218, @p219, @p220, @p221, @p222, @p223),
+(@p224, @p225, @p226, @p227, @p228, @p229, @p230, @p231),
+(@p232, @p233, @p234, @p235, @p236, @p237, @p238, @p239);
+2024-01-25 19:56:47.093 +03:00 [ERR] An exception occurred in the database while saving changes for context type 'NewsAggregatingProject.Data.NewsAggregatingDBContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Не удалось вставить значение NULL в столбец "Description", таблицы "NewAggregatorDB.dbo.News"; в столбце запрещены значения NULL. Ошибка в INSERT.
+Выполнение данной инструкции было прервано.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__209_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:b126d453-9ac7-4d8a-86c3-8e2cafb90fdd
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Не удалось вставить значение NULL в столбец "Description", таблицы "NewAggregatorDB.dbo.News"; в столбце запрещены значения NULL. Ошибка в INSERT.
+Выполнение данной инструкции было прервано.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__209_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:b126d453-9ac7-4d8a-86c3-8e2cafb90fdd
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2024-01-25 19:56:47.210 +03:00 [INF] Executed action NewsAggregatingProject.API.Controllers.AggregateNewsController.Aggregate (NewsAggregatingProject.API) in 32466.1272ms
+2024-01-25 19:56:47.211 +03:00 [INF] Executed endpoint 'NewsAggregatingProject.API.Controllers.AggregateNewsController.Aggregate (NewsAggregatingProject.API)'
+2024-01-25 19:56:47.214 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Не удалось вставить значение NULL в столбец "Description", таблицы "NewAggregatorDB.dbo.News"; в столбце запрещены значения NULL. Ошибка в INSERT.
+Выполнение данной инструкции было прервано.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__209_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:b126d453-9ac7-4d8a-86c3-8e2cafb90fdd
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at NewsAggregatingProject.Repositories.UnitOfWork.Commit() in C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.Repositories\UnitOfWork.cs:line 38
+   at NewsAggregatingProject.Services.NewsService.InsertParsedNews(List`1 listFullfilledNews) in C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.Services\NewsService.cs:line 97
+   at NewsAggregatingProject.API.Controllers.AggregateNewsController.Aggregate(Guid sourceId) in C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.API\Controllers\AggregateNewsController.cs:line 36
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-01-25 19:56:47.254 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/api/AggregateNews?sourceId=1dd0b67f-7c37-419d-b80d-19d8b055a920 - 500 null text/plain; charset=utf-8 32548.4972ms
+2024-01-25 19:59:50.572 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-01-25 19:59:50.621 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-01-25 19:59:50.623 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-01-25 19:59:50.624 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-01-25 19:59:50.650 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-01-25 19:59:50.660 +03:00 [INF] Applying migration '20240125165936_NullDescript'.
+2024-01-25 19:59:50.787 +03:00 [INF] Executed DbCommand (95ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var0 sysname;
+SELECT @var0 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[News]') AND [c].[name] = N'Description');
+IF @var0 IS NOT NULL EXEC(N'ALTER TABLE [News] DROP CONSTRAINT [' + @var0 + '];');
+ALTER TABLE [News] ALTER COLUMN [Description] nvarchar(max) NULL;
+2024-01-25 19:59:50.797 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20240125165936_NullDescript', N'8.0.1');
+2024-01-25 20:00:10.667 +03:00 [INF] Now listening on: https://localhost:7100
+2024-01-25 20:00:10.693 +03:00 [INF] Now listening on: http://localhost:5184
+2024-01-25 20:00:10.695 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-25 20:00:10.696 +03:00 [INF] Hosting environment: Development
+2024-01-25 20:00:10.696 +03:00 [INF] Content root path: C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.API
+2024-01-25 20:00:16.343 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/swagger/index.html - null null
+2024-01-25 20:00:16.567 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/swagger/index.html - 200 null text/html;charset=utf-8 231.0654ms
+2024-01-25 20:00:16.613 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-25 20:00:16.613 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/_vs/browserLink - null null
+2024-01-25 20:00:16.626 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/_framework/aspnetcore-browser-refresh.js - 200 13788 application/javascript; charset=utf-8 12.9313ms
+2024-01-25 20:00:16.689 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/_vs/browserLink - 200 null text/javascript; charset=UTF-8 76.2707ms
+2024-01-25 20:00:16.736 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/swagger/v1/swagger.json - null null
+2024-01-25 20:00:16.848 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 112.4181ms
+2024-01-25 20:00:31.577 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/api/AggregateNews?sourceId=1dd0b67f-7c37-419d-b80d-19d8b055a920 - null 0
+2024-01-25 20:00:31.584 +03:00 [INF] Executing endpoint 'NewsAggregatingProject.API.Controllers.AggregateNewsController.Aggregate (NewsAggregatingProject.API)'
+2024-01-25 20:00:31.615 +03:00 [INF] Route matched with {action = "Aggregate", controller = "AggregateNews"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Aggregate(System.Guid) on controller NewsAggregatingProject.API.Controllers.AggregateNewsController (NewsAggregatingProject.API).
+2024-01-25 20:00:33.313 +03:00 [INF] Executed DbCommand (61ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Name], [s].[RSSUrl], [s].[Url]
+FROM [Sources] AS [s]
+WHERE [s].[Id] = @__id_0
+2024-01-25 20:00:33.583 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[SourceUrl]
+FROM [News] AS [n]
+2024-01-25 20:00:47.319 +03:00 [INF] Executed DbCommand (42ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = -1), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000), @p4='?' (DbType = Single), @p5='?' (DbType = Guid), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Guid), @p9='?' (Size = -1), @p10='?' (DbType = DateTime2), @p11='?' (Size = 4000), @p12='?' (DbType = Single), @p13='?' (DbType = Guid), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (DbType = Guid), @p17='?' (Size = 4000), @p18='?' (DbType = DateTime2), @p19='?' (Size = 4000), @p20='?' (DbType = Single), @p21='?' (DbType = Guid), @p22='?' (Size = 4000), @p23='?' (Size = 4000), @p24='?' (DbType = Guid), @p25='?' (Size = 4000), @p26='?' (DbType = DateTime2), @p27='?' (Size = 4000), @p28='?' (DbType = Single), @p29='?' (DbType = Guid), @p30='?' (Size = 4000), @p31='?' (Size = 4000), @p32='?' (DbType = Guid), @p33='?' (Size = 4000), @p34='?' (DbType = DateTime2), @p35='?' (Size = 4000), @p36='?' (DbType = Single), @p37='?' (DbType = Guid), @p38='?' (Size = 4000), @p39='?' (Size = 4000), @p40='?' (DbType = Guid), @p41='?' (Size = 4000), @p42='?' (DbType = DateTime2), @p43='?' (Size = 4000), @p44='?' (DbType = Single), @p45='?' (DbType = Guid), @p46='?' (Size = 4000), @p47='?' (Size = 4000), @p48='?' (DbType = Guid), @p49='?' (Size = -1), @p50='?' (DbType = DateTime2), @p51='?' (Size = 4000), @p52='?' (DbType = Single), @p53='?' (DbType = Guid), @p54='?' (Size = 4000), @p55='?' (Size = 4000), @p56='?' (DbType = Guid), @p57='?' (Size = 4000), @p58='?' (DbType = DateTime2), @p59='?' (Size = 4000), @p60='?' (DbType = Single), @p61='?' (DbType = Guid), @p62='?' (Size = 4000), @p63='?' (Size = 4000), @p64='?' (DbType = Guid), @p65='?' (Size = 4000), @p66='?' (DbType = DateTime2), @p67='?' (Size = 4000), @p68='?' (DbType = Single), @p69='?' (DbType = Guid), @p70='?' (Size = 4000), @p71='?' (Size = 4000), @p72='?' (DbType = Guid), @p73='?' (Size = 4000), @p74='?' (DbType = DateTime2), @p75='?' (Size = 4000), @p76='?' (DbType = Single), @p77='?' (DbType = Guid), @p78='?' (Size = 4000), @p79='?' (Size = 4000), @p80='?' (DbType = Guid), @p81='?' (Size = -1), @p82='?' (DbType = DateTime2), @p83='?' (Size = 4000), @p84='?' (DbType = Single), @p85='?' (DbType = Guid), @p86='?' (Size = 4000), @p87='?' (Size = 4000), @p88='?' (DbType = Guid), @p89='?' (Size = 4000), @p90='?' (DbType = DateTime2), @p91='?' (Size = 4000), @p92='?' (DbType = Single), @p93='?' (DbType = Guid), @p94='?' (Size = 4000), @p95='?' (Size = 4000), @p96='?' (DbType = Guid), @p97='?' (Size = 4000), @p98='?' (DbType = DateTime2), @p99='?' (Size = 4000), @p100='?' (DbType = Single), @p101='?' (DbType = Guid), @p102='?' (Size = 4000), @p103='?' (Size = 4000), @p104='?' (DbType = Guid), @p105='?' (Size = 4000), @p106='?' (DbType = DateTime2), @p107='?' (Size = 4000), @p108='?' (DbType = Single), @p109='?' (DbType = Guid), @p110='?' (Size = 4000), @p111='?' (Size = 4000), @p112='?' (DbType = Guid), @p113='?' (Size = 4000), @p114='?' (DbType = DateTime2), @p115='?' (Size = 4000), @p116='?' (DbType = Single), @p117='?' (DbType = Guid), @p118='?' (Size = 4000), @p119='?' (Size = 4000), @p120='?' (DbType = Guid), @p121='?' (Size = 4000), @p122='?' (DbType = DateTime2), @p123='?' (Size = 4000), @p124='?' (DbType = Single), @p125='?' (DbType = Guid), @p126='?' (Size = 4000), @p127='?' (Size = 4000), @p128='?' (DbType = Guid), @p129='?' (Size = 4000), @p130='?' (DbType = DateTime2), @p131='?' (Size = 4000), @p132='?' (DbType = Single), @p133='?' (DbType = Guid), @p134='?' (Size = 4000), @p135='?' (Size = 4000), @p136='?' (DbType = Guid), @p137='?' (Size = 4000), @p138='?' (DbType = DateTime2), @p139='?' (Size = 4000), @p140='?' (DbType = Single), @p141='?' (DbType = Guid), @p142='?' (Size = 4000), @p143='?' (Size = 4000), @p144='?' (DbType = Guid), @p145='?' (Size = 4000), @p146='?' (DbType = DateTime2), @p147='?' (Size = 4000), @p148='?' (DbType = Single), @p149='?' (DbType = Guid), @p150='?' (Size = 4000), @p151='?' (Size = 4000), @p152='?' (DbType = Guid), @p153='?' (Size = -1), @p154='?' (DbType = DateTime2), @p155='?' (Size = 4000), @p156='?' (DbType = Single), @p157='?' (DbType = Guid), @p158='?' (Size = 4000), @p159='?' (Size = 4000), @p160='?' (DbType = Guid), @p161='?' (Size = 4000), @p162='?' (DbType = DateTime2), @p163='?' (Size = 4000), @p164='?' (DbType = Single), @p165='?' (DbType = Guid), @p166='?' (Size = 4000), @p167='?' (Size = 4000), @p168='?' (DbType = Guid), @p169='?' (Size = 4000), @p170='?' (DbType = DateTime2), @p171='?' (Size = 4000), @p172='?' (DbType = Single), @p173='?' (DbType = Guid), @p174='?' (Size = 4000), @p175='?' (Size = 4000), @p176='?' (DbType = Guid), @p177='?' (Size = 4000), @p178='?' (DbType = DateTime2), @p179='?' (Size = 4000), @p180='?' (DbType = Single), @p181='?' (DbType = Guid), @p182='?' (Size = 4000), @p183='?' (Size = 4000), @p184='?' (DbType = Guid), @p185='?' (Size = -1), @p186='?' (DbType = DateTime2), @p187='?' (Size = 4000), @p188='?' (DbType = Single), @p189='?' (DbType = Guid), @p190='?' (Size = 4000), @p191='?' (Size = 4000), @p192='?' (DbType = Guid), @p193='?' (Size = 4000), @p194='?' (DbType = DateTime2), @p195='?' (Size = 4000), @p196='?' (DbType = Single), @p197='?' (DbType = Guid), @p198='?' (Size = 4000), @p199='?' (Size = 4000), @p200='?' (DbType = Guid), @p201='?' (Size = 4000), @p202='?' (DbType = DateTime2), @p203='?' (Size = 4000), @p204='?' (DbType = Single), @p205='?' (DbType = Guid), @p206='?' (Size = 4000), @p207='?' (Size = 4000), @p208='?' (DbType = Guid), @p209='?' (Size = 4000), @p210='?' (DbType = DateTime2), @p211='?' (Size = 4000), @p212='?' (DbType = Single), @p213='?' (DbType = Guid), @p214='?' (Size = 4000), @p215='?' (Size = 4000), @p216='?' (DbType = Guid), @p217='?' (Size = 4000), @p218='?' (DbType = DateTime2), @p219='?' (Size = 4000), @p220='?' (DbType = Single), @p221='?' (DbType = Guid), @p222='?' (Size = 4000), @p223='?' (Size = 4000), @p224='?' (DbType = Guid), @p225='?' (Size = -1), @p226='?' (DbType = DateTime2), @p227='?' (Size = 4000), @p228='?' (DbType = Single), @p229='?' (DbType = Guid), @p230='?' (Size = 4000), @p231='?' (Size = 4000), @p232='?' (DbType = Guid), @p233='?' (Size = 4000), @p234='?' (DbType = DateTime2), @p235='?' (Size = 4000), @p236='?' (DbType = Single), @p237='?' (DbType = Guid), @p238='?' (Size = 4000), @p239='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [News] ([Id], [ContentNew], [DataAndTime], [Description], [Rate], [SourceId], [SourceUrl], [Title])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7),
+(@p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15),
+(@p16, @p17, @p18, @p19, @p20, @p21, @p22, @p23),
+(@p24, @p25, @p26, @p27, @p28, @p29, @p30, @p31),
+(@p32, @p33, @p34, @p35, @p36, @p37, @p38, @p39),
+(@p40, @p41, @p42, @p43, @p44, @p45, @p46, @p47),
+(@p48, @p49, @p50, @p51, @p52, @p53, @p54, @p55),
+(@p56, @p57, @p58, @p59, @p60, @p61, @p62, @p63),
+(@p64, @p65, @p66, @p67, @p68, @p69, @p70, @p71),
+(@p72, @p73, @p74, @p75, @p76, @p77, @p78, @p79),
+(@p80, @p81, @p82, @p83, @p84, @p85, @p86, @p87),
+(@p88, @p89, @p90, @p91, @p92, @p93, @p94, @p95),
+(@p96, @p97, @p98, @p99, @p100, @p101, @p102, @p103),
+(@p104, @p105, @p106, @p107, @p108, @p109, @p110, @p111),
+(@p112, @p113, @p114, @p115, @p116, @p117, @p118, @p119),
+(@p120, @p121, @p122, @p123, @p124, @p125, @p126, @p127),
+(@p128, @p129, @p130, @p131, @p132, @p133, @p134, @p135),
+(@p136, @p137, @p138, @p139, @p140, @p141, @p142, @p143),
+(@p144, @p145, @p146, @p147, @p148, @p149, @p150, @p151),
+(@p152, @p153, @p154, @p155, @p156, @p157, @p158, @p159),
+(@p160, @p161, @p162, @p163, @p164, @p165, @p166, @p167),
+(@p168, @p169, @p170, @p171, @p172, @p173, @p174, @p175),
+(@p176, @p177, @p178, @p179, @p180, @p181, @p182, @p183),
+(@p184, @p185, @p186, @p187, @p188, @p189, @p190, @p191),
+(@p192, @p193, @p194, @p195, @p196, @p197, @p198, @p199),
+(@p200, @p201, @p202, @p203, @p204, @p205, @p206, @p207),
+(@p208, @p209, @p210, @p211, @p212, @p213, @p214, @p215),
+(@p216, @p217, @p218, @p219, @p220, @p221, @p222, @p223),
+(@p224, @p225, @p226, @p227, @p228, @p229, @p230, @p231),
+(@p232, @p233, @p234, @p235, @p236, @p237, @p238, @p239);
+2024-01-25 20:00:47.469 +03:00 [INF] Executed action NewsAggregatingProject.API.Controllers.AggregateNewsController.Aggregate (NewsAggregatingProject.API) in 15850.3811ms
+2024-01-25 20:00:47.470 +03:00 [INF] Executed endpoint 'NewsAggregatingProject.API.Controllers.AggregateNewsController.Aggregate (NewsAggregatingProject.API)'
+2024-01-25 20:00:47.474 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No service for type 'MediatR.IRequestHandler`2[NewsAggregatingProject.Data.CQS.Queries.GetUnratedNewsQuery,System.Guid[]]' has been registered.
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at MediatR.Wrappers.RequestHandlerWrapperImpl`2.<>c__DisplayClass1_0.<Handle>g__Handler|0()
+   at MediatR.Wrappers.RequestHandlerWrapperImpl`2.Handle(IRequest`1 request, IServiceProvider serviceProvider, CancellationToken cancellationToken)
+   at MediatR.Mediator.Send[TResponse](IRequest`1 request, CancellationToken cancellationToken)
+   at NewsAggregatingProject.Services.NewsService.RateUnratedNews() in C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.Services\NewsService.cs:line 147
+   at NewsAggregatingProject.API.Controllers.AggregateNewsController.Aggregate(Guid sourceId) in C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.API\Controllers\AggregateNewsController.cs:line 37
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-01-25 20:00:47.529 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/api/AggregateNews?sourceId=1dd0b67f-7c37-419d-b80d-19d8b055a920 - 500 null text/plain; charset=utf-8 15956.5433ms
+2024-01-25 20:11:18.127 +03:00 [INF] Now listening on: https://localhost:7100
+2024-01-25 20:11:18.157 +03:00 [INF] Now listening on: http://localhost:5184
+2024-01-25 20:11:18.159 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-25 20:11:18.159 +03:00 [INF] Hosting environment: Development
+2024-01-25 20:11:18.159 +03:00 [INF] Content root path: C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.API
+2024-01-25 20:11:24.260 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/swagger/index.html - null null
+2024-01-25 20:11:24.743 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/swagger/index.html - 200 null text/html;charset=utf-8 501.3895ms
+2024-01-25 20:11:24.960 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-25 20:11:24.975 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/_vs/browserLink - null null
+2024-01-25 20:11:24.975 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/_framework/aspnetcore-browser-refresh.js - 200 13788 application/javascript; charset=utf-8 15.6094ms
+2024-01-25 20:11:25.081 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/_vs/browserLink - 200 null text/javascript; charset=UTF-8 106.5725ms
+2024-01-25 20:11:25.167 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/swagger/v1/swagger.json - null null
+2024-01-25 20:11:25.343 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 176.5093ms
+2024-01-25 20:11:47.303 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/api/AggregateNews?sourceId=1dd0b67f-7c37-419d-b80d-19d8b055a920 - null 0
+2024-01-25 20:11:47.314 +03:00 [INF] Executing endpoint 'NewsAggregatingProject.API.Controllers.AggregateNewsController.Aggregate (NewsAggregatingProject.API)'
+2024-01-25 20:11:47.376 +03:00 [INF] Route matched with {action = "Aggregate", controller = "AggregateNews"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Aggregate(System.Guid) on controller NewsAggregatingProject.API.Controllers.AggregateNewsController (NewsAggregatingProject.API).
+2024-01-25 20:11:47.386 +03:00 [INF] Executed action NewsAggregatingProject.API.Controllers.AggregateNewsController.Aggregate (NewsAggregatingProject.API) in 5.7115ms
+2024-01-25 20:11:47.388 +03:00 [INF] Executed endpoint 'NewsAggregatingProject.API.Controllers.AggregateNewsController.Aggregate (NewsAggregatingProject.API)'
+2024-01-25 20:11:47.394 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'NewsAggregatingProject.Services.Interfaces.INewsService' while attempting to activate 'NewsAggregatingProject.API.Controllers.AggregateNewsController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method9(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-01-25 20:11:47.550 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/api/AggregateNews?sourceId=1dd0b67f-7c37-419d-b80d-19d8b055a920 - 500 null text/plain; charset=utf-8 251.1244ms
+2024-01-25 20:13:01.445 +03:00 [INF] Now listening on: https://localhost:7100
+2024-01-25 20:13:01.494 +03:00 [INF] Now listening on: http://localhost:5184
+2024-01-25 20:13:01.497 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-25 20:13:01.497 +03:00 [INF] Hosting environment: Development
+2024-01-25 20:13:01.497 +03:00 [INF] Content root path: C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.API
+2024-01-25 20:13:33.745 +03:00 [INF] Now listening on: https://localhost:7100
+2024-01-25 20:13:33.780 +03:00 [INF] Now listening on: http://localhost:5184
+2024-01-25 20:13:33.782 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-25 20:13:33.783 +03:00 [INF] Hosting environment: Development
+2024-01-25 20:13:33.783 +03:00 [INF] Content root path: C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.API
+2024-01-25 20:13:38.059 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/swagger/index.html - null null
+2024-01-25 20:13:38.338 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/swagger/index.html - 200 null text/html;charset=utf-8 283.4431ms
+2024-01-25 20:13:38.415 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/_vs/browserLink - null null
+2024-01-25 20:13:38.415 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-25 20:13:38.426 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/_framework/aspnetcore-browser-refresh.js - 200 13788 application/javascript; charset=utf-8 11.0507ms
+2024-01-25 20:13:38.478 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/_vs/browserLink - 200 null text/javascript; charset=UTF-8 63.5258ms
+2024-01-25 20:13:38.543 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/swagger/v1/swagger.json - null null
+2024-01-25 20:13:38.704 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 160.8603ms
+2024-01-25 20:14:00.001 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/api/AggregateNews?sourceId=1dd0b67f-7c37-419d-b80d-19d8b055a920 - null 0
+2024-01-25 20:14:00.011 +03:00 [INF] Executing endpoint 'NewsAggregatingProject.API.Controllers.AggregateNewsController.Aggregate (NewsAggregatingProject.API)'
+2024-01-25 20:14:00.073 +03:00 [INF] Route matched with {action = "Aggregate", controller = "AggregateNews"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Aggregate(System.Guid) on controller NewsAggregatingProject.API.Controllers.AggregateNewsController (NewsAggregatingProject.API).
+2024-01-25 20:14:00.086 +03:00 [INF] Executed action NewsAggregatingProject.API.Controllers.AggregateNewsController.Aggregate (NewsAggregatingProject.API) in 5.7268ms
+2024-01-25 20:14:00.087 +03:00 [INF] Executed endpoint 'NewsAggregatingProject.API.Controllers.AggregateNewsController.Aggregate (NewsAggregatingProject.API)'
+2024-01-25 20:14:00.092 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'NewsAggregatingProject.Services.Interfaces.INewsService' while attempting to activate 'NewsAggregatingProject.API.Controllers.AggregateNewsController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method9(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-01-25 20:14:00.162 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/api/AggregateNews?sourceId=1dd0b67f-7c37-419d-b80d-19d8b055a920 - 500 null text/plain; charset=utf-8 160.3179ms
+2024-01-25 20:20:31.533 +03:00 [INF] Now listening on: https://localhost:7100
+2024-01-25 20:20:31.567 +03:00 [INF] Now listening on: http://localhost:5184
+2024-01-25 20:20:31.569 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-25 20:20:31.569 +03:00 [INF] Hosting environment: Development
+2024-01-25 20:20:31.569 +03:00 [INF] Content root path: C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.API
+2024-01-25 20:20:36.816 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/swagger/index.html - null null
+2024-01-25 20:20:37.140 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/swagger/index.html - 200 null text/html;charset=utf-8 331.3963ms
+2024-01-25 20:20:37.195 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-25 20:20:37.195 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/_vs/browserLink - null null
+2024-01-25 20:20:37.213 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/_framework/aspnetcore-browser-refresh.js - 200 13788 application/javascript; charset=utf-8 18.3905ms
+2024-01-25 20:20:37.244 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/_vs/browserLink - 200 null text/javascript; charset=UTF-8 48.7729ms
+2024-01-25 20:20:37.317 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/swagger/v1/swagger.json - null null
+2024-01-25 20:20:37.497 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 180.0745ms
+2024-01-25 20:20:58.893 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/api/AggregateNews?sourceId=1dd0b67f-7c37-419d-b80d-19d8b055a920 - null 0
+2024-01-25 20:20:58.909 +03:00 [INF] Executing endpoint 'NewsAggregatingProject.API.Controllers.AggregateNewsController.Aggregate (NewsAggregatingProject.API)'
+2024-01-25 20:20:58.954 +03:00 [INF] Route matched with {action = "Aggregate", controller = "AggregateNews"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Aggregate(System.Guid) on controller NewsAggregatingProject.API.Controllers.AggregateNewsController (NewsAggregatingProject.API).
+2024-01-25 20:21:01.372 +03:00 [INF] Executed DbCommand (110ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Name], [s].[RSSUrl], [s].[Url]
+FROM [Sources] AS [s]
+WHERE [s].[Id] = @__id_0
+2024-01-25 20:21:02.392 +03:00 [INF] Executed DbCommand (24ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[SourceUrl]
+FROM [News] AS [n]
+2024-01-25 20:21:10.823 +03:00 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id]
+FROM [News] AS [n]
+WHERE [n].[Rate] IS NULL
+2024-01-25 20:21:11.190 +03:00 [INF] Executed action NewsAggregatingProject.API.Controllers.AggregateNewsController.Aggregate (NewsAggregatingProject.API) in 12230.1403ms
+2024-01-25 20:21:11.192 +03:00 [INF] Executed endpoint 'NewsAggregatingProject.API.Controllers.AggregateNewsController.Aggregate (NewsAggregatingProject.API)'
+2024-01-25 20:21:11.198 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidCastException: Unable to cast object of type 'System.Guid' to type 'NewsAggregatingProject.Data.Entities.News'.
+   at Microsoft.EntityFrameworkCore.Query.RelationalSqlTranslatingExpressionVisitor.ParameterValueExtractor[T](QueryContext context, String baseParameterName, List`1 complexPropertyChain, IProperty property)
+   at lambda_method74(Closure, QueryContext)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, LambdaExpression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.FirstOrDefaultAsync[TSource](IQueryable`1 source, Expression`1 predicate, CancellationToken cancellationToken)
+   at NewsAggregatingProject.Data.CQS.Queries.GetNewsTextByIdQeueryHandler.Handle(GetNewsTextByIdQeuery request, CancellationToken cancellationToken) in C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.Data.CQS\QueryHandlers\GetNewsTextByIdQeueryHandler.cs:line 23
+   at NewsAggregatingProject.Services.NewsService.Rate(Guid id) in C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.Services\NewsService.cs:line 155
+   at NewsAggregatingProject.Services.NewsService.RateUnratedNews() in C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.Services\NewsService.cs:line 150
+   at NewsAggregatingProject.API.Controllers.AggregateNewsController.Aggregate(Guid sourceId) in C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.API\Controllers\AggregateNewsController.cs:line 37
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-01-25 20:21:11.298 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/api/AggregateNews?sourceId=1dd0b67f-7c37-419d-b80d-19d8b055a920 - 500 null text/plain; charset=utf-8 12405.8546ms
+2024-01-25 20:24:56.447 +03:00 [INF] Now listening on: https://localhost:7100
+2024-01-25 20:24:56.482 +03:00 [INF] Now listening on: http://localhost:5184
+2024-01-25 20:24:56.484 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-25 20:24:56.485 +03:00 [INF] Hosting environment: Development
+2024-01-25 20:24:56.485 +03:00 [INF] Content root path: C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.API
+2024-01-25 20:25:00.955 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/swagger/index.html - null null
+2024-01-25 20:25:01.239 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/swagger/index.html - 200 null text/html;charset=utf-8 289.9829ms
+2024-01-25 20:25:01.309 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-25 20:25:01.309 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/_vs/browserLink - null null
+2024-01-25 20:25:01.317 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/_framework/aspnetcore-browser-refresh.js - 200 13788 application/javascript; charset=utf-8 7.9976ms
+2024-01-25 20:25:01.365 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/_vs/browserLink - 200 null text/javascript; charset=UTF-8 56.0946ms
+2024-01-25 20:25:01.433 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/swagger/v1/swagger.json - null null
+2024-01-25 20:25:01.590 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 157.0675ms
+2024-01-25 20:25:31.848 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/api/AggregateNews?sourceId=1dd0b67f-7c37-419d-b80d-19d8b055a920 - null 0
+2024-01-25 20:25:31.861 +03:00 [INF] Executing endpoint 'NewsAggregatingProject.API.Controllers.AggregateNewsController.Aggregate (NewsAggregatingProject.API)'
+2024-01-25 20:25:31.895 +03:00 [INF] Route matched with {action = "Aggregate", controller = "AggregateNews"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Aggregate(System.Guid) on controller NewsAggregatingProject.API.Controllers.AggregateNewsController (NewsAggregatingProject.API).
+2024-01-25 20:25:34.409 +03:00 [INF] Executed DbCommand (87ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Name], [s].[RSSUrl], [s].[Url]
+FROM [Sources] AS [s]
+WHERE [s].[Id] = @__id_0
+2024-01-25 20:25:34.931 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[SourceUrl]
+FROM [News] AS [n]
+2024-01-25 20:26:18.648 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id]
+FROM [News] AS [n]
+WHERE [n].[Rate] IS NULL
+2024-01-25 20:26:18.941 +03:00 [INF] Executed action NewsAggregatingProject.API.Controllers.AggregateNewsController.Aggregate (NewsAggregatingProject.API) in 47037.8512ms
+2024-01-25 20:26:18.943 +03:00 [INF] Executed endpoint 'NewsAggregatingProject.API.Controllers.AggregateNewsController.Aggregate (NewsAggregatingProject.API)'
+2024-01-25 20:26:18.949 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidCastException: Unable to cast object of type 'System.Guid' to type 'NewsAggregatingProject.Data.Entities.News'.
+   at Microsoft.EntityFrameworkCore.Query.RelationalSqlTranslatingExpressionVisitor.ParameterValueExtractor[T](QueryContext context, String baseParameterName, List`1 complexPropertyChain, IProperty property)
+   at lambda_method74(Closure, QueryContext)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, LambdaExpression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.FirstOrDefaultAsync[TSource](IQueryable`1 source, Expression`1 predicate, CancellationToken cancellationToken)
+   at NewsAggregatingProject.Data.CQS.Queries.GetNewsTextByIdQeueryHandler.Handle(GetNewsTextByIdQeuery request, CancellationToken cancellationToken) in C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.Data.CQS\QueryHandlers\GetNewsTextByIdQeueryHandler.cs:line 23
+   at NewsAggregatingProject.Services.NewsService.Rate(Guid id) in C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.Services\NewsService.cs:line 155
+   at NewsAggregatingProject.Services.NewsService.RateUnratedNews() in C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.Services\NewsService.cs:line 150
+   at NewsAggregatingProject.API.Controllers.AggregateNewsController.Aggregate(Guid sourceId) in C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.API\Controllers\AggregateNewsController.cs:line 37
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-01-25 20:26:19.000 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/api/AggregateNews?sourceId=1dd0b67f-7c37-419d-b80d-19d8b055a920 - 500 null text/plain; charset=utf-8 47160.1829ms

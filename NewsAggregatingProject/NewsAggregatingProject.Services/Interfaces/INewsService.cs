@@ -16,9 +16,9 @@ namespace NewsAggregatingProject.Services.Interfaces
         public Task<NewsDto?[]> GetNewsByName(string Name);
         public Task<NewsDto[]?> GetPositive();
         public Task DeleteNews(Guid id);
-        public Task<Guid> CreateNews(NewsDto dto);
+        public Task CreateNews(NewsDto dto);
         public Task CreateNewsAndSource(NewsDto newsDto, SourceDto sourceDto);
-
+        public Task RateUnratedNews();
 
     }
 }

@@ -1,13 +1,20 @@
 ﻿using HtmlAgilityPack;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage.Json;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Identity.Client;
 using NewsAggregatingProject.API.Mappers;
 using NewsAggregatingProject.Core;
 using NewsAggregatingProject.Data.CQS.Commands;
+using NewsAggregatingProject.Data.CQS.Queries;
 using NewsAggregatingProject.Data.Entities;
 using NewsAggregatingProject.Repositories;
 using NewsAggregatingProject.Services.Interfaces;
+using Newtonsoft.Json;
+using System.Net.Http.Json;
 using System.ServiceModel.Syndication;
+using System.Text.RegularExpressions;
 using System.Xml;
 
 namespace NewsAggregatingProject.Services
@@ -17,14 +24,16 @@ namespace NewsAggregatingProject.Services
         private readonly IUnitOfWork _unitOfWork;
         private readonly NewsMapper _newsMapper;
         private readonly IMediator _mediator;
+        private readonly IConfiguration _configuration;
 
 
 
-        public NewsService(IUnitOfWork unitOfWork, NewsMapper newsMapper, IMediator mediator)
+        public NewsService(IUnitOfWork unitOfWork, NewsMapper newsMapper, IMediator mediator, IConfiguration configuration)
         {
             _unitOfWork = unitOfWork;
             _newsMapper=newsMapper;
             _mediator=mediator;
+            _configuration=configuration;
         }
         public async Task<NewsDto[]?> AggregateDataFromByRssSourceId(Guid sourceId)
         {
@@ -40,7 +49,7 @@ namespace NewsAggregatingProject.Services
                     SourceId = sourceId,
                     Date = item.PublishDate.UtcDateTime,
                     Title = item.Title.Text,
-                    Description = item.Summary.Text,
+                    ConentNew = item.Summary.Text,
                     SourceUrl = item.Id
                 }).ToArray();
 
@@ -73,7 +82,17 @@ namespace NewsAggregatingProject.Services
         }
         public async Task<int> InsertParsedNews(List<NewsDto> listFullfilledNews)
         {
-            var news = listFullfilledNews.Select(dto => _newsMapper.NewsDtoToNews(dto)).ToArray();
+            var news = listFullfilledNews.Select(dto => new News()
+            {
+                ContentNew=dto.ConentNew,
+                DataAndTime=dto.Date,
+                Description=dto.Description,
+                Id=dto.Id,
+                Rate=dto.Rate,
+                SourceId=dto.SourceId,
+                SourceUrl=dto.SourceUrl,
+                Title=dto.Title
+            }).ToArray();
             await _unitOfWork.NewRepository.InsertMany(news);
             return await _unitOfWork.Commit();
         }
@@ -120,7 +139,74 @@ namespace NewsAggregatingProject.Services
 
         public Task CreateNewsAndSource(NewsDto newsDto, SourceDto sourceDto)
         {
+            throw new NotImplementedException();
+        }
+
+        public async Task RateUnratedNews()
+        {
+            var ids=await _mediator.Send(new GetUnratedNewsQuery());
+            foreach(var id in ids)
+            {
+                await Rate(id);
+            }
+        }
+        private async Task Rate(Guid id)
+        {
+            var text = await _mediator.Send(new GetNewsTextByIdQeuery() { Id = id });
+            var dictionary = _configuration
+                .GetSection("Dictionary")
+                .GetChildren()
+                .ToDictionary(section=>section.Key, 
+                    section=>Convert.ToInt32(section.Value));
             
+            var textWithoutHtml = RemoveHTMLTags(text);
+
+            var lemmas = await GetLemmas(textWithoutHtml);
+            int? rate = null;
+
+            foreach (var lemma in lemmas) 
+            { 
+                if (dictionary.TryGetValue(lemma, out int value))
+                {
+                    if(rate==null) rate= value;
+                    rate += value;
+                }
+            }
+            await _mediator.Send(new SetNewsRateCommand() { Id = id, Rate = rate });
+        }
+
+        private string RemoveHTMLTags(string html)
+        {
+            return Regex.Replace(html, "<.*?>", string.Empty);
+        }
+        private async Task<string[]> GetLemmas(string text)
+        {
+            using(var httpClient=new HttpClient())
+            {
+                var request = new HttpRequestMessage(HttpMethod.Post, $"http://api.ispras.ru/texterra/v1/nlp?targetType=lemma&apikey={_configuration["AppSetting:IsprasKey"]}");
+
+                request.Headers.Add("Accept", "application/json");
+
+                request.Content = JsonContent.Create(new[]
+                {
+                    new { Text=text}
+                });
+                var response= await httpClient.SendAsync(request);
+                
+                if (response.IsSuccessStatusCode)
+                {
+                    var responseString = await response.Content.ReadAsStringAsync();
+                    var lemmas = JsonConvert.DeserializeObject<IsprasLemmatizationResponse[]>(responseString)?
+                        .FirstOrDefault()?
+                        .Annotations
+                        .Lemma
+                        .Select(l => l.Value)
+                        .ToArray();
+                    return lemmas;
+                }
+                return new string[] { };
+
+            }
         }
     }
 }
