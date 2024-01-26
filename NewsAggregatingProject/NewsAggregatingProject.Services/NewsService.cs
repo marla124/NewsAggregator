@@ -12,6 +12,7 @@ using NewsAggregatingProject.Data.Entities;
 using NewsAggregatingProject.Repositories;
 using NewsAggregatingProject.Services.Interfaces;
 using Newtonsoft.Json;
+using System.ComponentModel.DataAnnotations;
 using System.Net.Http.Json;
 using System.ServiceModel.Syndication;
 using System.Text.RegularExpressions;
@@ -35,7 +36,7 @@ namespace NewsAggregatingProject.Services
             _mediator=mediator;
             _configuration=configuration;
         }
-        public async Task<NewsDto[]?> AggregateDataFromByRssSourceId(Guid sourceId)
+        private async Task<NewsDto[]?> AggregateDataFromByRssSourceId(Guid sourceId)
         {
             var sourceRss = (await _unitOfWork.SourceRepository.GetById(sourceId))?.RSSUrl;
             if (string.IsNullOrWhiteSpace(sourceRss)) return null;
@@ -58,10 +59,10 @@ namespace NewsAggregatingProject.Services
 
         }
 
-        public async Task<NewsDto> GetNewsByUrl(string url, NewsDto dto)
+        private (Guid,string) GetNewsByUrl((Guid, string) newsInfo)
         {
             var web = new HtmlWeb();
-            var doc = web.Load(url);
+            var doc = web.Load(newsInfo.Item2);
 
             var textNode = doc.DocumentNode.SelectSingleNode("//div[@class=\"news-text\"]");
             var newsRes = textNode.SelectSingleNode("//div[@class=\"news-reference\"]");
@@ -69,32 +70,25 @@ namespace NewsAggregatingProject.Services
             var textValue = textNode.InnerHtml;
             //var lastInterestedElement = textValue.IndexOf("<div id=\"news-text-end\"></div>");
             //textValue = textValue.Remove(lastInterestedElement);
-            dto.ConentNew = textValue;
-            return dto;
+            var tuple=(newsInfo.Item1,newsInfo.Item2);
+            
+            return tuple;
         }
 
 
-        public async Task<string[]> GetExistedNewsUrls()
+        private async Task<string[]> GetExistedNewsUrls()
         {
             var existedNewsUrls = await _unitOfWork.NewRepository.GetAsQueryable()
                 .Select(news => news.SourceUrl).ToArrayAsync();
             return existedNewsUrls;
         }
-        public async Task<int> InsertParsedNews(List<NewsDto> listFullfilledNews)
+        public async Task ParseNewsText()
         {
-            var news = listFullfilledNews.Select(dto => new News()
-            {
-                ContentNew=dto.ConentNew,
-                DataAndTime=dto.Date,
-                Description=dto.Description,
-                Id=dto.Id,
-                Rate=dto.Rate,
-                SourceId=dto.SourceId,
-                SourceUrl=dto.SourceUrl,
-                Title=dto.Title
-            }).ToArray();
-            await _unitOfWork.NewRepository.InsertMany(news);
-            return await _unitOfWork.Commit();
+            var newsWithoutText = await _mediator.Send(new GetNewsWithoutTextQuery()); 
+            var data=newsWithoutText.Select(tuple => GetNewsByUrl(tuple)).ToDictionary(tuple=>tuple.Item1, tuple=>tuple.Item2);
+
+            
+            await _mediator.Send(new UpdateNewsText() { NewsData = data });
         }
 
         public async Task<NewsDto?> GetNewsById(Guid id)
@@ -142,7 +136,7 @@ namespace NewsAggregatingProject.Services
             throw new NotImplementedException();
         }
 
-        public async Task RateUnratedNews()
+        public async Task RateBatchOfUnratedNews()
         {
             var ids=await _mediator.Send(new GetUnratedNewsQuery());
             foreach(var id in ids)
@@ -207,6 +201,23 @@ namespace NewsAggregatingProject.Services
                 return new string[] { };
 
             }
+        }
+
+        public async Task AggregateNewsFromRssBySourceId(Guid sourceId)
+        {
+            var data = await AggregateDataFromByRssSourceId(sourceId);
+
+            
+            var existedNews = await GetExistedNewsUrls();
+            var uniqueNews = data
+                .Where(dto => !existedNews.Any(url => dto.SourceUrl.Equals(url)))
+                .ToArray();
+            var command = new InsertRssDataCommand()
+            {
+                News = uniqueNews
+            };
+            await _mediator.Send(command);
+
         }
     }
 }

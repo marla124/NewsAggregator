@@ -1,4 +1,5 @@
 
+using Hangfire;
 using Microsoft.AspNetCore.Hosting;
 using Serilog;
 using Serilog.Events;
@@ -28,6 +29,7 @@ namespace NewsAggregatingProject.API
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             builder.Services.RegisterServices(builder.Configuration);
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -40,9 +42,11 @@ namespace NewsAggregatingProject.API
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
-
+            app.UseHangfireDashboard();
+                
 
             app.MapControllers();
+            app.MapHangfireDashboard();
 
             app.Run();
         }

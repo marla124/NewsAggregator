@@ -1163,3 +1163,330 @@ System.InvalidCastException: Unable to cast object of type 'System.Guid' to type
    at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
    at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
 2024-01-25 20:26:19.000 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/api/AggregateNews?sourceId=1dd0b67f-7c37-419d-b80d-19d8b055a920 - 500 null text/plain; charset=utf-8 47160.1829ms
+2024-01-25 23:12:38.318 +03:00 [INF] Start installing Hangfire SQL objects...
+2024-01-25 23:12:40.441 +03:00 [INF] Hangfire SQL objects installed.
+2024-01-25 23:14:21.418 +03:00 [INF] Start installing Hangfire SQL objects...
+2024-01-25 23:14:22.702 +03:00 [INF] Hangfire SQL objects installed.
+2024-01-25 23:14:24.614 +03:00 [INF] Now listening on: https://localhost:7100
+2024-01-25 23:14:24.614 +03:00 [INF] Now listening on: http://localhost:5184
+2024-01-25 23:14:24.631 +03:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: DESKTOP-2FD6QEU@NewAggregatorDB'
+2024-01-25 23:14:24.631 +03:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2024-01-25 23:14:24.631 +03:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2024-01-25 23:14:24.710 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-25 23:14:24.711 +03:00 [INF] Hosting environment: Development
+2024-01-25 23:14:24.711 +03:00 [INF] Content root path: C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.API
+2024-01-25 23:14:24.983 +03:00 [INF] Server desktop-2fd6qeu:9996:c4e5281f successfully announced in 274,9457 ms
+2024-01-25 23:14:24.994 +03:00 [INF] Server desktop-2fd6qeu:9996:c4e5281f is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2024-01-25 23:14:25.201 +03:00 [INF] Server desktop-2fd6qeu:9996:c4e5281f all the dispatchers started
+2024-01-25 23:14:31.267 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/swagger/index.html - null null
+2024-01-25 23:14:31.869 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/swagger/index.html - 200 null text/html;charset=utf-8 610.9077ms
+2024-01-25 23:14:31.960 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/_vs/browserLink - null null
+2024-01-25 23:14:31.960 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-25 23:14:31.990 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/_framework/aspnetcore-browser-refresh.js - 200 13788 application/javascript; charset=utf-8 30.9527ms
+2024-01-25 23:14:32.538 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/_vs/browserLink - 200 null text/javascript; charset=UTF-8 578.8444ms
+2024-01-25 23:14:32.633 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/swagger/v1/swagger.json - null null
+2024-01-25 23:14:32.864 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 231.4958ms
+2024-01-25 23:15:01.182 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/hangfire - null null
+2024-01-25 23:15:01.703 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/hangfire/css18901809036332 - null null
+2024-01-25 23:15:01.706 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/hangfire/css-dark1890380673209 - null null
+2024-01-25 23:15:01.709 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/hangfire - 200 null text/html 527.1808ms
+2024-01-25 23:15:01.742 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-25 23:15:01.743 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/_vs/browserLink - null null
+2024-01-25 23:15:01.747 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/hangfire/js18902076595617 - null null
+2024-01-25 23:15:01.750 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/_framework/aspnetcore-browser-refresh.js - 200 13788 application/javascript; charset=utf-8 8.2842ms
+2024-01-25 23:15:01.759 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/hangfire/css-dark1890380673209 - 200 null text/css 54.1089ms
+2024-01-25 23:15:01.767 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/hangfire/css18901809036332 - 200 null text/css 64.638ms
+2024-01-25 23:15:01.784 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/_vs/browserLink - 200 null text/javascript; charset=UTF-8 40.8371ms
+2024-01-25 23:15:01.809 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/hangfire/js18902076595617 - 200 null application/javascript 64.2143ms
+2024-01-25 23:15:01.828 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/hangfire/fonts/glyphicons-halflings-regular/woff2 - null null
+2024-01-25 23:15:01.833 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/hangfire/fonts/glyphicons-halflings-regular/woff2 - 200 null font/woff2 4.9971ms
+2024-01-25 23:15:04.050 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:15:04.148 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 97.7842ms
+2024-01-25 23:15:06.164 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:15:06.241 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 77.8363ms
+2024-01-25 23:15:08.261 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:15:08.346 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 85.2476ms
+2024-01-25 23:15:10.359 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:15:10.441 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 82.93ms
+2024-01-25 23:15:12.456 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:15:12.541 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 85.0497ms
+2024-01-25 23:15:14.563 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:15:14.623 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 60.2534ms
+2024-01-25 23:15:16.639 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:15:16.724 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 85.9382ms
+2024-01-25 23:15:18.744 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:15:18.808 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 63.9528ms
+2024-01-25 23:15:20.828 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:15:20.904 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 77.1777ms
+2024-01-25 23:15:22.919 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:15:23.020 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 101.3973ms
+2024-01-25 23:15:25.036 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:15:25.099 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 63.864ms
+2024-01-25 23:15:27.110 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:15:27.177 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 67.615ms
+2024-01-25 23:15:29.202 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:15:29.283 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 81.689ms
+2024-01-25 23:15:31.296 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:15:31.369 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 73.7237ms
+2024-01-25 23:15:33.383 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:15:33.456 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 72.9739ms
+2024-01-25 23:15:35.472 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:15:35.531 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 59.4156ms
+2024-01-25 23:15:37.546 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:15:37.625 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 79.4509ms
+2024-01-25 23:15:39.648 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:15:39.702 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 55.2342ms
+2024-01-25 23:15:41.712 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:15:41.788 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 76.1797ms
+2024-01-25 23:15:43.814 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:15:43.883 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 69.3749ms
+2024-01-25 23:15:45.906 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:15:45.975 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 69.8274ms
+2024-01-25 23:15:47.989 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:15:48.055 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 66.3226ms
+2024-01-25 23:15:50.065 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:15:50.134 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 69.2787ms
+2024-01-25 23:15:52.145 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:15:52.220 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 74.2572ms
+2024-01-25 23:15:54.243 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:15:54.311 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 68.6307ms
+2024-01-25 23:15:56.339 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:15:56.410 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 71.5676ms
+2024-01-25 23:15:58.424 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:15:58.500 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 76.2015ms
+2024-01-25 23:16:00.511 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:16:00.578 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 67.125ms
+2024-01-25 23:16:02.595 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:16:02.788 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 194.4473ms
+2024-01-25 23:16:04.809 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:16:04.957 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 148.9157ms
+2024-01-25 23:16:06.972 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:16:07.144 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 173.63ms
+2024-01-25 23:16:09.157 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:16:09.296 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 139.3014ms
+2024-01-25 23:16:11.309 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:16:11.500 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 191.5106ms
+2024-01-25 23:16:13.521 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:16:13.665 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 143.6405ms
+2024-01-25 23:16:15.687 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:16:15.927 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 240.748ms
+2024-01-25 23:16:17.954 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:16:18.216 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 263.1905ms
+2024-01-25 23:16:20.234 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:16:20.373 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 139.1588ms
+2024-01-25 23:16:22.393 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:16:22.602 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 209.0826ms
+2024-01-25 23:16:24.628 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:16:24.811 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 184.0977ms
+2024-01-25 23:16:26.833 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:16:27.003 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 170.2041ms
+2024-01-25 23:16:29.164 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:16:29.402 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 238.2304ms
+2024-01-25 23:16:31.415 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:16:31.599 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 185.4272ms
+2024-01-25 23:16:33.613 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:16:33.766 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 153.4446ms
+2024-01-25 23:16:35.783 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:16:35.872 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 90.6476ms
+2024-01-25 23:16:37.899 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:16:37.967 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 68.1092ms
+2024-01-25 23:16:39.986 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:16:40.074 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 89.2526ms
+2024-01-25 23:16:42.086 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:16:42.157 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 71.2518ms
+2024-01-25 23:16:44.174 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:16:44.244 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 70.1938ms
+2024-01-25 23:16:46.258 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:16:46.364 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 106.159ms
+2024-01-25 23:16:48.386 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:16:48.473 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 88.0315ms
+2024-01-25 23:16:50.497 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:16:50.568 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 72.0334ms
+2024-01-25 23:16:52.586 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:16:52.680 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 94.3666ms
+2024-01-25 23:16:54.696 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:16:54.900 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 204.2022ms
+2024-01-25 23:16:56.919 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:16:56.996 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 77.7064ms
+2024-01-25 23:16:59.010 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:16:59.080 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 70.8972ms
+2024-01-25 23:17:01.105 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:17:01.195 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 89.9118ms
+2024-01-25 23:17:03.215 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:17:03.273 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 58.8512ms
+2024-01-25 23:17:05.289 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:17:05.352 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 64.1919ms
+2024-01-25 23:17:07.367 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:17:07.441 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 73.8706ms
+2024-01-25 23:17:09.453 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:17:09.520 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 68.4301ms
+2024-01-25 23:17:11.539 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:17:11.612 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 74.0552ms
+2024-01-25 23:17:13.628 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:17:13.714 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 87.0917ms
+2024-01-25 23:17:15.729 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:17:15.790 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 61.6861ms
+2024-01-25 23:17:17.804 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:17:17.905 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 101.7075ms
+2024-01-25 23:17:19.925 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:17:19.989 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 64.9918ms
+2024-01-25 23:17:22.001 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:17:22.073 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 73.7895ms
+2024-01-25 23:17:24.092 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:17:24.173 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 81.0982ms
+2024-01-25 23:17:26.187 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:17:26.281 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 94.2346ms
+2024-01-25 23:17:28.293 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:17:28.356 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 62.9959ms
+2024-01-25 23:17:30.379 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:17:30.445 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 67.0145ms
+2024-01-25 23:17:32.456 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:17:32.543 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 86.8785ms
+2024-01-25 23:17:34.560 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:17:34.620 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 61.3316ms
+2024-01-25 23:17:36.639 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:17:36.715 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 76.7828ms
+2024-01-25 23:17:38.735 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:17:38.808 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 74.5754ms
+2024-01-25 23:17:40.818 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:17:40.879 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 60.8473ms
+2024-01-25 23:17:42.898 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:17:42.974 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 76.6677ms
+2024-01-25 23:17:44.996 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:17:45.075 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 78.8699ms
+2024-01-25 23:17:47.105 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:17:47.163 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 59.3658ms
+2024-01-25 23:17:49.177 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:17:49.247 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 71.0303ms
+2024-01-25 23:17:51.260 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:17:51.339 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 79.6637ms
+2024-01-25 23:17:53.358 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:17:53.422 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 64.7416ms
+2024-01-25 23:17:55.444 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:17:55.518 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 74.4941ms
+2024-01-25 23:17:57.532 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:17:57.607 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 75.2666ms
+2024-01-25 23:17:59.620 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:17:59.698 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 78.4872ms
+2024-01-25 23:18:01.721 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:18:01.794 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 72.7715ms
+2024-01-25 23:18:03.816 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:18:03.897 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 81.1946ms
+2024-01-25 23:18:05.928 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:18:05.993 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 65.3463ms
+2024-01-25 23:18:08.004 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:18:08.087 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 83.1939ms
+2024-01-25 23:18:10.110 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:18:10.171 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 62.0671ms
+2024-01-25 23:18:12.187 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:18:12.265 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 79.1465ms
+2024-01-25 23:18:14.287 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:18:14.354 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 67.887ms
+2024-01-25 23:18:16.365 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:18:16.449 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 85.0438ms
+2024-01-25 23:18:18.462 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:18:18.520 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 58.6388ms
+2024-01-25 23:18:20.537 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:18:20.602 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 66.1085ms
+2024-01-25 23:18:22.612 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:18:22.685 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 73.5239ms
+2024-01-25 23:18:24.708 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:18:24.773 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 66.0189ms
+2024-01-25 23:18:26.791 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:18:26.863 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 72.6068ms
+2024-01-25 23:18:28.875 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:18:28.949 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 73.8941ms
+2024-01-25 23:18:30.961 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:18:31.025 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 64.8865ms
+2024-01-25 23:18:33.035 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:18:33.117 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 81.5836ms
+2024-01-25 23:18:35.136 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:18:35.205 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 69.635ms
+2024-01-25 23:18:37.224 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:18:37.314 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 90.037ms
+2024-01-25 23:18:39.323 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:18:39.390 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 67.8526ms
+2024-01-25 23:18:41.411 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:18:41.502 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 90.6183ms
+2024-01-25 23:18:43.524 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:18:43.580 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 57.2047ms
+2024-01-25 23:18:45.595 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:18:45.668 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 73.0035ms
+2024-01-25 23:18:47.679 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:18:47.749 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 70.9106ms
+2024-01-25 23:18:49.770 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:18:49.840 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 70.8388ms
+2024-01-25 23:18:51.851 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:18:51.920 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 69.046ms
+2024-01-25 23:18:53.933 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:18:54.033 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 100.8141ms
+2024-01-25 23:18:56.054 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:18:56.115 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 62.7062ms
+2024-01-25 23:18:58.135 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:18:58.216 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 82.0053ms
+2024-01-25 23:19:00.226 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:19:00.279 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 53.6474ms
+2024-01-25 23:19:02.289 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:19:02.346 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 56.9505ms
+2024-01-25 23:19:04.361 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:19:04.421 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 60.6037ms
+2024-01-25 23:19:06.435 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:19:06.504 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 69.3375ms
+2024-01-25 23:19:08.526 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:19:08.596 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 70.6791ms
+2024-01-25 23:19:10.617 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:19:10.679 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 62.1508ms
+2024-01-25 23:19:12.708 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:19:12.784 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 76.1513ms
+2024-01-25 23:19:14.798 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:19:14.852 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 54.9996ms
+2024-01-25 23:19:16.869 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:19:16.933 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 64.2027ms
+2024-01-25 23:19:18.948 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:19:19.016 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 68.385ms
+2024-01-25 23:19:21.032 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:19:21.129 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 97.0041ms
+2024-01-25 23:19:23.149 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:19:23.206 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 57.9417ms
+2024-01-25 23:19:25.226 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:19:25.291 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 65.191ms
+2024-01-25 23:19:27.303 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:19:27.370 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 68.3462ms
+2024-01-25 23:19:29.384 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:19:29.487 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 103.4248ms
+2024-01-25 23:19:31.507 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:19:31.563 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 56.0636ms
+2024-01-25 23:19:33.579 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:19:33.674 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 96.1565ms
+2024-01-25 23:19:35.692 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:19:35.752 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 60.0928ms
+2024-01-25 23:19:37.773 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:19:37.832 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 60.0411ms
+2024-01-25 23:19:39.857 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:19:39.948 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 91.3279ms
+2024-01-25 23:19:41.972 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:19:42.033 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 61.8391ms
+2024-01-25 23:19:44.051 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:19:44.116 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 65.813ms
+2024-01-25 23:19:46.141 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:19:46.214 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 74.1341ms
+2024-01-25 23:19:48.227 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:19:48.301 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 74.77ms
+2024-01-25 23:19:50.325 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:19:50.397 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 72.4416ms
+2024-01-25 23:19:52.413 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:19:52.467 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 54.4288ms
+2024-01-25 23:19:54.489 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 485
+2024-01-25 23:19:54.565 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 76.3543ms
+2024-01-25 23:19:55.908 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/hangfire/servers - null null
+2024-01-25 23:19:56.041 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/hangfire/servers - 200 null text/html 133.0694ms
+2024-01-25 23:19:56.063 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-25 23:19:56.069 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/_framework/aspnetcore-browser-refresh.js - 200 13788 application/javascript; charset=utf-8 5.562ms
+2024-01-25 23:19:56.068 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7100/_vs/browserLink - null null
+2024-01-25 23:19:56.096 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7100/_vs/browserLink - 200 null text/javascript; charset=UTF-8 28.1413ms
+2024-01-25 23:19:58.213 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7100/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 167
+2024-01-25 23:19:58.233 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7100/hangfire/stats - 200 null application/json 20.7094ms

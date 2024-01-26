@@ -6,6 +6,7 @@ using NewsAggregatingProject.Services.Interfaces;
 using NewsAggregatingProject.Services;
 using NewsAggregatingProject.API.Mappers;
 using NewsAggregatingProject.Data.CQS.Commands;
+using Hangfire;
 
 namespace NewsAggregatingProject.API
 {
@@ -28,6 +29,14 @@ namespace NewsAggregatingProject.API
             services.AddScoped<IUserService, UserService>();
             //services.AddScoped<ISourceService, SourceService>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+            services.AddHangfire(configuration => configuration
+            .SetDataCompatibilityLevel(CompatibilityLevel.Version_180)
+            .UseSimpleAssemblyNameTypeSerializer()
+            .UseRecommendedSerializerSettings()
+            .UseSqlServerStorage(connectionString));
+
+            services.AddHangfireServer();
 
             services.AddScoped<NewsMapper>();
             services.AddMediatR(cfg => {

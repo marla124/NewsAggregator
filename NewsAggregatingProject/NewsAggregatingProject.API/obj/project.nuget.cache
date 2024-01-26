@@ -1,11 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "EM7y/QkgYO8hWyWxarLc/4YESA6u+5QyQcejutLsyg2y9p9HwgQR8kl5KcPyMNrLU7c6HrNkkCNa0OIOZpSiOw==",
+  "dgSpecHash": "Yxmd5DuOsroI0jIJzOqmYY6luzp+7hQDWSkcx3soMRvEC0y2OjxF82mQdjKvHm+qcycQy23mBxFxGykBJg/pgQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Брест\\myprj\\NewsAggregator\\NewsAggregatingProject\\NewsAggregatingProject.API\\NewsAggregatingProject.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Брест\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Брест\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
+    "C:\\Users\\Брест\\.nuget\\packages\\hangfire\\1.8.9\\hangfire.1.8.9.nupkg.sha512",
+    "C:\\Users\\Брест\\.nuget\\packages\\hangfire.aspnetcore\\1.8.9\\hangfire.aspnetcore.1.8.9.nupkg.sha512",
+    "C:\\Users\\Брест\\.nuget\\packages\\hangfire.core\\1.8.9\\hangfire.core.1.8.9.nupkg.sha512",
+    "C:\\Users\\Брест\\.nuget\\packages\\hangfire.netcore\\1.8.9\\hangfire.netcore.1.8.9.nupkg.sha512",
+    "C:\\Users\\Брест\\.nuget\\packages\\hangfire.sqlserver\\1.8.9\\hangfire.sqlserver.1.8.9.nupkg.sha512",
     "C:\\Users\\Брест\\.nuget\\packages\\htmlagilitypack\\1.11.57\\htmlagilitypack.1.11.57.nupkg.sha512",
     "C:\\Users\\Брест\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Брест\\.nuget\\packages\\mediatr\\12.2.0\\mediatr.12.2.0.nupkg.sha512",

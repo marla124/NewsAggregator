@@ -20,7 +20,9 @@ namespace NewsAggregatingProject.Data.CQS.Queries
         public async Task<Guid[]> Handle(GetUnratedNewsQuery request, 
             CancellationToken cancellationToken)
         {
-            return await _dbContext.News.AsNoTracking().Where(news => news.Rate == null)
+            return await _dbContext.News.AsNoTracking()
+                .Where(news => news.Rate == null)
+                .Take(request.MaxTake)
                 .Select(news => news.Id)
                 .ToArrayAsync(cancellationToken:cancellationToken);
 
