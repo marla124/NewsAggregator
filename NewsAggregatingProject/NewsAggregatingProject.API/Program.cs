@@ -29,6 +29,8 @@ namespace NewsAggregatingProject.API
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             builder.Services.RegisterServices(builder.Configuration);
+            builder.Services.ConfigureJwt(builder.Configuration);
+
 
             var app = builder.Build();
 
@@ -40,6 +42,7 @@ namespace NewsAggregatingProject.API
             }
 
             app.UseHttpsRedirection();
+            app.UseAuthentication();
 
             app.UseAuthorization();
             app.UseHangfireDashboard();

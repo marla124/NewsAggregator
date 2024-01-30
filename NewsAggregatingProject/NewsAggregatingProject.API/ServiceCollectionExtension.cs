@@ -1,12 +1,15 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Hangfire;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using NewsAggregatingProject.API.Mappers;
 using NewsAggregatingProject.Data;
+using NewsAggregatingProject.Data.CQS.Commands;
 using NewsAggregatingProject.Data.Entities;
 using NewsAggregatingProject.Repositories;
-using NewsAggregatingProject.Services.Interfaces;
 using NewsAggregatingProject.Services;
-using NewsAggregatingProject.API.Mappers;
-using NewsAggregatingProject.Data.CQS.Commands;
-using Hangfire;
+using NewsAggregatingProject.Services.Interfaces;
+using System.Text;
 
 namespace NewsAggregatingProject.API
 {
@@ -39,9 +42,32 @@ namespace NewsAggregatingProject.API
             services.AddHangfireServer();
 
             services.AddScoped<NewsMapper>();
-            services.AddMediatR(cfg => {
+            services.AddMediatR(cfg =>
+            {
                 cfg.RegisterServicesFromAssembly(typeof(AddNewsCommand).Assembly);
             });
+
+        }
+        public static void ConfigureJwt
+           (this IServiceCollection services, IConfiguration configuration)
+        {
+            var issuer = configuration["Jwt:Issuer"];
+            var audience = configuration["Jwt:Audience"];
+            var secret = configuration["Jwt:Secret"];
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                .AddJwtBearer(opt =>
+                {
+                    opt.TokenValidationParameters = new TokenValidationParameters()
+                    {
+                        ValidateIssuer = true,
+                        ValidateAudience = true,
+                        ValidateLifetime = true,
+                        ValidateIssuerSigningKey = true,
+                        ValidIssuer = issuer,
+                        ValidAudience = audience,
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secret))
+                    };
+                });
 
         }
     }

@@ -183,3 +183,4 @@ C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingP
 C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.API\bin\Debug\net8.0\tr-TR\Hangfire.Core.resources.dll
 C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.API\bin\Debug\net8.0\zh-TW\Hangfire.Core.resources.dll
 C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.API\bin\Debug\net8.0\zh\Hangfire.Core.resources.dll
+C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

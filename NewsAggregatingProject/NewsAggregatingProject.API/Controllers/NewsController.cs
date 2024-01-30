@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using NewsAggregatingProject.API.Mappers;
 using NewsAggregatingProject.Models;
@@ -26,6 +27,7 @@ namespace NewsAggregatingProject.API.Controllers
 
 
         [HttpGet]
+        [Authorize(Roles ="Admin")]
         public async Task<IActionResult> GetNews()
         {
             var news = (await _newsService.GetPositive())
