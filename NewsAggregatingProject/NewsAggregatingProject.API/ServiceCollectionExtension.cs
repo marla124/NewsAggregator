@@ -30,6 +30,8 @@ namespace NewsAggregatingProject.API
             services.AddScoped<IRepository<Category>, Repository<Category>>();
             services.AddScoped<INewsService, NewsService>();
             services.AddScoped<IUserService, UserService>();
+            services.AddScoped<ITokenService, TokenService>();
+
             //services.AddScoped<ISourceService, SourceService>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 

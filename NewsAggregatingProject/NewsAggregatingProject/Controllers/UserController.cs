@@ -63,7 +63,7 @@ namespace NewsAggregatingProject.Controllers
             var result = await _loginValidator.ValidateAsync(model);
             if (result.IsValid && _userService.IsUserExists(model.Email))
             {
-                if (await _userService.IsPasswordCorrect(model.Email, model.Password))
+                if (await _userService.CheckPasswordCorrect(model.Email, model.Password))
                 {
                     await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,
                     new ClaimsPrincipal(await _userService.Authenticate(model.Email)));

@@ -12,6 +12,8 @@ namespace NewsAggregatingProject.Data
         public DbSet<User> Users { get; set; }
         public DbSet<UserStatus> UserStatuses { get; set; }
         public DbSet<Comment> Comments { get; set; }
+        public DbSet<RefreshToken> RefreshTokens { get; set; }
+
 
         public NewsAggregatingDBContext(DbContextOptions<NewsAggregatingDBContext> options) : base(options) { }
         //public NewsAggregatorDBContext(DbContextOptionsBuilder optionsBuilder) {

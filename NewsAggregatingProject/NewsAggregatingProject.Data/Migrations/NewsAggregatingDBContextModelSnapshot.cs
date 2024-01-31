@@ -92,6 +92,32 @@ namespace NewsAggregatingProject.Data.Migrations
                     b.ToTable("News");
                 });
 
+            modelBuilder.Entity("NewsAggregatingProject.Data.Entities.RefreshToken", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("AssociateDeviceName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("ExpiringAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("GeneratedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("RefreshTokens");
+                });
+
             modelBuilder.Entity("NewsAggregatingProject.Data.Entities.Source", b =>
                 {
                     b.Property<Guid>("Id")
@@ -190,6 +216,17 @@ namespace NewsAggregatingProject.Data.Migrations
                     b.Navigation("Source");
                 });
 
+            modelBuilder.Entity("NewsAggregatingProject.Data.Entities.RefreshToken", b =>
+                {
+                    b.HasOne("NewsAggregatingProject.Data.Entities.User", "User")
+                        .WithMany("RefreshTokens")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("NewsAggregatingProject.Data.Entities.User", b =>
                 {
                     b.HasOne("NewsAggregatingProject.Data.Entities.UserStatus", "UserStatus")
@@ -219,6 +256,8 @@ namespace NewsAggregatingProject.Data.Migrations
             modelBuilder.Entity("NewsAggregatingProject.Data.Entities.User", b =>
                 {
                     b.Navigation("Comments");
+
+                    b.Navigation("RefreshTokens");
                 });
 
             modelBuilder.Entity("NewsAggregatingProject.Data.Entities.UserStatus", b =>

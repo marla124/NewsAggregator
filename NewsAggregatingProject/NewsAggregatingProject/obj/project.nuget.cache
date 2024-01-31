@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "o/plKN11WFDpDn0SwoFFVEjJOd75Hfw+X20nBm2kN/2aa6ZAqdQmi26xlJzG99f2b/CF/3xzgwoiSDTH7ClwAQ==",
+  "dgSpecHash": "x97OxJwRdm6k8lYplSlIXY5P+5fiyWovJvAUihEOLz2WDCboC7k/H+R56lXJiTwgYIkIu1AngjD1TstdzU/DHQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Брест\\myprj\\NewsAggregator\\NewsAggregatingProject\\NewsAggregatingProject\\NewsAggregatingProject.csproj",
   "expectedPackageFiles": [
@@ -13,6 +13,8 @@
     "C:\\Users\\Брест\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Брест\\.nuget\\packages\\mediatr\\12.2.0\\mediatr.12.2.0.nupkg.sha512",
     "C:\\Users\\Брест\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\Брест\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
+    "C:\\Users\\Брест\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
     "C:\\Users\\Брест\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "C:\\Users\\Брест\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.3.3\\microsoft.codeanalysis.analyzers.3.3.3.nupkg.sha512",
     "C:\\Users\\Брест\\.nuget\\packages\\microsoft.codeanalysis.common\\4.5.0\\microsoft.codeanalysis.common.4.5.0.nupkg.sha512",

@@ -1,6 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Azure.Core;
+using MediatR;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
+using NewsAggregatingProject.API.Mappers;
+using NewsAggregatingProject.Core;
 using NewsAggregatingProject.Models;
+using NewsAggregatingProject.Services.Interfaces;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
@@ -9,43 +15,69 @@ namespace NewsAggregatingProject.API.Controllers
 {
     public class TokenController : Controller
     {
-        private readonly IConfiguration _configuration;
+        private readonly ITokenService _tokenService;
+        private readonly UserMapper _userMapper;        
+        private readonly IUserService _userService;
 
-        public TokenController(IConfiguration configuration)
+
+
+        public TokenController(ITokenService tokenService,UserMapper userMapper, IUserService userService)
         {
-            _configuration = configuration;
+            _tokenService = tokenService;
+            _userMapper = userMapper;
+            _userService = userService;
+
         }
         [HttpPost]
-        public IActionResult Login(LoginModel request)
+        [Route("Refresh")]
+
+        public async Task<IActionResult> GenerateToken(RefreshTokenModel request)
         {
-            if (request.Email.Equals("admin@email.com") && request.Password.Equals("Password"))
+            var IsRefreshTokenValue=await _tokenService.CheckRefreshToken(request.RefreshToken);
+            if (IsRefreshTokenValue)
             {
-                var isLifetime= int.TryParse(_configuration["Jwt:Lifetime"], out var lifetime);
-                var key = Encoding.UTF8.GetBytes(_configuration["Jwt:Secret"]);
-                var iss = _configuration["Jwt:Issuer"];
-                var aud = _configuration["Jwt:Audience"];
+                var userDto= await _userService.GetUserByRefreshToken(request.RefreshToken);
 
-
-
-                var tokenDescriptor = new SecurityTokenDescriptor()
-                {
-                    Subject = new ClaimsIdentity(new Claim[]
-                    {
-                        new Claim(ClaimTypes.Email, request.Email),
-                        new Claim(ClaimTypes.Role, "Admin"),
-                        new Claim("aud",aud),
-                        new Claim("iss",iss)
-
-                    }),
-                    Expires = DateTime.UtcNow.AddMinutes(lifetime),
-                    SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256)
-                };
-
-                var tokenHandler=new JwtSecurityTokenHandler();
-                var token=tokenHandler.CreateToken(tokenDescriptor);
-                return Ok(new {Token=tokenHandler.WriteToken(token) });
+                var jwtToken = await _tokenService.GenerateJwtToken(userDto);
+                var refreshToken = await _tokenService.AddRefreshToken(userDto.Email,
+                    HttpContext.Connection.RemoteIpAddress.MapToIPv6().ToString());
+                await _tokenService.RemoveRefreshToken(request.RefreshToken);
+                return Ok(new TokenResponseModel { JwtToken = jwtToken, RefreshToken = refreshToken });
             }
             return Unauthorized();
         }
+
+        [HttpPost]
+        public async Task<IActionResult> GenerateToken(LoginModel request)
+        {
+            //can be refactored
+            var isUserCorrect = await _userService.CheckPasswordCorrect(request.Email, request.Password);
+            if (isUserCorrect)
+            {
+
+                var userDto = await _userService.GetUserByEmail(request.Email);
+                var jwtToken = await _tokenService.GenerateJwtToken(userDto);
+                var refreshToken = await _tokenService.AddRefreshToken(userDto.Email,
+                    HttpContext.Connection.RemoteIpAddress.MapToIPv6().ToString());
+                return Ok(new TokenResponseModel { JwtToken = jwtToken, RefreshToken = refreshToken });
+
+            }
+
+            return Unauthorized();
+        }
+
+        [HttpDelete]
+        [Route("Revoke")]
+        public async Task<IActionResult> RevokeToken(RefreshTokenModel request)
+        {
+            var IsRefreshTokenValue = await _tokenService.CheckRefreshToken(request.RefreshToken);
+            if (IsRefreshTokenValue)
+            {
+                await _tokenService.RemoveRefreshToken(request.RefreshToken);
+                return Ok();
+            }
+            return Unauthorized(); //!!!
+        }
+
     }
 }

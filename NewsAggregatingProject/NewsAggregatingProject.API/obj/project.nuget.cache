@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "R6+p8iP/8RqokWF1MWJe0MaBK8RWyvPZMm2CZlnXuUDK2FVeb4H86LEAEopXLPLtn+T+F3cE24nlZs53V+EknA==",
+  "dgSpecHash": "F2AzNgFgoiBMqU1t3Hme/V4gSvmOYWgZUDQ6uzLHnwq8KrmAspm4q5hoqJUriO5KZgTt8/4w0wjftz1hwgL4Pg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Брест\\myprj\\NewsAggregator\\NewsAggregatingProject\\NewsAggregatingProject.API\\NewsAggregatingProject.API.csproj",
   "expectedPackageFiles": [
@@ -16,6 +16,8 @@
     "C:\\Users\\Брест\\.nuget\\packages\\mediatr\\12.2.0\\mediatr.12.2.0.nupkg.sha512",
     "C:\\Users\\Брест\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\Брест\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.1\\microsoft.aspnetcore.authentication.jwtbearer.8.0.1.nupkg.sha512",
+    "C:\\Users\\Брест\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
+    "C:\\Users\\Брест\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
     "C:\\Users\\Брест\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "C:\\Users\\Брест\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.3.3\\microsoft.codeanalysis.analyzers.3.3.3.nupkg.sha512",
     "C:\\Users\\Брест\\.nuget\\packages\\microsoft.codeanalysis.common\\4.5.0\\microsoft.codeanalysis.common.4.5.0.nupkg.sha512",

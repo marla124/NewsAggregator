@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NewsAggregatingProject.Mappers")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+486de3aff51441ae1cbc17c871ece8de60f7f1a7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b3b5c8ceea322387b6b6c4149a6a87de1d0fa9d7")]
 [assembly: System.Reflection.AssemblyProductAttribute("NewsAggregatingProject.Mappers")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NewsAggregatingProject.Mappers")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

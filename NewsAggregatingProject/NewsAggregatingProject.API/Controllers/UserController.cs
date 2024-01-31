@@ -1,5 +1,9 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using NewsAggregatingProject.API.Mappers;
+using NewsAggregatingProject.Core;
+using NewsAggregatingProject.Models;
+using NewsAggregatingProject.Services.Interfaces;
 
 namespace NewsAggregatingProject.API.Controllers
 {
@@ -7,6 +11,16 @@ namespace NewsAggregatingProject.API.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
+        private readonly IUserService _userService;
+        private readonly UserMapper _userMapper;
+        private readonly ITokenService _tokenService;
+
+        public UserController(IUserService userService, UserMapper userMapper, ITokenService tokenService)
+        {
+            _userService = userService;
+            _userMapper = userMapper;
+            _tokenService = tokenService;
+        }
         [HttpGet("{id}")]
         public async Task<IActionResult> GetUsersById()
         {
@@ -20,9 +34,15 @@ namespace NewsAggregatingProject.API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateUsers()
+        public async Task<IActionResult> CreateUser(RegisterModel request)
         {
-            return Ok();
+            var userDto=_userMapper.RegisterUserRequestToUserDto(request);
+            await _userService.RegisterUser(userDto);
+
+            var user = await _userService.GetUserByEmail(userDto.Email);
+            //var token=await _tokenService.GenerateJwtToken(user); 
+            return Created($"users/{user.Id}", null);
+
         }
 
         [HttpDelete("{id}")]

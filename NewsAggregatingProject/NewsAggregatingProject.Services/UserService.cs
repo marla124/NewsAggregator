@@ -1,6 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using MediatR;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using NewsAggregatingProject.API.Mappers;
 using NewsAggregatingProject.Core;
+using NewsAggregatingProject.Data.CQS.Queries;
 using NewsAggregatingProject.Data.Entities;
 using NewsAggregatingProject.Repositories;
 using NewsAggregatingProject.Services.Interfaces;
@@ -14,12 +17,14 @@ namespace NewsAggregatingProject.Services
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IConfiguration _configuration;
+        private readonly IMediator _mediator;
+        private readonly UserMapper _mapper;
 
-
-        public UserService(IUnitOfWork unitOfWork, IConfiguration configuration)
+        public UserService(IUnitOfWork unitOfWork, IConfiguration configuration, IMediator mediator)
         {
             _unitOfWork = unitOfWork;
             _configuration = configuration;
+            _mediator = mediator;
         }
 
         public async Task<ClaimsIdentity> Authenticate(string email)
@@ -89,7 +94,7 @@ namespace NewsAggregatingProject.Services
             }
         }
 
-        public async Task<bool> IsPasswordCorrect(string email, string password)
+        public async Task<bool> CheckPasswordCorrect(string email, string password)
         {
             var currentPasswordHash = (await _unitOfWork.UserRepository
                 .FindBy(user => user.Email.Equals(email))
@@ -99,6 +104,21 @@ namespace NewsAggregatingProject.Services
             var enteredPasswordHash = MdHashGenerate(password);
 
             return currentPasswordHash?.Equals(enteredPasswordHash) ?? false;
+        }
+
+        public async Task<UserDto> GetUserByEmail(string userDtoEmail)
+        {
+
+            var query = new GetUserByEmailQuery() { Email = userDtoEmail };
+            var user = await _mediator.Send(query);
+            return _mapper.UserToUserDto(user);
+        }
+
+        public async Task<UserDto> GetUserByRefreshToken(Guid requestRefreshToken)
+        {
+            var user=await _mediator.Send(new GetUserByRefreshTokenQuery { RefreshTokenId = requestRefreshToken });
+            var dto = _mapper.UserToUserDto(user);
+            return dto;
         }
     }
 }

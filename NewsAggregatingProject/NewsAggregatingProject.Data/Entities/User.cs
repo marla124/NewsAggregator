@@ -8,5 +8,6 @@
         public Guid UserStatusId { get; set; }
         public UserStatus UserStatus { get; set; }
         public List<Comment> Comments { get; set; }
+        public List<RefreshToken> RefreshTokens { get; set; }
     }
 }
