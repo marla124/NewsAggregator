@@ -7,7 +7,7 @@ namespace NewsAggregatingProject.Repositories
 {
     public interface IRepository<T> where T : class, IBaseEntity
     {
-        Task<T?> GetById(Guid id);
+        Task<T?> GetById(Guid id, params Expression<Func<T, object>>[] includes);
         Task<T?> GetByIdAsNoTracking(Guid id);
 
         IQueryable<T> FindBy(Expression<Func<T, bool>> wherePredicate,
@@ -22,5 +22,6 @@ namespace NewsAggregatingProject.Repositories
         Task<int> Count();
         Task Update(T entity);
         Task Patch(Guid id, List<PatchDto> patchDtos);
+
     }
 }

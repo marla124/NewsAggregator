@@ -49,9 +49,18 @@ namespace NewsAggregatingProject.Repositories
             return _dbSet.AsQueryable();
         }
 
-        public virtual async Task<T> GetById(Guid id)
+        public async Task<T?> GetById(Guid id,
+            params Expression<Func<T, object>>[] includes)
         {
-            return await _dbSet.FirstOrDefaultAsync(entities => entities.Id.Equals(id));
+            var resultQuery = _dbSet.AsQueryable();
+            if (includes.Any())
+            {
+                resultQuery = includes.Aggregate(resultQuery,
+                    (current, include)
+                        => current.Include(include));
+            }
+
+            return await resultQuery.FirstOrDefaultAsync(entity => entity.Id.Equals(id));
         }
 
         public virtual async Task InsertMany(IEnumerable<T> entities)

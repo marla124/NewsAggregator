@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace NewsAggregatingProject.Repositories
 {
-    public class NewRepository : Repository<News>, INewRepository
+    public class NewRepository : Repository<News>, INewsRepository
     {
         public NewRepository(NewsAggregatingDBContext dBContext) : base(dBContext)
         {

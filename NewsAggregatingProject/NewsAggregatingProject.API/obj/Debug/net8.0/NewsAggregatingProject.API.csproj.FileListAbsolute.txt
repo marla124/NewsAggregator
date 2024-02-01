@@ -3,7 +3,6 @@ C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingP
 C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.API\obj\Debug\net8.0\NewsAggregatingProject.API.AssemblyInfoInputs.cache
 C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.API\obj\Debug\net8.0\NewsAggregatingProject.API.AssemblyInfo.cs
 C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.API\obj\Debug\net8.0\NewsAggregatingProject.API.csproj.CoreCompileInputs.cache
-C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.API\obj\Debug\net8.0\NewsAggregatingProject.API.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.API\obj\Debug\net8.0\NewsAggregatingProject.API.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.API\obj\Debug\net8.0\NewsAggregatingProject.API.sourcelink.json
 C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject.API\bin\Debug\net8.0\appsettings.Development.json

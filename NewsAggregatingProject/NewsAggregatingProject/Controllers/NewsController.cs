@@ -114,7 +114,7 @@ namespace NewsAggregatingProject.Controllers
                     DataAndTime = DateTime.Now,
                    
                 };
-                await _unitOfWork.NewRepository.InsertOne(newForCreate);
+                await _unitOfWork.NewsRepository.InsertOne(newForCreate);
                 await _unitOfWork.Commit();
                 return Ok();
             }

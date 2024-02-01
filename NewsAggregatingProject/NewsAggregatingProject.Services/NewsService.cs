@@ -68,8 +68,6 @@ namespace NewsAggregatingProject.Services
             var newsRes = textNode.SelectSingleNode("//div[@class=\"news-reference\"]");
             textNode.RemoveChild(newsRes);
             var textValue = textNode.InnerHtml;
-            //var lastInterestedElement = textValue.IndexOf("<div id=\"news-text-end\"></div>");
-            //textValue = textValue.Remove(lastInterestedElement);
             var tuple=(newsInfo.Item1,newsInfo.Item2);
             
             return tuple;
@@ -78,7 +76,7 @@ namespace NewsAggregatingProject.Services
 
         private async Task<string[]> GetExistedNewsUrls()
         {
-            var existedNewsUrls = await _unitOfWork.NewRepository.GetAsQueryable()
+            var existedNewsUrls = await _unitOfWork.NewsRepository.GetAsQueryable()
                 .Select(news => news.SourceUrl).ToArrayAsync();
             return existedNewsUrls;
         }
@@ -93,18 +91,16 @@ namespace NewsAggregatingProject.Services
 
         public async Task<NewsDto?> GetNewsById(Guid id)
         {
-            var news = (await _unitOfWork.NewRepository.GetById(id));
-            if(news == null)
-            {
-                return null;
-            }
-            return _newsMapper.NewsToNewsDto(news);
-            
+            var articleDto = _newsMapper.NewsToNewsDto(
+                await _mediator.Send(new GetNewsByIdQuery { Id = id }));
+
+            return articleDto;
+
         }
 
         public async Task<NewsDto?[]> GetNewsByName(string name)
         {
-            var news = await _unitOfWork.NewRepository
+            var news = await _unitOfWork.NewsRepository
                 .FindBy(news => news.Title.Contains(name))
                 .Select(news => _newsMapper.NewsToNewsDto(news)).ToArrayAsync();
             return news;
@@ -112,7 +108,7 @@ namespace NewsAggregatingProject.Services
 
         public async Task<NewsDto[]?> GetPositive()
         {
-            var news = await _unitOfWork.NewRepository.GetAsQueryable()
+            var news = await _unitOfWork.NewsRepository.GetAsQueryable()
             //.FindBy(news => news.Rate >= 0)
             .Select(news => _newsMapper.NewsToNewsDto(news))
             .ToArrayAsync();
@@ -121,7 +117,7 @@ namespace NewsAggregatingProject.Services
 
         public async Task DeleteNews(Guid id)
         {
-            await _unitOfWork.NewRepository.DeleteById(id);
+            await _unitOfWork.NewsRepository.DeleteById(id);
             await _unitOfWork.Commit();
         }
 
@@ -146,7 +142,7 @@ namespace NewsAggregatingProject.Services
         }
         private async Task Rate(Guid id)
         {
-            var text = await _mediator.Send(new GetNewsTextByIdQeuery() { Id = id });
+            var text = await _mediator.Send(new GetNewsTextByIdQuery() { Id = id });
             var dictionary = _configuration
                 .GetSection("Dictionary")
                 .GetChildren()

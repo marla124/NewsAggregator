@@ -41,7 +41,7 @@ namespace NewsAggregatingProject.Controllers
         [HttpGet]
         public async Task<IActionResult> Favorite()
         {
-            var newsList = _unitOfWork.NewRepository
+            var newsList = _unitOfWork.NewsRepository
                 .FindBy(news => !string.IsNullOrEmpty(news.Title), news => news.Source)
                 .Select(news => new NewModel()
                 {

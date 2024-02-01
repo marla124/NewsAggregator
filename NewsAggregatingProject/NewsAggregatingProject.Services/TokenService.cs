@@ -15,6 +15,7 @@ using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
+using WebApp.Data.CQS.Commands;
 
 namespace NewsAggregatingProject.Services
 {
@@ -73,7 +74,7 @@ namespace NewsAggregatingProject.Services
             return tokenHandler.WriteToken(token);
         }
 
-        public Task RemoveRefreshToken(Guid requestRefreshToken)
+        public async Task RemoveRefreshToken(Guid requestRefreshToken)
         {
             await _mediator.Send(new DeleteRefreshTokenCommand()
             {

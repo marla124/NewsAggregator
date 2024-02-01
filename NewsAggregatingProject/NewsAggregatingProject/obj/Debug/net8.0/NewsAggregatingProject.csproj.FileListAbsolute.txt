@@ -585,7 +585,6 @@ C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingP
 C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject\obj\Debug\net8.0\NewsAggregatingProject.AssemblyInfoInputs.cache
 C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject\obj\Debug\net8.0\NewsAggregatingProject.AssemblyInfo.cs
 C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject\obj\Debug\net8.0\NewsAggregatingProject.csproj.CoreCompileInputs.cache
-C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject\obj\Debug\net8.0\NewsAggregatingProject.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject\obj\Debug\net8.0\NewsAggregatingProject.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject\obj\Debug\net8.0\NewsAggregatingProject.RazorAssemblyInfo.cache
 C:\Users\Брест\myprj\NewsAggregator\NewsAggregatingProject\NewsAggregatingProject\obj\Debug\net8.0\NewsAggregatingProject.RazorAssemblyInfo.cs

@@ -25,7 +25,7 @@ namespace NewsAggregatingProject.Repositories
             _userStatusRepository = userStatusRepository;
         }
 
-        public IRepository<News> NewRepository => _newRepository;
+        public IRepository<News> NewsRepository => _newRepository;
 
         public IRepository<Source> SourceRepository => _sourceRepository;
         public IRepository<Comment> CommentRepository => _commentRepository;
