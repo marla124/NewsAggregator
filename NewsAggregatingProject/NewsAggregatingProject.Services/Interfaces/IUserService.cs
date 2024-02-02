@@ -17,5 +17,7 @@ namespace NewsAggregatingProject.Services.Interfaces
         public Task<bool> CheckPasswordCorrect(string email, string password);
         Task<UserDto> GetUserByEmail(string email);
         Task<UserDto> GetUserByRefreshToken(Guid requestRefreshToken);
+        public Task DeleteUser(Guid id);
+
     }
 }

@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using NewsAggregatingProject.API.Mappers;
 using NewsAggregatingProject.Core;
 using NewsAggregatingProject.Models;
+using NewsAggregatingProject.Services;
 using NewsAggregatingProject.Services.Interfaces;
 
 namespace NewsAggregatingProject.API.Controllers
@@ -46,8 +47,9 @@ namespace NewsAggregatingProject.API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteUsers()
+        public async Task<IActionResult> DeleteUsers(Guid id)
         {
+            await _userService.DeleteUser(id);
             return Ok();
         }
 

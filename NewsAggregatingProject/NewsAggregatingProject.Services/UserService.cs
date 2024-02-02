@@ -120,5 +120,11 @@ namespace NewsAggregatingProject.Services
             var dto = _mapper.UserToUserDto(user);
             return dto;
         }
+
+        public async Task DeleteUser(Guid id)
+        {
+            await _unitOfWork.UserRepository.DeleteById(id);
+            await _unitOfWork.Commit();
+        }
     }
 }

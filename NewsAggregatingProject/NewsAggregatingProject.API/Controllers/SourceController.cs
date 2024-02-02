@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using NewsAggregatingProject.API.Mappers;
 using NewsAggregatingProject.Services;
@@ -31,6 +32,8 @@ namespace NewsAggregatingProject.API.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Admin")]
+
         public async Task<IActionResult> DeleteSource(Guid id)
         {
             await _sourceService.DeleteSource(id);
@@ -38,6 +41,8 @@ namespace NewsAggregatingProject.API.Controllers
         }
 
         [HttpPatch("{id}")]
+        [Authorize(Roles = "Admin")]
+
         public async Task<IActionResult> UpdateSource() => Ok();
 
     }

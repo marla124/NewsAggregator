@@ -1,16 +1,18 @@
-using NewsAggregatingProject.Data;
-using NewsAggregatingProject.Data.Entities;
-using NewsAggregatingProject.Services;
-using NewsAggregatingProject.Repositories;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Identity;
 using FluentValidation;
-using NewsAggregatingProject.FluentValidation;
-using Serilog;
-using Microsoft.AspNetCore.Mvc;
-using Serilog.Events;
-using NewsAggregatingProject.Services.Interfaces;
+using Hangfire;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using NewsAggregatingProject.API.Mappers;
+using NewsAggregatingProject.Data;
+using NewsAggregatingProject.Data.CQS.Commands;
+using NewsAggregatingProject.Data.Entities;
+using NewsAggregatingProject.FluentValidation;
+using NewsAggregatingProject.Repositories;
+using NewsAggregatingProject.Services;
+using NewsAggregatingProject.Services.Interfaces;
+using Serilog;
+using Serilog.Events;
 
 namespace NewsAggregatingProject
 {
@@ -19,7 +21,7 @@ namespace NewsAggregatingProject
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-            var connectionString= builder.Configuration.GetConnectionString("Default");
+            var connectionString = builder.Configuration.GetConnectionString("Default");
             builder.Services.AddDbContext<NewsAggregatingDBContext>(opt => opt.UseSqlServer(connectionString));
             // Add services to the container.
 
@@ -52,36 +54,45 @@ namespace NewsAggregatingProject
             builder.Services.AddScoped<IRepository<UserStatus>, Repository<UserStatus>>();
             builder.Services.AddScoped<IRepository<Comment>, Repository<Comment>>();
             builder.Services.AddScoped<IRepository<Category>, Repository<Category>>();
-
-            //builder.Services.AddScoped<IDbInitializer, DbInitializer>();
             builder.Services.AddScoped<INewsService, NewsService>();
             builder.Services.AddScoped<IUserService, UserService>();
 
 
             builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
+            builder.Services.AddHangfire(configuration => configuration
+                .SetDataCompatibilityLevel(CompatibilityLevel.Version_180)
+                .UseSimpleAssemblyNameTypeSerializer()
+                .UseRecommendedSerializerSettings()
+                .UseSqlServerStorage(connectionString));
+
+            builder.Services.AddHangfireServer();
+
+            builder.Services.AddScoped<NewsMapper>();
+            builder.Services.AddMediatR(cfg =>
+            {
+                cfg.RegisterServicesFromAssembly(typeof(AddNewsCommand).Assembly);
+            });
+
             builder.Services.AddControllersWithViews();
 
             var app = builder.Build();
 
-            // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
             {
                 app.UseExceptionHandler("/Home/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-            //app.UseSerilogRequestLogging();
 
 
             app.UseRouting();
 
             app.UseAuthentication();
             app.UseAuthorization();
-            app.Map("/NotFound", ()=>new NotFoundResult());
+            app.Map("/NotFound", () => new NotFoundResult());
 
 
             app.MapControllerRoute(

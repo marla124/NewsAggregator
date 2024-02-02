@@ -27,7 +27,6 @@ namespace NewsAggregatingProject.API.Controllers
 
 
         [HttpGet]
-        [Authorize(Roles ="Admin")]
         public async Task<IActionResult> GetNews()
         {
             var news = (await _newsService.GetPositive())
@@ -37,6 +36,8 @@ namespace NewsAggregatingProject.API.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Admin")]
+
         public async Task<IActionResult> CreateNews(NewsModel request)
         {
             var dto=_newsMapper.NewsModelToNewsDto(request);
@@ -45,6 +46,8 @@ namespace NewsAggregatingProject.API.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Admin")]
+
         public async Task<IActionResult> DeleteNews(Guid id)
         {
             await _newsService.DeleteNews(id);
@@ -52,6 +55,8 @@ namespace NewsAggregatingProject.API.Controllers
         }
 
         [HttpPatch("{id}")]
+        [Authorize(Roles = "Admin")]
+
         public async Task<IActionResult> UpdateNews()
         {
             return Ok();
