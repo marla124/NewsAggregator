@@ -17,7 +17,7 @@ namespace NewsAggregatingProject.API
             {
                 options.AddDefaultPolicy(policyBuilder =>
                 {
-                    policyBuilder.WithOrigins("http://localhost:51206", "https://github.com")
+                    policyBuilder.WithOrigins("http://localhost:55165", "https://github.com")
                     .AllowAnyHeader()
                     .AllowAnyMethod();
                 });

@@ -12,6 +12,7 @@ namespace NewsAggregatingProject.Data.CQS.Queries
     internal class GetNewsByIdQueryHandler : IRequestHandler<GetNewsByIdQuery, News>
     {
         private readonly NewsAggregatingDBContext _dbContext;
+
         public GetNewsByIdQueryHandler(NewsAggregatingDBContext dbContext)
         {
             _dbContext = dbContext;
@@ -20,7 +21,8 @@ namespace NewsAggregatingProject.Data.CQS.Queries
         public async Task<News> Handle(GetNewsByIdQuery request, 
             CancellationToken cancellationToken)
         {
-            var news= await _dbContext.News.FirstOrDefaultAsync(news=>news.Equals(request.Id), 
+            var news= await _dbContext.News
+                .FirstOrDefaultAsync(onenews=>onenews.Equals(request.Id), 
                 cancellationToken: cancellationToken);
             return news;
 

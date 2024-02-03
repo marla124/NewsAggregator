@@ -1,4 +1,4 @@
-﻿using NewsAggregatingProject.Core;
+﻿ using NewsAggregatingProject.Core;
 using NewsAggregatingProject.Data.Entities;
 using NewsAggregatingProject.Models;
 using Riok.Mapperly.Abstractions;

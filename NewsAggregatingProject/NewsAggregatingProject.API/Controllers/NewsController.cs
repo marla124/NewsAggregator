@@ -21,7 +21,8 @@ namespace NewsAggregatingProject.API.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(Guid id)
         {
-            var news = _newsMapper.NewsDtoToNewsModel( await _newsService.GetNewsById(id));
+            var news = _newsMapper.NewsDtoToNewsModel(
+                await _newsService.GetNewsById(id));
             return Ok(news);
         }
 
@@ -30,8 +31,9 @@ namespace NewsAggregatingProject.API.Controllers
         public async Task<IActionResult> GetNews()
         {
             var news = (await _newsService.GetPositive())
-                .Select(dto=>_newsMapper.NewsDtoToNewsModel(dto))
-                .ToArray();
+            .Select(dto => _newsMapper.NewsDtoToNewsModel(dto))
+            .ToArray();
+
             return Ok(news);
         }
 

@@ -91,10 +91,9 @@ namespace NewsAggregatingProject.Services
 
         public async Task<NewsDto?> GetNewsById(Guid id)
         {
-            var articleDto = _newsMapper.NewsToNewsDto(
+            var newsDto = _newsMapper.NewsToNewsDto(
                 await _mediator.Send(new GetNewsByIdQuery { Id = id }));
-
-            return articleDto;
+            return newsDto;
 
         }
 
@@ -108,9 +107,9 @@ namespace NewsAggregatingProject.Services
 
         public async Task<NewsDto[]?> GetPositive()
         {
-            var news = await _unitOfWork.NewsRepository.GetAsQueryable()
-            //.FindBy(news => news.Rate >= 0)
-            .Select(news => _newsMapper.NewsToNewsDto(news))
+            var news = await _unitOfWork.NewsRepository
+            .GetAsQueryable()
+            .Select(onenew => _newsMapper.NewsToNewsDto(onenew))
             .ToArrayAsync();
             return news;
         }
@@ -206,7 +205,8 @@ namespace NewsAggregatingProject.Services
             
             var existedNews = await GetExistedNewsUrls();
             var uniqueNews = data
-                .Where(dto => !existedNews.Any(url => dto.SourceUrl.Equals(url)))
+                .Where(dto => !existedNews
+                .Any(url => dto.SourceUrl.Equals(url)))
                 .ToArray();
             var command = new InsertRssDataCommand()
             {
