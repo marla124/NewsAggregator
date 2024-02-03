@@ -12,6 +12,16 @@ namespace NewsAggregatingProject.API
         {
             var builder = WebApplication.CreateBuilder(args);
 
+
+            builder.Services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(policyBuilder =>
+                {
+                    policyBuilder.WithOrigins("http://localhost:51206", "https://github.com")
+                    .AllowAnyHeader()
+                    .AllowAnyMethod();
+                });
+            });
             // Add services to the container.
             var logger = new LoggerConfiguration()
             .MinimumLevel.Override("Microsoft", LogEventLevel.Information)
@@ -40,6 +50,7 @@ namespace NewsAggregatingProject.API
             }
 
             app.UseHttpsRedirection();
+            app.UseCors();
             app.UseAuthentication();
 
             app.UseAuthorization();
