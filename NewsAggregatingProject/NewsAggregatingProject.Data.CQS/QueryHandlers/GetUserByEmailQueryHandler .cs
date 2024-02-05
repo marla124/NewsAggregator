@@ -20,7 +20,7 @@ namespace NewsAggregatingProject.Data.CQS.Queries
         public async Task<User> Handle(GetUserByEmailQuery request, 
             CancellationToken cancellationToken)
         {
-            var user= await _dbContext.Users.FirstOrDefaultAsync(us=>us.Equals(request.Email), 
+            var user= await _dbContext.Users.FirstOrDefaultAsync(us=>us.Email.Equals(request.Email), 
                 cancellationToken: cancellationToken);
             return user;
 

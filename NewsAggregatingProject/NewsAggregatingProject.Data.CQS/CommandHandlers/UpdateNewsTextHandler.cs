@@ -19,13 +19,14 @@ namespace NewsAggregatingProject.Data.CQS.CommandsHandlers
 
         public async Task Handle(UpdateNewsText command, CancellationToken cancellationToken)
         {
-            var articles = await _dbContext.News.Where(article => command.NewsData.Keys
-                .Contains(article.Id))
+            var news = await _dbContext.News
+                .Where(newone => command.NewsData.Keys
+                .Contains(newone.Id))
                 .ToListAsync(cancellationToken);
 
-            foreach (var article in articles)
+            foreach (var newone in news)
             {
-                article.ContentNew = command.NewsData[article.Id];
+                newone.ContentNew = command.NewsData[newone.Id];
             }
 
             await _dbContext.SaveChangesAsync(cancellationToken);

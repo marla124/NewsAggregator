@@ -62,7 +62,6 @@ namespace NewsAggregatingProject.Data.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("ContentNew")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("DataAndTime")

@@ -16,15 +16,13 @@ namespace NewsAggregatingProject.API.Controllers
     public class TokenController : Controller
     {
         private readonly ITokenService _tokenService;
-        private readonly UserMapper _userMapper;        
         private readonly IUserService _userService;
 
 
 
-        public TokenController(ITokenService tokenService,UserMapper userMapper, IUserService userService)
+        public TokenController(ITokenService tokenService,IUserService userService)
         {
             _tokenService = tokenService;
-            _userMapper = userMapper;
             _userService = userService;
 
         }
@@ -58,7 +56,7 @@ namespace NewsAggregatingProject.API.Controllers
                 var userDto = await _userService.GetUserByEmail(request.Email);
                 var jwtToken = await _tokenService.GenerateJwtToken(userDto);
                 var refreshToken = await _tokenService.AddRefreshToken(userDto.Email,
-                    HttpContext.Connection.RemoteIpAddress.MapToIPv6().ToString());
+                    HttpContext.Connection.RemoteIpAddress.MapToIPv4().ToString());
                 return Ok(new TokenResponseModel { JwtToken = jwtToken, RefreshToken = refreshToken });
 
             }
@@ -71,12 +69,12 @@ namespace NewsAggregatingProject.API.Controllers
         public async Task<IActionResult> RevokeToken(RefreshTokenModel request)
         {
             var IsRefreshTokenValue = await _tokenService.CheckRefreshToken(request.RefreshToken);
-            if (IsRefreshTokenValue)
-            {
+            //if (IsRefreshTokenValue)
+            //{
                 await _tokenService.RemoveRefreshToken(request.RefreshToken);
                 return Ok();
-            }
-            return Unauthorized(); //!!!
+            //}
+            //return Unauthorized(); //!!!
         }
 
     }

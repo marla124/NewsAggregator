@@ -50,8 +50,9 @@ namespace NewsAggregatingProject.Services
                     SourceId = sourceId,
                     Date = item.PublishDate.UtcDateTime,
                     Title = item.Title.Text,
-                    ConentNew = item.Summary.Text,
-                    SourceUrl = item.Id
+                    //ConentNew = item.Summary.Text,
+                    SourceUrl = item.Id,
+                    Description= item.Summary.Text
                 }).ToArray();
 
                 return rssNews;
@@ -68,8 +69,7 @@ namespace NewsAggregatingProject.Services
             var newsRes = textNode.SelectSingleNode("//div[@class=\"news-reference\"]");
             textNode.RemoveChild(newsRes);
             var textValue = textNode.InnerHtml;
-            var tuple=(newsInfo.Item1,newsInfo.Item2);
-            
+            var tuple = (newsInfo.Item1, textValue);
             return tuple;
         }
 
@@ -83,7 +83,8 @@ namespace NewsAggregatingProject.Services
         public async Task ParseNewsText()
         {
             var newsWithoutText = await _mediator.Send(new GetNewsWithoutTextQuery()); 
-            var data=newsWithoutText.Select(tuple => GetNewsByUrl(tuple)).ToDictionary(tuple=>tuple.Item1, tuple=>tuple.Item2);
+            var data=newsWithoutText.Select(tuple => GetNewsByUrl(tuple))
+                .ToDictionary(tuple=>tuple.Item1, tuple=>tuple.Item2);
 
             
             await _mediator.Send(new UpdateNewsText() { NewsData = data });
@@ -139,7 +140,7 @@ namespace NewsAggregatingProject.Services
                 await Rate(id);
             }
         }
-        private async Task Rate(Guid id)
+        private async Task Rate(Guid id) //1. получаем текст новости 2. читаем в словаря ключевые слова 3. удаляем htmltag
         {
             var text = await _mediator.Send(new GetNewsTextByIdQuery() { Id = id });
             var dictionary = _configuration
@@ -160,21 +161,22 @@ namespace NewsAggregatingProject.Services
                     if(rate==null) rate= value;
                     rate += value;
                 }
-            }
+            }//даем рейтинг новостям
             await _mediator.Send(new SetNewsRateCommand() { Id = id, Rate = rate });
         }
 
         private string RemoveHTMLTags(string html)
         {
-            return Regex.Replace(html, "<.*?>", string.Empty);
-        }
+            return Regex.Replace(html??"", "<.*?>", string.Empty);
+        }//удаление htmltag
         private async Task<string[]> GetLemmas(string text)
         {
             using(var httpClient=new HttpClient())
             {
-                var request = new HttpRequestMessage(HttpMethod.Post, $"http://api.ispras.ru/texterra/v1/nlp?targetType=lemma&apikey={_configuration["AppSetting:IsprasKey"]}");
+                var request = new HttpRequestMessage(HttpMethod.Post, 
+                    $"http://api.ispras.ru/texterra/v1/nlp?targetType=lemma&apikey={_configuration["AppSetting:IsprasKey"]}");
 
-                request.Headers.Add("Accept", "application/json");
+                request.Headers.Add("Accept", "application/json");//добавляем значения
 
                 request.Content = JsonContent.Create(new[]
                 {

@@ -20,7 +20,7 @@ namespace NewsAggregatingProject.Data.CQS.Queries
         public async Task<string> Handle(GetNewsTextByIdQuery request, 
             CancellationToken cancellationToken)
         {
-            var news= await _dbContext.News.FirstOrDefaultAsync(news=>news.Equals(request.Id), 
+            var news= await _dbContext.News.FirstOrDefaultAsync(news=>news.Id.Equals(request.Id), 
                 cancellationToken: cancellationToken);
             if (news == null)
             {

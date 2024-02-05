@@ -22,7 +22,7 @@ namespace NewsAggregatingProject.Data.CQS.Queries
             CancellationToken cancellationToken)
         {
             var news= await _dbContext.News
-                .FirstOrDefaultAsync(onenews=>onenews.Equals(request.Id), 
+                .FirstOrDefaultAsync(onenews=>onenews.Id.Equals(request.Id), 
                 cancellationToken: cancellationToken);
             return news;
 

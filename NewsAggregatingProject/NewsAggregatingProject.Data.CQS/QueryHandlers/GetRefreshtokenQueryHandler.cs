@@ -20,7 +20,7 @@ namespace NewsAggregatingProject.Data.CQS.Queries
         public async Task<RefreshToken> Handle(GetRefreshtokenQuery request, 
             CancellationToken cancellationToken)
         {
-            var refToken= await _dbContext.RefreshTokens.FirstOrDefaultAsync(rt=>rt.Equals(request.Id), 
+            var refToken= await _dbContext.RefreshTokens.FirstOrDefaultAsync(rt=>rt.Id.Equals(request.Id), 
                 cancellationToken: cancellationToken);
             return refToken;
 

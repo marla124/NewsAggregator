@@ -8,7 +8,7 @@ namespace NewsAggregatingProject.Core
         public string? Description { get; set; }
         public string Title { get; set; }
 
-        public string ConentNew { get; set; }
+        public string? ConentNew { get; set; }
         public DateTime Date { get; set; }
         public float? Rate { get; set; }
         public string SourceUrl { get; set; }
