@@ -44,6 +44,8 @@ namespace NewsAggregatingProject.API
             services.AddHangfireServer();
 
             services.AddScoped<NewsMapper>();
+            services.AddScoped<UserMapper>();
+
             services.AddMediatR(cfg =>
             {
                 cfg.RegisterServicesFromAssembly(typeof(AddNewsCommand).Assembly);

@@ -18,13 +18,14 @@ namespace NewsAggregatingProject.Services
         private readonly IUnitOfWork _unitOfWork;
         private readonly IConfiguration _configuration;
         private readonly IMediator _mediator;
-        private readonly UserMapper _mapper;
+        private readonly UserMapper _userMapper;
 
-        public UserService(IUnitOfWork unitOfWork, IConfiguration configuration, IMediator mediator)
+        public UserService(IUnitOfWork unitOfWork, IConfiguration configuration, IMediator mediator, UserMapper userMapper)
         {
             _unitOfWork = unitOfWork;
             _configuration = configuration;
             _mediator = mediator;
+            _userMapper= userMapper;
         }
 
         public async Task<ClaimsIdentity> Authenticate(string email)
@@ -111,13 +112,13 @@ namespace NewsAggregatingProject.Services
 
             var query = new GetUserByEmailQuery() { Email = userDtoEmail };
             var user = await _mediator.Send(query);
-            return _mapper.UserToUserDto(user);
+            return _userMapper.UserToUserDto(user);
         }
 
         public async Task<UserDto> GetUserByRefreshToken(Guid requestRefreshToken)
         {
             var user=await _mediator.Send(new GetUserByRefreshTokenQuery { RefreshTokenId = requestRefreshToken });
-            var dto = _mapper.UserToUserDto(user);
+            var dto = _userMapper.UserToUserDto(user);
             return dto;
         }
 

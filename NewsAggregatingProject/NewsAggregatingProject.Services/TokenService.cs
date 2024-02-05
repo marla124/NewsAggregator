@@ -53,17 +53,14 @@ namespace NewsAggregatingProject.Services
             var iss = _configuration["Jwt:Issuer"];
             var aud = _configuration["Jwt:Audience"];
 
-
-
             var tokenDescriptor = new SecurityTokenDescriptor()
             {
                 Subject = new ClaimsIdentity(new Claim[]
                 {
-                        new Claim(ClaimTypes.Email, userDto.Email),
-                        new Claim(ClaimTypes.Role, "Admin"),
-                        new Claim("aud",aud),
-                        new Claim("iss",iss)
-
+                new Claim(ClaimTypes.Email, userDto.Email),
+                new Claim(ClaimTypes.Role, "Admin"),
+                new Claim("aud",aud),
+                new Claim("iss",iss)
                 }),
                 Expires = DateTime.UtcNow.AddMinutes(lifetime),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256)
@@ -71,6 +68,7 @@ namespace NewsAggregatingProject.Services
 
             var tokenHandler = new JwtSecurityTokenHandler();
             var token = tokenHandler.CreateToken(tokenDescriptor);
+
             return tokenHandler.WriteToken(token);
         }
 

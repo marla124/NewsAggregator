@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "MArSe50wQvM570m02qkafc3ttMVY+KicGFR67XmkL/w=",
+  "Hash": "iFZMl4gdE4mDysmVuFoWQuMtv/dmaEGrLYBGyvvAgwk=",
   "Source": "NewsAggregatingProject",
   "BasePath": "_content/NewsAggregatingProject",
   "Mode": "Default",
@@ -72,6 +72,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\Брест\\myprj\\NewsAggregator\\NewsAggregatingProject\\NewsAggregatingProject\\wwwroot\\css\\StyleIndex.css",
+      "SourceId": "NewsAggregatingProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Брест\\myprj\\NewsAggregator\\NewsAggregatingProject\\NewsAggregatingProject\\wwwroot\\",
+      "BasePath": "_content/NewsAggregatingProject",
+      "RelativePath": "css/StyleIndex.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\StyleIndex.css"
     },
     {
       "Identity": "C:\\Users\\Брест\\myprj\\NewsAggregator\\NewsAggregatingProject\\NewsAggregatingProject\\wwwroot\\favicon.ico",

@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\NewsAggregatingProject.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Брест\\myprj\\NewsAggregator\\NewsAggregatingProject\\NewsAggregatingProject\\wwwroot\\css\\StyleIndex.css",
+      "PackagePath": "staticwebassets\\css\\StyleIndex.css"
+    },
+    {
       "Id": "C:\\Users\\Брест\\myprj\\NewsAggregator\\NewsAggregatingProject\\NewsAggregatingProject\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

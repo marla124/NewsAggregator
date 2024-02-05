@@ -29,7 +29,6 @@ namespace NewsAggregatingProject.Controllers
         }
 
         [HttpGet]
-        //[Authorize]
         public async Task<IActionResult> Index()
         {
             try
