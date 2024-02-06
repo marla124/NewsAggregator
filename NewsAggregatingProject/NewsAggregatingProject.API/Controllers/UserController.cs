@@ -22,17 +22,7 @@ namespace NewsAggregatingProject.API.Controllers
             _userMapper = userMapper;
             _tokenService = tokenService;
         }
-        //[HttpGet("{id}")]
-        //public async Task<IActionResult> GetUsersById()
-        //{
-        //    return Ok();
-        //}
 
-        //[HttpGet]
-        //public async Task<IActionResult> GetUsers()
-        //{
-        //    return Ok();
-        //}
 
         [HttpPost]
         public async Task<IActionResult> CreateUser(RegisterModel request)
@@ -41,7 +31,6 @@ namespace NewsAggregatingProject.API.Controllers
             await _userService.RegisterUser(userDto);
 
             var user = await _userService.GetUserByEmail(userDto.Email);
-            //var token=await _tokenService.GenerateJwtToken(user); 
             return Created($"users/{user.Id}", null);
 
         }
@@ -53,11 +42,7 @@ namespace NewsAggregatingProject.API.Controllers
             return Ok();
         }
 
-        //[HttpPatch("{id}")]
-        //public async Task<IActionResult> UpdateUsers()
-        //{
-        //    return Ok();
-        //}
+ 
 
     }
 }

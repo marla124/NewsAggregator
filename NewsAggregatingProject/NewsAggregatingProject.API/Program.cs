@@ -1,6 +1,7 @@
 
 using Hangfire;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.OpenApi.Models;
 using Serilog;
 using Serilog.Events;
 
@@ -17,12 +18,11 @@ namespace NewsAggregatingProject.API
             {
                 options.AddDefaultPolicy(policyBuilder =>
                 {
-                    policyBuilder.WithOrigins("http://localhost:60928", "https://github.com")
+                    policyBuilder.WithOrigins("http://localhost:4200")
                     .AllowAnyHeader()
                     .AllowAnyMethod();
                 });
             });
-            // Add services to the container.
             var logger = new LoggerConfiguration()
             .MinimumLevel.Override("Microsoft", LogEventLevel.Information)
             .WriteTo
@@ -36,11 +36,37 @@ namespace NewsAggregatingProject.API
             builder.Configuration.AddJsonFile("AFINN-ru.json");
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddSwaggerGen();
+            builder.Services.AddSwaggerGen(opt =>
+            {
+                opt.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title="MyApi", Version="v1" });
+                opt.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                {
+                    In = ParameterLocation.Header,
+                    Description = "Please enter token",
+                    Name = "Authorization",
+                    Type = SecuritySchemeType.Http,
+                    BearerFormat = "JWT",
+                    Scheme = "bearer"
+                });
+                opt.AddSecurityRequirement(new OpenApiSecurityRequirement
+                {
+                    {
+                        new OpenApiSecurityScheme
+                        {
+                            Reference=new OpenApiReference
+                            {
+                                Type=ReferenceType.SecurityScheme,
+                                Id="Bearer"
+                            }
+                        },
+                        new string[]{}
+                    }
+                });
+            });
             builder.Services.RegisterServices(builder.Configuration);
             builder.Services.ConfigureJwt(builder.Configuration);
 
-
+            
             var app = builder.Build();
 
             if (app.Environment.IsDevelopment())

@@ -13,7 +13,7 @@ namespace NewsAggregatingProject.Services.Interfaces
         public bool IsUserExists(string email);
         public Task<int> RegisterUser(UserDto userDto);
         public Task<bool> IsAdmin(string email);
-        public Task<ClaimsIdentity> Authenticate(string email);
+        //public Task<ClaimsIdentity> Authenticate(string email);
         public Task<bool> CheckPasswordCorrect(string email, string password);
         Task<UserDto> GetUserByEmail(string email);
         Task<UserDto> GetUserByRefreshToken(Guid requestRefreshToken);

@@ -50,7 +50,6 @@ namespace NewsAggregatingProject.Services
                     SourceId = sourceId,
                     Date = item.PublishDate.UtcDateTime,
                     Title = item.Title.Text,
-                    //ConentNew = item.Summary.Text,
                     SourceUrl = item.Id,
                     Description= item.Summary.Text
                 }).ToArray();
@@ -98,13 +97,6 @@ namespace NewsAggregatingProject.Services
 
         }
 
-        public async Task<NewsDto?[]> GetNewsByName(string name)
-        {
-            var news = await _unitOfWork.NewsRepository
-                .FindBy(news => news.Title.Contains(name))
-                .Select(news => _newsMapper.NewsToNewsDto(news)).ToArrayAsync();
-            return news;
-        }
 
         public async Task<NewsDto[]?> GetPositive()
         {
@@ -127,10 +119,6 @@ namespace NewsAggregatingProject.Services
             _mediator.Send(command);
         }
 
-        public Task CreateNewsAndSource(NewsDto newsDto, SourceDto sourceDto)
-        {
-            throw new NotImplementedException();
-        }
 
         public async Task RateBatchOfUnratedNews()
         {
@@ -140,7 +128,7 @@ namespace NewsAggregatingProject.Services
                 await Rate(id);
             }
         }
-        private async Task Rate(Guid id) //1. получаем текст новости 2. читаем в словаря ключевые слова 3. удаляем htmltag
+        private async Task Rate(Guid id) 
         {
             var text = await _mediator.Send(new GetNewsTextByIdQuery() { Id = id });
             var dictionary = _configuration
@@ -168,7 +156,7 @@ namespace NewsAggregatingProject.Services
         private string RemoveHTMLTags(string html)
         {
             return Regex.Replace(html??"", "<.*?>", string.Empty);
-        }//удаление htmltag
+        }
         private async Task<string[]> GetLemmas(string text)
         {
             using(var httpClient=new HttpClient())

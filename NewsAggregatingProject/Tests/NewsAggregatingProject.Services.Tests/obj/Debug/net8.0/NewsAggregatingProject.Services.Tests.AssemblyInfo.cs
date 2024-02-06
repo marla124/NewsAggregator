@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NewsAggregatingProject.Services.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a273c5540196e592a4853a50e1cd09baf03d37a4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4460267ae6f1fc2f26caf0574a350507104aa5b8")]
 [assembly: System.Reflection.AssemblyProductAttribute("NewsAggregatingProject.Services.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NewsAggregatingProject.Services.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

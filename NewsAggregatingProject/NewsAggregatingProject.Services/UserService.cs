@@ -28,33 +28,33 @@ namespace NewsAggregatingProject.Services
             _userMapper= userMapper;
         }
 
-        public async Task<ClaimsIdentity> Authenticate(string email)
-        {
-            var user = await _unitOfWork.UserRepository
-                .FindBy(us => us.Email.Equals(email))
-                .FirstOrDefaultAsync();
-            if (user != null)
-            {
-                var status = (await _unitOfWork.UserStatusRepository
-                    .GetByIdAsNoTracking(user.UserStatusId)).Status;
+        //public async Task<ClaimsIdentity> Authenticate(string email)
+        //{
+        //    var user = await _unitOfWork.UserRepository
+        //        .FindBy(us => us.Email.Equals(email))
+        //        .FirstOrDefaultAsync();
+        //    if (user != null)
+        //    {
+        //        var status = (await _unitOfWork.UserStatusRepository
+        //            .GetByIdAsNoTracking(user.UserStatusId)).Status;
 
-                var claims = new List<Claim>()
-                {
-                    new Claim(ClaimsIdentity.DefaultNameClaimType, user.Email),
-                    new Claim(ClaimsIdentity.DefaultRoleClaimType, status)
-                };
-                var claimsIdentity = new ClaimsIdentity(claims,
-                    "ApplicationCookie",
-                    ClaimsIdentity.DefaultNameClaimType,
-                    ClaimsIdentity.DefaultRoleClaimType);
-                return claimsIdentity;
-            }
-            return null;
-        }
+        //        var claims = new List<Claim>()
+        //        {
+        //            new Claim(ClaimsIdentity.DefaultNameClaimType, user.Email),
+        //            new Claim(ClaimsIdentity.DefaultRoleClaimType, status)
+        //        };
+        //        var claimsIdentity = new ClaimsIdentity(claims,
+        //            "ApplicationCookie",
+        //            ClaimsIdentity.DefaultNameClaimType,
+        //            ClaimsIdentity.DefaultRoleClaimType);
+        //        return claimsIdentity;
+        //    }
+        //    return null;
+        //}
 
         public async Task <bool> IsAdmin(string email)
         {
-            ///
+            
             var user = await _unitOfWork.UserRepository
                 .FindBy(user => user.Email.Equals(email))
                 .FirstOrDefaultAsync();

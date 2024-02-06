@@ -1,4 +1,5 @@
 ﻿using Hangfire;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using NewsAggregatingProject.API.Mappers;
@@ -18,6 +19,8 @@ namespace NewsAggregatingProject.API.Controllers
             _newsService = newsService;
         }
         [HttpPost]
+
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Aggregate(Guid sourceId)
         {
 

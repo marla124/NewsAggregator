@@ -36,10 +36,5 @@ namespace NewsAggregatingProject.Services
             }
             return _sourceMapper.SourceToSourceDto(source);
         }
-
-        public Task<SourceDto> UpdateSourcebyId(Guid id)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
