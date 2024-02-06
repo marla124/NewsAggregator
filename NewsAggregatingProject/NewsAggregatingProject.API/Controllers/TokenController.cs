@@ -59,13 +59,13 @@ namespace NewsAggregatingProject.API.Controllers
         [Route("Revoke")]
         public async Task<IActionResult> RevokeToken(RefreshTokenModel request)
         {
-            var IsRefreshTokenValue = await _tokenService.CheckRefreshToken(request.RefreshToken);
-            //if (IsRefreshTokenValid)
-            //{
+            var IsRefreshTokenValid = await _tokenService.CheckRefreshToken(request.RefreshToken);
+            if (IsRefreshTokenValid)
+            {
                 await _tokenService.RemoveRefreshToken(request.RefreshToken);
                 return Ok();
-            //}
-            //return Unauthorized(); //!!!
+        }
+            return Unauthorized(); 
         }
 
     }

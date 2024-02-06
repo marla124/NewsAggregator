@@ -25,11 +25,11 @@ namespace NewsAggregatingProject.API.Controllers
             return Ok(source);
         }
 
-        [HttpGet]
-        public async Task<IActionResult> GetSources()
-        {
-            return Ok();
-        }
+        //[HttpGet]
+        //public async Task<IActionResult> GetSources()
+        //{
+        //    return Ok();
+        //}
 
         [HttpDelete("{id}")]
         [Authorize(Roles = "Admin")]
@@ -40,10 +40,10 @@ namespace NewsAggregatingProject.API.Controllers
             return Ok();
         }
 
-        [HttpPatch("{id}")]
-        [Authorize(Roles = "Admin")]
+        //[HttpPatch("{id}")]
+        //[Authorize(Roles = "Admin")]
 
-        public async Task<IActionResult> UpdateSource() => Ok();
+        //public async Task<IActionResult> UpdateSource() => Ok();
 
     }
 }

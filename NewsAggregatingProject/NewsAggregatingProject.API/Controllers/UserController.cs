@@ -22,17 +22,17 @@ namespace NewsAggregatingProject.API.Controllers
             _userMapper = userMapper;
             _tokenService = tokenService;
         }
-        [HttpGet("{id}")]
-        public async Task<IActionResult> GetUsersById()
-        {
-            return Ok();
-        }
+        //[HttpGet("{id}")]
+        //public async Task<IActionResult> GetUsersById()
+        //{
+        //    return Ok();
+        //}
 
-        [HttpGet]
-        public async Task<IActionResult> GetUsers()
-        {
-            return Ok();
-        }
+        //[HttpGet]
+        //public async Task<IActionResult> GetUsers()
+        //{
+        //    return Ok();
+        //}
 
         [HttpPost]
         public async Task<IActionResult> CreateUser(RegisterModel request)
@@ -53,11 +53,11 @@ namespace NewsAggregatingProject.API.Controllers
             return Ok();
         }
 
-        [HttpPatch("{id}")]
-        public async Task<IActionResult> UpdateUsers()
-        {
-            return Ok();
-        }
+        //[HttpPatch("{id}")]
+        //public async Task<IActionResult> UpdateUsers()
+        //{
+        //    return Ok();
+        //}
 
     }
 }

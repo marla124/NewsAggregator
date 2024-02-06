@@ -46,6 +46,7 @@ namespace NewsAggregatingProject.Services
             return false;   
         }
 
+
         public async Task<string> GenerateJwtToken(UserDto userDto)
         {
             var isLifetime = int.TryParse(_configuration["Jwt:Lifetime"], out var lifetime);
